@@ -1,18 +1,18 @@
-const identityHighlights = [
+﻿const identityHighlights = [
   {
     title: "면접 답변 진단 중심",
     description:
-      "Interviewer Lens 소개 문구를 기준으로 보면, 질문 생성보다 '답변이 왜 약하게 들리는지'를 먼저 짚어주는 방향이 핵심입니다.",
+      "Interviewer Lens는 질문 생성보다 답변이 왜 약하게 들리는지, 어디서 흔들리는지를 먼저 짚어주는 방향이 핵심입니다.",
   },
   {
     title: "AI 이미지 부업을 프로젝트로 운영",
     description:
-      "Deep Constellation은 미용실, 피부과 같은 업종에 맞춰 AI 모델로 원하는 스타일의 이미지를 제작하는 실전형 AI 부업 프로젝트입니다.",
+      "Deep Constellation은 미용실, 피부과 같은 업종에 맞춰 AI 모델로 원하는 스타일 이미지를 제작하는 실전형 AI 부업 프로젝트입니다.",
   },
   {
     title: "콘텐츠는 짧고, 아카이브는 깊게",
     description:
-      "유튜브, X, 쓰레드, 인스타에서 빠르게 접점이 생기고, 노션과 서비스 페이지에서 더 깊게 읽는 구조입니다.",
+      "유튜브, X, 스레드, 인스타에서 빠르게 업데이트를 보고, 노션과 서비스 페이지에서 더 깊게 읽는 구조입니다.",
   },
 ];
 
@@ -34,7 +34,7 @@ const channelLinks = [
     type: "Channel",
   },
   {
-    title: "회몬의 쓰레드 구경가기",
+    title: "회몬의 스레드 구경가기",
     description: "AI 툴 소개와 실제 사용 사례를 가볍게 둘러보기 좋습니다.",
     href: "https://www.threads.com/@sashimi_mong",
     tag: "Threads",
@@ -51,7 +51,7 @@ const channelLinks = [
   },
   {
     title: "회몬에게 문의하기",
-    description: "협업, 문의, 기타 연락이 필요하다면 오픈카카오톡으로 연결됩니다.",
+    description: "작업, 협업, 기타 문의가 필요하다면 카카오톡 오픈채팅으로 연결됩니다.",
     href: "https://open.kakao.com/o/sPFCjtni",
     tag: "Contact",
     category: "contact",
@@ -63,20 +63,32 @@ const projects = [
   {
     title: "Interviewer Lens",
     description:
-      "개발자 면접 답변을 입력하면 탈락 포인트, 면접관 관점의 위험 신호, 예상 꼬리질문, 개선 초안을 보여주는 면접 답변 진단 프로젝트입니다.",
+      "개발자 면접 답변을 입력하면 실제 현직 면접관 관점의 위험 신호, 예상 꼬리질문, 개선 초안을 보여주는 면접 답변 진단 프로젝트입니다.",
     href: "https://interview.jhsoftlabs.com",
     tag: "Interview Project",
     category: "project",
     type: "Project",
+    image: "./assets/project-interviewer-lens.svg",
+    points: [
+      "답변이 왜 약하게 들리는지 구조적으로 진단",
+      "탈락 포인트와 예상 꼬리질문까지 한 번에 정리",
+      "개선된 답변 방향을 빠르게 다시 잡을 수 있는 프로젝트",
+    ],
   },
   {
     title: "Deep Constellation",
     description:
-      "미용실, 피부과 등에서 원하는 콘셉트와 스타일을 뽑아낼 수 있도록 AI 모델 기반 이미지를 제작하는 AI 이미지 부업 프로젝트입니다.",
+      "미용실, 피부과 등에 맞춰 콘셉트와 스타일을 잡아볼 수 있도록 AI 모델 기반 이미지를 제작하는 AI 이미지 부업 프로젝트입니다.",
     href: "https://image.jhsoftlabs.com/",
     tag: "AI Image Project",
     category: "project",
     type: "Project",
+    image: "./assets/project-deep-constellation.svg",
+    points: [
+      "미용실, 피부과 등 오프라인 업장용 스타일 이미지를 생성",
+      "원하는 무드와 콘셉트에 맞춘 AI 모델 기반 제작",
+      "실전 부업 구조로 이어지는 이미지 제작 프로젝트",
+    ],
   },
 ];
 
@@ -91,7 +103,7 @@ const notionResources = [
   },
   {
     title: "오늘 바로 시작하는 AI 부업 첫걸음",
-    description: "AI 부업을 처음 시작하는 사람에게 필요한 가장 첫 단계들을 담았습니다.",
+    description: "AI 부업을 처음 시작하는 사람에게 필요한 가장 첫 단계들을 안내합니다.",
     href: "https://standing-swing-3b7.notion.site/AI-33629bec7df880a2b8fbf7edf41d3fad",
     tag: "Getting Started",
     category: "ai-side",
@@ -107,7 +119,7 @@ const notionResources = [
   },
   {
     title: "[2026 팀핏(Team-fit) 면접 대비 리스트] - 회몬의 압축본",
-    description: "팀핏 면접을 준비할 때 꼭 점검해야 할 질문 포인트를 압축해서 정리했습니다.",
+    description: "팀핏 면접을 준비할 때 체크해야 할 질문 포인트를 압축해서 정리했습니다.",
     href: "https://standing-swing-3b7.notion.site/2026-Team-fit-33029bec7df88090900fc00c8b2e7087",
     tag: "Interview",
     category: "interview",
@@ -123,7 +135,7 @@ const notionResources = [
   },
   {
     title: "개발자 커리어 밸런스 자가진단",
-    description: "현재 커리어 상태를 점검하고 다음 선택을 정리하는 데 도움이 되는 체크리스트입니다.",
+    description: "현재 커리어 상태를 점검하고 다음 선택을 정리하는 데 도움을 주는 체크리스트입니다.",
     href: "https://standing-swing-3b7.notion.site/33529bec7df88091abe3c2fa8d49bfbd?pvs=74",
     tag: "Career",
     category: "career",
@@ -152,10 +164,11 @@ const categoryLabels = {
 const appState = {
   filter: "all",
   query: "",
-  collectionExpanded: false
+  collectionExpanded: false,
 };
 
 const metricsKey = "jhsoftlabs-click-metrics";
+const allLinks = [...projects, ...channelLinks, ...notionResources];
 
 function createCard(item, className) {
   return `
@@ -165,7 +178,7 @@ function createCard(item, className) {
       </div>
       <h3>${item.title}</h3>
       <p class="${className}__description">${item.description}</p>
-      <a class="${className}__link" href="${item.href}" target="_blank" rel="noreferrer">
+      <a class="${className}__link" href="${item.href}" target="_blank" rel="noreferrer" data-track="${item.title}">
         바로가기 <span aria-hidden="true">↗</span>
       </a>
     </article>
@@ -187,7 +200,7 @@ function createCollectionCard(item) {
       </div>
       <h3>${item.title}</h3>
       <p class="collection-card__description">${item.description}</p>
-      <a class="collection-card__link" href="${item.href}" target="_blank" rel="noreferrer">
+      <a class="collection-card__link" href="${item.href}" target="_blank" rel="noreferrer" data-track="${item.title}">
         바로가기 <span aria-hidden="true">↗</span>
       </a>
     </article>
@@ -195,14 +208,20 @@ function createCollectionCard(item) {
 }
 
 function createProjectCard(item) {
+  const points = (item.points || []).map((point) => `<li>${point}</li>`).join("");
+
   return `
     <article class="feature-card">
+      <div class="feature-card__media">
+        <img src="${item.image}" alt="${item.title} 미리보기 이미지" loading="lazy" />
+      </div>
       <div class="feature-card__meta">
         <span class="feature-card__tag">${item.tag}</span>
         <span class="collection-card__type">${item.type}</span>
       </div>
       <h3>${item.title}</h3>
       <p class="feature-card__description">${item.description}</p>
+      <ul class="feature-card__points">${points}</ul>
       <a class="feature-card__link" href="${item.href}" target="_blank" rel="noreferrer" data-track="${item.title}">
         프로젝트 보기 <span aria-hidden="true">↗</span>
       </a>
@@ -250,22 +269,15 @@ function renderArchive() {
     target.innerHTML = `
       <article class="archive-empty">
         <span class="archive-empty__badge">Ready For Notion</span>
-        <h3>추천 아카이브가 곧 여기에 채워집니다.</h3>
-        <p>
-          AI 부업, 면접, 커리어, 실전 활용 아카이브를 이 영역에서 바로
-          둘러볼 수 있도록 준비 중입니다.
-        </p>
+        <h3>추천 아카이브가 여기에 채워집니다.</h3>
+        <p>AI 부업, 면접, 커리어, 실전 사용 아카이브를 이 영역에서 바로 둘러볼 수 있도록 준비 중입니다.</p>
       </article>
     `;
     return;
   }
 
-  target.innerHTML = notionResources
-    .map((item) => createCard(item, "archive-card"))
-    .join("");
+  target.innerHTML = notionResources.map((item) => createCard(item, "archive-card")).join("");
 }
-
-const allLinks = [...projects, ...channelLinks, ...notionResources];
 
 function matchesQuery(item, query) {
   if (!query) return true;
@@ -325,9 +337,7 @@ function renderCollection() {
   const limit = 6;
   const shouldCollapse = visibleItems.length > limit;
   const renderedItems =
-    shouldCollapse && !appState.collectionExpanded
-      ? visibleItems.slice(0, limit)
-      : visibleItems;
+    shouldCollapse && !appState.collectionExpanded ? visibleItems.slice(0, limit) : visibleItems;
 
   target.innerHTML = renderedItems.map(createCollectionCard).join("");
 
@@ -340,6 +350,7 @@ function renderCollection() {
 
 function syncUrlState() {
   const url = new URL(window.location.href);
+
   if (appState.filter === "all") {
     url.searchParams.delete("tab");
   } else {
@@ -358,11 +369,14 @@ function syncUrlState() {
 function setActiveFilter(filter) {
   const filterBar = document.getElementById("filter-bar");
   if (!filterBar) return;
+
   appState.filter = filter;
   appState.collectionExpanded = false;
+
   filterBar
     .querySelectorAll(".filter-button")
     .forEach((node) => node.classList.toggle("is-active", node.dataset.filter === filter));
+
   renderCollection();
   syncUrlState();
 }
@@ -401,6 +415,7 @@ function bindCollectionFilters() {
 function bindCollectionSearch() {
   const input = document.getElementById("collection-search");
   if (!input) return;
+
   input.value = appState.query;
   input.addEventListener("input", (event) => {
     appState.query = event.target.value.trim();
@@ -413,6 +428,7 @@ function bindCollectionSearch() {
 function bindCollectionMore() {
   const button = document.getElementById("collection-more");
   if (!button) return;
+
   button.addEventListener("click", () => {
     appState.collectionExpanded = !appState.collectionExpanded;
     renderCollection();
@@ -436,12 +452,7 @@ function renderRecentUpdates() {
   const target = document.getElementById("recent-grid");
   if (!target) return;
 
-  const recentItems = [
-    notionResources[0],
-    notionResources[1],
-    projects[0]
-  ].filter(Boolean);
-
+  const recentItems = [notionResources[0], notionResources[1], projects[0]].filter(Boolean);
   target.innerHTML = recentItems.map(createRecentCard).join("");
 }
 
@@ -500,6 +511,7 @@ function bindClickTracking() {
 function mountMetricsPanel() {
   const template = document.getElementById("metrics-template");
   if (!template) return;
+
   document.body.appendChild(template.content.cloneNode(true));
   document.getElementById("metrics-close")?.addEventListener("click", () => {
     const panel = document.getElementById("metrics-panel");

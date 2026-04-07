@@ -1,0 +1,20 @@
+﻿<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="36" fill="#FBF6EE"/>
+  <rect x="34" y="34" width="1132" height="562" rx="30" fill="url(#panel)" stroke="rgba(32,23,19,0.08)"/>
+  <circle cx="1008" cy="132" r="118" fill="rgba(188,76,42,0.12)"/>
+  <circle cx="1112" cy="502" r="92" fill="rgba(30,106,102,0.12)"/>
+  <rect x="82" y="84" width="188" height="188" rx="94" fill="#12354D"/>
+  <circle cx="176" cy="178" r="66" fill="#F0D6C1"/>
+  <path d="M114 240C131 204 169 180 210 180C251 180 290 204 306 240V274H114V240Z" fill="#23212D"/>
+  <path d="M123 172C123 124 162 94 210 94C259 94 293 128 293 168C293 204 265 236 207 236C149 236 123 206 123 172Z" fill="#1E1D28"/>
+  <text x="82" y="330" fill="#BC4C2A" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">JH SOFT LABS</text>
+  <text x="82" y="404" fill="#201713" font-family="Arial, sans-serif" font-size="76" font-weight="700">회몬의 프로젝트와</text>
+  <text x="82" y="488" fill="#201713" font-family="Arial, sans-serif" font-size="76" font-weight="700">커리어 아카이브</text>
+  <text x="84" y="548" fill="#69564D" font-family="Arial, sans-serif" font-size="28">면접, 커리어, AI 부업, 대표 프로젝트를 한 곳에서 탐색하는 메인 허브</text>
+  <defs>
+    <linearGradient id="panel" x1="56" y1="48" x2="1126" y2="586" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF9"/>
+      <stop offset="1" stop-color="#F6E9DB"/>
+    </linearGradient>
+  </defs>
+</svg>
