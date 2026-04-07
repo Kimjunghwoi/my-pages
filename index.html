@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JH Soft Labs</title>
+    <meta
+      name="description"
+      content="회몬의 대표 프로젝트, 채널, AI 부업과 커리어 아카이브를 한곳에서 탐색할 수 있는 프로필 허브"
+    />
+    <meta property="og:title" content="JH Soft Labs" />
+    <meta
+      property="og:description"
+      content="대표 프로젝트부터 채널, AI 부업과 커리어 아카이브까지 회몬의 활동을 한 페이지에서 탐색할 수 있습니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jhsoftlabs.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="profile-shell">
+          <div class="profile-shell__cover"></div>
+          <div class="profile-shell__body">
+            <div class="profile-shell__topline">
+              <div class="hero__badge">JH SOFT LABS</div>
+              <p class="hero__availability">Profile Hub</p>
+            </div>
+
+            <div class="profile-head">
+              <img
+                class="profile-head__avatar"
+                src="./assets/hoemon-profile.jpg"
+                alt="회몬 캐릭터 프로필"
+              />
+              <div class="profile-head__main">
+                <div class="profile-head__title-row">
+                  <div>
+                    <h1>회몬</h1>
+                    <p class="profile-head__handle">@sashimi_mong</p>
+                  </div>
+                  <a class="button button--ghost button--compact" href="#collection">
+                    전체 링크 보기
+                  </a>
+                </div>
+                <p class="profile-head__bio">
+                  11년차 개발자. 스타트업, 유니콘, 중견, 대기업까지 전부
+                  경험했습니다. 면접, 이직, 회사 선택, 직장인 돈과 부업에 대한
+                  현실적인 이야기를 다룹니다. 직접 쓰는 툴 이야기도 함께
+                  정리합니다.
+                </p>
+                <div class="profile-head__meta">
+                  <span>서울</span>
+                  <span>개발자 면접 답변 진단기 운영</span>
+                  <span>AI 프로젝트 실행 기록 아카이브</span>
+                </div>
+                <ul class="hero__chips hero__chips--profile">
+                  <li>면접 꿀팁</li>
+                  <li>회사생활</li>
+                  <li>개발자 취업</li>
+                  <li>AI 부업</li>
+                  <li>개발자 이야기</li>
+                </ul>
+                <div class="hero__actions hero__actions--profile">
+                  <a class="button button--primary" href="#projects">대표 프로젝트 보기</a>
+                  <a class="button button--ghost button--compact" href="#collection">전체 링크 탐색</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-summary">
+              <article class="profile-summary__card">
+                <span class="profile-summary__value" id="channel-count">0</span>
+                <span class="profile-summary__label">채널 / 문의 링크</span>
+              </article>
+              <article class="profile-summary__card">
+                <span class="profile-summary__value" id="archive-count">0</span>
+                <span class="profile-summary__label">추천 아카이브</span>
+              </article>
+              <article class="profile-summary__card profile-summary__card--wide">
+                <p class="hero__card-label">Analyzed Identity</p>
+                <ul class="identity-list" id="identity-list"></ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section--featured" id="projects">
+          <div class="section__header">
+            <p class="section__eyebrow">Featured Projects</p>
+            <h2>대표 프로젝트</h2>
+            <p class="section__description">
+              회몬이 직접 만들고 운영하는 핵심 프로젝트입니다. 먼저 보고 싶은
+              작업부터 바로 확인할 수 있습니다.
+            </p>
+          </div>
+          <div class="feature-grid" id="project-grid"></div>
+        </section>
+
+        <section class="section" id="recent-updates">
+          <div class="section__header">
+            <p class="section__eyebrow">Recent Updates</p>
+            <h2>최근 업데이트</h2>
+            <p class="section__description">
+              지금 가장 먼저 읽어볼 만한 글과 프로젝트 진입점을 빠르게 모았습니다.
+            </p>
+          </div>
+          <div class="recent-grid" id="recent-grid"></div>
+        </section>
+
+        <section class="section navigator" id="navigator">
+          <div class="section__header">
+            <p class="section__eyebrow">Navigator</p>
+            <h2>분야별로 바로 들어가기</h2>
+            <p class="section__description">
+              관심 있는 주제를 먼저 고르면, 관련 링크와 글만 빠르게 모아볼 수
+              있습니다.
+            </p>
+          </div>
+          <div class="jump-grid">
+            <a class="jump-card" href="#collection" data-filter-link="all">
+              <strong>전체</strong>
+              <span>모든 링크 한 번에 보기</span>
+            </a>
+            <a class="jump-card" href="#collection" data-filter-link="interview">
+              <strong>면접</strong>
+              <span>면접 진단, 팀핏, 코딩 테스트</span>
+            </a>
+            <a class="jump-card" href="#collection" data-filter-link="career">
+              <strong>커리어</strong>
+              <span>커리어 점검, 연봉, 이직 관점</span>
+            </a>
+            <a class="jump-card" href="#collection" data-filter-link="ai-side">
+              <strong>AI 부업</strong>
+              <span>루틴, 첫걸음, 실행 사례</span>
+            </a>
+            <a class="jump-card" href="#collection" data-filter-link="social">
+              <strong>채널</strong>
+              <span>유튜브, X, 쓰레드, 인스타</span>
+            </a>
+            <a class="jump-card" href="#collection" data-filter-link="project">
+              <strong>프로젝트</strong>
+              <span>서비스와 프로젝트 사이트</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" id="collection">
+          <div class="section__header">
+            <p class="section__eyebrow">Collection</p>
+            <h2>전체 링크 컬렉션</h2>
+            <p class="section__description">
+              이 섹션은 전체 탐색용입니다. 아래 채널과 아카이브 섹션은 주제별로
+              다시 보기 쉽게 정리한 큐레이션 버전입니다.
+            </p>
+          </div>
+          <div class="collection-tools">
+            <label class="search-box" for="collection-search">
+              <span class="search-box__label">검색</span>
+              <input
+                id="collection-search"
+                class="search-box__input"
+                type="search"
+                placeholder="프로젝트, 채널, 글 제목 검색"
+                autocomplete="off"
+              />
+            </label>
+          </div>
+          <div class="filter-bar" id="filter-bar"></div>
+          <div class="collection-grid" id="collection-grid"></div>
+          <div class="collection-actions">
+            <button class="button button--ghost button--compact" id="collection-more" type="button">
+              더 보기
+            </button>
+          </div>
+        </section>
+
+        <section class="section" id="channels">
+          <div class="section__header">
+            <p class="section__eyebrow">Channels</p>
+            <h2>업데이트를 가장 빠르게 만나는 채널</h2>
+            <p class="section__description">
+              영상, 짧은 글, 릴스, 프로젝트 기록까지. 선호하는 방식대로 편하게
+              둘러볼 수 있습니다.
+            </p>
+          </div>
+          <div class="card-grid" id="channel-grid"></div>
+        </section>
+
+        <section class="section" id="archive">
+          <div class="section__header">
+            <p class="section__eyebrow">Archive</p>
+            <h2>바로 읽을 수 있는 추천 아카이브</h2>
+            <p class="section__description">
+              AI 부업, 면접 준비, 커리어 점검, 그리고 최신 AI 이슈까지 빠르게
+              훑어볼 수 있는 글을 모았습니다.
+            </p>
+          </div>
+          <div class="archive-grid" id="archive-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© <span id="current-year"></span> JH Soft Labs</p>
+        <a href="https://image.jhsoftlabs.com/" target="_blank" rel="noreferrer">
+          Deep Constellation
+        </a>
+      </footer>
+    </div>
+
+    <template id="metrics-template">
+      <div class="metrics-panel" id="metrics-panel" hidden>
+        <div class="metrics-panel__header">
+          <strong>최근 클릭 통계</strong>
+          <button class="metrics-panel__close" id="metrics-close" type="button" aria-label="닫기">
+            닫기
+          </button>
+        </div>
+        <div class="metrics-panel__body" id="metrics-body"></div>
+      </div>
+    </template>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
