@@ -167,7 +167,6 @@ const appState = {
   collectionExpanded: false,
 };
 
-const metricsKey = "jhsoftlabs-click-metrics";
 const allLinks = [...projects, ...channelLinks, ...notionResources];
 
 function createCard(item, className) {
@@ -178,7 +177,7 @@ function createCard(item, className) {
       </div>
       <h3>${item.title}</h3>
       <p class="${className}__description">${item.description}</p>
-      <a class="${className}__link" href="${item.href}" target="_blank" rel="noreferrer" data-track="${item.title}">
+      <a class="${className}__link" href="${item.href}" target="_blank" rel="noreferrer">
         바로가기 <span aria-hidden="true">↗</span>
       </a>
     </article>
@@ -200,7 +199,7 @@ function createCollectionCard(item) {
       </div>
       <h3>${item.title}</h3>
       <p class="collection-card__description">${item.description}</p>
-      <a class="collection-card__link" href="${item.href}" target="_blank" rel="noreferrer" data-track="${item.title}">
+      <a class="collection-card__link" href="${item.href}" target="_blank" rel="noreferrer">
         바로가기 <span aria-hidden="true">↗</span>
       </a>
     </article>
@@ -222,7 +221,7 @@ function createProjectCard(item) {
       <h3>${item.title}</h3>
       <p class="feature-card__description">${item.description}</p>
       <ul class="feature-card__points">${points}</ul>
-      <a class="feature-card__link" href="${item.href}" target="_blank" rel="noreferrer" data-track="${item.title}">
+      <a class="feature-card__link" href="${item.href}" target="_blank" rel="noreferrer">
         프로젝트 보기 <span aria-hidden="true">↗</span>
       </a>
     </article>
@@ -238,7 +237,7 @@ function createRecentCard(item) {
       </div>
       <h3>${item.title}</h3>
       <p class="recent-card__description">${item.description}</p>
-      <a class="recent-card__link" href="${item.href}" target="_blank" rel="noreferrer" data-track="${item.title}">
+      <a class="recent-card__link" href="${item.href}" target="_blank" rel="noreferrer">
         바로 읽기 <span aria-hidden="true">↗</span>
       </a>
     </article>
@@ -456,70 +455,6 @@ function renderRecentUpdates() {
   target.innerHTML = recentItems.map(createRecentCard).join("");
 }
 
-function readMetrics() {
-  try {
-    return JSON.parse(window.localStorage.getItem(metricsKey) || "{}");
-  } catch {
-    return {};
-  }
-}
-
-function writeMetrics(metrics) {
-  window.localStorage.setItem(metricsKey, JSON.stringify(metrics));
-}
-
-function renderMetricsPanel() {
-  const container = document.getElementById("metrics-panel");
-  const body = document.getElementById("metrics-body");
-  if (!container || !body) return;
-
-  const metrics = Object.entries(readMetrics())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5);
-
-  if (metrics.length === 0) {
-    container.hidden = true;
-    return;
-  }
-
-  container.hidden = false;
-  body.innerHTML = metrics
-    .map(
-      ([label, count]) => `
-        <div class="metrics-item">
-          <strong>${label}</strong>
-          <span>${count} clicks</span>
-        </div>
-      `
-    )
-    .join("");
-}
-
-function bindClickTracking() {
-  document.addEventListener("click", (event) => {
-    const link = event.target.closest("[data-track]");
-    if (!link) return;
-
-    const label = link.dataset.track;
-    const metrics = readMetrics();
-    metrics[label] = (metrics[label] || 0) + 1;
-    writeMetrics(metrics);
-    renderMetricsPanel();
-  });
-}
-
-function mountMetricsPanel() {
-  const template = document.getElementById("metrics-template");
-  if (!template) return;
-
-  document.body.appendChild(template.content.cloneNode(true));
-  document.getElementById("metrics-close")?.addEventListener("click", () => {
-    const panel = document.getElementById("metrics-panel");
-    if (panel) panel.hidden = true;
-  });
-  renderMetricsPanel();
-}
-
 hydrateInitialState();
 renderIdentity();
 renderProfileSummary();
@@ -532,7 +467,5 @@ bindCollectionFilters();
 bindCollectionSearch();
 bindCollectionMore();
 setActiveFilter(appState.filter);
-mountMetricsPanel();
-bindClickTracking();
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
