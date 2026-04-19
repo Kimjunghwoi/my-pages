@@ -300,6 +300,76 @@ body::before {
   margin-top: 22px;
 }
 
+.hero-project-strip {
+  margin-top: 24px;
+  padding: 18px;
+  border: 1px solid rgba(188, 76, 42, 0.12);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.94), rgba(255, 242, 234, 0.88));
+}
+
+.hero-project-strip__header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.hero-project-strip__header strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.18rem;
+}
+
+.hero-project-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.hero-project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 132px;
+  padding: 16px;
+  border: 1px solid rgba(32, 23, 19, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.hero-project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(188, 76, 42, 0.24);
+  box-shadow: 0 18px 36px rgba(85, 47, 21, 0.08);
+}
+
+.hero-project-card strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+}
+
+.hero-project-card span:last-child {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.hero-project-card__tag {
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+  font: 700 0.8rem/1 "Space Grotesk", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .button,
 .card__link,
 .feature-card__link,
@@ -439,6 +509,12 @@ body::before {
   background:
     radial-gradient(circle at top right, rgba(188, 76, 42, 0.08), transparent 26%),
     linear-gradient(180deg, rgba(255, 248, 243, 0.96), rgba(255, 240, 231, 0.9)),
+    var(--surface);
+}
+
+.section--summary {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 236, 223, 0.86)),
     var(--surface);
 }
 
@@ -793,6 +869,10 @@ body::before {
     grid-template-columns: 1fr;
   }
 
+  .hero-project-strip__grid {
+    grid-template-columns: 1fr;
+  }
+
   .collection-tools {
     justify-content: stretch;
   }
@@ -865,6 +945,14 @@ body::before {
 
   .hero__actions--profile {
     flex-direction: column;
+  }
+
+  .hero-project-strip {
+    padding: 16px;
+  }
+
+  .hero-project-card {
+    min-height: 0;
   }
 
   .section {
