@@ -12,6 +12,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --check script.js
-      - run: node --check experiences.js
-      - run: node --test tests/*.test.mjs
+      - run: node scripts/verify-pages.mjs

@@ -6,6 +6,8 @@
 - 기술: HTML, CSS, vanilla JavaScript. 설치나 빌드 단계가 없습니다.
 - 호스팅: 기존 Vercel `mypages` 프로젝트.
 
+Cloudflare Pages 이전 준비는 `docs/cloudflare-pages-migration.md`를 참고합니다. 아직 운영 호스팅과 DNS를 변경하지 않았습니다. Pages용 검증/배포본은 `node scripts/verify-pages.mjs`로 만들며, `.pages-dist`만 배포합니다. Vercel 원본은 복구용으로 유지합니다.
+
 ## 로컬 확인
 
 ```powershell
