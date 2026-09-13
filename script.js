@@ -1,471 +1,141 @@
-﻿const identityHighlights = [
-  {
-    title: "면접 답변 진단 중심",
-    description:
-      "Interviewer Lens는 질문 생성보다 답변이 왜 약하게 들리는지, 어디서 흔들리는지를 먼저 짚어주는 방향이 핵심입니다.",
-  },
-  {
-    title: "AI 이미지 부업을 프로젝트로 운영",
-    description:
-      "Deep Constellation은 미용실, 피부과 같은 업종에 맞춰 AI 모델로 원하는 스타일 이미지를 제작하는 실전형 AI 부업 프로젝트입니다.",
-  },
-  {
-    title: "콘텐츠는 짧고, 아카이브는 깊게",
-    description:
-      "유튜브, X, 스레드, 인스타에서 빠르게 업데이트를 보고, 노션과 서비스 페이지에서 더 깊게 읽는 구조입니다.",
-  },
-];
+(() => {
+  "use strict";
 
-const channelLinks = [
-  {
-    title: "회몬의 유튜브 채널 구독하기",
-    description: "이직, 연봉, 부업 관련 인사이트를 영상으로 받아볼 수 있습니다.",
-    href: "https://youtube.com/@%ED%9A%8C%EB%AA%AC?sub_confirmation=1",
-    tag: "YouTube",
-    category: "social",
-    type: "Channel",
-  },
-  {
-    title: "회몬의 X 구경가기",
-    description: "개발, 커리어, 면접 관련 짧고 빠른 인사이트를 확인할 수 있습니다.",
-    href: "https://x.com/sashimi_mong",
-    tag: "X",
-    category: "social",
-    type: "Channel",
-  },
-  {
-    title: "회몬의 스레드 구경가기",
-    description: "AI 툴 소개와 실제 사용 사례를 가볍게 둘러보기 좋습니다.",
-    href: "https://www.threads.com/@sashimi_mong",
-    tag: "Threads",
-    category: "social",
-    type: "Channel",
-  },
-  {
-    title: "회몬의 인스타 구경가기",
-    description: "면접 관련 릴스를 중심으로 짧은 콘텐츠를 볼 수 있습니다.",
-    href: "https://www.instagram.com/sashimi_mong?igsh=MWtvYnZ6NTh2Zzh6YQ==",
-    tag: "Instagram",
-    category: "social",
-    type: "Channel",
-  },
-  {
-    title: "회몬에게 문의하기",
-    description: "작업, 협업, 기타 문의가 필요하다면 카카오톡 오픈채팅으로 연결됩니다.",
-    href: "https://open.kakao.com/o/sPFCjtni",
-    tag: "Contact",
-    category: "contact",
-    type: "Contact",
-  },
-];
-
-const projects = [
-  {
-    title: "Interviewer Lens",
-    description:
-      "개발자 면접 답변을 입력하면 실제 현직 면접관 관점의 위험 신호, 예상 꼬리질문, 개선 초안을 보여주는 면접 답변 진단 프로젝트입니다.",
-    href: "https://interview.jhsoftlabs.com",
-    tag: "Interview Project",
-    category: "project",
-    type: "Project",
-    image: "./assets/project-interviewer-lens.svg",
-    points: [
-      "답변이 왜 약하게 들리는지 구조적으로 진단",
-      "탈락 포인트와 예상 꼬리질문까지 한 번에 정리",
-      "개선된 답변 방향을 빠르게 다시 잡을 수 있는 프로젝트",
-    ],
-  },
-  {
-    title: "Deep Constellation",
-    description:
-      "미용실, 피부과 등에 맞춰 콘셉트와 스타일을 잡아볼 수 있도록 AI 모델 기반 이미지를 제작하는 AI 이미지 부업 프로젝트입니다.",
-    href: "https://image.jhsoftlabs.com/",
-    tag: "AI Image Project",
-    category: "project",
-    type: "Project",
-    image: "./assets/project-deep-constellation.svg",
-    points: [
-      "미용실, 피부과 등 오프라인 업장용 스타일 이미지를 생성",
-      "원하는 무드와 콘셉트에 맞춘 AI 모델 기반 제작",
-      "실전 부업 구조로 이어지는 이미지 제작 프로젝트",
-    ],
-  },
-];
-
-const notionResources = [
-  {
-    title: "AI 부업, 오늘부터 1일 차 루틴",
-    description: "바로 실행할 수 있는 AI 부업 첫날 루틴을 짧고 명확하게 정리한 가이드입니다.",
-    href: "https://standing-swing-3b7.notion.site/33929bec7df8800ca351f6688f23f7b3",
-    tag: "AI Side Hustle",
-    category: "ai-side",
-    type: "Notion",
-  },
-  {
-    title: "오늘 바로 시작하는 AI 부업 첫걸음",
-    description: "AI 부업을 처음 시작하는 사람에게 필요한 가장 첫 단계들을 안내합니다.",
-    href: "https://standing-swing-3b7.notion.site/AI-33629bec7df880a2b8fbf7edf41d3fad",
-    tag: "Getting Started",
-    category: "ai-side",
-    type: "Notion",
-  },
-  {
-    title: "[부록] 멘탈 관리: AI를 부리는 시니어의 마인드셋",
-    description: "도구에 끌려가지 않고 AI를 활용하기 위한 시니어 관점의 사고방식을 다룹니다.",
-    href: "https://standing-swing-3b7.notion.site/AI-33229bec7df8807ca997feb5dd0ab81d",
-    tag: "Mindset",
-    category: "ai-side",
-    type: "Notion",
-  },
-  {
-    title: "[2026 팀핏(Team-fit) 면접 대비 리스트] - 회몬의 압축본",
-    description: "팀핏 면접을 준비할 때 체크해야 할 질문 포인트를 압축해서 정리했습니다.",
-    href: "https://standing-swing-3b7.notion.site/2026-Team-fit-33029bec7df88090900fc00c8b2e7087",
-    tag: "Interview",
-    category: "interview",
-    type: "Notion",
-  },
-  {
-    title: "AI 코딩 테스트 승률 200% 올리는 프롬프트 원칙",
-    description: "AI를 활용한 코딩 테스트에서 실수를 줄이고 효율을 높이는 프롬프트 원칙 모음입니다.",
-    href: "https://standing-swing-3b7.notion.site/AI-200-33229bec7df880d480b5dadb72a54f83",
-    tag: "Prompting",
-    category: "interview",
-    type: "Notion",
-  },
-  {
-    title: "개발자 커리어 밸런스 자가진단",
-    description: "현재 커리어 상태를 점검하고 다음 선택을 정리하는 데 도움을 주는 체크리스트입니다.",
-    href: "https://standing-swing-3b7.notion.site/33529bec7df88091abe3c2fa8d49bfbd?pvs=74",
-    tag: "Career",
-    category: "career",
-    type: "Notion",
-  },
-  {
-    title: "[긴급 분석] 클로드 코드 소스 유출과 에이전트의 미래",
-    description: "최근 이슈를 바탕으로 에이전트 시대의 변화와 시사점을 빠르게 정리한 분석 글입니다.",
-    href: "https://standing-swing-3b7.notion.site/33529bec7df880359fe1c911a788c4e0",
-    tag: "AI Analysis",
-    category: "ai-side",
-    type: "Notion",
-  },
-];
-
-const categoryLabels = {
-  all: "전체",
-  interview: "면접",
-  career: "커리어",
-  "ai-side": "AI 부업",
-  social: "채널",
-  project: "프로젝트",
-  contact: "문의",
-};
-
-const appState = {
-  filter: "all",
-  query: "",
-  collectionExpanded: false,
-};
-
-const allLinks = [...projects, ...channelLinks, ...notionResources];
-
-function createCard(item, className) {
-  return `
-    <article class="${className}">
-      <div class="${className}__meta">
-        <span class="${className}__tag">${item.tag}</span>
-      </div>
-      <h3>${item.title}</h3>
-      <p class="${className}__description">${item.description}</p>
-      <a class="${className}__link" href="${item.href}" target="_blank" rel="noreferrer">
-        바로가기 <span aria-hidden="true">↗</span>
-      </a>
-    </article>
-  `;
-}
-
-function renderList(targetId, items, className) {
-  const target = document.getElementById(targetId);
-  if (!target) return;
-  target.innerHTML = items.map((item) => createCard(item, className)).join("");
-}
-
-function createCollectionCard(item) {
-  return `
-    <article class="collection-card">
-      <div class="collection-card__meta">
-        <span class="collection-card__tag">${item.tag}</span>
-        <span class="collection-card__type">${item.type}</span>
-      </div>
-      <h3>${item.title}</h3>
-      <p class="collection-card__description">${item.description}</p>
-      <a class="collection-card__link" href="${item.href}" target="_blank" rel="noreferrer">
-        바로가기 <span aria-hidden="true">↗</span>
-      </a>
-    </article>
-  `;
-}
-
-function createProjectCard(item) {
-  const points = (item.points || []).map((point) => `<li>${point}</li>`).join("");
-
-  return `
-    <article class="feature-card">
-      <div class="feature-card__media">
-        <img src="${item.image}" alt="${item.title} 미리보기 이미지" loading="lazy" />
-      </div>
-      <div class="feature-card__meta">
-        <span class="feature-card__tag">${item.tag}</span>
-        <span class="collection-card__type">${item.type}</span>
-      </div>
-      <h3>${item.title}</h3>
-      <p class="feature-card__description">${item.description}</p>
-      <ul class="feature-card__points">${points}</ul>
-      <a class="feature-card__link" href="${item.href}" target="_blank" rel="noreferrer">
-        프로젝트 보기 <span aria-hidden="true">↗</span>
-      </a>
-    </article>
-  `;
-}
-
-function createRecentCard(item) {
-  return `
-    <article class="recent-card">
-      <div class="recent-card__meta">
-        <span class="recent-card__tag">${item.tag}</span>
-        <span class="recent-card__eyebrow">${item.type}</span>
-      </div>
-      <h3>${item.title}</h3>
-      <p class="recent-card__description">${item.description}</p>
-      <a class="recent-card__link" href="${item.href}" target="_blank" rel="noreferrer">
-        바로 읽기 <span aria-hidden="true">↗</span>
-      </a>
-    </article>
-  `;
-}
-
-function renderIdentity() {
-  const target = document.getElementById("identity-list");
-  if (!target) return;
-
-  target.innerHTML = identityHighlights
-    .map(
-      (item) => `
-        <li>
-          <strong>${item.title}</strong>
-          <span>${item.description}</span>
-        </li>
-      `
-    )
-    .join("");
-}
-
-function renderArchive() {
-  const target = document.getElementById("archive-grid");
-  if (!target) return;
-
-  if (notionResources.length === 0) {
-    target.innerHTML = `
-      <article class="archive-empty">
-        <span class="archive-empty__badge">Ready For Notion</span>
-        <h3>추천 아카이브가 여기에 채워집니다.</h3>
-        <p>AI 부업, 면접, 커리어, 실전 사용 아카이브를 이 영역에서 바로 둘러볼 수 있도록 준비 중입니다.</p>
-      </article>
-    `;
-    return;
-  }
-
-  target.innerHTML = notionResources.map((item) => createCard(item, "archive-card")).join("");
-}
-
-function matchesQuery(item, query) {
-  if (!query) return true;
-  const normalized = query.trim().toLowerCase();
-  if (!normalized) return true;
-  return [item.title, item.description, item.tag, item.type]
-    .filter(Boolean)
-    .some((value) => value.toLowerCase().includes(normalized));
-}
-
-function renderFilters() {
+  const search = document.getElementById("collection-search");
   const filterBar = document.getElementById("filter-bar");
-  if (!filterBar) return;
-
-  const order = ["all", "interview", "career", "ai-side", "social", "project", "contact"];
-  filterBar.innerHTML = order
-    .map(
-      (key, index) => `
-        <button
-          class="filter-button${index === 0 ? " is-active" : ""}"
-          type="button"
-          data-filter="${key}"
-        >
-          ${categoryLabels[key]}
-        </button>
-      `
-    )
-    .join("");
-}
-
-function renderCollection() {
-  const target = document.getElementById("collection-grid");
-  const moreButton = document.getElementById("collection-more");
-  if (!target) return;
-
-  const filteredItems =
-    appState.filter === "all"
-      ? allLinks
-      : allLinks.filter((item) => item.category === appState.filter);
-
-  const visibleItems = filteredItems.filter((item) => matchesQuery(item, appState.query));
-
-  if (visibleItems.length === 0) {
-    target.innerHTML = `
-      <article class="archive-empty">
-        <span class="archive-empty__badge">No Results</span>
-        <h3>조건에 맞는 링크가 없습니다.</h3>
-        <p>필터를 바꾸거나 검색어를 지우고 다시 확인해보세요.</p>
-      </article>
-    `;
-    if (moreButton) {
-      moreButton.hidden = true;
-    }
-    return;
-  }
-
+  const buttons = [...filterBar.querySelectorAll("[data-filter]")];
+  const categories = new Set(buttons.map((button) => button.dataset.filter));
+  const rows = [...document.querySelectorAll(".resource")].map((element) => ({
+    element,
+    categories: element.dataset.category.split(" "),
+    searchText: normalize(`${element.textContent} ${element.dataset.keywords || ""}`),
+  }));
+  const more = document.getElementById("collection-more");
+  const reset = document.getElementById("collection-reset");
+  const count = document.getElementById("result-count");
+  const empty = document.getElementById("collection-empty");
   const limit = 6;
-  const shouldCollapse = visibleItems.length > limit;
-  const renderedItems =
-    shouldCollapse && !appState.collectionExpanded ? visibleItems.slice(0, limit) : visibleItems;
+  const state = { filter: "all", query: "", expanded: false };
+  let searchTimer;
 
-  target.innerHTML = renderedItems.map(createCollectionCard).join("");
-
-  if (moreButton) {
-    moreButton.hidden = !shouldCollapse;
-    moreButton.textContent =
-      shouldCollapse && !appState.collectionExpanded ? "더 보기" : "접기";
-  }
-}
-
-function syncUrlState() {
-  const url = new URL(window.location.href);
-
-  if (appState.filter === "all") {
-    url.searchParams.delete("tab");
-  } else {
-    url.searchParams.set("tab", appState.filter);
+  function normalize(value) {
+    return value.normalize("NFKC").toLocaleLowerCase("ko-KR").replace(/\s+/g, " ").trim();
   }
 
-  if (appState.query) {
-    url.searchParams.set("q", appState.query);
-  } else {
-    url.searchParams.delete("q");
+  function render() {
+    const terms = normalize(state.query).split(" ").filter(Boolean);
+    const matches = rows.filter((row) =>
+      (state.filter === "all" || row.categories.includes(state.filter)) &&
+      terms.every((term) => row.searchText.includes(term))
+    );
+    const visible = new Set(state.expanded ? matches : matches.slice(0, limit));
+    rows.forEach((row) => { row.element.hidden = !visible.has(row); });
+    buttons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.filter === state.filter));
+    });
+    const label = buttons.find((button) => button.dataset.filter === state.filter).textContent;
+    count.textContent = `${label} ${matches.length}개${matches.length > visible.size ? ` · ${visible.size}개 표시` : ""}`;
+    empty.hidden = matches.length !== 0;
+    reset.hidden = state.filter === "all" && !state.query;
+    more.hidden = matches.length <= limit;
+    more.setAttribute("aria-expanded", String(state.expanded));
+    more.textContent = state.expanded ? "간추려 보기 ↑" : `나머지 ${matches.length - limit}개 링크 더 보기 ↓`;
   }
 
-  window.history.replaceState({}, "", url);
-}
-
-function setActiveFilter(filter) {
-  const filterBar = document.getElementById("filter-bar");
-  if (!filterBar) return;
-
-  appState.filter = filter;
-  appState.collectionExpanded = false;
-
-  filterBar
-    .querySelectorAll(".filter-button")
-    .forEach((node) => node.classList.toggle("is-active", node.dataset.filter === filter));
-
-  renderCollection();
-  syncUrlState();
-}
-
-function hydrateInitialState() {
-  const url = new URL(window.location.href);
-  const requestedFilter = url.searchParams.get("tab");
-  const requestedQuery = url.searchParams.get("q");
-
-  if (requestedFilter && categoryLabels[requestedFilter]) {
-    appState.filter = requestedFilter;
+  function writeUrl(mode = "replace") {
+    const url = new URL(window.location.href);
+    if (state.filter === "all") url.searchParams.delete("tab");
+    else url.searchParams.set("tab", state.filter);
+    if (state.query) url.searchParams.set("q", state.query);
+    else url.searchParams.delete("q");
+    if (url.href !== window.location.href) {
+      window.history[mode === "push" ? "pushState" : "replaceState"](null, "", url);
+    }
   }
 
-  if (requestedQuery) {
-    appState.query = requestedQuery;
+  function readUrl() {
+    const params = new URLSearchParams(window.location.search);
+    state.filter = categories.has(params.get("tab")) ? params.get("tab") : "all";
+    state.query = (params.get("q") || "").slice(0, 120);
+    state.expanded = false;
+    search.value = state.query;
+    render();
   }
-}
 
-function bindCollectionFilters() {
-  const filterBar = document.getElementById("filter-bar");
-  if (!filterBar) return;
+  function clearSearch() {
+    clearTimeout(searchTimer);
+    state.filter = "all";
+    state.query = "";
+    state.expanded = false;
+    search.value = "";
+    writeUrl("push");
+    render();
+    search.focus({ preventScroll: true });
+  }
 
   filterBar.addEventListener("click", (event) => {
     const button = event.target.closest("[data-filter]");
-    if (!button) return;
-    setActiveFilter(button.dataset.filter);
+    if (!button || state.filter === button.dataset.filter) return;
+    clearTimeout(searchTimer);
+    state.filter = button.dataset.filter;
+    state.expanded = false;
+    writeUrl("push");
+    render();
+  });
+  search.addEventListener("input", () => {
+    state.query = search.value.trim();
+    state.expanded = false;
+    render();
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => writeUrl(), 200);
+  });
+  search.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && search.value) {
+      event.preventDefault();
+      clearTimeout(searchTimer);
+      search.value = "";
+      state.query = "";
+      state.expanded = false;
+      writeUrl();
+      render();
+    }
+  });
+  reset.addEventListener("click", clearSearch);
+  document.getElementById("empty-reset").addEventListener("click", clearSearch);
+  more.addEventListener("click", () => {
+    state.expanded = !state.expanded;
+    render();
+    if (state.expanded) {
+      const revealed = rows.filter((row) => !row.element.hidden)[limit];
+      if (revealed) revealed.element.focus({ preventScroll: true });
+    } else {
+      more.scrollIntoView({ block: "nearest" });
+    }
+  });
+  window.addEventListener("popstate", () => {
+    clearTimeout(searchTimer);
+    readUrl();
+  });
+  document.addEventListener("keydown", (event) => {
+    const editing = event.target.closest("input, textarea, select, [contenteditable]");
+    if (event.key === "/" && !editing && !event.ctrlKey && !event.metaKey && !event.altKey && !event.isComposing) {
+      event.preventDefault();
+      search.focus();
+    }
   });
 
-  document.querySelectorAll("[data-filter-link]").forEach((link) => {
-    link.addEventListener("click", () => {
-      setActiveFilter(link.dataset.filterLink);
-    });
-  });
-}
-
-function bindCollectionSearch() {
-  const input = document.getElementById("collection-search");
-  if (!input) return;
-
-  input.value = appState.query;
-  input.addEventListener("input", (event) => {
-    appState.query = event.target.value.trim();
-    appState.collectionExpanded = false;
-    renderCollection();
-    syncUrlState();
-  });
-}
-
-function bindCollectionMore() {
-  const button = document.getElementById("collection-more");
-  if (!button) return;
-
-  button.addEventListener("click", () => {
-    appState.collectionExpanded = !appState.collectionExpanded;
-    renderCollection();
-  });
-}
-
-function renderProfileSummary() {
-  const channelCount = document.getElementById("channel-count");
-  const archiveCount = document.getElementById("archive-count");
-
-  if (channelCount) {
-    channelCount.textContent = String(channelLinks.length);
+  // Keep links shared from earlier versions pointing to the unified library.
+  const legacySections = new Set(["#archive", "#recent-updates", "#navigator"]);
+  function resolveLegacySection() {
+    if (!legacySections.has(window.location.hash)) return;
+    const url = new URL(window.location.href);
+    url.hash = "collection";
+    window.history.replaceState(null, "", url);
+    document.getElementById("collection").scrollIntoView();
   }
-
-  if (archiveCount) {
-    archiveCount.textContent = String(notionResources.length);
-  }
-}
-
-function renderRecentUpdates() {
-  const target = document.getElementById("recent-grid");
-  if (!target) return;
-
-  const recentItems = [notionResources[0], notionResources[1], projects[0]].filter(Boolean);
-  target.innerHTML = recentItems.map(createRecentCard).join("");
-}
-
-hydrateInitialState();
-renderIdentity();
-renderProfileSummary();
-renderList("channel-grid", channelLinks, "card");
-document.getElementById("project-grid").innerHTML = projects.map(createProjectCard).join("");
-renderArchive();
-renderRecentUpdates();
-renderFilters();
-bindCollectionFilters();
-bindCollectionSearch();
-bindCollectionMore();
-setActiveFilter(appState.filter);
-
-document.getElementById("current-year").textContent = new Date().getFullYear();
+  window.addEventListener("hashchange", resolveLegacySection);
+  document.querySelector(".collection-controls").hidden = false;
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+  readUrl();
+  resolveLegacySection();
+})();

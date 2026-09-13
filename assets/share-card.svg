@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#f6f7f2"/>
+  <path d="M890 0h310v630H890z" fill="#e8eddd"/>
+  <circle cx="1090" cy="165" r="165" fill="#dce6c8"/>
+  <rect x="64" y="49" width="51" height="51" rx="5" fill="#202e29"/>
+  <text x="70" y="86" fill="#f6f7f2" font-family="Georgia,serif" font-size="37">jh.</text>
+  <text x="131" y="72" fill="#202e29" font-family="Malgun Gothic,sans-serif" font-size="20" font-weight="700" letter-spacing="2">JH SOFT LABS</text>
+  <text x="132" y="96" fill="#657169" font-family="Malgun Gothic,sans-serif" font-size="14">BY HOEMON</text>
+  <path d="M64 131h1072" stroke="#cfd8c7"/>
+  <text x="64" y="239" fill="#202e29" font-family="Malgun Gothic,sans-serif" font-size="57" font-weight="700" letter-spacing="-3">쓸모 있는 것을 만들고,</text>
+  <text x="64" y="321" fill="#315d47" font-family="Malgun Gothic,sans-serif" font-size="57" font-weight="700" letter-spacing="-3">그 과정을 나눕니다.</text>
+  <text x="67" y="386" fill="#657169" font-family="Malgun Gothic,sans-serif" font-size="23">개발자 회몬의 프로젝트와 실전 기록</text>
+  <rect x="64" y="446" width="282" height="72" rx="6" fill="#dfeaf0"/>
+  <rect x="364" y="446" width="282" height="72" rx="6" fill="#eae3d9"/>
+  <rect x="664" y="446" width="282" height="72" rx="6" fill="#dfe9d8"/>
+  <g fill="#202e29" font-family="Malgun Gothic,sans-serif" font-size="21" font-weight="700"><text x="89" y="490">Interviewer Lens</text><text x="389" y="490">Deep Constellation</text><text x="689" y="490">Column Harbor</text></g>
+  <text x="67" y="578" fill="#526348" font-family="Malgun Gothic,sans-serif" font-size="20">jhsoftlabs.com</text>
+  <text x="922" y="578" fill="#657a54" font-family="Georgia,serif" font-size="30" font-style="italic">Hoemon.</text>
+</svg>
