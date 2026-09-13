@@ -3,10 +3,11 @@
 개발자 회몬의 프로젝트와 글, 채널을 모은 정적 홈페이지.
 
 - 운영 주소: https://jhsoftlabs.com/
-- 기술: HTML, CSS, vanilla JavaScript. 설치나 빌드 단계가 없습니다.
-- 호스팅: 기존 Vercel `mypages` 프로젝트.
+- 기술: HTML, CSS, vanilla JavaScript. 런타임 의존성이나 서버 API가 없습니다.
+- Pages 프로젝트: `jhsoftlabs`, https://jhsoftlabs.pages.dev/ (GitHub `main` 자동 배포).
+- 기존 Vercel `mypages` 프로젝트는 복구용으로 보존합니다.
 
-Cloudflare Pages 이전 준비는 `docs/cloudflare-pages-migration.md`를 참고합니다. 아직 운영 호스팅과 DNS를 변경하지 않았습니다. Pages용 검증/배포본은 `node scripts/verify-pages.mjs`로 만들며, `.pages-dist`만 배포합니다. Vercel 원본은 복구용으로 유지합니다.
+Cloudflare Pages 이전 상태와 DNS 복구 절차는 `docs/cloudflare-pages-migration.md`를 참고합니다. Pages 임시 주소 배포와 네임서버 변경은 완료했고 메인 도메인 연결은 활성화 확인 후 진행합니다. Pages용 검증/배포본은 `node scripts/verify-pages.mjs`로 만들며, `.pages-dist`만 배포합니다.
 
 ## 로컬 확인
 
@@ -39,7 +40,7 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 - 입문 경로는 네이티브 `details/summary`로 구성해 스크립트 없이도 사용할 수 있습니다. 기존 링크와 목적별 순서를 유지합니다.
 - `stories/column-harbor.html`은 확인된 구현을 설명하는 정적 제작기입니다. 레이아웃은 `stories.css`, 공통 테마는 `styles.css`를 사용합니다.
 - 제작기를 추가할 때 제목·설명·canonical·공유 메타·JSON-LD·작성일·사이트맵을 함께 갱신합니다. 게시/수정일은 실제 변경 날짜만 기록합니다.
-- 상세 제작기에 홈페이지용 `script.js`를 로딩하지 않습니다. Vercel 분석은 기존 페이지뷰 수집만 유지하고 유료 사용자 정의 이벤트는 추가하지 않았습니다.
+- 상세 제작기에 홈페이지용 `script.js`를 로딩하지 않습니다. Pages에서는 Cloudflare Web Analytics로 페이지뷰를 수집합니다. Vercel 전용 분석은 Pages 빌드 출력에서만 제거하며 사용자 정의 이벤트는 추가하지 않습니다.
 
 ## 실험 기록과 무료 양식
 
@@ -64,12 +65,12 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 
 ## 배포 전
 
-테스트와 320px/390px/768px/1440px 브라우저 확인 후 기존 프로젝트에 배포합니다.
+검증과 화면 확인 후 변경을 커밋하고 `main`에 push하면 Cloudflare Pages가 자동 배포합니다. 빌드 명령은 아래와 같고 Node.js 22, 출력 폴더는 `.pages-dist`입니다.
 
 ```powershell
-vercel --prod --yes
+node scripts/verify-pages.mjs
 ```
 
-DNS는 별도 변경할 필요가 없습니다. `ads.txt`, AdSense 소유 확인 메타, Vercel Analytics/Speed Insights 스크립트를 유지합니다. 소셜 공유 이미지는 `assets/share-card.svg`의 래스터 버전인 `assets/og-card.png`입니다.
+일상적인 코드 배포에서는 DNS를 변경하지 않습니다. `ads.txt`와 AdSense 소유 확인 메타를 유지합니다. Pages Web Analytics는 대시보드의 Metrics에서 활성화하며 다음 배포에 자동 삽입됩니다. 기존 Vercel 통계가 Cloudflare로 이관되는 것은 아닙니다. 소셜 공유 이미지는 `assets/share-card.svg`의 래스터 버전인 `assets/og-card.png`입니다.
 
 기존 개선 검증은 `docs/enhancement-plan-2026-09-13.md`, 새 콘텐츠 릴리즈 절차는 `docs/fieldnotes-release-2026-09-13.md`를 참고하세요.

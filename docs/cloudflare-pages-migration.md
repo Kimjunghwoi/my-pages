@@ -3,8 +3,10 @@
 ## 상태
 
 - 대상: 메인 홈페이지 `jhsoftlabs.com`, 저장소 `Kimjunghwoi/my-pages`.
-- 현재 운영은 Vercel이며 아직 DNS와 네임서버를 변경하지 않았습니다.
-- Pages용 정적 배포본 생성과 자동 검증을 준비했습니다. 외부 배포 성공과 도메인 전환 완료는 별도로 확인해야 합니다.
+- Pages 프로젝트 `jhsoftlabs` 배포 성공: https://jhsoftlabs.pages.dev/
+- 첫 배포: commit `83b12aa14ab05603d8ddbae8383452dba5a19fdc`, deployment `9068634d-e715-4e66-8ccf-eacc25b338fc`.
+- Porkbun 네임서버를 `chad.ns.cloudflare.com`, `leah.ns.cloudflare.com`으로 변경하고 재조회했습니다. 1.1.1.1 및 8.8.8.8에서도 새 NS가 반환됩니다.
+- 메인 apex는 아직 Vercel A `76.76.21.21`을 유지합니다. Cloudflare zone 활성화 후 Pages 사용자 도메인 연결과 HTTPS 확인이 남아 있습니다.
 - `csv`, `image`, `interview`의 앱 배포는 이 작업에 포함되지 않습니다.
 
 ## 중요한 범위 차이
@@ -33,7 +35,7 @@ Cloudflare Pages 설정:
 
 배포 출력만 업로드합니다. 저장소 루트나 `.vercelignore`에 의존해 공개 범위를 결정하면 안 됩니다. `docs`, `tests`, `.git`, `.github`, `.vercel`, `scripts`, `outputs`는 배포본에 포함되지 않습니다. 템플릿 Markdown은 의도된 공개 다운로드입니다.
 
-기존 Vercel 원본의 HTML은 변경하지 않습니다. 빌드가 Pages 출력에서만 Vercel Analytics/Speed Insights를 제거합니다. 기존 통계는 Vercel에 남고 새 호스팅의 조회수 수집은 별도로 설정하기 전까지 중단됩니다. AdSense 소유 확인과 `ads.txt`는 유지합니다.
+기존 Vercel 원본의 HTML은 변경하지 않습니다. 빌드가 Pages 출력에서만 Vercel Analytics/Speed Insights를 제거합니다. 기존 통계는 Vercel에 남습니다. Pages 프로젝트의 무료 Web Analytics를 활성화했고 다음 배포에서 스니펫이 자동 삽입됩니다. 통계 이관이나 클릭 이벤트 추가를 의미하지 않습니다. AdSense 소유 확인과 `ads.txt`는 유지합니다.
 
 Pages는 `/stories/example.html`을 `/stories/example`로 리디렉션합니다. 출력의 내부 링크, canonical, OG URL, JSON-LD, sitemap을 이 기본 동작에 맞춥니다. 이미 공유된 `.html` 경로도 실제 응답을 확인해야 합니다. 디렉터리 URL(`/stories/`, `/templates/`, `/tools/release-check/`)과 앵커는 유지합니다. 최상위 `404.html`로 잘못된 주소가 홈페이지 200 응답으로 처리되지 않게 합니다.
 
@@ -61,6 +63,18 @@ Pages는 `/stories/example.html`을 `/stories/example`로 리디렉션합니다.
 
 전체 16개 레코드는 `outputs/dns-before-cloudflare-2026-09-13.zone`에 별도로 보관했습니다(웹 배포 및 Git 제외). 루트 SPF가 중복되어 있으므로 새 DNS에는 두 발송처를 포함한 `v=spf1 include:amazonses.com include:_spf.porkbun.com ~all` 한 개만 유지합니다. 발송처를 추가하거나 제거하는 변경은 아닙니다. 공개 DNS DS 조회에서 DS는 반환되지 않았습니다.
 
+작업 도중 별도 CSV 이전으로 Porkbun의 csv 대상이 `column-harbor-jhsoftlabs.pages.dev`로 변경됐습니다. 네임서버 전환 전에 전체 DNS를 다시 읽어 최신 대상만 반영했습니다. 최종 원본은 `outputs/dns-immediately-before-switch-2026-09-13.zone`, Cloudflare 복제본은 `outputs/dns-cloudflare-import-2026-09-13.zone`에 있습니다. 원래 16개 중 중복 SPF 하나를 제외한 15개를 보존했습니다.
+
+## 확인 결과
+
+- 로컬 및 GitHub CI: 53개 테스트 통과. 공개 파일 35개, 로컬 기준 613,454bytes.
+- Pages HTTP: 공개 파일, 다운로드, sitemap, ads.txt, 기존 글 9개의 308 리디렉션과 query 유지, 없는 주소와 비공개 경로의 404 등 48개 확인 통과.
+- SVG 3개는 Windows CRLF와 Git Linux LF 차이만 있습니다. 원본 바이트를 재조회하여 줄바꿈 정규화 후 동일함을 확인했습니다. 직접 요청한 `/404` 파일은 200이지만 존재하지 않는 임의 주소는 정상 404입니다.
+- 브라우저: 프로젝트 카드, 데모 전환, 검색/필터 조합, 점검 도구 페이지 진입 확인.
+- 양쪽 할당 네임서버에서 15개 레코드씩 30개 DNS 대조 통과. CNAME은 DNS only로 유지했습니다.
+- 네임서버 변경 후 메인, csv, image, interview의 HTTPS 200 확인. 메일은 MX/SPF/DKIM/DMARC를 대조했으며 실제 발송/수신 테스트를 수행한 것은 아닙니다.
+- 상세 근거는 `outputs/pages-live-verification-2026-09-13-final.json`, `outputs/dns-authoritative-verification-2026-09-13.json`, `outputs/post-nameserver-http-2026-09-13.json`에 보관했습니다.
+
 ## 복구
 
 호스팅 전환 이후 문제가 생기면 기존 Vercel 배포/도메인 연결을 보존한 상태에서 Cloudflare의 apex를 기록해 둔 Vercel 대상(현재 A `76.76.21.21`)으로 되돌리고 DNS only로 설정합니다. 다른 서비스 레코드는 건드리지 않습니다. 네임서버 변경 자체에 문제가 있으면 저장해 둔 원래 네임서버를 Porkbun에서 복구하되 DNS 캐시로 복구가 즉시 완료되지는 않을 수 있습니다.
@@ -74,3 +88,4 @@ Pages는 `/stories/example.html`을 `/stories/example`로 리디렉션합니다.
 - 정적 라우팅과 404: https://developers.cloudflare.com/pages/configuration/serving-pages/
 - 한도: https://developers.cloudflare.com/pages/platform/limits/
 - 외부 DNS에서 Porkbun 메일 유지: https://kb.porkbun.com/article/47-how-to-use-porkbun-email-when-your-dns-is-hosted-elsewhere
+- Pages 무료 방문 통계: https://developers.cloudflare.com/pages/how-to/web-analytics/
