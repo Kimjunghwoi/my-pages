@@ -63,6 +63,10 @@ h1 > span { color: var(--green); }
 .fieldnotes-intro h2 { font-size: 29px; line-height: 1.6; letter-spacing: -1px; margin: 18px 0 12px; }
 .fieldnotes-intro > p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.9; word-break: keep-all; }
 .fieldnotes-template { display: inline-flex; align-items: center; gap: 15px; min-height: 48px; margin-top: 18px; color: var(--green); font-size: 13px; font-weight: 700; border-bottom: 1px solid #a8b69f; }
+.note-tool { display: flex; flex-direction: column; gap: 10px; padding: 20px; margin-top: 24px; border-left: 3px solid #7f9564; background: linear-gradient(120deg, #e8eddd, #f0f3e8); }
+.note-tool strong { font-size: 17px; font-weight: 600; line-height: 1.7; letter-spacing: -.5px; word-break: keep-all; }
+.note-tool > span:last-child { font-size: 13px; line-height: 1.8; color: #536649; word-break: keep-all; }
+.note-tool:hover strong { text-decoration: underline; text-underline-offset: 5px; }
 .fieldnotes-list { list-style: none; margin: 0; padding: 0; }
 .fieldnotes-list li + li { border-top: 1px solid var(--line); }
 .fieldnotes-list a { position: relative; display: flex; flex-direction: column; padding: 20px 38px 23px 0; gap: 9px; }

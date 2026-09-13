@@ -18,6 +18,22 @@
 .story-comparison small { font-size: 12px; line-height: 1.7; color: #53644b; }
 .comparison-arrow { align-self: center; font-size: 27px; color: #7b8c6a; }
 .story-comparison figcaption { grid-column: 1 / -1; padding-top: 17px; border-top: 1px solid #cfd9c3; font-size: 12px; color: #607152; line-height: 1.8; }
+.verification-board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 28px; border: 1px solid var(--line); background: #fff; }
+.verification-lane { padding: 30px; min-width: 0; }
+.verification-lane code { display: block; margin-top: 18px; font: 600 clamp(17px, 2.1vw, 26px)/1.5 Consolas, monospace; white-space: nowrap; }
+.verification-lane code + code { margin-top: 8px; }
+.verification-lane code span { padding: 2px 3px; background: #dfebd0; color: #365326; }
+.verification-lane p { margin-top: 18px; font-size: 13px; line-height: 1.8; color: var(--muted); word-break: keep-all; }
+.verification-lane--changed { background: #f5efe4; border-left: 1px solid var(--line); }
+.verification-lane--changed code span { background: #f1dac1; color: #82491a; }
+.verification-board figcaption { grid-column: 1 / -1; padding: 16px 30px; font-size: 12px; line-height: 1.8; color: var(--muted); border-top: 1px solid var(--line); }
+@media (max-width: 580px) {
+  .verification-board { grid-template-columns: minmax(0, 1fr); }
+  .verification-lane { padding: 23px 20px; }
+  .verification-lane code { font-size: clamp(17px, 5.1vw, 24px); }
+  .verification-lane--changed { border-left: 0; border-top: 1px solid var(--line); }
+  .verification-board figcaption { padding-inline: 20px; }
+}
 .story-layout { display: grid; grid-template-columns: 195px minmax(0, 1fr); gap: 50px; margin-top: 55px; }
 .story-toc { position: sticky; top: 120px; align-self: start; display: flex; flex-direction: column; gap: 2px; font-size: 12px; }
 .story-toc > span { font-weight: 600; margin-bottom: 12px; }

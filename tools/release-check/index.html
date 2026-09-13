@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-adsense-account" content="ca-pub-6113316314236430" />
+  <meta name="theme-color" content="#f6f7f2" />
+  <title>배포 전, 여섯 가지 작업 점검 | 회몬 · JH Soft Labs</title>
+  <meta name="description" content="AI 서비스, 웹사이트, 실무 가이드의 실패 상황을 직접 점검하세요. 상태를 분류하고 Markdown으로 내려받는 무료 도구. 선택값은 서버 전송·저장 없이 이 탭에서만 유지됩니다." />
+  <link rel="canonical" href="https://jhsoftlabs.com/tools/release-check/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="배포 전, 여섯 가지 작업 점검" />
+  <meta property="og:description" content="AI 서비스, 웹사이트, 실무 가이드의 실패 상황을 직접 점검하세요. 상태를 분류하고 Markdown으로 내려받는 무료 도구. 선택값은 서버 전송·저장 없이 이 탭에서만 유지됩니다." />
+  <meta property="og:url" content="https://jhsoftlabs.com/tools/release-check/" />
+  <meta property="og:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <meta property="og:image:alt" content="개발자 회몬의 프로젝트와 작업 기록" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="배포 전, 여섯 가지 작업 점검" />
+  <meta name="twitter:description" content="AI 서비스, 웹사이트, 실무 가이드의 실패 상황을 직접 점검하세요. 상태를 분류하고 Markdown으로 내려받는 무료 도구. 선택값은 서버 전송·저장 없이 이 탭에서만 유지됩니다." />
+  <meta name="twitter:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../stories.css" />
+
+  <link rel="stylesheet" href="./checklist.css" />
+  <script defer src="./checklist.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header"><div class="header-inner shell">
+    <a class="wordmark" href="../../" aria-label="JH Soft Labs 홈"><span class="monogram" aria-hidden="true">jh<span>.</span></span><span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span></a>
+    <nav class="main-nav" aria-label="주요 메뉴"><a href="../../#projects">프로젝트</a><a href="../../#fieldnotes">실험 기록</a><a href="../../templates/">무료 템플릿</a><a href="../../#about">소개</a></nav>
+    <a class="header-contact" href="../../#collection">모든 글·자료 <span aria-hidden="true">→</span></a>
+  </div></header>
+  <main id="main" class="story-shell check-shell" tabindex="-1">
+    <nav class="story-breadcrumb" aria-label="현재 위치"><a href="../../">홈</a><span aria-hidden="true">/</span><a href="../../templates/">무료 템플릿</a><span aria-hidden="true">/</span><span aria-current="page">작업 점검 도구</span></nav>
+    <header class="story-header"><p class="eyebrow">A SMALL TOOL FOR YOUR NEXT RELEASE</p><h1>만들었다면,<br /><span>실패할 때도 살펴보기.</span></h1><p class="story-intro">내 작업을 여섯 가지 질문으로 점검하고, 확인할 일을 Markdown으로 가져가세요.</p></header>
+    <div class="check-notice"><strong>직접 점검 · 서버 전송·저장 없음</strong><p>자동 검사가 아닙니다. 새로고침하면 선택이 사라지니, 나가기 전에 기록을 내려받으세요.</p></div>
+    <div class="check-kind" role="group" aria-label="점검할 작업 선택" data-check-controls hidden>
+      <button type="button" data-check-kind="ai" aria-pressed="true">AI 서비스</button>
+      <button type="button" data-check-kind="site" aria-pressed="false">웹사이트·콘텐츠</button>
+      <button type="button" data-check-kind="guide" aria-pressed="false">실무 가이드</button>
+    </div>
+    <a class="check-summary-jump" href="#check-summary-title" data-check-controls hidden>집계·내보내기로 이동 <span aria-hidden="true">↓</span></a>
+    <noscript><p class="check-noscript">JavaScript가 꺼져 있어 아래 세 점검표를 읽기용으로 표시합니다. <a href="../../templates/">Markdown 전체 양식</a>을 내려받아 기록할 수 있습니다.</p></noscript>
+    <div class="check-layout">
+      <div id="check-panels">
+        <section class="check-panel" data-check-panel="ai" aria-labelledby="ai-title">
+          <header class="check-panel-heading"><p class="eyebrow">REQUEST → RESULT</p><h2 id="ai-title">AI 서비스</h2><p>응답이 돌아온 뒤에도 결과와 사용량이 일치하는지 확인합니다.</p></header>
+          <ol class="check-items">
+            <li data-check-item="ai-duplicate">
+              <span class="check-number" aria-hidden="true">01</span>
+              <div class="check-copy"><h3>같은 요청을 두 번 보내면?</h3><p id="ai-duplicate-help">격리된 환경에서 같은 요청을 다시 보내고, 실행과 사용량이 중복 반영되지 않는지 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="ai-duplicate-status"><span class="sr-only">같은 요청을 두 번 보내면? 점검 상태</span><select id="ai-duplicate-status" aria-describedby="ai-duplicate-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="ai-atomic">
+              <span class="check-number" aria-hidden="true">02</span>
+              <div class="check-copy"><h3>저장 도중 실패하면?</h3><p id="ai-atomic-help">결과와 사용량 중 일부만 확정되는 상태가 없는지, 실패 후 다시 조회해 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="ai-atomic-status"><span class="sr-only">저장 도중 실패하면? 점검 상태</span><select id="ai-atomic-status" aria-describedby="ai-atomic-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="ai-late">
+              <span class="check-number" aria-hidden="true">03</span>
+              <div class="check-copy"><h3>완료 응답만 유실되면?</h3><p id="ai-late-help">새 작업을 무조건 시작하지 않고 기존 결과를 확인할 수 있는지 살펴보세요.</p></div>
+              <label class="check-status" data-status-control hidden for="ai-late-status"><span class="sr-only">완료 응답만 유실되면? 점검 상태</span><select id="ai-late-status" aria-describedby="ai-late-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="ai-expiry">
+              <span class="check-number" aria-hidden="true">04</span>
+              <div class="check-copy"><h3>작업이 중간에 멈추면?</h3><p id="ai-expiry-help">기다림에 끝이 있는지, 만료 안내와 안전하게 다시 시도할 경로가 있는지 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="ai-expiry-status"><span class="sr-only">작업이 중간에 멈추면? 점검 상태</span><select id="ai-expiry-status" aria-describedby="ai-expiry-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="ai-access">
+              <span class="check-number" aria-hidden="true">05</span>
+              <div class="check-copy"><h3>다른 계정으로 바뀌면?</h3><p id="ai-access-help">이전 사용자의 응답이나 기록이 화면에 돌아오지 않는지 합성 계정으로 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="ai-access-status"><span class="sr-only">다른 계정으로 바뀌면? 점검 상태</span><select id="ai-access-status" aria-describedby="ai-access-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="ai-budget">
+              <span class="check-number" aria-hidden="true">06</span>
+              <div class="check-copy"><h3>AI 요청이 제한되면?</h3><p id="ai-budget-help">일시 중지·예산 거절을 사용자에게 설명하고, 실패한 요청의 사용량 처리 기준을 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="ai-budget-status"><span class="sr-only">AI 요청이 제한되면? 점검 상태</span><select id="ai-budget-status" aria-describedby="ai-budget-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+          </ol>
+          <div class="check-related"><a href="../../stories/ai-retry-safety.html">이 질문이 나온 작업 기록 <span aria-hidden="true">→</span></a><a href="../../templates/#ai-release">근거까지 적는 전체 양식 <span aria-hidden="true">→</span></a></div>
+        </section>
+        <section class="check-panel" data-check-panel="site" aria-labelledby="site-title">
+          <header class="check-panel-heading"><p class="eyebrow">ASSET → INQUIRY</p><h2 id="site-title">웹사이트·콘텐츠</h2><p>파일이 있는 것과 방문자가 사용할 수 있는 것을 구분합니다.</p></header>
+          <ol class="check-items">
+            <li data-check-item="site-asset">
+              <span class="check-number" aria-hidden="true">01</span>
+              <div class="check-copy"><h3>실제 주소에서도 자산이 열리나요?</h3><p id="site-asset-help">이미지의 비어 있지 않은 본문과 표시, 다운로드 파일을 공개 주소에서 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="site-asset-status"><span class="sr-only">실제 주소에서도 자산이 열리나요? 점검 상태</span><select id="site-asset-status" aria-describedby="site-asset-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="site-empty">
+              <span class="check-number" aria-hidden="true">02</span>
+              <div class="check-copy"><h3>입력을 비우면 어떻게 되나요?</h3><p id="site-empty-help">빈 수량·잘못된 값이 임의의 기본 주문으로 바뀌지 않는지 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="site-empty-status"><span class="sr-only">입력을 비우면 어떻게 되나요? 점검 상태</span><select id="site-empty-status" aria-describedby="site-empty-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="site-context">
+              <span class="check-number" aria-hidden="true">03</span>
+              <div class="check-copy"><h3>새 탭에서도 선택이 이어지나요?</h3><p id="site-context-help">샘플·상품 선택이 새 탭과 수정 왕복에서 유지되는지, 연락처가 URL에 없는지 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="site-context-status"><span class="sr-only">새 탭에서도 선택이 이어지나요? 점검 상태</span><select id="site-context-status" aria-describedby="site-context-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="site-failure">
+              <span class="check-number" aria-hidden="true">04</span>
+              <div class="check-copy"><h3>문의 전송이 실패하면?</h3><p id="site-failure-help">모의 오류·시간 초과에서 입력 보존과 중복 제출 방지, 대체 문의 경로를 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="site-failure-status"><span class="sr-only">문의 전송이 실패하면? 점검 상태</span><select id="site-failure-status" aria-describedby="site-failure-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="site-copy">
+              <span class="check-number" aria-hidden="true">05</span>
+              <div class="check-copy"><h3>샘플의 성격을 정확히 설명하나요?</h3><p id="site-copy-help">AI 예시와 실제 고객 결과를 구분하고, 게시 문구와 납품 범위가 서로 맞는지 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="site-copy-status"><span class="sr-only">샘플의 성격을 정확히 설명하나요? 점검 상태</span><select id="site-copy-status" aria-describedby="site-copy-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="site-public">
+              <span class="check-number" aria-hidden="true">06</span>
+              <div class="check-copy"><h3>공개할 파일만 들어 있나요?</h3><p id="site-public-help">내부 문서·원본 자료·비밀키를 제외하고 공개 빌드만으로 사이트가 동작하는지 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="site-public-status"><span class="sr-only">공개할 파일만 들어 있나요? 점검 상태</span><select id="site-public-status" aria-describedby="site-public-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+          </ol>
+          <div class="check-related"><a href="../../stories/salon-publishing.html">이 질문이 나온 작업 기록 <span aria-hidden="true">→</span></a><a href="../../templates/#content-release">근거까지 적는 전체 양식 <span aria-hidden="true">→</span></a></div>
+        </section>
+        <section class="check-panel" data-check-panel="guide" aria-labelledby="guide-title">
+          <header class="check-panel-heading"><p class="eyebrow">EXPECTED → OBSERVED</p><h2 id="guide-title">실무 가이드</h2><p>설명, 샘플, 실제 프로그램의 결과가 같은 이야기를 하는지 확인합니다.</p></header>
+          <ol class="check-items">
+            <li data-check-item="guide-sample">
+              <span class="check-number" aria-hidden="true">01</span>
+              <div class="check-copy"><h3>샘플에 문제가 드러나나요?</h3><p id="guide-sample-help">합성 입력만으로 설명한 오류와 개선 결과를 비교할 수 있는지 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="guide-sample-status"><span class="sr-only">샘플에 문제가 드러나나요? 점검 상태</span><select id="guide-sample-status" aria-describedby="guide-sample-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="guide-expected">
+              <span class="check-number" aria-hidden="true">02</span>
+              <div class="check-copy"><h3>예상 결과를 먼저 적었나요?</h3><p id="guide-expected-help">실행 전에 예상한 값과 실제 결과를 나란히 기록하고, 차이가 난 조건을 남기세요.</p></div>
+              <label class="check-status" data-status-control hidden for="guide-expected-status"><span class="sr-only">예상 결과를 먼저 적었나요? 점검 상태</span><select id="guide-expected-status" aria-describedby="guide-expected-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="guide-type">
+              <span class="check-number" aria-hidden="true">03</span>
+              <div class="check-copy"><h3>값뿐 아니라 자료형도 맞나요?</h3><p id="guide-type-help">식별자·0·빈 값·날짜를 구분하고 표시 모양이나 글자 수만으로 통과시키지 마세요.</p></div>
+              <label class="check-status" data-status-control hidden for="guide-type-status"><span class="sr-only">값뿐 아니라 자료형도 맞나요? 점검 상태</span><select id="guide-type-status" aria-describedby="guide-type-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="guide-engine">
+              <span class="check-number" aria-hidden="true">04</span>
+              <div class="check-copy"><h3>실제 프로그램에서 실행했나요?</h3><p id="guide-engine-help">엔진·버전·언어·작업 순서를 기록하세요. 독립 계산을 프로그램 실행 증거로 바꾸지 마세요.</p></div>
+              <label class="check-status" data-status-control hidden for="guide-engine-status"><span class="sr-only">실제 프로그램에서 실행했나요? 점검 상태</span><select id="guide-engine-status" aria-describedby="guide-engine-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="guide-roundtrip">
+              <span class="check-number" aria-hidden="true">05</span>
+              <div class="check-copy"><h3>저장한 파일을 다시 열었나요?</h3><p id="guide-roundtrip-help">결과 파일을 다시 읽고 원래 값이 보존되는지, 샘플 다운로드가 실제로 되는지 확인하세요.</p></div>
+              <label class="check-status" data-status-control hidden for="guide-roundtrip-status"><span class="sr-only">저장한 파일을 다시 열었나요? 점검 상태</span><select id="guide-roundtrip-status" aria-describedby="guide-roundtrip-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+            <li data-check-item="guide-limits">
+              <span class="check-number" aria-hidden="true">06</span>
+              <div class="check-copy"><h3>미해결·미검증 범위를 적었나요?</h3><p id="guide-limits-help">성공한 대체 경로와 원인 해결을 구분하고, 검증하지 못한 환경을 독자에게 알려주세요.</p></div>
+              <label class="check-status" data-status-control hidden for="guide-limits-status"><span class="sr-only">미해결·미검증 범위를 적었나요? 점검 상태</span><select id="guide-limits-status" aria-describedby="guide-limits-help"><option value="unknown">미확인</option><option value="pass">통과</option><option value="recheck">재확인 필요</option><option value="na">해당 없음</option></select></label>
+            </li>
+          </ol>
+          <div class="check-related"><a href="../../stories/excel-native-checks.html">이 질문이 나온 작업 기록 <span aria-hidden="true">→</span></a><a href="../../templates/#guide-quality">근거까지 적는 전체 양식 <span aria-hidden="true">→</span></a></div>
+        </section>
+      </div>
+      <aside class="check-summary" aria-labelledby="check-summary-title" data-check-controls hidden>
+        <p class="eyebrow">YOUR CHECK-IN</p><h2 id="check-summary-title">이번 점검 기록</h2>
+        <p id="check-progress" role="status" aria-live="polite" aria-atomic="true"></p>
+        <progress id="check-progress-bar" max="6" value="0" aria-label="상태를 분류한 항목 수"></progress>
+        <dl class="check-counts"><div><dt>통과</dt><dd id="count-pass">0</dd></div><div><dt>재확인</dt><dd id="count-recheck">0</dd></div><div><dt>미확인</dt><dd id="count-unknown">6</dd></div><div><dt>해당 없음</dt><dd id="count-na">0</dd></div></dl>
+        <p class="check-limit">분류 완료는 배포 안전이나 보안 검증 통과를 뜻하지 않습니다. 확인 근거와 ‘해당 없음’의 이유는 전체 양식에 남겨주세요.</p>
+        <button class="button button--dark" id="check-download" type="button">현재 기록 내려받기 <span aria-hidden="true">↓</span></button>
+        <button class="check-secondary" id="check-copy" type="button">기록 복사하기</button>
+        <p class="check-output-status" id="check-output-status" role="status" aria-live="polite"></p>
+        <details class="check-output" id="check-output"><summary>내보낼 내용 보기</summary><label class="sr-only" for="check-output-text">현재 점검 기록 Markdown</label><textarea id="check-output-text" readonly spellcheck="false" rows="10"></textarea><button class="check-secondary" id="check-select-text" type="button">텍스트 전체 선택</button></details>
+        <button class="check-reset" id="check-reset" type="button">현재 점검 초기화</button>
+        <div class="check-confirm" id="check-confirm" hidden><p>이 주제의 선택값만 지울까요? 다른 주제의 기록은 유지합니다.</p><div><button type="button" id="check-reset-confirm">초기화하기</button><button type="button" id="check-reset-cancel">취소</button></div></div>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer shell"><span>© 2026 JH Soft Labs</span><span class="footer-note">Made with curiosity. Shared with you.</span><a href="../../">홈으로 돌아가기 <span aria-hidden="true">↑</span></a></footer>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); }; window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>

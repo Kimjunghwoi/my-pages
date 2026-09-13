@@ -24,12 +24,12 @@ test("exactly three featured projects, each linked to its own service", () => {
 });
 
 test("library preserves all external resources and adds records and free templates", () => {
-  assert.equal(resources.length, 26);
+  assert.equal(resources.length, 28);
   assert.equal(new Set(resources.map((item) => item.href)).size, resources.length);
   assert.equal(resources.filter((item) => new URL(item.href, "https://jhsoftlabs.com/").hostname.endsWith("notion.site")).length, 7);
   assert.equal(resources.filter((item) => item.href.startsWith("https://csv.jhsoftlabs.com/guides/")).length, 4);
   const local = resources.filter((item) => item.href.startsWith("./"));
-  assert.equal(local.length, 7);
+  assert.equal(local.length, 9);
   assert.equal(local[0].href, "./stories/column-harbor.html");
   assert.equal(local[0].target, undefined);
   assert.ok(local.every((item) => !item.target));
@@ -90,7 +90,11 @@ test("build note has unique metadata and structured data matching its visible co
 });
 
 test("all public HTML documents have valid local destinations, assets, anchors and external link contracts", () => {
-  const files = ["index.html", "templates/index.html", ...readdirSync(resolve(root, "stories")).filter((name) => name.endsWith(".html")).map((name) => `stories/${name}`)];
+  const publicHtml = (directory) => readdirSync(resolve(root, directory), { withFileTypes: true }).flatMap((entry) => {
+    const file = `${directory}/${entry.name}`;
+    return entry.isDirectory() ? publicHtml(file) : file.endsWith(".html") ? [file] : [];
+  });
+  const files = ["index.html", ...["stories", "templates", "tools"].flatMap(publicHtml)];
   const documents = new Map(files.map((file) => [file, readFileSync(resolve(root, file), "utf8")]));
   for (const [file, source] of documents) {
     const base = new URL(file === "index.html" ? "/" : `/${file}`, "https://jhsoftlabs.com");

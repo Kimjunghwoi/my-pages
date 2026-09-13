@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-adsense-account" content="ca-pub-6113316314236430" />
+  <meta name="theme-color" content="#f6f7f2" />
+  <title>글자 수는 같았는데, ID는 달라졌다 | 회몬의 실험 기록</title>
+  <meta name="description" content="CSV 가이드를 실제 Excel에서 검증하며 발견한 긴 ID 손상과 필터·숨김의 예상값 차이. 확인한 대체 경로와 미해결 원인을 구분한 회몬의 실험 기록." />
+  <link rel="canonical" href="https://jhsoftlabs.com/stories/excel-native-checks.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="글자 수는 같았는데, ID는 달라졌다" />
+  <meta property="og:description" content="CSV 가이드를 실제 Excel에서 검증하며 발견한 긴 ID 손상과 필터·숨김의 예상값 차이. 확인한 대체 경로와 미해결 원인을 구분한 회몬의 실험 기록." />
+  <meta property="og:url" content="https://jhsoftlabs.com/stories/excel-native-checks.html" />
+  <meta property="og:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <meta property="og:image:alt" content="개발자 회몬의 프로젝트와 작업 기록" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="글자 수는 같았는데, ID는 달라졌다" />
+  <meta name="twitter:description" content="CSV 가이드를 실제 Excel에서 검증하며 발견한 긴 ID 손상과 필터·숨김의 예상값 차이. 확인한 대체 경로와 미해결 원인을 구분한 회몬의 실험 기록." />
+  <meta name="twitter:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../stories.css" />
+
+  <meta property="article:published_time" content="2026-09-13" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"글자 수는 같았는데, ID는 달라졌다","description":"CSV 가이드를 실제 Excel에서 검증하며 발견한 긴 ID 손상과 필터·숨김의 예상값 차이. 확인한 대체 경로와 미해결 원인을 구분한 회몬의 실험 기록.","datePublished":"2026-09-13","dateModified":"2026-09-13","inLanguage":"ko-KR","author":{"@type":"Person","name":"회몬","url":"https://jhsoftlabs.com/#about"},"image":"https://jhsoftlabs.com/assets/og-card.png","mainEntityOfPage":"https://jhsoftlabs.com/stories/excel-native-checks.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header"><div class="header-inner shell">
+    <a class="wordmark" href="../" aria-label="JH Soft Labs 홈"><span class="monogram" aria-hidden="true">jh<span>.</span></span><span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span></a>
+    <nav class="main-nav" aria-label="주요 메뉴"><a href="../#projects">프로젝트</a><a href="../#fieldnotes">실험 기록</a><a href="../templates/">무료 템플릿</a><a href="../#about">소개</a></nav>
+    <a class="header-contact" href="../#collection">모든 글·자료 <span aria-hidden="true">→</span></a>
+  </div></header>
+  <main id="main" class="story-shell" tabindex="-1">
+    <nav class="story-breadcrumb" aria-label="현재 위치"><a href="../">홈</a><span aria-hidden="true">/</span><a href="../#fieldnotes">실험 기록</a><span aria-hidden="true">/</span><span aria-current="page">실제 Excel 검증</span></nav>
+    <article>
+      <header class="story-header"><p class="eyebrow">FIELD NOTE 04 · COLUMN HARBOR</p><h1>글자 수는 같았는데, ID는 달라졌다</h1><p class="story-intro">예상값을 계산해 보는 것과, 실제 프로그램에서 실행하는 것은 달랐습니다. CSV 가이드를 Excel에서 다시 확인하며 바꾼 검증 기준을 기록합니다.</p><div class="story-byline"><img src="../assets/hoemon-profile.jpg" alt="회몬 캐릭터" width="40" height="40" /><div><strong>회몬</strong><span>개발자 · 메이커</span></div><time datetime="2026-09-13">2026. 09. 13.</time></div></header>
+      <figure class="verification-board">
+        <div class="verification-lane"><span class="eyebrow">원본 · 서로 다른 두 ID</span><code>123456789012345<span>6</span></code><code>123456789012345<span>7</span></code><p>마지막 한 자리가 다른 식별자입니다.</p></div>
+        <div class="verification-lane verification-lane--changed"><span class="eyebrow">General 가져오기 · 관측한 값</span><code>123456789012345<span>0</span></code><code>123456789012345<span>0</span></code><p>길이는 16자리 그대로. 값은 같아졌습니다.</p></div>
+        <figcaption>합성 데이터로 재현한 가져오기 결과를 다시 그린 도해입니다. 고객 데이터나 실제 Excel 화면이 아닙니다.</figcaption>
+      </figure>
+      <aside class="note-summary" aria-label="이 기록의 핵심"><span class="eyebrow">먼저 가져갈 세 가지</span><ol><li>길이가 아니라 원래 문자와 자료형까지 확인합니다.</li><li>필터·숨김·작업 순서도 실험의 입력으로 기록합니다.</li><li>대체 경로가 성공해도 원인을 해결했다고 쓰지 않습니다.</li></ol><p>Windows Excel Version 16.0 / Build 5569.0, 별도 합성 워크북에서 확인한 범위입니다.</p></aside>
+      <div class="story-layout">
+        <nav class="story-toc" aria-label="이 글의 목차"><span>이 글에서</span><a href="#engine">기대값과 실제 엔진</a><a href="#identifier">길이가 같은 두 ID</a><a href="#state">수식 밖에 있던 입력</a><a href="#unresolved">해결하지 못한 경로</a><a href="#next-check">내 작업에 적용하기</a></nav>
+        <div class="story-content">
+          <section id="engine" aria-labelledby="engine-title"><p class="story-section-number">01 / EXPECTED VS OBSERVED</p><h2 id="engine-title">계산이 맞아도, 검증이 끝난 것은 아니었습니다</h2><p><a href="./guides-that-work.html">앞선 제작 기록</a>에서는 독자가 따라 할 수 있는 예제를 만드는 일을 다뤘습니다. 그 다음에는 한 걸음 더 들어갔습니다. 독립 스크립트의 기대값이 맞더라도 Excel의 가져오기와 자료형 처리까지 확인한 것은 아니기 때문입니다.</p><p>실제 Excel을 별도 합성 워크북으로 실행해 값, 자료형, 표시 형식, 조작 순서를 함께 기록했습니다. 신규 원고 검사 32개와 기존 원고 검사 62개를 남겼습니다. 합계 94개는 특정 환경의 검사 행 수이지, 서로 다른 Excel 기능 94개나 모든 버전의 검증을 뜻하지 않습니다.</p></section>
+          <section id="identifier" aria-labelledby="identifier-title"><p class="story-section-number">02 / SAME LENGTH, DIFFERENT VALUE</p><h2 id="identifier-title">16자리라는 사실만으로는 충분하지 않았습니다</h2><p>같은 합성 파일에서 ID 열을 General로 가져온 대조군과 Text로 가져온 경우를 비교했습니다. General 대조군에서는 서로 다른 두 ID가 같은 숫자로 합쳐졌습니다. 두 값 모두 길이는 여전히 16자리였습니다.</p><p>원문을 보존한 경로는 <code>QueryTables</code>에서 해당 열을 Text로 지정한 가져오기였습니다. 성공 여부는 원래 문자열과 <code>Value2</code>의 직접 비교, <code>ISTEXT</code>, <code>LEN</code>, <code>EXACT</code>를 함께 사용해 확인했습니다.</p><p>Excel의 숫자 정밀도는 유효 숫자 15자리로 제한됩니다. 계산할 숫자가 아닌 긴 식별자는 숫자로 바꾸기 전에 텍스트로 다루는 것이 중요합니다. <a href="https://support.microsoft.com/en-US/Excel/keeping-leading-zeros-and-large-numbers" target="_blank" rel="noopener noreferrer">Microsoft의 앞자리 0·긴 숫자 안내 <span aria-hidden="true">↗</span><span class="sr-only"> (영문, 새 탭)</span></a></p><div class="story-callout"><strong>‘보기 좋음’과 ‘원본 보존’은 다른 확인입니다.</strong><p>지수 표기로 보인다고 반드시 손상된 것은 아닙니다. 반대로 길게 펼쳐 보이거나 글자 수가 같다고 안전한 것도 아닙니다. 어떤 문자가 실제로 남았는지가 기준입니다.</p></div></section>
+          <section id="state" aria-labelledby="state-title"><p class="story-section-number">03 / THE HIDDEN INPUT</p><h2 id="state-title">수식 밖에도 입력이 있었습니다</h2><p><code>SUBTOTAL</code> 실습에서는 필터를 적용한 뒤 행을 수동으로 숨긴 혼합 상태가 예상과 달랐습니다. 이 빌드에서 관측한 결과를 모든 Excel 버전의 일반 규칙으로 바꾸지는 않았습니다.</p><p>원고를 ‘필터만 적용하는 실습’과 ‘필터를 완전히 끈 뒤 수동으로 숨기는 실습’으로 나눴습니다. 실습 전에 이전 필터와 숨김 상태를 초기화하고, 혼합 상태의 결과는 별도 관측으로 남겼습니다.</p><ol class="story-flow"><li><strong>초기 상태</strong><span>필터와 숨김을 초기화하고 어떤 행이 보이는지 확인합니다.</span></li><li><strong>한 가지 변화</strong><span>필터 또는 수동 숨김 중 하나를 먼저 적용합니다.</span></li><li><strong>관측과 범위</strong><span>예상값·실제값·실행 순서를 남기고 다른 환경까지 일반화하지 않습니다.</span></li></ol><p>공식과 셀 값만으로 실험을 설명할 수 없었습니다. 작업 순서와 이전 상태도 입력의 일부였습니다.</p></section>
+          <section id="unresolved" aria-labelledby="unresolved-title"><p class="story-section-number">04 / WHAT IS STILL UNKNOWN</p><h2 id="unresolved-title">우회에 성공해도, 원인은 미해결이었습니다</h2><p><code>OpenText</code>에 Text 설정을 전달했는데도 긴 ID가 숫자로 읽히는 현상을 별도로 재현했습니다. 파일 확장자와 인수 전달을 달리하는 시도도 했지만 근본 원인을 확정하지 못했습니다.</p><p>따라서 결론은 두 줄입니다. QueryTables의 Text 가져오기에서는 원문 보존을 확인했습니다. OpenText 경로의 원인은 아직 미해결입니다. 성공한 대체 방법을 찾았다는 사실과 원인을 해결했다는 주장을 섞지 않았습니다.</p><p>최신 동적 배열 함수, Power Query 편집기·M 실행, 모든 언어와 인코딩 조합은 이번 검증 범위가 아닙니다. 사용한 원고나 샘플이 바뀌면 과거의 PASS도 그 전 버전에 대한 근거로 남습니다.</p></section>
+          <section id="next-check" class="note-template" aria-labelledby="next-check-title"><p class="story-section-number">TAKE IT WITH YOU</p><h2 id="next-check-title">다음 가이드에는, 예상과 실제를 나란히</h2><p>샘플, 예상값, 자료형, 실제 엔진, 저장 후 재확인, 미검증 범위를 여섯 개의 질문으로 정리했습니다. 내 원고의 상태를 골라 적고 Markdown으로 가져갈 수 있습니다. 자동 검사는 아니며 입력한 상태는 서버에 보내지 않습니다.</p><div class="story-next"><a class="button button--dark" href="../tools/release-check/?kind=guide">내 가이드 점검하기 <span aria-hidden="true">→</span></a><a class="template-context" href="../templates/#guide-quality">전체 검수 양식 보기</a></div></section>
+          <footer class="story-end"><p>2026년 9월의 실제 Excel 실행 보고서와 개발 기록을 바탕으로 작성했습니다. 합성 샘플과 특정 빌드의 관측이며 고객 파일·모든 버전·검색·매출 성과에 대한 검증이 아닙니다.</p><a href="https://csv.jhsoftlabs.com/" target="_blank" rel="noopener noreferrer">Column Harbor에서 파일 위험 점검하기 <span aria-hidden="true">↗</span><span class="sr-only"> (영문 사이트, 새 탭)</span></a><a href="../#fieldnotes">다른 실험 기록 읽기 <span aria-hidden="true">→</span></a></footer>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="footer shell"><span>© 2026 JH Soft Labs</span><span class="footer-note">Made with curiosity. Shared with you.</span><a href="../">홈으로 돌아가기 <span aria-hidden="true">↑</span></a></footer>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); }; window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
