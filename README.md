@@ -11,7 +11,8 @@
 ```powershell
 python -m http.server 8017 --bind 127.0.0.1
 node --check script.js
-node --test tests/site.test.mjs
+node --check experiences.js
+node --test tests/*.test.mjs
 ```
 
 http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insights의 전용 경로는 일반 로컬 서버에서 404가 발생할 수 있으며 실제 Vercel 배포에서 검증합니다.
@@ -20,12 +21,22 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 
 대표 프로젝트와 모든 링크는 `index.html`에 있습니다. JavaScript가 꺼져도 콘텐츠를 읽을 수 있습니다.
 
+프로젝트 이름과 용도를 시각 예시보다 먼저 표시합니다. 자료 목록에는 기존 외부 링크 19개와 내부 제작기 1개가 있습니다. `project` 필터는 실제 서비스 세 개만, `data` 필터는 데이터 도구·가이드와 제작기를 보여줍니다.
+
 - 대표 프로젝트: `.project-grid`의 카드와 해당 `.resource` 항목을 함께 수정합니다.
 - 글/가이드: `.resource-list`에 링크를 추가합니다. `data-category`에는 공백으로 구분한 주제들을 지정할 수 있습니다.
 - 검색 보조어: `data-keywords`에 한영 별칭을 넣습니다. 방문자가 입력한 검색어는 HTML로 삽입하지 않습니다.
 - 분류: `data-filter` 버튼과 `data-category`가 일치해야 합니다. `data`는 데이터 실무, `ai-side`는 AI·부업입니다.
 - 영문 사이트에는 `EN`, 예시 시각물에는 예시임을 표시합니다. 확인되지 않은 이용 실적이나 가격을 쓰지 않습니다.
 - `?tab=data&q=CSV`처럼 검색 상태를 URL로 공유할 수 있습니다. 예전 `#archive` 등의 링크도 컬렉션으로 연결됩니다.
+
+## 체험과 제작기
+
+- `experiences.js`는 고정된 상품 코드 `00123`의 숫자/텍스트 해석 예시만 전환합니다. 실제 파일을 받거나 네트워크·저장소에 데이터를 전송하지 않습니다. 스크립트가 실행되지 않으면 두 결과를 모두 표시합니다.
+- 입문 경로는 네이티브 `details/summary`로 구성해 스크립트 없이도 사용할 수 있습니다. 기존 링크와 목적별 순서를 유지합니다.
+- `stories/column-harbor.html`은 확인된 구현을 설명하는 정적 제작기입니다. 레이아웃은 `stories.css`, 공통 테마는 `styles.css`를 사용합니다.
+- 제작기를 추가할 때 제목·설명·canonical·공유 메타·JSON-LD·작성일·사이트맵을 함께 갱신합니다. 게시/수정일은 실제 변경 날짜만 기록합니다.
+- 상세 제작기에 홈페이지용 `script.js`를 로딩하지 않습니다. Vercel 분석은 기존 페이지뷰 수집만 유지하고 유료 사용자 정의 이벤트는 추가하지 않았습니다.
 
 ## 배포 전
 

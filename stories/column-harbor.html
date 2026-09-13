@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-adsense-account" content="ca-pub-6113316314236430" />
+    <meta name="theme-color" content="#f6f7f2" />
+    <title>숫자로 바꾸기 전에, 원본을 한 번 더 | 회몬의 만든 이야기</title>
+    <meta name="description" content="Column Harbor의 설계 기록. CSV 원본을 브라우저에서 읽고, 값을 바꾸는 대신 가져오기 위험을 먼저 보여주는 이유와 한계를 소개합니다." />
+    <link rel="canonical" href="https://jhsoftlabs.com/stories/column-harbor.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:title" content="숫자로 바꾸기 전에, 원본을 한 번 더" />
+    <meta property="og:description" content="CSV를 자동으로 고치지 않는 도구. 개발자 회몬의 Column Harbor 설계 기록." />
+    <meta property="og:url" content="https://jhsoftlabs.com/stories/column-harbor.html" />
+    <meta property="og:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="JH Soft Labs · 개발자 회몬의 프로젝트와 실전 기록" />
+    <meta property="article:published_time" content="2026-09-13" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="숫자로 바꾸기 전에, 원본을 한 번 더" />
+    <meta name="twitter:description" content="원본을 지키는 CSV 점검기, Column Harbor의 설계 기록." />
+    <meta name="twitter:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../stories.css" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","headline":"숫자로 바꾸기 전에, 원본을 한 번 더","description":"Column Harbor가 CSV 원본을 다루는 방식과 자동으로 고치지 않는 것들에 관한 설계 기록.","datePublished":"2026-09-13","dateModified":"2026-09-13","inLanguage":"ko-KR","author":{"@type":"Person","name":"회몬","url":"https://jhsoftlabs.com/#about"},"image":"https://jhsoftlabs.com/assets/og-card.png","mainEntityOfPage":"https://jhsoftlabs.com/stories/column-harbor.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <header class="site-header">
+      <div class="header-inner shell">
+        <a class="wordmark" href="../" aria-label="JH Soft Labs 홈"><span class="monogram" aria-hidden="true">jh<span>.</span></span><span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span></a>
+        <nav class="main-nav" aria-label="주요 메뉴"><a href="../#projects">프로젝트</a><a href="../#collection">글·가이드</a><a href="../#channels">채널</a><a href="../#about">소개</a></nav>
+        <a class="header-contact" href="https://csv.jhsoftlabs.com/#checker" target="_blank" rel="noopener noreferrer">CSV 점검하기 <span aria-hidden="true">↗</span><span class="sr-only"> (영문 사이트, 새 탭)</span></a>
+      </div>
+    </header>
+    <main id="main" class="story-shell" tabindex="-1">
+      <nav class="story-breadcrumb" aria-label="현재 위치"><a href="../">홈</a><span aria-hidden="true">/</span><a href="../#project-csv">Column Harbor</a><span aria-hidden="true">/</span><span aria-current="page">만든 이야기</span></nav>
+      <article>
+        <header class="story-header">
+          <p class="eyebrow">BUILD NOTE 01 · COLUMN HARBOR</p>
+          <h1>숫자로 바꾸기 전에,<br /><span>원본을 한 번 더.</span></h1>
+          <p class="story-intro">데이터를 대신 고치는 것보다, 무엇이 달라질 수 있는지 먼저 보여주는 일. CSV 점검기 Column Harbor가 원본을 다루는 방식과 그 경계를 소개합니다.</p>
+          <div class="story-byline"><img src="../assets/hoemon-profile.jpg" alt="회몬 캐릭터" width="40" height="40" /><div><strong>회몬</strong><span>개발자 · 메이커</span></div><time datetime="2026-09-13">2026. 09. 13.</time></div>
+        </header>
+
+        <figure class="story-comparison">
+          <div><span>원본 상품 코드</span><code>00123</code><small>식별자로 남아야 하는 값</small></div>
+          <span class="comparison-arrow" aria-hidden="true">→</span>
+          <div><span>숫자로 해석한 예시</span><code>123</code><small>같은 숫자, 다른 상품 코드</small></div>
+          <figcaption>설명용 합성 예시입니다. 프로그램의 설정과 가져오기 방식에 따라 실제 결과는 달라집니다.</figcaption>
+        </figure>
+
+        <div class="story-layout">
+          <nav class="story-toc" aria-label="이 글의 목차"><span>이 글에서</span><a href="#problem">작은 차이의 의미</a><a href="#local">브라우저 안의 흐름</a><a href="#boundaries">자동으로 고치지 않는 것</a><a href="#next">점검 다음의 한 걸음</a></nav>
+          <div class="story-content">
+            <section id="problem" aria-labelledby="problem-title">
+              <p class="story-section-number">01 / THE PROBLEM</p>
+              <h2 id="problem-title">숫자처럼 보여도,<br />계산할 값은 아닐 수 있습니다.</h2>
+              <p>상품 코드 <code>00123</code>은 숫자 123과 다른 식별자일 수 있습니다. CSV를 열면서 숫자로 해석하면 앞자리 0이 사라질 수 있고, 긴 ID는 숫자 정밀도의 영향을 받을 수 있습니다. Microsoft도 이런 값을 보존하기 위한 텍스트 가져오기 방식을 안내합니다. <a href="https://support.microsoft.com/en-us/excel/keeping-leading-zeros-and-large-numbers" target="_blank" rel="noopener noreferrer">공식 안내 읽기 <span aria-hidden="true">↗</span><span class="sr-only"> (영문, 새 탭)</span></a></p>
+              <p>Column Harbor는 이 지점에서 출발하는 도구입니다. 파일이 이미 깨졌다고 단정하는 대신, 가져오기 전에 확인할 값과 위치를 보여줍니다. 경고의 의미는 ‘오류 확정’이 아니라 ‘이 값은 한 번 더 살펴보세요’에 가깝습니다.</p>
+            </section>
+
+            <section id="local" aria-labelledby="local-title">
+              <p class="story-section-number">02 / THE FLOW</p>
+              <h2 id="local-title">파일을 선택해도,<br />서버로 올리지는 않습니다.</h2>
+              <p>점검기는 선택한 파일이나 붙여 넣은 텍스트를 현재 브라우저에서 읽습니다. 내용을 서버에 보내 AI로 분석하는 방식이 아니라, 원본 문자열을 해석하고 정해진 규칙으로 위험 신호를 찾습니다.</p>
+              <ol class="story-flow">
+                <li><strong>원본 읽기</strong><span>UTF-8 텍스트를 읽고, 선택한 구분자로 레코드와 필드를 나눕니다.</span></li>
+                <li><strong>값은 문자열로 유지</strong><span>상품 코드나 날짜처럼 보이는 값을 임의로 숫자·날짜로 바꾸지 않습니다.</span></li>
+                <li><strong>위험과 위치 보여주기</strong><span>앞자리 0, 긴 숫자, 날짜 패턴, 열 개수 등 확인할 부분과 원본 값을 표시합니다.</span></li>
+              </ol>
+              <p>점검 입력과 결과는 현재 페이지의 메모리에 머무릅니다. 다만 파일이 로컬에서 처리된다는 말이 웹사이트 접속 자체의 완전한 익명성을 뜻하지는 않습니다. 내려받은 점검 보고서에도 원본 값 일부가 들어갈 수 있으므로 공유 전에 확인해야 합니다. <a href="https://csv.jhsoftlabs.com/privacy" target="_blank" rel="noopener noreferrer">파일 처리 안내 <span aria-hidden="true">↗</span><span class="sr-only"> (영문, 새 탭)</span></a></p>
+            </section>
+
+            <section id="boundaries" aria-labelledby="boundaries-title">
+              <p class="story-section-number">03 / THE BOUNDARY</p>
+              <h2 id="boundaries-title">친절한 자동 수정이<br />항상 정답은 아니니까요.</h2>
+              <p><code>03/04/2026</code>이 3월 4일인지, 4월 3일인지는 모양만 보고 확정할 수 없습니다. <code>123</code>의 원래 값이 <code>00123</code>이었는지도 이미 손실된 파일만으로는 알 수 없습니다. 그래서 점검기는 원본을 덮어쓰거나 복구를 약속하지 않습니다.</p>
+              <div class="story-callout"><strong>찾는 것과 고치는 것은 다른 책임입니다.</strong><p>경고가 없다고 모든 가져오기가 안전한 것은 아닙니다. 목적지 프로그램의 규칙과 데이터의 의미는 별도로 확인해야 합니다.</p></div>
+              <p>브라우저에서 다루는 범위에도 제한을 둡니다. 확인 당시 점검기는 최대 5 MiB의 UTF-8 텍스트, 20,000개 데이터 레코드, 250,000개 셀을 다룹니다. 대용량 처리나 모든 업무 규칙의 검증을 대신하는 도구는 아닙니다.</p>
+            </section>
+
+            <section id="next" aria-labelledby="next-title">
+              <p class="story-section-number">04 / WHAT COMES NEXT</p>
+              <h2 id="next-title">경고 다음에는,<br />다음 행동이 있어야 합니다.</h2>
+              <p>위험 신호만 보여주고 끝나지 않도록, 점검 결과에서 관련 가이드로 이동할 수 있습니다. 앞자리 0은 텍스트로 가져오는 방법으로, 한 열에 몰린 값은 구분자와 가져오기 설정으로 이어집니다.</p>
+              <p>이 프로젝트가 맡는 역할은 작습니다. 원본이 어떻게 생겼는지 확인하고, 달라질 수 있는 부분을 찾고, 다음 행동을 고르는 것. 파일을 바꾸기 전에 한 번 멈춰 볼 수 있는 도구입니다.</p>
+              <div class="story-next"><a class="button button--dark" href="https://csv.jhsoftlabs.com/#checker" target="_blank" rel="noopener noreferrer">내 CSV 점검하기 <span aria-hidden="true">↗</span><span class="sr-only"> (영문 사이트, 새 탭)</span></a><span>무료 · 가입 불필요 · 영문 서비스</span></div>
+            </section>
+            <footer class="story-end"><p>2026년 9월 13일의 구현과 공개 안내를 확인해 작성한 설계 기록입니다. 기능과 제한은 이후 달라질 수 있습니다. 예시는 실제 고객 데이터가 아닙니다.</p><a href="../#collection">다른 글과 프로젝트 둘러보기 <span aria-hidden="true">→</span></a></footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="footer shell"><span>© 2026 JH Soft Labs</span><span class="footer-note">Made with curiosity. Shared with you.</span><a href="../">홈으로 돌아가기 <span aria-hidden="true">↑</span></a></footer>
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); }; window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+  </body>
+</html>

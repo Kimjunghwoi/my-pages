@@ -13,4 +13,5 @@ jobs:
         with:
           node-version: 22
       - run: node --check script.js
-      - run: node --test tests/site.test.mjs
+      - run: node --check experiences.js
+      - run: node --test tests/*.test.mjs

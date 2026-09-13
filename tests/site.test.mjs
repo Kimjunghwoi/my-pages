@@ -6,6 +6,7 @@ import { test } from "node:test";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const html = readFileSync(resolve(root, "index.html"), "utf8");
+const story = readFileSync(resolve(root, "stories/column-harbor.html"), "utf8");
 const attributes = (text) => Object.fromEntries([...text.matchAll(/([\w-]+)="([^"]*)"/g)].map((match) => [match[1], match[2]]));
 const anchors = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].map((match) => ({ ...attributes(match[1]), content: match[2] }));
 const resources = anchors.filter((anchor) => anchor.class === "resource");
@@ -22,11 +23,15 @@ test("exactly three featured projects, each linked to its own service", () => {
   });
 });
 
-test("library preserves seven Notion pages, adds four guides, and has no duplicate destinations", () => {
-  assert.equal(resources.length, 19);
+test("library preserves all external resources and adds one internal build note", () => {
+  assert.equal(resources.length, 20);
   assert.equal(new Set(resources.map((item) => item.href)).size, resources.length);
-  assert.equal(resources.filter((item) => new URL(item.href).hostname.endsWith("notion.site")).length, 7);
+  assert.equal(resources.filter((item) => new URL(item.href, "https://jhsoftlabs.com/").hostname.endsWith("notion.site")).length, 7);
   assert.equal(resources.filter((item) => item.href.startsWith("https://csv.jhsoftlabs.com/guides/")).length, 4);
+  const local = resources.filter((item) => item.href.startsWith("./"));
+  assert.equal(local.length, 1);
+  assert.equal(local[0].href, "./stories/column-harbor.html");
+  assert.equal(local[0].target, undefined);
 });
 
 test("every topic has a matching accessible filter", () => {
@@ -42,10 +47,78 @@ test("every topic has a matching accessible filter", () => {
 });
 
 test("external links use HTTPS and safe new-tab attributes", () => {
-  for (const anchor of anchors.filter((item) => !item.href.startsWith("#"))) {
+  for (const anchor of anchors.filter((item) => /^https?:/.test(item.href))) {
     assert.equal(new URL(anchor.href).protocol, "https:");
     assert.equal(anchor.target, "_blank");
     assert.ok(anchor.rel.includes("noopener") && anchor.rel.includes("noreferrer"));
+  }
+});
+
+test("each project name and purpose precede its visual in reading order", () => {
+  for (const card of html.matchAll(/<article class="project-card[^>]*>([\s\S]*?)<\/article>/g)) {
+    assert.ok(card[1].indexOf('<div class="project-heading">') < card[1].indexOf('<div class="project-visual'));
+    assert.ok(card[1].indexOf('class="project-summary"') < card[1].indexOf('<div class="project-visual'));
+  }
+});
+
+test("starter paths use native disclosures and keep working without scripts", () => {
+  const paths = [...html.matchAll(/<details class="starter-path">([\s\S]*?)<\/details>/g)];
+  assert.equal(paths.length, 3);
+  paths.forEach((path) => {
+    assert.ok(path[1].includes("<summary>"));
+    assert.ok(path[1].includes("<ol>"));
+    assert.ok((path[1].match(/<li>/g) || []).length >= 2);
+  });
+});
+
+test("build note has unique metadata and structured data matching its visible content", () => {
+  const url = "https://jhsoftlabs.com/stories/column-harbor.html";
+  assert.ok(story.includes(`rel="canonical" href="${url}"`));
+  assert.ok(story.includes(`property="og:url" content="${url}"`));
+  assert.ok(story.includes('property="og:type" content="article"'));
+  assert.ok(story.includes('datetime="2026-09-13"'));
+  const schema = JSON.parse(story.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+  assert.equal(schema.mainEntityOfPage, url);
+  assert.equal(schema.author.name, "회몬");
+  assert.equal(schema.datePublished, "2026-09-13");
+  assert.ok(!story.includes('src="../script.js"'));
+  assert.ok(story.includes("자동") && story.includes("경고가 없다고"));
+  assert.ok(readFileSync(resolve(root, "sitemap.xml"), "utf8").includes(`<loc>${url}</loc>`));
+  assert.ok(readFileSync(resolve(root, "robots.txt"), "utf8").includes("Sitemap: https://jhsoftlabs.com/sitemap.xml"));
+});
+
+test("both documents have valid local destinations, assets, anchors and external link contracts", () => {
+  const documents = new Map([["index.html", html], ["stories/column-harbor.html", story]]);
+  for (const [file, source] of documents) {
+    const base = new URL(file === "index.html" ? "/" : `/${file}`, "https://jhsoftlabs.com");
+    const documentIds = [...source.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+    assert.equal(new Set(documentIds).size, documentIds.length, file);
+    assert.equal((source.match(/<h1\b/g) || []).length, 1, file);
+    assert.ok(!source.includes("\uFFFD"), file);
+    for (const match of source.matchAll(/aria-(?:controls|labelledby)="([^"]+)"/g)) {
+      match[1].split(" ").forEach((id) => assert.ok(documentIds.includes(id), `${file}: ${id}`));
+    }
+    for (const match of source.matchAll(/<a\b([^>]*)>/g)) {
+      const link = attributes(match[1]);
+      const url = new URL(link.href, base);
+      assert.equal(url.protocol, "https:", link.href);
+      if (url.origin !== base.origin) {
+        assert.equal(link.target, "_blank", link.href);
+        assert.ok(link.rel?.includes("noopener") && link.rel?.includes("noreferrer"), link.href);
+        continue;
+      }
+      const path = url.pathname.endsWith("/") ? `${url.pathname}index.html` : url.pathname;
+      assert.ok(existsSync(resolve(root, `.${path}`)), link.href);
+      if (url.hash) {
+        const destination = readFileSync(resolve(root, `.${path}`), "utf8");
+        assert.ok(destination.includes(`id="${url.hash.slice(1)}"`), `${file}: ${link.href}`);
+      }
+    }
+    for (const match of source.matchAll(/(?:src|href)="(\.\.?\/[^"?#]+)"/g)) {
+      assert.ok(existsSync(resolve(root, dirname(file), match[1])), `${file}: ${match[1]}`);
+    }
+    assert.ok(source.includes('/_vercel/insights/script.js'));
+    assert.ok(source.includes('/_vercel/speed-insights/script.js'));
   }
 });
 
