@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-adsense-account" content="ca-pub-6113316314236430" />
+  <meta name="theme-color" content="#f6f7f2" />
+  <title>개발기록 | 회몬 · JH Soft Labs</title>
+  <meta name="description" content="AI 면접 서비스, 홍보 콘텐츠, CSV 도구와 이 홈페이지를 만들며 남긴 개발기록 9편. 구현한 것과 확인한 것, 아직 모르는 것을 나눠 적었습니다." />
+  <link rel="canonical" href="https://jhsoftlabs.com/stories/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="만든 것 뒤에, 남은 기록들." />
+  <meta property="og:description" content="프로젝트별 개발기록 9편. 기능 목록보다 시행착오와 바꾼 판단 기준을 읽어보세요." />
+  <meta property="og:url" content="https://jhsoftlabs.com/stories/" />
+  <meta property="og:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <meta property="og:image:alt" content="개발자 회몬의 프로젝트와 작업 기록" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="만든 것 뒤에, 남은 기록들." />
+  <meta name="twitter:description" content="프로젝트별 개발기록 9편. 기능 목록보다 시행착오와 바꾼 판단 기준을 읽어보세요." />
+  <meta name="twitter:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../stories.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"개발기록 | 회몬 · JH Soft Labs","url":"https://jhsoftlabs.com/stories/","inLanguage":"ko-KR","mainEntity":{"@type":"ItemList","numberOfItems":9,"itemListElement":[{"@type":"ListItem","position":1,"name":"AI가 내 경험을 대신 지어내지 않도록","url":"https://jhsoftlabs.com/stories/ai-answer-fidelity.html"},{"@type":"ListItem","position":2,"name":"로그인을 없앤 다음에도, 전환율을 말하지 않은 이유","url":"https://jhsoftlabs.com/stories/guest-trial-funnel.html"},{"@type":"ListItem","position":3,"name":"AI가 답한 뒤에 생기는 문제들","url":"https://jhsoftlabs.com/stories/ai-retry-safety.html"},{"@type":"ListItem","position":4,"name":"24초 영상에도, 배포 파이프라인이 필요했습니다","url":"https://jhsoftlabs.com/stories/shorts-release-pipeline.html"},{"@type":"ListItem","position":5,"name":"이미지를 만들었는데, 일은 끝나지 않았다","url":"https://jhsoftlabs.com/stories/salon-publishing.html"},{"@type":"ListItem","position":6,"name":"글자 수는 같았는데, ID는 달라졌다","url":"https://jhsoftlabs.com/stories/excel-native-checks.html"},{"@type":"ListItem","position":7,"name":"24편을 쓴 뒤에도, 끝났다고 할 수 없었다","url":"https://jhsoftlabs.com/stories/guides-that-work.html"},{"@type":"ListItem","position":8,"name":"숫자로 바꾸기 전에, 원본을 한 번 더","url":"https://jhsoftlabs.com/stories/column-harbor.html"},{"@type":"ListItem","position":9,"name":"색을 바꿔도 같아 보이던 홈페이지를 고친 방법","url":"https://jhsoftlabs.com/stories/homepage-information-order.html"}]}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header"><div class="header-inner shell">
+    <a class="wordmark" href="../" aria-label="JH Soft Labs 홈"><span class="monogram" aria-hidden="true">jh<span>.</span></span><span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span></a>
+    <nav class="main-nav" aria-label="주요 메뉴"><a href="../#projects">프로젝트</a><a href="./" aria-current="page">개발기록</a><a href="../templates/">무료 템플릿</a><a href="../#about">소개</a></nav>
+    <a class="header-contact" href="../#collection">모든 글·자료 <span aria-hidden="true">→</span></a>
+  </div></header>
+  <main id="main" class="story-shell journal">
+    <nav class="story-breadcrumb" aria-label="현재 위치"><a href="../">홈</a><span aria-hidden="true">/</span><span aria-current="page">개발기록</span></nav>
+    <header class="story-header">
+      <p class="eyebrow">THE DEVELOPMENT JOURNAL</p>
+      <h1>만든 것 뒤에,<br /><span>남은 기록들.</span></h1>
+      <p class="story-intro">만들며 막힌 이유와 바꾼 설계, 확인한 범위와 아직 모르는 것까지. 프로젝트별로 모았습니다.</p>
+      <p class="journal-count">프로젝트별 기록 9편 · 관찰과 해석을 구분합니다.</p>
+    </header>
+    <nav class="journal-nav" aria-label="프로젝트별 기록 바로가기"><a href="#interview">Interviewer Lens<span>3편 <span aria-hidden="true">↓</span></span></a><a href="#deep">Deep Constellation<span>2편 <span aria-hidden="true">↓</span></span></a><a href="#data">Column Harbor<span>3편 <span aria-hidden="true">↓</span></span></a><a href="#homepage">JH Soft Labs<span>1편 <span aria-hidden="true">↓</span></span></a></nav>
+    <section class="journal-group" id="interview" aria-labelledby="interview-title"><div class="journal-group-heading"><p class="eyebrow">FROM THE WORKBENCH</p><h2 id="interview-title">Interviewer Lens</h2><p>답변의 품질부터 체험의 마지막 행동까지.</p></div><ol class="journal-list"><li><a class="journal-entry" href="./ai-answer-fidelity.html"><span class="journal-entry-meta">AI 품질 · 출력 경계</span><h3>AI가 내 경험을 대신 지어내지 않도록</h3><p>그럴듯한 면접 답변보다 원문에 충실한 초안을 선택한 이유. 형식 검증과 사실 보존, 생성·표시·복사 경로의 방어를 나눠 정리했습니다.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li><li><a class="journal-entry" href="./guest-trial-funnel.html"><span class="journal-entry-meta">제품 설계 · 관찰의 한계</span><h3>로그인을 없앤 다음에도, 전환율을 말하지 않은 이유</h3><p>첫 진단을 로그인 없이 열면서 발견한 결과 복사 회귀와 빈 입력의 장벽. 기능 개선과 전환 성과를 구분하기 위해 무엇을 관찰했는지 기록했습니다.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li><li><a class="journal-entry" href="./ai-retry-safety.html"><span class="journal-entry-meta">서비스 운영 · 실패와 재시도</span><h3>AI가 답한 뒤에 생기는 문제들</h3><p>결과 저장, 사용량 반영, 멈춘 화면의 끝맺음을 나눠 살폈습니다.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li></ol></section>
+    <section class="journal-group" id="deep" aria-labelledby="deep-title"><div class="journal-group-heading"><p class="eyebrow">FROM THE WORKBENCH</p><h2 id="deep-title">Deep Constellation</h2><p>이미지와 영상이 전달 가능한 결과물이 되기까지.</p></div><ol class="journal-list"><li><a class="journal-entry" href="./shorts-release-pipeline.html"><span class="journal-entry-meta">콘텐츠 엔지니어링 · 검수</span><h3>24초 영상에도, 배포 파이프라인이 필요했습니다</h3><p>AI 이미지 세 장을 짧은 홍보영상으로 묶으며 정한 완료 기준. 키프레임·문자 경계·디코딩 검사와 제작·게시·성과 상태를 분리한 기록입니다.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li><li><a class="journal-entry" href="./salon-publishing.html"><span class="journal-entry-meta">콘텐츠 제작 · 게시와 전달</span><h3>이미지를 만들었는데, 일은 끝나지 않았다</h3><p>제작 완료, 실제 공개, 돌아온 반응은 서로 다른 기록이었습니다.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li></ol></section>
+    <section class="journal-group" id="data" aria-labelledby="data-title"><div class="journal-group-heading"><p class="eyebrow">FROM THE WORKBENCH</p><h2 id="data-title">Column Harbor</h2><p>데이터를 고치기 전에, 원본과 검증부터.</p></div><ol class="journal-list"><li><a class="journal-entry" href="./excel-native-checks.html"><span class="journal-entry-meta">실제 Excel · 자료형 검증</span><h3>글자 수는 같았는데, ID는 달라졌다</h3><p>긴 ID의 손상과 필터 상태의 차이. 성공한 대안과 미해결 원인을 나눴습니다.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li><li><a class="journal-entry" href="./guides-that-work.html"><span class="journal-entry-meta">실무 가이드 · 예제 품질</span><h3>24편을 쓴 뒤에도, 끝났다고 할 수 없었다</h3><p>따라 할 수 있는 예제를 만들고, 공개와 검색 성과를 구분했습니다.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li><li><a class="journal-entry" href="./column-harbor.html"><span class="journal-entry-meta">만든 이야기 · 브라우저 도구</span><h3>숫자로 바꾸기 전에, 원본을 한 번 더</h3><p>CSV 가져오기 위험을 살피되, 원본을 자동으로 바꾸지 않는 이유.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li></ol></section>
+    <section class="journal-group" id="homepage" aria-labelledby="homepage-title"><div class="journal-group-heading"><p class="eyebrow">FROM THE WORKBENCH</p><h2 id="homepage-title">JH Soft Labs</h2><p>이 기록들을 담는 홈페이지도 하나의 작업입니다.</p></div><ol class="journal-list"><li><a class="journal-entry" href="./homepage-information-order.html"><span class="journal-entry-meta">프론트엔드 · 정보 설계</span><h3>색을 바꿔도 같아 보이던 홈페이지를 고친 방법</h3><p>큰 소개문과 반복된 카드 대신 실제 프로젝트를 먼저 보여주기까지. 분류·검색·기록·점검 도구를 필요한 만큼만 더한 정적 홈페이지의 개선 기록입니다.</p><span class="journal-entry-tail"><time datetime="2026-09-13">2026. 09. 13.</time><span>읽기 <span aria-hidden="true">→</span></span></span></a></li></ol></section>
+    <aside class="journal-end" aria-label="내 작업에 적용하기"><div><p class="eyebrow">MAKE IT USEFUL</p><h2>기록을 읽었다면,<br />다음 작업에 써보세요.</h2><p>실제로 겪은 질문을 점검 도구와 빈 양식으로 정리했습니다.</p></div><div class="journal-end-links"><a href="../tools/release-check/">브라우저에서 작업 점검하기 <span aria-hidden="true">→</span></a><a href="../templates/">무료 템플릿 3종 보기 <span aria-hidden="true">→</span></a></div></aside>
+  </main>
+  <footer class="footer shell"><span>© 2026 JH Soft Labs</span><span class="footer-note">Made with curiosity. Shared with you.</span><a href="../">홈으로 돌아가기 <span aria-hidden="true">↑</span></a></footer>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); }; window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>

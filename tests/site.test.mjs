@@ -24,12 +24,12 @@ test("exactly three featured projects, each linked to its own service", () => {
 });
 
 test("library preserves all external resources and adds records and free templates", () => {
-  assert.equal(resources.length, 28);
+  assert.equal(resources.length, 32);
   assert.equal(new Set(resources.map((item) => item.href)).size, resources.length);
   assert.equal(resources.filter((item) => new URL(item.href, "https://jhsoftlabs.com/").hostname.endsWith("notion.site")).length, 7);
   assert.equal(resources.filter((item) => item.href.startsWith("https://csv.jhsoftlabs.com/guides/")).length, 4);
   const local = resources.filter((item) => item.href.startsWith("./"));
-  assert.equal(local.length, 9);
+  assert.equal(local.length, 13);
   assert.equal(local[0].href, "./stories/column-harbor.html");
   assert.equal(local[0].target, undefined);
   assert.ok(local.every((item) => !item.target));

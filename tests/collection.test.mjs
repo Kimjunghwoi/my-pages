@@ -70,13 +70,13 @@ function mount(initial = "https://jhsoftlabs.com/") {
   };
 }
 
-test("initial collection shows six of twenty-eight, expands all, and focuses the first newly revealed row", () => {
+test("initial collection shows six of thirty-two, expands all, and focuses the first newly revealed row", () => {
   const ui = mount();
   assert.equal(ui.controls.hidden, false);
   assert.equal(ui.visible().length, 6);
-  assert.match(ui.ids["result-count"].textContent, /전체 28개/);
+  assert.match(ui.ids["result-count"].textContent, /전체 32개/);
   ui.click("collection-more");
-  assert.equal(ui.visible().length, 28);
+  assert.equal(ui.visible().length, 32);
   assert.equal(ui.focused, ui.rows[6]);
   assert.equal(ui.ids["collection-more"].attributes["aria-expanded"], "true");
   ui.click("collection-more");
@@ -139,13 +139,16 @@ test("shared URL restores query and unknown filters safely fall back to all", ()
   assert.equal(ui.visible().length, 1);
   assert.equal(ui.ids["collection-search"].value, "CSV 원본");
   const invalid = mount("https://jhsoftlabs.com/?tab=missing");
-  assert.match(invalid.ids["result-count"].textContent, /^전체 28개/);
+  assert.match(invalid.ids["result-count"].textContent, /^전체 32개/);
 });
 
 test("record and template filters expose internal content without adding featured services", () => {
   const ui = mount();
   ui.filter("record");
-  assert.equal(ui.visible().length, 5);
+  assert.equal(ui.visible().length, 6);
+  assert.match(ui.ids["result-count"].textContent, /작업 기록 9개/);
+  ui.click("collection-more");
+  assert.equal(ui.visible().length, 9);
   assert.equal(ui.url.searchParams.get("tab"), "record");
   ui.filter("template");
   assert.equal(ui.visible().length, 4);
@@ -160,6 +163,24 @@ test("legacy anchors preserve filters and navigate to the unified library", () =
     assert.equal(ui.url.hash, "#collection");
     assert.equal(ui.url.searchParams.get("tab"), "data");
     assert.equal(ui.ids.collection.scrolled, true);
+  }
+});
+
+test("new development records are searchable by their specific engineering topics", () => {
+  for (const [query, title] of [
+    ["초안 환각", "AI가 내 경험을 대신 지어내지 않도록"],
+    ["로그인 분모", "로그인을 없앤 다음에도"],
+    ["쇼츠 디코딩", "24초 영상에도"],
+    ["정보 구조", "색을 바꿔도 같아 보이던"],
+  ]) {
+    const ui = mount();
+    ui.filter("record");
+    ui.search(query);
+    ui.flush();
+    assert.equal(ui.visible().length, 1, query);
+    assert.ok(ui.visible()[0].textContent.includes(title));
+    assert.equal(ui.url.searchParams.get("tab"), "record");
+    assert.equal(ui.url.searchParams.get("q"), query);
   }
 });
 

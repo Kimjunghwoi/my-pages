@@ -1,9 +1,44 @@
 .story-shell { max-width: 1030px; width: calc(100% - 96px); margin: 0 auto; }
+.journal .story-header { margin-top: 8px; margin-bottom: 22px; }
+.journal .story-header h1 { font-size: clamp(29px, 4vw, 46px); line-height: 1.35; letter-spacing: -1.7px; margin-top: 14px; }
+.journal .story-intro { max-width: 680px; margin-top: 16px; font-size: 15px; }
+.journal-count { margin-top: 16px; font-size: 12px; color: var(--muted); line-height: 1.8; }
+.journal-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 25px; margin: 24px 0 16px; }
+.journal-nav a { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 16px 0; min-height: 50px; border-bottom: 1px solid #a8b69f; font-size: 13px; font-weight: 600; }
+.journal-nav a > span { color: var(--muted); font-size: 11px; white-space: nowrap; }
+.journal-group { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr); gap: 50px; padding: 45px 0 8px; scroll-margin-top: 20px; }
+.journal-group-heading h2 { font-size: 23px; line-height: 1.5; letter-spacing: -.8px; margin: 12px 0; }
+.journal-group-heading > p:last-child { color: var(--muted); font-size: 13px; line-height: 1.9; word-break: keep-all; }
+.journal-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); min-width: 0; }
+.journal-list li { border-bottom: 1px solid var(--line); }
+.journal-entry { display: block; padding: 23px 0; }
+.journal-entry:hover h3 { color: var(--green); text-decoration: underline; text-underline-offset: 6px; }
+.journal-entry-meta { font-size: 11px; color: var(--green); line-height: 1.8; }
+.journal-entry h3 { font-size: 21px; font-weight: 650; line-height: 1.65; letter-spacing: -.65px; margin: 9px 0; word-break: keep-all; overflow-wrap: anywhere; }
+.journal-entry > p { color: var(--muted); font-size: 13px; line-height: 1.9; word-break: keep-all; overflow-wrap: anywhere; }
+.journal-entry-tail { display: flex; justify-content: space-between; gap: 20px; font-size: 11px; color: var(--muted); margin-top: 17px; }
+.journal-entry-tail > span { color: var(--green); }
+.journal-end { display: flex; justify-content: space-between; gap: 32px; margin-top: 50px; padding: 30px; border-block: 1px solid var(--line); background: #e9eddf; }
+.journal-end h2 { margin: 13px 0; font-size: 24px; line-height: 1.6; letter-spacing: -.7px; }
+.journal-end p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.9; word-break: keep-all; }
+.journal-end-links { display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+.journal-end-links a { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 48px; font-size: 13px; color: var(--green); text-decoration: underline; text-underline-offset: 5px; }
+@media (max-width: 850px) {
+  .journal-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .journal-group { gap: 28px; }
+}
+@media (max-width: 580px) {
+  .journal-group { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-top: 35px; }
+  .journal-nav { gap: 6px 18px; margin-top: 26px; }
+  .journal-nav a { font-size: 12px; }
+  .journal-entry h3 { font-size: 20px; }
+  .journal-end { flex-direction: column; padding: 24px 20px; gap: 20px; }
+}
 .story-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 26px 0; font-size: 12px; line-height: 1.7; color: var(--muted); }
 .story-breadcrumb a { padding-block: 8px; }
 .story-breadcrumb a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .story-header { max-width: 770px; margin: 18px 0 32px; }
-.story-header h1 { font-size: clamp(32px, 4.8vw, 59px); line-height: 1.35; letter-spacing: -2.4px; margin-top: 19px; }
+.story-header h1 { font-size: clamp(32px, 4.8vw, 59px); line-height: 1.35; letter-spacing: -2.4px; margin-top: 19px; text-wrap: balance; }
 .story-intro { max-width: 630px; margin-top: 23px; font-size: 17px; line-height: 1.9; color: var(--muted); word-break: keep-all; overflow-wrap: anywhere; }
 .story-byline { display: flex; align-items: center; gap: 12px; margin-top: 28px; font-size: 12px; }
 .story-byline img { border-radius: 50%; object-fit: cover; object-position: 50% 44%; }

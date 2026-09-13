@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-adsense-account" content="ca-pub-6113316314236430" />
+  <meta name="theme-color" content="#f6f7f2" />
+  <title>AI가 내 경험을 대신 지어내지 않도록 | 회몬의 개발기록</title>
+  <meta name="description" content="그럴듯한 면접 답변보다 원문에 충실한 초안을 선택한 이유. 형식 검증과 사실 보존, 생성·표시·복사 경로의 방어를 나눠 정리했습니다." />
+  <link rel="canonical" href="https://jhsoftlabs.com/stories/ai-answer-fidelity.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="AI가 내 경험을 대신 지어내지 않도록" />
+  <meta property="og:description" content="그럴듯한 면접 답변보다 원문에 충실한 초안을 선택한 이유. 형식 검증과 사실 보존, 생성·표시·복사 경로의 방어를 나눠 정리했습니다." />
+  <meta property="og:url" content="https://jhsoftlabs.com/stories/ai-answer-fidelity.html" />
+  <meta property="og:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <meta property="og:image:alt" content="개발자 회몬의 프로젝트와 작업 기록" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI가 내 경험을 대신 지어내지 않도록" />
+  <meta name="twitter:description" content="그럴듯한 면접 답변보다 원문에 충실한 초안을 선택한 이유. 형식 검증과 사실 보존, 생성·표시·복사 경로의 방어를 나눠 정리했습니다." />
+  <meta name="twitter:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <meta property="article:published_time" content="2026-09-13" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../stories.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI가 내 경험을 대신 지어내지 않도록","description":"그럴듯한 면접 답변보다 원문에 충실한 초안을 선택한 이유. 형식 검증과 사실 보존, 생성·표시·복사 경로의 방어를 나눠 정리했습니다.","datePublished":"2026-09-13","dateModified":"2026-09-13","inLanguage":"ko-KR","author":{"@type":"Person","name":"회몬","url":"https://jhsoftlabs.com/#about"},"image":"https://jhsoftlabs.com/assets/og-card.png","mainEntityOfPage":"https://jhsoftlabs.com/stories/ai-answer-fidelity.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header"><div class="header-inner shell">
+    <a class="wordmark" href="../" aria-label="JH Soft Labs 홈"><span class="monogram" aria-hidden="true">jh<span>.</span></span><span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span></a>
+    <nav class="main-nav" aria-label="주요 메뉴"><a href="../#projects">프로젝트</a><a href="./">개발기록</a><a href="../templates/">무료 템플릿</a><a href="../#about">소개</a></nav>
+    <a class="header-contact" href="../#collection">모든 글·자료 <span aria-hidden="true">→</span></a>
+  </div></header>
+  <main id="main" class="story-shell">
+    <nav class="story-breadcrumb" aria-label="현재 위치"><a href="../">홈</a><span aria-hidden="true">/</span><a href="./">개발기록</a><span aria-hidden="true">/</span><span aria-current="page">AI 품질 · 출력 경계</span></nav>
+    <article>
+      <header class="story-header">
+        <p class="eyebrow">FIELD NOTE 05 · INTERVIEWER LENS</p>
+        <h1>AI가 내 경험을 대신 지어내지 않도록</h1>
+        <p class="story-intro">그럴듯한 면접 답변보다 원문에 충실한 초안을 선택한 이유. 형식 검증과 사실 보존, 생성·표시·복사 경로의 방어를 나눠 정리했습니다.</p>
+        <div class="story-byline"><img src="../assets/hoemon-profile.jpg" alt="회몬 캐릭터" width="40" height="40" /><div><strong>회몬</strong><span>개발자 · 메이커</span></div><time datetime="2026-09-13">2026. 09. 13.</time></div>
+      </header>
+      <aside class="note-summary" aria-label="이 기록의 핵심"><span class="eyebrow">WHAT CHANGED, AND WHY</span><ol><li>정해진 JSON 형식과 사실에 맞는 내용은 다른 검사입니다.</li><li>원문 밖의 수치·기술이 추가되는 신호에는 보수적인 대안을 둡니다.</li><li>새 결과뿐 아니라 과거 결과의 표시와 복사도 같은 기준으로 다룹니다.</li></ol><p>2026년 9월까지의 개발·QA 기록을 편집했습니다. 사실 추가를 완전히 막았다는 품질 보증은 아닙니다.</p></aside>
+      <div class="story-layout">
+        <nav class="story-toc" aria-label="이 글의 목차"><span>이 글에서</span><a href="#plausible">더 구체적인 문장이 더 나쁜 답변일 수 있었습니다</a><a href="#two-checks">필드가 존재하는 것과 사실인 것은 다릅니다</a><a href="#boundaries">화면은 안전한데, 복사는 원본이면 안 됩니다</a><a href="#limits">통과한 테스트 수로 답변 품질을 말하지 않기</a><a href="#next">내 작업에 적용하기</a></nav>
+        <div class="story-content">
+          <section id="plausible" aria-labelledby="plausible-title"><p class="story-section-number">01 / DEVELOPMENT NOTES</p><h2 id="plausible-title">더 구체적인 문장이 더 나쁜 답변일 수 있었습니다</h2><p>면접 답변 진단에서 AI가 해야 할 일은 지원자의 경험을 더 잘 설명하도록 돕는 것입니다. 그런데 짧은 답변을 긴 성공담으로 바꾸다 보면, 지원자가 말하지 않은 성과까지 채워 넣기 쉽습니다. 개발 기록에서는 짧은 원문의 과도한 확장과, QA 초안에 원문 밖 측정 시간·구현 세부사항이 추가된 사례를 확인했습니다.</p><p>수치와 기술 이름이 들어가면 글은 전문적으로 보입니다. 하지만 면접관이 “어떻게 측정했나요?”라고 물었을 때 본인의 경험으로 설명할 수 없다면 개선이 아닙니다. 이 제품에서는 문장의 화려함보다 사용자가 책임지고 말할 수 있는 범위를 먼저 두기로 했습니다.</p><div class="story-callout"><strong>설명용 합성 예시</strong><p>원문: “느린 조회 쿼리를 수정했습니다.”<br />확인되지 않은 확장: “Redis를 도입해 응답 시간을 40% 줄였습니다.”<br />기술 선택과 개선 수치는 원문만으로 확인할 수 없습니다. 실제 사용자 답변이나 모델 재실행 결과가 아닙니다.</p></div></section>
+          <section id="two-checks" aria-labelledby="two-checks-title"><p class="story-section-number">02 / DEVELOPMENT NOTES</p><h2 id="two-checks-title">필드가 존재하는 것과 사실인 것은 다릅니다</h2><p>점수, 요약, 약점, 개선 초안, 꼬리질문은 앱이 일정한 형태로 읽을 수 있어야 합니다. JSON Schema 기반 구조화 출력과 앱의 범위 검사는 그 계약을 위한 것이었습니다. 그러나 형태를 통과한 문자열에도 원문 밖 주장이 들어갈 수 있습니다.</p><p>그래서 “처리할 수 있는 형식인가”와 “원문보다 더 큰 주장을 만드는가”를 별도의 질문으로 나눴습니다. 프롬프트에는 확인한 사실과 보완 제안을 구분하도록 넣고, 출력 뒤에는 숫자·단위와 선정한 주요 기술 표현을 비교하는 보호 로직을 두었습니다.</p><ol class="story-flow"><li><strong>원문과 초안을 비교합니다</strong><span>숫자·단위·일부 기술 표현을 정규화해 원문 밖 추가 신호를 살핍니다.</span></li><li><strong>의심되면 더 보수적으로 돌려줍니다</strong><span>검증되지 않은 구체성을 그대로 주는 대신, 원문과 실제 경험으로 보완하라는 안내를 제공합니다.</span></li><li><strong>한계를 남깁니다</strong><span>의미 전체를 이해하는 사실 확인기가 아닙니다. 목록 밖 주장과 같은 숫자의 다른 의미는 놓칠 수 있고, 안전한 설명을 막을 수도 있습니다.</span></li></ol></section>
+          <section id="boundaries" aria-labelledby="boundaries-title"><p class="story-section-number">03 / DEVELOPMENT NOTES</p><h2 id="boundaries-title">화면은 안전한데, 복사는 원본이면 안 됩니다</h2><p>새 생성 경로만 바꾸면 예전에 저장한 결과는 예전 방식으로 읽힙니다. 화면에 보이는 초안을 보수적으로 바꿨어도 복사 버튼이 가공 전 값을 가져가면, 사용자가 실제로 가져가는 문장은 달라집니다.</p><p>같은 보호 함수를 새 평가의 후처리, 저장된 결과의 표시, 결과 복사에 적용했습니다. 과거 데이터를 모두 다시 생성하거나 삭제한 것은 아닙니다. 사용자에게 전달하는 세 경로의 기준을 맞춘 것입니다.</p><p>회귀 검사에는 빈 초안, 원문 밖 숫자, 단위 표기, 기술 동의어, 이미 보호된 문구를 넣었습니다. 평가 함수가 실제로 이 경로를 거치는지도 확인했습니다. 보호를 위해 AI를 한 번 더 호출하는 방식은 쓰지 않았습니다.</p></section>
+          <section id="limits" aria-labelledby="limits-title"><p class="story-section-number">04 / DEVELOPMENT NOTES</p><h2 id="limits-title">통과한 테스트 수로 답변 품질을 말하지 않기</h2><p>이 검사는 정해진 사례에서 보호 정책이 유지되는지 확인합니다. 모든 문장에서 환각이 사라졌다는 뜻은 아닙니다. 스키마 검사와 휴리스틱만으로 사용자 경험의 진위를 판정할 수도 없습니다.</p><p>결과 출처도 구분했습니다. 규칙 기반 대체 결과가 표시됐다는 사실을 기대한 AI 평가의 성공으로 세지 않았습니다. 유효한 본 평가 뒤의 추가 다듬기만 실패한 경우와, 평가 자체가 실패한 경우 역시 같은 상태로 묶지 않았습니다.</p><p>다음으로 필요한 것은 사실 추가·누락·과장·구체성을 나눠 보는 사람의 평가와 오탐·미탐 측정입니다. 이 글에서 그러한 대규모 검증을 완료했다고 말하지 않습니다. 점수 상승 역시 실제 면접 실력이나 합격률 상승과는 별개입니다.</p></section>
+          <section id="next" class="note-template" aria-labelledby="next-title"><p class="story-section-number">KEEP EXPLORING</p><h2 id="next-title">읽은 뒤, 내 작업에서 확인할 것</h2><p>내 서비스의 원문과 개선 초안, 화면 표시와 복사 결과를 각각 비교해보세요. 같은 보호 기준이 모든 전달 경로에 적용되는지부터 확인할 수 있습니다.</p><a class="button button--dark" href="../tools/release-check/?kind=ai">내 AI 서비스 점검하기<span aria-hidden="true">→</span></a></section>
+          <footer class="story-end"><p>초안 품질 개선 문서와 검증대장의 생성·표시·복사 경계 기록을 바탕으로 작성했습니다. 고객 원문, 내부 운영 상한과 소표본 통계는 싣지 않았습니다. 이번 글 작성 과정에서 실제 AI나 운영 DB를 새로 실행하지 않았습니다.</p><a href="./guest-trial-funnel.html">이어서 읽기 · 로그인 다음에 남은 장벽 <span aria-hidden="true">→</span></a><a href="./">개발기록 전체 보기 <span aria-hidden="true">→</span></a></footer>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="footer shell"><span>© 2026 JH Soft Labs</span><span class="footer-note">Made with curiosity. Shared with you.</span><a href="../">홈으로 돌아가기 <span aria-hidden="true">↑</span></a></footer>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); }; window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
