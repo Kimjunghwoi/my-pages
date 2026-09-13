@@ -7,7 +7,7 @@
 - Pages 프로젝트: `jhsoftlabs`, https://jhsoftlabs.pages.dev/ (GitHub `main` 자동 배포).
 - 기존 Vercel `mypages` 프로젝트는 복구용으로 보존합니다.
 
-Cloudflare Pages 이전 상태와 DNS 복구 절차는 `docs/cloudflare-pages-migration.md`를 참고합니다. Pages 임시 주소 배포와 네임서버 변경은 완료했고 메인 도메인 연결은 활성화 확인 후 진행합니다. Pages용 검증/배포본은 `node scripts/verify-pages.mjs`로 만들며, `.pages-dist`만 배포합니다.
+2026-09-13 Cloudflare Pages 이전을 완료했습니다. `jhsoftlabs.com`의 Active / SSL enabled 상태와 실제 HTTPS 응답을 확인했습니다. 이전 검증과 DNS 복구 절차는 `docs/cloudflare-pages-migration.md`를 참고합니다. Pages용 검증/배포본은 `node scripts/verify-pages.mjs`로 만들며, `.pages-dist`만 배포합니다.
 
 ## 로컬 확인
 

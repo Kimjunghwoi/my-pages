@@ -6,7 +6,8 @@
 - Pages 프로젝트 `jhsoftlabs` 배포 성공: https://jhsoftlabs.pages.dev/
 - 첫 배포: commit `83b12aa14ab05603d8ddbae8383452dba5a19fdc`, deployment `9068634d-e715-4e66-8ccf-eacc25b338fc`.
 - Porkbun 네임서버를 `chad.ns.cloudflare.com`, `leah.ns.cloudflare.com`으로 변경하고 재조회했습니다. 1.1.1.1 및 8.8.8.8에서도 새 NS가 반환됩니다.
-- 메인 apex는 아직 Vercel A `76.76.21.21`을 유지합니다. Cloudflare zone 활성화 후 Pages 사용자 도메인 연결과 HTTPS 확인이 남아 있습니다.
+- 2026-09-13 22시대 KST 이전 완료. Cloudflare zone 활성화 후 apex를 `jhsoftlabs.pages.dev` CNAME (Proxied / Auto TTL)으로 연결했습니다. Pages 대시보드에서 `jhsoftlabs.com Active`, `SSL enabled`를 확인했습니다.
+- 운영 주소 https://jhsoftlabs.com/ 는 Cloudflare HTTPS 200으로 응답합니다. HTTP는 HTTPS로 301 이동합니다. 이전 네임서버를 캐시한 방문자는 잠시 보존된 Vercel 배포를 볼 수 있습니다.
 - `csv`, `image`, `interview`의 앱 배포는 이 작업에 포함되지 않습니다.
 
 ## 중요한 범위 차이
@@ -35,7 +36,7 @@ Cloudflare Pages 설정:
 
 배포 출력만 업로드합니다. 저장소 루트나 `.vercelignore`에 의존해 공개 범위를 결정하면 안 됩니다. `docs`, `tests`, `.git`, `.github`, `.vercel`, `scripts`, `outputs`는 배포본에 포함되지 않습니다. 템플릿 Markdown은 의도된 공개 다운로드입니다.
 
-기존 Vercel 원본의 HTML은 변경하지 않습니다. 빌드가 Pages 출력에서만 Vercel Analytics/Speed Insights를 제거합니다. 기존 통계는 Vercel에 남습니다. Pages 프로젝트의 무료 Web Analytics를 활성화했고 다음 배포에서 스니펫이 자동 삽입됩니다. 통계 이관이나 클릭 이벤트 추가를 의미하지 않습니다. AdSense 소유 확인과 `ads.txt`는 유지합니다.
+기존 Vercel 원본의 HTML은 변경하지 않습니다. 빌드가 Pages 출력에서만 Vercel Analytics/Speed Insights를 제거합니다. 기존 통계는 Vercel에 남습니다. Pages 프로젝트의 무료 Web Analytics를 활성화하고 후속 자동 배포 `b650f2c` / `ef2489ec-f962-4ae2-b147-49b97a1dcf7d`에서 스니펫 삽입을 확인했습니다. 통계 이관이나 클릭 이벤트 추가를 의미하지 않습니다. 실제 방문 집계는 대시보드에 지연 반영될 수 있습니다. AdSense 소유 확인과 `ads.txt`는 유지합니다.
 
 Pages는 `/stories/example.html`을 `/stories/example`로 리디렉션합니다. 출력의 내부 링크, canonical, OG URL, JSON-LD, sitemap을 이 기본 동작에 맞춥니다. 이미 공유된 `.html` 경로도 실제 응답을 확인해야 합니다. 디렉터리 URL(`/stories/`, `/templates/`, `/tools/release-check/`)과 앵커는 유지합니다. 최상위 `404.html`로 잘못된 주소가 홈페이지 200 응답으로 처리되지 않게 합니다.
 
@@ -74,6 +75,16 @@ Pages는 `/stories/example.html`을 `/stories/example`로 리디렉션합니다.
 - 양쪽 할당 네임서버에서 15개 레코드씩 30개 DNS 대조 통과. CNAME은 DNS only로 유지했습니다.
 - 네임서버 변경 후 메인, csv, image, interview의 HTTPS 200 확인. 메일은 MX/SPF/DKIM/DMARC를 대조했으며 실제 발송/수신 테스트를 수행한 것은 아닙니다.
 - 상세 근거는 `outputs/pages-live-verification-2026-09-13-final.json`, `outputs/dns-authoritative-verification-2026-09-13.json`, `outputs/post-nameserver-http-2026-09-13.json`에 보관했습니다.
+- 최종 운영 도메인: 49개 HTTP 점검에서 실패 없음. 모든 HTML은 허용된 Cloudflare 통계 삽입 외 원본과 동일하며, 14개 HTML에서 통계 스크립트 삽입을 확인했습니다. `robots.txt` 자동 관리 기능은 사용하지 않아 기존 파일을 그대로 제공합니다.
+- 최종 두 네임서버에서 메인 외 14개 레코드씩 28개 보존 검사 통과. 메인, csv, image, interview 모두 HTTPS 200으로 응답했습니다. 근거는 `outputs/production-pages-verification-2026-09-13.json`, `outputs/final-dns-and-services-2026-09-13.json`입니다.
+- 브라우저에서 운영 홈페이지를 열어 렌더링을 확인했고, 임시 주소에서 기존 글의 `.html?migration=check#main`이 확장자 없는 경로로 query/hash를 보존하며 이동함을 확인했습니다.
+
+## 이후 운영
+
+- DNS는 이제 Cloudflare에서 관리합니다. Porkbun에 남아 있는 이전 DNS 목록을 수정해도 현재 권한 DNS에는 적용되지 않습니다. 도메인 갱신은 계속 Porkbun에서 합니다.
+- `main` push로 Pages가 자동 배포하며 GitHub CI와 Pages 빌드에서 검증 명령이 실행됩니다. 무료 플랜만 사용했고 Workers, 유료 저장소, 서버 API를 추가하지 않았습니다.
+- 메일 전달은 기존 Porkbun MX와 발송 인증 레코드를 유지합니다. 실제 송수신 확인은 별도 운영 점검 사항입니다.
+- Vercel 프로젝트와 기존 도메인 연결은 즉시 복구 경로로 남겨 두었습니다. 이전 통계도 그대로 남습니다. DNS 전파가 안정된 뒤 필요에 따라 정리할 수 있으나 이번 작업에서는 삭제하지 않았습니다.
 
 ## 복구
 
