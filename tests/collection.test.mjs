@@ -70,13 +70,13 @@ function mount(initial = "https://jhsoftlabs.com/") {
   };
 }
 
-test("initial collection shows six of twenty, expands all, and focuses the first newly revealed row", () => {
+test("initial collection shows six of twenty-six, expands all, and focuses the first newly revealed row", () => {
   const ui = mount();
   assert.equal(ui.controls.hidden, false);
   assert.equal(ui.visible().length, 6);
-  assert.match(ui.ids["result-count"].textContent, /전체 20개/);
+  assert.match(ui.ids["result-count"].textContent, /전체 26개/);
   ui.click("collection-more");
-  assert.equal(ui.visible().length, 20);
+  assert.equal(ui.visible().length, 26);
   assert.equal(ui.focused, ui.rows[6]);
   assert.equal(ui.ids["collection-more"].attributes["aria-expanded"], "true");
   ui.click("collection-more");
@@ -139,7 +139,19 @@ test("shared URL restores query and unknown filters safely fall back to all", ()
   assert.equal(ui.visible().length, 1);
   assert.equal(ui.ids["collection-search"].value, "CSV 원본");
   const invalid = mount("https://jhsoftlabs.com/?tab=missing");
-  assert.match(invalid.ids["result-count"].textContent, /^전체 20개/);
+  assert.match(invalid.ids["result-count"].textContent, /^전체 26개/);
+});
+
+test("record and template filters expose internal content without adding featured services", () => {
+  const ui = mount();
+  ui.filter("record");
+  assert.equal(ui.visible().length, 4);
+  assert.equal(ui.url.searchParams.get("tab"), "record");
+  ui.filter("template");
+  assert.equal(ui.visible().length, 3);
+  assert.ok(ui.visible().every((row) => row.textContent.includes("무료 양식")));
+  ui.filter("project");
+  assert.equal(ui.visible().length, 3);
 });
 
 test("legacy anchors preserve filters and navigate to the unified library", () => {

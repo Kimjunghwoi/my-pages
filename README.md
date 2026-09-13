@@ -21,7 +21,7 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 
 대표 프로젝트와 모든 링크는 `index.html`에 있습니다. JavaScript가 꺼져도 콘텐츠를 읽을 수 있습니다.
 
-프로젝트 이름과 용도를 시각 예시보다 먼저 표시합니다. 자료 목록에는 기존 외부 링크 19개와 내부 제작기 1개가 있습니다. `project` 필터는 실제 서비스 세 개만, `data` 필터는 데이터 도구·가이드와 제작기를 보여줍니다.
+프로젝트 이름과 용도를 시각 예시보다 먼저 표시합니다. 자료 목록은 외부 링크 19개, 작업 기록 4개, 무료 템플릿 3개로 총 26개입니다. `project` 필터는 실제 서비스 세 개만, `record`는 작업 기록, `template`은 무료 양식을 보여줍니다.
 
 - 대표 프로젝트: `.project-grid`의 카드와 해당 `.resource` 항목을 함께 수정합니다.
 - 글/가이드: `.resource-list`에 링크를 추가합니다. `data-category`에는 공백으로 구분한 주제들을 지정할 수 있습니다.
@@ -38,6 +38,17 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 - 제작기를 추가할 때 제목·설명·canonical·공유 메타·JSON-LD·작성일·사이트맵을 함께 갱신합니다. 게시/수정일은 실제 변경 날짜만 기록합니다.
 - 상세 제작기에 홈페이지용 `script.js`를 로딩하지 않습니다. Vercel 분석은 기존 페이지뷰 수집만 유지하고 유료 사용자 정의 이벤트는 추가하지 않았습니다.
 
+## 실험 기록과 무료 양식
+
+- 대표 프로젝트 다음의 `#fieldnotes`에서 실험 기록 3편과 무료 템플릿으로 이동합니다. 기존 서비스 카드의 우선순위는 유지합니다.
+- `stories/salon-publishing.html`: 이미지 제작 이후 게시·배포·소개 단계의 시행착오.
+- `stories/guides-that-work.html`: 가이드 예제 검증과 공개·검색 성과의 구분.
+- `stories/ai-retry-safety.html`: AI 요청의 실패·재시도 처리와 운영 적용 검증.
+- `templates/index.html`: 네이티브 `details` 미리보기와 실제 Markdown 파일 다운로드. 입력·로그인·저장 기능은 없습니다.
+- 양식 수정 시 `templates/*.md`와 해당 HTML의 `<pre>`를 함께 갱신합니다. `tests/content.test.mjs`가 내용 일치를 검사합니다.
+- 상세 작성 근거는 로컬 전용 문서 `docs/fieldnotes-sources-2026-09-13.md`에 있으며 Git과 웹 배포에서 제외합니다. 원문 채팅, 고객 정보, 내부 운영 자료를 공개 경로로 옮기지 않습니다.
+- 새 글과 양식의 공개 범위는 2026-09-13에 검토·승인됐습니다. 글의 게시일과 템플릿 버전 날짜도 같은 날짜로 유지합니다.
+
 ## 배포 전
 
 테스트와 320px/390px/768px/1440px 브라우저 확인 후 기존 프로젝트에 배포합니다.
@@ -48,4 +59,4 @@ vercel --prod --yes
 
 DNS는 별도 변경할 필요가 없습니다. `ads.txt`, AdSense 소유 확인 메타, Vercel Analytics/Speed Insights 스크립트를 유지합니다. 소셜 공유 이미지는 `assets/share-card.svg`의 래스터 버전인 `assets/og-card.png`입니다.
 
-최근 사이트 확인 내용은 `docs/site-audit.md`를 참고하세요.
+기존 개선 검증은 `docs/enhancement-plan-2026-09-13.md`, 새 콘텐츠 릴리즈 절차는 `docs/fieldnotes-release-2026-09-13.md`를 참고하세요.
