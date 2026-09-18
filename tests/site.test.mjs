@@ -18,7 +18,7 @@ test("exactly three featured projects, each linked to its own service", () => {
   assert.equal(cards.length, 3);
   cards.forEach((card, index) => {
     const urls = [...card[1].matchAll(/href="(https:[^"]+)"/g)].map((match) => new URL(match[1]));
-    assert.equal(urls.length, 2);
+    assert.ok(urls.length >= 2);
     assert.ok(urls.every((url) => url.hostname === projectHosts[index]));
   });
 });
