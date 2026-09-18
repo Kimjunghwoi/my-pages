@@ -143,13 +143,6 @@ h1 > span { color: var(--green); }
 .language-tag { display: inline-block; border: 1px solid #b7c1ae; border-radius: 3px; padding: 1px 4px; font-family: "Manrope", sans-serif; font-size: 11px; font-weight: 700; line-height: 1.4; color: #526444; vertical-align: middle; }
 .project-summary { font-size: 13px; font-weight: 600; line-height: 1.8; margin-top: 11px; word-break: keep-all; overflow-wrap: anywhere; }
 .project-description { font-size: 14px; line-height: 1.85; color: var(--muted); word-break: keep-all; overflow-wrap: break-word; }
-.project-quicklinks { margin-top: 14px; padding: 12px 14px; background: #f4f7f2; border: 1px solid #dbe3d6; border-radius: 6px; }
-.quicklinks-title { display: block; font-size: 11px; font-weight: 700; color: #44593f; margin-bottom: 6px; }
-.project-quicklinks ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
-.project-quicklinks li a { font-size: 12px; color: var(--ink); display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0; }
-.project-quicklinks li a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
-.project-quicklinks li a strong { font-weight: 700; color: #2e4429; }
-.project-quicklinks li a span[aria-hidden] { font-size: 11px; opacity: 0.7; }
 .project-story { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 8px; font-size: 12px; line-height: 1.7; color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 .project-detail { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #59704e; padding-top: 19px; margin-top: auto; }
 .small-dot { width: 4px; height: 4px; }
