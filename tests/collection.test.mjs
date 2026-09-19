@@ -74,9 +74,9 @@ test("initial collection shows six of thirty-two, expands all, and focuses the f
   const ui = mount();
   assert.equal(ui.controls.hidden, false);
   assert.equal(ui.visible().length, 6);
-  assert.match(ui.ids["result-count"].textContent, /전체 32개/);
+  assert.match(ui.ids["result-count"].textContent, /전체 36개/);
   ui.click("collection-more");
-  assert.equal(ui.visible().length, 32);
+  assert.equal(ui.visible().length, 36);
   assert.equal(ui.focused, ui.rows[6]);
   assert.equal(ui.ids["collection-more"].attributes["aria-expanded"], "true");
   ui.click("collection-more");
@@ -98,11 +98,11 @@ test("project filter keeps exactly three services while data also includes the b
 test("normalized multi-term search finds the build note and escapes clear only the query", () => {
   const ui = mount();
   ui.filter("data");
-  ui.search("ＣＳＶ   원본");
+  ui.search("ＣＳＶ   브라우저 원본");
   assert.equal(ui.visible().length, 1);
   assert.match(ui.visible()[0].textContent, /숫자로 바꾸기 전에/);
   ui.flush();
-  assert.equal(ui.url.searchParams.get("q"), "ＣＳＶ   원본");
+  assert.equal(ui.url.searchParams.get("q"), "ＣＳＶ   브라우저 원본");
   ui.escape();
   assert.equal(ui.url.searchParams.get("q"), null);
   assert.equal(ui.url.searchParams.get("tab"), "data");
@@ -135,11 +135,11 @@ test("filter history restores query, selected filter and collapsed results", () 
 });
 
 test("shared URL restores query and unknown filters safely fall back to all", () => {
-  const ui = mount("https://jhsoftlabs.com/?tab=data&q=CSV%20%EC%9B%90%EB%B3%B8#collection");
+  const ui = mount("https://jhsoftlabs.com/?tab=data&q=CSV%20%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%20%EC%9B%90%EB%B3%B8#collection");
   assert.equal(ui.visible().length, 1);
-  assert.equal(ui.ids["collection-search"].value, "CSV 원본");
+  assert.equal(ui.ids["collection-search"].value, "CSV 브라우저 원본");
   const invalid = mount("https://jhsoftlabs.com/?tab=missing");
-  assert.match(invalid.ids["result-count"].textContent, /^전체 32개/);
+  assert.match(invalid.ids["result-count"].textContent, /^전체 36개/);
 });
 
 test("record and template filters expose internal content without adding featured services", () => {

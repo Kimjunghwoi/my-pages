@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://jhsoftlabs.com/</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://jhsoftlabs.com/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://jhsoftlabs.com/data-guides/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://jhsoftlabs.com/data-guides/csv-one-column.html</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://jhsoftlabs.com/data-guides/excel-leading-zeros.html</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://jhsoftlabs.com/data-guides/power-query-merge-rows.html</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://jhsoftlabs.com/data-guides/excel-filter-spill.html</loc><lastmod>2026-09-19</lastmod></url>
   <url><loc>https://jhsoftlabs.com/stories/column-harbor.html</loc><lastmod>2026-09-13</lastmod></url>
   <url><loc>https://jhsoftlabs.com/stories/salon-publishing.html</loc><lastmod>2026-09-13</lastmod></url>
   <url><loc>https://jhsoftlabs.com/stories/guides-that-work.html</loc><lastmod>2026-09-13</lastmod></url>

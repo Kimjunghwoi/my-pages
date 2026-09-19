@@ -24,13 +24,13 @@ test("exactly three featured projects, each linked to its own service", () => {
 });
 
 test("library preserves all external resources and adds records and free templates", () => {
-  assert.equal(resources.length, 32);
+  assert.equal(resources.length, 36);
   assert.equal(new Set(resources.map((item) => item.href)).size, resources.length);
   assert.equal(resources.filter((item) => new URL(item.href, "https://jhsoftlabs.com/").hostname.endsWith("notion.site")).length, 7);
   assert.equal(resources.filter((item) => item.href.startsWith("https://csv.jhsoftlabs.com/guides/")).length, 4);
   const local = resources.filter((item) => item.href.startsWith("./"));
-  assert.equal(local.length, 13);
-  assert.equal(local[0].href, "./stories/column-harbor.html");
+  assert.equal(local.length, 17);
+  assert.ok(local.some((item) => item.href === "./stories/column-harbor.html"));
   assert.equal(local[0].target, undefined);
   assert.ok(local.every((item) => !item.target));
   assert.equal(resources.filter((item) => item["data-category"].split(" ").includes("project")).length, 3);
@@ -94,7 +94,7 @@ test("all public HTML documents have valid local destinations, assets, anchors a
     const file = `${directory}/${entry.name}`;
     return entry.isDirectory() ? publicHtml(file) : file.endsWith(".html") ? [file] : [];
   });
-  const files = ["index.html", ...["stories", "templates", "tools"].flatMap(publicHtml)];
+  const files = ["index.html", ...["stories", "data-guides", "templates", "tools"].flatMap(publicHtml)];
   const documents = new Map(files.map((file) => [file, readFileSync(resolve(root, file), "utf8")]));
   for (const [file, source] of documents) {
     const base = new URL(file === "index.html" ? "/" : `/${file}`, "https://jhsoftlabs.com");

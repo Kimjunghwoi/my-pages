@@ -5,11 +5,12 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const repository = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const bootstrap = "window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); }; window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };";
+const compactBootstrap = "window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};";
 
 export function pagesHtml(source) {
   const html = source.replace(/<script\b([^>]*)>([\s\S]*?)<\/script>/g, (tag, attributes, body) => {
     if (/\bsrc="\/_vercel\/(?:insights|speed-insights)\/script\.js"/.test(attributes)) return "";
-    if (!attributes.trim() && body.trim().replace(/\s+/g, " ") === bootstrap) return "";
+    if (!attributes.trim() && [bootstrap, compactBootstrap].includes(body.trim().replace(/\s+/g, " "))) return "";
     return tag;
   });
   if (/\/_vercel\/|window\.(?:va|si)\s*=/.test(html)) throw new Error("Unrecognized Vercel telemetry: inspect before publishing.");
@@ -18,7 +19,7 @@ export function pagesHtml(source) {
 
 function pagesUrls(source, file, articles) {
   const base = new URL(file, "https://jhsoftlabs.com/");
-  const absolute = source.replace(/https:\/\/jhsoftlabs\.com\/stories\/[a-z0-9-]+\.html/g,
+  const absolute = source.replace(/https:\/\/jhsoftlabs\.com\/(?:stories|data-guides)\/[a-z0-9-]+\.html/g,
     (url) => articles.has(new URL(url).pathname) ? url.slice(0, -5) : url);
   return absolute.replace(/href="([^"]+)"/g, (attribute, href) => {
     const url = new URL(href, base);
@@ -34,6 +35,7 @@ export function buildPages(root = repository) {
   const groups = {
     assets: /\.(?:svg|png|jpe?g|webp|woff2?)$/i,
     stories: /\.html$/,
+    "data-guides": /\.html$/,
     templates: /\.(?:html|md)$/,
     "tools/release-check": /\.(?:html|css|js)$/,
   };
@@ -44,7 +46,7 @@ export function buildPages(root = repository) {
     }
   }
   const files = new Map();
-  const articles = new Set(sources.filter((file) => /^stories\/(?!index\.html)[a-z0-9-]+\.html$/.test(file)).map((file) => `/${file}`));
+  const articles = new Set(sources.filter((file) => /^(?:stories|data-guides)\/(?!index\.html)[a-z0-9-]+\.html$/.test(file)).map((file) => `/${file}`));
   for (const file of sources.sort()) {
     const path = join(root, file);
     if (lstatSync(path).isSymbolicLink() || !realpathSync(path).startsWith(`${root}${sep}`)) throw new Error(`Refusing unsafe public path: ${file}`);

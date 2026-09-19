@@ -38,7 +38,7 @@
           <span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span>
         </a>
         <nav class="main-nav" aria-label="주요 메뉴">
-          <a href="#projects">프로젝트</a><a href="#fieldnotes">실험 기록</a><a href="#collection">글·자료</a><a href="#about">소개</a>
+          <a href="#projects">프로젝트</a><a href="./data-guides/">데이터 가이드</a><a href="#fieldnotes">실험 기록</a><a href="#collection">글·자료</a><a href="#about">소개</a>
         </nav>
         <a class="header-contact" href="https://open.kakao.com/o/sPFCjtni" target="_blank" rel="noopener noreferrer">이야기 나누기 <span aria-hidden="true">↗</span><span class="sr-only"> (카카오톡, 새 탭)</span></a>
       </div>
@@ -166,6 +166,11 @@
         </ol>
       </section>
 
+      <section class="fieldnotes section" id="data-guides" aria-labelledby="data-guides-title">
+        <div class="fieldnotes-intro"><span class="eyebrow">PRACTICAL DATA GUIDES</span><h2 id="data-guides-title">링크를 모으는 대신,<br/>여기서 바로 해결합니다.</h2><p>CSV·Excel·Power Query에서 자주 막히는 문제를 한국어로 설명했습니다. 원본 보존, 합성 예제와 예상 결과를 함께 확인합니다.</p><a class="fieldnotes-all" href="./data-guides/">한국어 데이터 가이드 4편 모두 보기 <span aria-hidden="true">→</span></a></div>
+        <ol class="fieldnotes-list"><li><a href="./data-guides/csv-one-column.html"><span class="fieldnote-meta">CSV · 구분자</span><strong>CSV가 Excel에서 한 열로 열릴 때</strong><span>쉼표와 세미콜론을 추측하지 않고 원본과 미리보기로 확인하기.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li><li><a href="./data-guides/excel-leading-zeros.html"><span class="fieldnote-meta">Excel · 식별자</span><strong>CSV의 앞자리 0을 Excel에서 지키기</strong><span>00123이 123으로 바뀌기 전에 Text 자료형으로 가져오기.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li><li><a href="./data-guides/power-query-merge-rows.html"><span class="fieldnote-meta">Power Query · 병합</span><strong>병합 후 행과 합계가 늘어날 때</strong><span>중복을 지우기 전에 매치 수와 one-to-many 관계 확인하기.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li></ol>
+      </section>
+
       <section class="library section" id="collection" aria-labelledby="collection-title">
         <div class="library-sidebar">
           <p class="eyebrow"><span class="section-index">03 /</span> NOTES & LINKS</p>
@@ -222,6 +227,10 @@
           </div>
           <p class="external-note">↗는 새 탭, <span class="language-tag">EN</span>은 영문 자료입니다. 작업 기록과 무료 템플릿은 이곳에서 봅니다.</p>
           <div class="resource-list" id="collection-grid">
+            <a class="resource" data-category="data" data-keywords="한국어 CSV 엑셀 한 열 구분자 세미콜론" href="./data-guides/csv-one-column.html"><span class="resource-source">GUIDE<span>한국어 데이터 실무</span></span><span class="resource-copy"><strong>CSV가 Excel에서 한 열로 열릴 때</strong><span>실제 구분자를 확인하고 원본을 보존하는 두 가지 복구 경로.</span></span><span class="resource-arrow" aria-hidden="true">→</span></a>
+            <a class="resource" data-category="data" data-keywords="한국어 Excel CSV 앞자리 0 식별자 Text" href="./data-guides/excel-leading-zeros.html"><span class="resource-source">GUIDE<span>한국어 데이터 실무</span></span><span class="resource-copy"><strong>CSV의 앞자리 0을 Excel에서 지키기</strong><span>서식이 아니라 가져오기 단계에서 식별자 값을 보존하기.</span></span><span class="resource-arrow" aria-hidden="true">→</span></a>
+            <a class="resource" data-category="data" data-keywords="한국어 Power Query 병합 중복 행 합계 one to many" href="./data-guides/power-query-merge-rows.html"><span class="resource-source">GUIDE<span>한국어 데이터 실무</span></span><span class="resource-copy"><strong>Power Query 병합 후 행이 늘어날 때</strong><span>펼치기 전에 매치 수를 세고 보고서의 행 의미를 결정하기.</span></span><span class="resource-arrow" aria-hidden="true">→</span></a>
+            <a class="resource" data-category="data" data-keywords="한국어 Excel FILTER SPILL 동적 배열 막힌 셀" href="./data-guides/excel-filter-spill.html"><span class="resource-source">GUIDE<span>한국어 데이터 실무</span></span><span class="resource-copy"><strong>Excel FILTER #SPILL 오류 해결하기</strong><span>데이터를 지우지 않고 출력 공간과 예상 결과를 확인하기.</span></span><span class="resource-arrow" aria-hidden="true">→</span></a>
             <a class="resource" data-category="data record" data-keywords="Column Harbor 제작기 원본 보존 브라우저 CSV 설계" href="./stories/column-harbor.html">
               <span class="resource-source">BUILD NOTE<span>만든 이야기</span></span>
               <span class="resource-copy"><strong>숫자로 바꾸기 전에, 원본을 한 번 더</strong><span>Column Harbor가 원본을 지키고, 자동으로 고치지 않는 이유.</span></span>

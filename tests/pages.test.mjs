@@ -24,7 +24,7 @@ test("Pages HTML removes only known telemetry, preserving public content and met
 test("Pages artifact excludes private paths, preserves downloads and replaces stale output", () => {
   const fixture = mkdtempSync(join(tmpdir(), "mypages-pages-test-"));
   const roots = ["index.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
-  for (const directory of ["assets", "stories", "templates", "tools/release-check"]) {
+  for (const directory of ["assets", "stories", "data-guides", "templates", "tools/release-check"]) {
     roots.push(...readdirSync(join(root, directory), { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => `${directory}/${entry.name}`));
   }
   for (const file of roots) {
