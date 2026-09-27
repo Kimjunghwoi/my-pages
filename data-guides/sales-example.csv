@@ -1,0 +1,5 @@
+sale_id,customer_id,amount
+S1,C10,10
+S2,C10,20
+S3,C20,5
+S4,C30,7

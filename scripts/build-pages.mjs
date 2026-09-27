@@ -31,11 +31,11 @@ function pagesUrls(source, file, articles) {
 export function buildPages(root = repository) {
   root = realpathSync(root);
   const output = resolve(root, ".pages-dist");
-  const sources = ["index.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml"];
+  const sources = ["index.html", "privacy.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml"];
   const groups = {
     assets: /\.(?:svg|png|jpe?g|webp|woff2?)$/i,
     stories: /\.html$/,
-    "data-guides": /\.html$/,
+    "data-guides": /\.(?:html|csv|tsv)$/,
     templates: /\.(?:html|md)$/,
     "tools/release-check": /\.(?:html|css|js)$/,
   };

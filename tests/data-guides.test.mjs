@@ -22,7 +22,7 @@ test("data guide hub and four articles are substantial, discoverable static cont
     assert.equal(data.mainEntityOfPage, url);
     assert.equal(data.datePublished, "2026-09-19");
     assert.ok(text.length > 1800, `${slug}: thin article`);
-    assert.match(source, new RegExp(`rel="canonical" href="${url.replaceAll(".", "\\.")}"`));
+    assert.match(source, new RegExp(`rel="canonical"\\s+href="${url.replaceAll(".", "\\.")}"`));
     assert.match(source, /합성|예제/);
     assert.match(source, /https:\/\/csv\.jhsoftlabs\.com\/guides\//);
     assert.ok(home.includes(`href="./data-guides/${slug}.html"`));
@@ -41,4 +41,36 @@ test("hub structured list matches article metadata and routes", () => {
     assert.equal(item.name, article.headline);
     assert.equal(item.url, article.mainEntityOfPage);
   });
+});
+
+test("Korean guide samples reproduce the stated results", () => {
+  const semicolon = read("data-guides/semicolon-example.csv").trim().split(/\r?\n/);
+  assert.deepEqual(semicolon, ["sku;description;price", '00123;"Mug, blue";12.50', '00456;"Plate; small";8.00']);
+
+  const identifiers = read("data-guides/identifier-example.csv").trim().split(/\r?\n/).slice(1);
+  assert.deepEqual(identifiers.map((row) => row.split(",")[0]), ["00123", "00007", "A-004"]);
+
+  const sales = read("data-guides/sales-example.csv").trim().split(/\r?\n/).slice(1).map((row) => row.split(","));
+  const addresses = read("data-guides/addresses-example.csv").trim().split(/\r?\n/).slice(1).map((row) => row.split(","));
+  assert.equal(sales.reduce((sum, row) => sum + Number(row[2]), 0), 42);
+  assert.deepEqual(sales.map((sale) => addresses.filter((address) => address[1] === sale[1]).length), [2, 2, 1, 0]);
+  const expanded = sales.flatMap((sale) => {
+    const matches = addresses.filter((address) => address[1] === sale[1]);
+    return (matches.length ? matches : [null]).map(() => Number(sale[2]));
+  });
+  assert.equal(expanded.length, 6);
+  assert.equal(expanded.reduce((sum, amount) => sum + amount, 0), 72);
+
+  const filter = read("data-guides/filter-example.tsv").trim().split(/\r?\n/).slice(1).map((row) => row.split("\t"));
+  const north = filter.filter((row) => row[1] === "North");
+  assert.deepEqual(north.map((row) => row[0]), ["R1", "R3", "R4"]);
+  assert.equal(north.reduce((sum, row) => sum + Number(row[2]), 0), 6);
+
+  for (const [guide, sample] of [
+    ["csv-one-column", "semicolon-example.csv"],
+    ["excel-leading-zeros", "identifier-example.csv"],
+    ["power-query-merge-rows", "sales-example.csv"],
+    ["power-query-merge-rows", "addresses-example.csv"],
+    ["excel-filter-spill", "filter-example.tsv"],
+  ]) assert.ok(read(`data-guides/${guide}.html`).includes(`href="./${sample}"`));
 });

@@ -90,6 +90,17 @@
 .story-callout { margin-block: 27px; padding: 20px 23px; border-left: 3px solid #8d9f69; background: #ecefe3; }
 .story-callout strong { font-size: 15px; font-weight: 600; line-height: 1.8; }
 .story-callout p { margin-top: 9px; font-size: 14px; line-height: 1.9; color: #536448; }
+.sample-block { margin: 27px 0; }
+.sample-block figcaption { margin-bottom: 11px; color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+.sample-table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); background: #fff; }
+.sample-table { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.6; white-space: nowrap; }
+.sample-table th, .sample-table td { padding: 11px 15px; border-bottom: 1px solid var(--line); text-align: left; }
+.sample-table tr:last-child td { border-bottom: 0; }
+.sample-table th { background: #e9ede3; color: var(--green); font-weight: 700; }
+.sample-table td { font-variant-numeric: tabular-nums; }
+.sample-code { overflow-x: auto; padding: 18px 20px; border: 1px solid var(--line); background: #e9ede3; font: 13px/1.7 Consolas, monospace; white-space: pre; }
+.sample-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 14px 0 0; font-size: 13px; }
+.sample-links a { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 .story-next { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 27px; }
 .story-next .button { margin: 0; }
 .story-next > span { font-size: 12px; color: var(--muted); }
@@ -97,6 +108,7 @@
 .story-end p { font-size: 12px; color: var(--muted); line-height: 1.9; }
 .story-end > a { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; margin-top: 15px; color: var(--green); font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
 .story-end > a + a { display: flex; width: fit-content; }
+.privacy-content { max-width: 740px; padding-bottom: 70px; }
 .note-summary { padding: 25px 30px; background: linear-gradient(105deg, #e9eddf, #f0f2e9); border-block: 1px solid #d9dfca; }
 .note-summary ol { padding-left: 20px; margin: 14px 0; }
 .note-summary li { padding: 5px 0 5px 7px; font-size: 15px; line-height: 1.8; word-break: keep-all; }

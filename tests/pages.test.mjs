@@ -23,7 +23,7 @@ test("Pages HTML removes only known telemetry, preserving public content and met
 
 test("Pages artifact excludes private paths, preserves downloads and replaces stale output", () => {
   const fixture = mkdtempSync(join(tmpdir(), "mypages-pages-test-"));
-  const roots = ["index.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
+  const roots = ["index.html", "privacy.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
   for (const directory of ["assets", "stories", "data-guides", "templates", "tools/release-check"]) {
     roots.push(...readdirSync(join(root, directory), { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => `${directory}/${entry.name}`));
   }
@@ -38,9 +38,12 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
   const first = buildPages(fixture);
   const names = first.files.map((file) => file.path);
   assert.ok(names.includes("404.html"));
+  assert.ok(names.includes("privacy.html"));
+  assert.ok(names.includes("data-guides/semicolon-example.csv"));
+  assert.ok(names.includes("data-guides/filter-example.tsv"));
   assert.equal(names.filter((file) => file.startsWith("stories/") && file.endsWith(".html")).length, 10);
   const sitemap = readFileSync(join(first.output, "sitemap.xml"), "utf8");
-  assert.doesNotMatch(sitemap, /\.html/);
+  assert.doesNotMatch(sitemap, /\/(?:stories|data-guides)\/[a-z0-9-]+\.html/);
   assert.match(readFileSync(join(first.output, "stories/column-harbor.html"), "utf8"), /rel="canonical" href="https:\/\/jhsoftlabs.com\/stories\/column-harbor"/);
   assert.match(readFileSync(join(first.output, "index.html"), "utf8"), /image.jhsoftlabs.com\/hair-salon\.html#cases/);
   for (const file of first.files) {
