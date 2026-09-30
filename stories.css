@@ -75,7 +75,7 @@
 .story-toc a { padding-block: 12px; color: var(--muted); }
 .story-toc a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 .story-content { min-width: 0; }
-.story-content section { scroll-margin-top: 20px; }
+.story-content section { scroll-margin-top: 110px; }
 .story-content section + section { margin-top: 56px; padding-top: 37px; border-top: 1px solid var(--line); }
 .story-section-number { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: #5b7350; }
 .story-content h2 { font-size: clamp(25px, 2.5vw, 32px); line-height: 1.5; letter-spacing: -1px; font-weight: 650; margin: 13px 0 22px; word-break: keep-all; }
@@ -99,6 +99,8 @@
 .sample-table th { background: #e9ede3; color: var(--green); font-weight: 700; }
 .sample-table td { font-variant-numeric: tabular-nums; }
 .sample-code { overflow-x: auto; padding: 18px 20px; border: 1px solid var(--line); background: #e9ede3; font: 13px/1.7 Consolas, monospace; white-space: pre; }
+.sample-code--wrap { white-space: pre-wrap; overflow-wrap: anywhere; }
+.story-revision { margin-top: 14px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .sample-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 14px 0 0; font-size: 13px; }
 .sample-links a { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 .story-next { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 27px; }

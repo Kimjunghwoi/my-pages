@@ -47,7 +47,7 @@
         "headline": "Power Query 병합 후 행이 늘어날 때",
         "description": "병합 매치 수와 관계를 확인해 행 증가를 안전하게 다루는 방법",
         "datePublished": "2026-09-19",
-        "dateModified": "2026-09-27",
+        "dateModified": "2026-09-30",
         "inLanguage": "ko-KR",
         "author": {
           "@type": "Person",
@@ -110,6 +110,7 @@
             </div>
             <time datetime="2026-09-19">2026. 09. 19.</time>
           </div>
+          <p class="story-revision">수정: <time datetime="2026-09-30">2026. 09. 30.</time> · 합성 예제와 예상 결과를 보강했습니다.</p>
         </header>
         <aside class="note-summary">
           <span class="eyebrow">삭제 전에 확인</span>
@@ -201,6 +202,13 @@
                   고객, 선택된 주소와 금액을 같이 확인해야 합니다.
                 </p>
               </div>
+              <p>판매 시점에 선택한 주소 ID가 기록돼 있다면 그 값을 사용할 수 있습니다. 다음 파일은 설명을 위해 주소 ID를 함께 넣은 별도 합성 데이터입니다. 실제 데이터에 주소 ID가 없다면 임의로 이 값을 채우지 말고, 담당자와 주소 선택 규칙부터 정하세요.</p>
+              <p class="sample-links"><a href="./sales-address-example.csv" download>주소 ID가 포함된 판매 CSV 내려받기</a></p>
+              <ol class="story-flow"><li><strong>새 판매 파일과 기존 주소 파일을 가져옵니다.</strong><span>두 쿼리의 address_id 열을 Text로 맞춥니다. 주소 쿼리에서 address_id가 중복되거나 비어 있는지 먼저 확인합니다.</span></li><li><strong>customer_id와 address_id 두 열로 Left Outer 병합합니다.</strong><span>양쪽에서 Ctrl 키를 누른 채 customer_id, address_id 순서로 선택합니다. 고객과 주소가 모두 같은 행만 연결해 다른 고객의 주소 연결도 피합니다.</span></li><li><strong>city를 펼치고 원본 판매 ID와 금액을 대조합니다.</strong><span>S1부터 S4까지 한 행씩, 합계 42가 남아야 합니다. 주소가 없는 S4는 null이며 판매 자체는 유지합니다.</span></li></ol>
+              <figure class="sample-block">
+                <figcaption>주소 선택이 명시된 병합 결과 · 판매 4행, 합계 42</figcaption>
+                <div class="sample-table-wrap"><table class="sample-table"><thead><tr><th scope="col">sale_id</th><th scope="col">address_id</th><th scope="col">city</th><th scope="col">amount</th></tr></thead><tbody><tr><td>S1</td><td>A1</td><td>Seoul</td><td>10</td></tr><tr><td>S2</td><td>A2</td><td>Busan</td><td>20</td></tr><tr><td>S3</td><td>A3</td><td>Incheon</td><td>5</td></tr><tr><td>S4</td><td>빈 값</td><td>null</td><td>7</td></tr></tbody></table></div>
+              </figure>
             </section>
             <section id="distinct">
               <p class="story-section-number">04 / CAUTION</p>
@@ -241,6 +249,7 @@
                 동작은 환경별로 시험해야 합니다.
               </p>
               <div class="story-next">
+                <a class="button button--outline" href="https://learn.microsoft.com/en-us/powerquery-m/table-nestedjoin" target="_blank" rel="noopener noreferrer">Microsoft 병합 함수 설명 <span aria-hidden="true">↗</span></a>
                 <a
                   class="button button--dark"
                   href="https://csv.jhsoftlabs.com/guides/power-query-merge-duplicates-extra-rows"

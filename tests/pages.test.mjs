@@ -43,7 +43,8 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
   assert.ok(names.includes("data-guides/filter-example.tsv"));
   assert.equal(names.filter((file) => file.startsWith("stories/") && file.endsWith(".html")).length, 10);
   const sitemap = readFileSync(join(first.output, "sitemap.xml"), "utf8");
-  assert.doesNotMatch(sitemap, /\/(?:stories|data-guides)\/[a-z0-9-]+\.html/);
+  assert.doesNotMatch(sitemap, /\.html/);
+  assert.match(readFileSync(join(first.output, "privacy.html"), "utf8"), /rel="canonical" href="https:\/\/jhsoftlabs.com\/privacy"/);
   assert.match(readFileSync(join(first.output, "stories/column-harbor.html"), "utf8"), /rel="canonical" href="https:\/\/jhsoftlabs.com\/stories\/column-harbor"/);
   assert.match(readFileSync(join(first.output, "index.html"), "utf8"), /image.jhsoftlabs.com\/hair-salon\.html#cases/);
   for (const file of first.files) {

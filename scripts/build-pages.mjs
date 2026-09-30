@@ -19,7 +19,7 @@ export function pagesHtml(source) {
 
 function pagesUrls(source, file, articles) {
   const base = new URL(file, "https://jhsoftlabs.com/");
-  const absolute = source.replace(/https:\/\/jhsoftlabs\.com\/(?:stories|data-guides)\/[a-z0-9-]+\.html/g,
+  const absolute = source.replace(/https:\/\/jhsoftlabs\.com\/(?:[a-z0-9-]+\/)*[a-z0-9-]+\.html/g,
     (url) => articles.has(new URL(url).pathname) ? url.slice(0, -5) : url);
   return absolute.replace(/href="([^"]+)"/g, (attribute, href) => {
     const url = new URL(href, base);
@@ -47,6 +47,7 @@ export function buildPages(root = repository) {
   }
   const files = new Map();
   const articles = new Set(sources.filter((file) => /^(?:stories|data-guides)\/(?!index\.html)[a-z0-9-]+\.html$/.test(file)).map((file) => `/${file}`));
+  articles.add("/privacy.html");
   for (const file of sources.sort()) {
     const path = join(root, file);
     if (lstatSync(path).isSymbolicLink() || !realpathSync(path).startsWith(`${root}${sep}`)) throw new Error(`Refusing unsafe public path: ${file}`);

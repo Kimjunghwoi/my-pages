@@ -61,6 +61,15 @@ test("Korean guide samples reproduce the stated results", () => {
   assert.equal(expanded.length, 6);
   assert.equal(expanded.reduce((sum, amount) => sum + amount, 0), 72);
 
+  const selected = read("data-guides/sales-address-example.csv").trim().split(/\r?\n/).slice(1).map((row) => row.split(","));
+  const corrected = selected.flatMap((sale) => {
+    const matches = addresses.filter((address) => address[1] === sale[1] && address[0] === sale[2]);
+    return (matches.length ? matches : [null]).map((address) => ({ id: sale[0], city: address?.[2] ?? null, amount: Number(sale[3]) }));
+  });
+  assert.deepEqual(corrected.map((row) => row.id), ["S1", "S2", "S3", "S4"]);
+  assert.deepEqual(corrected.map((row) => row.city), ["Seoul", "Busan", "Incheon", null]);
+  assert.equal(corrected.reduce((sum, row) => sum + row.amount, 0), 42);
+
   const filter = read("data-guides/filter-example.tsv").trim().split(/\r?\n/).slice(1).map((row) => row.split("\t"));
   const north = filter.filter((row) => row[1] === "North");
   assert.deepEqual(north.map((row) => row[0]), ["R1", "R3", "R4"]);
@@ -71,6 +80,7 @@ test("Korean guide samples reproduce the stated results", () => {
     ["excel-leading-zeros", "identifier-example.csv"],
     ["power-query-merge-rows", "sales-example.csv"],
     ["power-query-merge-rows", "addresses-example.csv"],
+    ["power-query-merge-rows", "sales-address-example.csv"],
     ["excel-filter-spill", "filter-example.tsv"],
   ]) assert.ok(read(`data-guides/${guide}.html`).includes(`href="./${sample}"`));
 });
