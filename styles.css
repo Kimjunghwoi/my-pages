@@ -53,6 +53,15 @@ h1 > span { color: var(--green); }
 .profile-handle { display: block; font-size: 11px; color: var(--muted); }
 .profile-note { display: block; margin-top: 13px; font-size: 10px; color: var(--muted); white-space: nowrap; }
 .profile-note span { margin-left: 7px; }
+.data-entry { display: grid; grid-template-columns: minmax(230px, .9fr) minmax(0, 2fr); align-items: center; gap: 24px; padding: 20px 0; margin-bottom: 24px; border-top: 1px solid var(--line); }
+.data-entry-copy h2 { margin-top: 7px; font-size: 17px; line-height: 1.6; letter-spacing: -.6px; word-break: keep-all; }
+.data-entry-copy > p:last-child { margin-top: 6px; font-size: 12px; line-height: 1.8; color: var(--muted); word-break: keep-all; }
+.data-entry-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.data-entry-links a { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 64px; padding: 8px 0 8px 15px; border-left: 1px solid var(--line); }
+.data-entry-links strong { display: block; font-size: 13px; line-height: 1.7; word-break: keep-all; }
+.data-entry-links a > span:first-child > span { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; line-height: 1.8; word-break: keep-all; overflow-wrap: anywhere; }
+.data-entry-links a > span[aria-hidden] { color: var(--green); flex-shrink: 0; }
+.data-entry-links a:hover strong { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 .section { scroll-margin-top: 12px; }
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-top: 23px; margin-bottom: 23px; }
 .heading-title { display: flex; align-items: baseline; gap: 14px; }
@@ -146,9 +155,10 @@ h1 > span { color: var(--green); }
 .project-quicklinks { margin-top: 14px; padding: 12px 14px; background: #f4f7f2; border: 1px solid #dbe3d6; border-radius: 6px; }
 .quicklinks-title { display: block; font-size: 11px; font-weight: 700; color: #44593f; margin-bottom: 6px; }
 .project-quicklinks ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
-.project-quicklinks li a { font-size: 12px; color: var(--ink); display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 2px 0; }
+.project-quicklinks li a { font-size: 12px; color: var(--ink); display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 52px; text-decoration: none; padding: 6px 0; }
 .project-quicklinks li a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
 .project-quicklinks li a strong { font-weight: 700; color: #2e4429; }
+.project-quicklinks li a > span:first-child > span { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; line-height: 1.7; overflow-wrap: anywhere; }
 .project-quicklinks li a span[aria-hidden] { font-size: 11px; opacity: 0.7; }
 .project-story { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 8px; font-size: 12px; line-height: 1.7; color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 .project-detail { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #59704e; padding-top: 19px; margin-top: auto; }
@@ -246,6 +256,8 @@ h1 > span { color: var(--green); }
 }
 @media (max-width: 1100px) {
   .shell { width: calc(100% - 64px); }
+  .data-entry { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .data-entry-links a { padding-left: 0; border-left: 0; }
   .intro-profile { padding-left: 20px; gap: 13px; }
   .avatar-frame { width: 76px; height: 76px; }
   .profile-note { font-size: 9px; }
@@ -321,6 +333,10 @@ h1 > span { color: var(--green); }
 }
 @media (max-width: 580px) {
   .shell { width: calc(100% - 36px); }
+  .data-entry { padding-top: 18px; margin-bottom: 12px; gap: 10px; }
+  .data-entry-links { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .data-entry-links a { min-height: 64px; padding-block: 10px; }
+  .data-entry-links a + a { border-top: 1px solid var(--line); }
   .intro { flex-direction: column; align-items: stretch; padding: 24px 0; gap: 18px; }
   .intro .eyebrow { font-size: 8px; }
   h1 { font-size: clamp(27px, 7.3vw, 38px); letter-spacing: -1.7px; margin-top: 13px; line-height: 1.5; }

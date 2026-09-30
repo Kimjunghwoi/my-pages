@@ -23,6 +23,26 @@ test("exactly three featured projects, each linked to its own service", () => {
   });
 });
 
+test("Column Harbor tools and learning are discoverable before projects without drifting counts", () => {
+  const entry = html.match(/<aside class="data-entry"[\s\S]*?<\/aside>/)?.[0];
+  assert.ok(entry);
+  assert.ok(html.indexOf(entry) < html.indexOf('id="projects"'));
+  assert.ok(entry.includes('aria-labelledby="data-entry-title"'));
+  const links = [...entry.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)];
+  assert.deepEqual(links.map((match) => attributes(match[1]).href), [
+    "https://csv.jhsoftlabs.com/workspace",
+    "https://csv.jhsoftlabs.com/learn/excel",
+    "https://csv.jhsoftlabs.com/guides",
+  ]);
+  assert.ok(entry.includes("목록 비교") && entry.includes("중복 제거") && entry.includes("형식 변환"));
+  assert.ok(entry.includes("예제와 정답") && entry.includes("영문"));
+  links.forEach((match) => assert.ok(match[2].includes("새 탭")));
+  anchors.filter((anchor) => ["https://csv.jhsoftlabs.com/guides", "https://csv.jhsoftlabs.com/learn/excel"].includes(anchor.href)).forEach((anchor) => {
+    assert.doesNotMatch(anchor.content, /가이드\s*\d+편|Excel Academy\s*\d+강|\d+개 기초~실무 레슨/);
+  });
+  assert.ok(html.includes('href="https://csv.jhsoftlabs.com/#checker"'));
+});
+
 test("library preserves all external resources and adds records and free templates", () => {
   assert.equal(resources.length, 36);
   assert.equal(new Set(resources.map((item) => item.href)).size, resources.length);
