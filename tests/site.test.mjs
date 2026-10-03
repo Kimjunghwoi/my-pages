@@ -13,6 +13,13 @@ const resources = anchors.filter((anchor) => anchor.class === "resource");
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 const projectHosts = ["interview.jhsoftlabs.com", "image.jhsoftlabs.com", "csv.jhsoftlabs.com"];
 
+test("homepage retains the approved Naver ownership verification in head", () => {
+  const head = html.match(/<head>([\s\S]*?)<\/head>/)?.[1];
+  assert.ok(head);
+  assert.ok(head.includes('<meta name="naver-site-verification" content="288cd3f4d4b7a5498e41f5633f0dc0e2536dc6e9" />'));
+  assert.ok(head.includes('<link rel="canonical" href="https://jhsoftlabs.com/" />'));
+});
+
 test("exactly three featured projects, each linked to its own service", () => {
   const cards = [...html.matchAll(/<article class="project-card[^>]*>([\s\S]*?)<\/article>/g)];
   assert.equal(cards.length, 3);
