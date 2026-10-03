@@ -12,8 +12,8 @@ const articleFiles = readdirSync(new URL("../stories/", import.meta.url)).filter
 
 test("journal links every published article once in project groups matching structured data", () => {
   const links = [...journal.matchAll(/class="journal-entry" href="\.\/([^"]+)"/g)].map((m) => m[1]);
-  assert.equal(links.length, 9);
-  assert.equal(new Set(links).size, 9);
+  assert.equal(links.length, 10);
+  assert.equal(new Set(links).size, 10);
   assert.deepEqual([...links].sort(), [...articleFiles].sort());
   const data = schema(journal);
   assert.equal(data["@type"], "CollectionPage");
@@ -24,7 +24,7 @@ test("journal links every published article once in project groups matching stru
     assert.equal(item.name, schema(read(`stories/${links[index]}`)).headline);
   });
   const groups = [...journal.matchAll(/<section class="journal-group" id="([^"]+)"[\s\S]*?<\/section>/g)];
-  assert.deepEqual(groups.map((g) => (g[0].match(/class="journal-entry"/g) || []).length), [3, 2, 3, 1]);
+  assert.deepEqual(groups.map((g) => (g[0].match(/class="journal-entry"/g) || []).length), [3, 3, 3, 1]);
   groups.forEach((group) => assert.ok(journal.includes(`href="#${group[1]}"`)));
   assert.ok(home.includes('class="fieldnotes-all" href="./stories/"'));
 });

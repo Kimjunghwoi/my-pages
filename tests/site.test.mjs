@@ -52,12 +52,12 @@ test("Column Harbor tools and learning are discoverable before projects without 
 });
 
 test("library preserves all external resources and adds records and free templates", () => {
-  assert.equal(resources.length, 36);
+  assert.equal(resources.length, 37);
   assert.equal(new Set(resources.map((item) => item.href)).size, resources.length);
   assert.equal(resources.filter((item) => new URL(item.href, "https://jhsoftlabs.com/").hostname.endsWith("notion.site")).length, 7);
   assert.equal(resources.filter((item) => item.href.startsWith("https://csv.jhsoftlabs.com/guides/")).length, 4);
   const local = resources.filter((item) => item.href.startsWith("./"));
-  assert.equal(local.length, 17);
+  assert.equal(local.length, 18);
   assert.ok(local.some((item) => item.href === "./stories/column-harbor.html"));
   assert.equal(local[0].target, undefined);
   assert.ok(local.every((item) => !item.target));

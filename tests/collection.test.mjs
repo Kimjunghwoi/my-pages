@@ -70,13 +70,13 @@ function mount(initial = "https://jhsoftlabs.com/") {
   };
 }
 
-test("initial collection shows six of thirty-two, expands all, and focuses the first newly revealed row", () => {
+test("initial collection shows six of thirty-seven, expands all, and focuses the first newly revealed row", () => {
   const ui = mount();
   assert.equal(ui.controls.hidden, false);
   assert.equal(ui.visible().length, 6);
-  assert.match(ui.ids["result-count"].textContent, /전체 36개/);
+  assert.match(ui.ids["result-count"].textContent, /전체 37개/);
   ui.click("collection-more");
-  assert.equal(ui.visible().length, 36);
+  assert.equal(ui.visible().length, 37);
   assert.equal(ui.focused, ui.rows[6]);
   assert.equal(ui.ids["collection-more"].attributes["aria-expanded"], "true");
   ui.click("collection-more");
@@ -139,16 +139,16 @@ test("shared URL restores query and unknown filters safely fall back to all", ()
   assert.equal(ui.visible().length, 1);
   assert.equal(ui.ids["collection-search"].value, "CSV 브라우저 원본");
   const invalid = mount("https://jhsoftlabs.com/?tab=missing");
-  assert.match(invalid.ids["result-count"].textContent, /^전체 36개/);
+  assert.match(invalid.ids["result-count"].textContent, /^전체 37개/);
 });
 
 test("record and template filters expose internal content without adding featured services", () => {
   const ui = mount();
   ui.filter("record");
   assert.equal(ui.visible().length, 6);
-  assert.match(ui.ids["result-count"].textContent, /작업 기록 9개/);
+  assert.match(ui.ids["result-count"].textContent, /작업 기록 10개/);
   ui.click("collection-more");
-  assert.equal(ui.visible().length, 9);
+  assert.equal(ui.visible().length, 10);
   assert.equal(ui.url.searchParams.get("tab"), "record");
   ui.filter("template");
   assert.equal(ui.visible().length, 4);
@@ -172,6 +172,7 @@ test("new development records are searchable by their specific engineering topic
     ["로그인 분모", "로그인을 없앤 다음에도"],
     ["쇼츠 디코딩", "24초 영상에도"],
     ["정보 구조", "색을 바꿔도 같아 보이던"],
+    ["수익화 중단", "만들 수 있다는 것과 팔 수 있다는 것은 달랐다"],
   ]) {
     const ui = mount();
     ui.filter("record");
