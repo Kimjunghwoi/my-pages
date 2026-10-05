@@ -41,6 +41,10 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
   assert.ok(names.includes("privacy.html"));
   assert.ok(names.includes("data-guides/semicolon-example.csv"));
   assert.ok(names.includes("data-guides/filter-example.tsv"));
+  for (const file of ["data-guides/merge-lab.pq", "stories/retry-lab.mjs"]) {
+    assert.ok(names.includes(file));
+    assert.deepEqual(readFileSync(join(first.output, file)), readFileSync(join(root, file)));
+  }
   assert.equal(names.filter((file) => file.startsWith("stories/") && file.endsWith(".html")).length, 11);
   const sitemap = readFileSync(join(first.output, "sitemap.xml"), "utf8");
   assert.doesNotMatch(sitemap, /\.html/);

@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-05",
+  "excel": "16.0",
+  "build": "5569.0",
+  "method": "Native Excel Mashup engine through OLE DB; not UI clicks or external connectors",
+  "querySha256": "ad39a096165ae6a22ab01d77008cdf819b111290c6bcff8f3fa52bc748e3cf8b",
+  "checks": [
+    {
+      "name": "audit.rows",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "audit.total",
+      "actual": 42.0,
+      "expected": 42
+    },
+    {
+      "name": "match_counts",
+      "actual": [
+        2.0,
+        2.0,
+        1.0,
+        0.0
+      ],
+      "expected": [
+        2,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "expanded.rows",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "expanded.total",
+      "actual": 72.0,
+      "expected": 72
+    },
+    {
+      "name": "corrected.rows",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "corrected.total",
+      "actual": 42.0,
+      "expected": 42
+    },
+    {
+      "name": "corrected.records",
+      "actual": [
+        [
+          "S1",
+          "C10",
+          "A1",
+          10.0,
+          "Seoul"
+        ],
+        [
+          "S2",
+          "C10",
+          "A2",
+          20.0,
+          "Busan"
+        ],
+        [
+          "S3",
+          "C20",
+          "A3",
+          5.0,
+          "Incheon"
+        ],
+        [
+          "S4",
+          "C30",
+          null,
+          7.0,
+          null
+        ]
+      ],
+      "expected": [
+        [
+          "S1",
+          "C10",
+          "A1",
+          10,
+          "Seoul"
+        ],
+        [
+          "S2",
+          "C10",
+          "A2",
+          20,
+          "Busan"
+        ],
+        [
+          "S3",
+          "C20",
+          "A3",
+          5,
+          "Incheon"
+        ],
+        [
+          "S4",
+          "C30",
+          null,
+          7,
+          null
+        ]
+      ]
+    },
+    {
+      "name": "duplicate_rejected",
+      "actual": [
+        [
+          "message"
+        ],
+        [
+          "Address lookup keys must be nonempty and unique"
+        ]
+      ],
+      "expected": [
+        [
+          "message"
+        ],
+        [
+          "Address lookup keys must be nonempty and unique"
+        ]
+      ]
+    }
+  ]
+}
