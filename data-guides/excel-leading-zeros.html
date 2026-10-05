@@ -47,7 +47,7 @@
         "headline": "Excel에서 CSV 앞자리 0 지키기",
         "description": "CSV 식별자를 Text로 가져와 앞자리 0을 보존하는 방법",
         "datePublished": "2026-09-19",
-        "dateModified": "2026-09-30",
+        "dateModified": "2026-10-05",
         "inLanguage": "ko-KR",
         "author": {
           "@type": "Person",
@@ -110,7 +110,7 @@
             </div>
             <time datetime="2026-09-19">2026. 09. 19.</time>
           </div>
-          <p class="story-revision">수정: <time datetime="2026-09-30">2026. 09. 30.</time> · 합성 예제·예상 결과와 공식 참고 자료를 제공합니다.</p>
+          <p class="story-revision">수정: <time datetime="2026-10-05">2026. 10. 05.</time> · 실제 Excel에서 표시 형식과 내부 값을 비교한 결과를 추가했습니다.</p>
         </header>
         <aside class="note-summary">
           <span class="eyebrow">판단 기준</span>
@@ -129,7 +129,7 @@
             ><a href="#damage">서식만 바꾸면 부족한 이유</a
             ><a href="#import">안전한 가져오기</a
             ><a href="#export">CSV로 다시 저장할 때</a
-            ><a href="#check">검증 체크리스트</a>
+            ><a href="#check">검증 체크리스트</a><a href="#native-evidence">표시와 값의 대조 실험</a>
           </nav>
           <div class="story-content">
             <section id="meaning">
@@ -262,6 +262,17 @@ A-004,3</pre>
                   >영문 가이드와 샘플 파일 <span aria-hidden="true">↗</span></a
                 >
               </div>
+            </section>
+            <section id="native-evidence">
+              <p class="story-section-number">06 / OBSERVED RESULT</p>
+              <h2>같은 00123으로 보여도<br />셀 안의 값은 달랐습니다</h2>
+              <p>2026년 10월 5일, Excel 16.0 build 5569.0에서 <a href="./semicolon-example.csv" download>상품 코드가 들어 있는 합성 CSV</a>를 QueryTables 텍스트 가져오기로 읽었습니다. General로 변환한 셀과 Text로 보존한 셀을 비교한 뒤, 숫자 셀에만 사용자 지정 표시 형식 <code>00000</code>을 적용했습니다.</p>
+              <div class="sample-table-wrap"><table class="sample-table"><caption>직접 읽은 표시 문자열과 셀 내부 값</caption><thead><tr><th scope="col">설정</th><th scope="col">표시 또는 문자열</th><th scope="col">내부 값</th><th scope="col">자료형</th></tr></thead><tbody><tr><th scope="row">General 가져오기</th><td>123</td><td>123</td><td>숫자</td></tr><tr><th scope="row">숫자에 00000 서식</th><td>00123</td><td>123</td><td>숫자</td></tr><tr><th scope="row">Text 가져오기</th><td>00123</td><td>00123</td><td>문자열</td></tr></tbody></table></div>
+              <p>두 번째 셀의 표시 문자열은 <code>00123</code>이었지만, 실제 값은 여전히 숫자 123이었습니다. 다섯 자리가 업무 규칙으로 확정된 표시용 코드라면 이 서식이 유용할 수 있습니다. 다만 원래 값이 123, 0123, 00123 중 무엇이었는지를 복구했다는 증거는 아닙니다.</p>
+              <h3>따라 해 볼 때의 완료 기준</h3>
+              <ol class="story-flow"><li><strong>새 파일 두 개에 동일한 원본을 가져옵니다.</strong><span>한쪽은 식별자 열을 General, 다른 쪽은 Text로 지정합니다. 원본은 덮어쓰지 않습니다.</span></li><li><strong>General 쪽에만 00000 표시 서식을 줍니다.</strong><span>화면이 비슷해져도 수식 입력줄과 <code>=ISTEXT(A2)</code> 결과를 비교합니다. Text 쪽은 TRUE, 숫자 쪽은 FALSE여야 합니다.</span></li><li><strong>정확한 문자열과 길이를 대조합니다.</strong><span><code>=LEN(A2)</code>와 <code>=EXACT(A2,"00123")</code>를 함께 봅니다. 표시 형식이 아니라 원본 식별자 보존이 목표입니다.</span></li></ol>
+              <div class="story-callout"><strong>관측과 미확인을 나눕니다.</strong><p>별도의 빈 통합문서에서 COM으로 가져오기와 표시 형식을 실행하고 값을 읽었습니다. 리본 메뉴 클릭, Power Query, 저장 후 재가져오기까지 검증한 결과는 아닙니다. CSV 왕복 저장은 앞 절의 절차대로 자신의 환경에서 별도로 확인하세요.</p></div>
+              <p><a href="./csv-one-column.html#native-evidence">같은 입력의 구분자·자료형 검증 전체 보기 →</a></p>
             </section>
           </div>
         </div>

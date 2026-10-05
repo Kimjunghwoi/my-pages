@@ -1,0 +1,145 @@
+{
+  "checkedAt": "2026-10-05T02:55:11.453638+00:00",
+  "excelVersion": "16.0",
+  "excelBuild": 5569.0,
+  "method": "Excel COM QueryTables TEXT import; semicolon, double-quote qualifier, explicit column types and decimal point",
+  "limits": "Not Power Query or UI-click testing. Source unchanged; no claim about every version or default settings.",
+  "passed": 27,
+  "results": [
+    {
+      "check": "general.rows",
+      "expected": 3,
+      "observed": 3
+    },
+    {
+      "check": "general.columns",
+      "expected": 3,
+      "observed": 3
+    },
+    {
+      "check": "general.description1",
+      "expected": "Mug, blue",
+      "observed": "Mug, blue"
+    },
+    {
+      "check": "general.description2",
+      "expected": "Plate; small",
+      "observed": "Plate; small"
+    },
+    {
+      "check": "general.price1",
+      "expected": 12.5,
+      "observed": 12.5
+    },
+    {
+      "check": "general.price2",
+      "expected": 8,
+      "observed": 8.0
+    },
+    {
+      "check": "general.sku",
+      "expected": 123,
+      "observed": 123.0
+    },
+    {
+      "check": "general.sku2",
+      "expected": 456,
+      "observed": 456.0
+    },
+    {
+      "check": "general.skuIsText",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "check": "general.=ISTEXT(A2)",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "check": "general.=LEN(A2)",
+      "expected": 3,
+      "observed": 3.0
+    },
+    {
+      "check": "general.=EXACT(A2,\"00123\")",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "check": "display-only.text",
+      "expected": "00123",
+      "observed": "00123"
+    },
+    {
+      "check": "display-only.value",
+      "expected": 123,
+      "observed": 123.0
+    },
+    {
+      "check": "display-only.isText",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "check": "text.rows",
+      "expected": 3,
+      "observed": 3
+    },
+    {
+      "check": "text.columns",
+      "expected": 3,
+      "observed": 3
+    },
+    {
+      "check": "text.description1",
+      "expected": "Mug, blue",
+      "observed": "Mug, blue"
+    },
+    {
+      "check": "text.description2",
+      "expected": "Plate; small",
+      "observed": "Plate; small"
+    },
+    {
+      "check": "text.price1",
+      "expected": 12.5,
+      "observed": 12.5
+    },
+    {
+      "check": "text.price2",
+      "expected": 8,
+      "observed": 8.0
+    },
+    {
+      "check": "text.sku",
+      "expected": "00123",
+      "observed": "00123"
+    },
+    {
+      "check": "text.sku2",
+      "expected": "00456",
+      "observed": "00456"
+    },
+    {
+      "check": "text.skuIsText",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "text.=ISTEXT(A2)",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "check": "text.=LEN(A2)",
+      "expected": 5,
+      "observed": 5.0
+    },
+    {
+      "check": "text.=EXACT(A2,\"00123\")",
+      "expected": true,
+      "observed": true
+    }
+  ]
+}

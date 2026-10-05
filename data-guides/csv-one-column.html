@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../stories.css" />
     <meta property="article:published_time" content="2026-09-19" />
-    <meta property="article:modified_time" content="2026-09-30" />
+    <meta property="article:modified_time" content="2026-10-05" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -48,7 +48,7 @@
         "headline": "CSV가 Excel에서 한 열로 열릴 때",
         "description": "CSV 구분자를 확인하고 Excel로 안전하게 다시 가져오는 방법",
         "datePublished": "2026-09-19",
-        "dateModified": "2026-09-30",
+        "dateModified": "2026-10-05",
         "inLanguage": "ko-KR",
         "author": {
           "@type": "Person",
@@ -111,7 +111,7 @@
             </div>
             <time datetime="2026-09-19">2026. 09. 19.</time>
           </div>
-          <p class="story-revision">수정: <time datetime="2026-09-30">2026. 09. 30.</time> · 합성 예제·예상 결과와 공식 참고 자료를 제공합니다.</p>
+          <p class="story-revision">수정: <time datetime="2026-10-05">2026. 10. 05.</time> · 실제 Excel 텍스트 가져오기 결과와 자료형 확인 방법을 추가했습니다.</p>
         </header>
         <aside class="note-summary">
           <span class="eyebrow">먼저 기억할 것</span>
@@ -131,7 +131,7 @@
             ><a href="#inspect">원본에서 구분자 확인</a
             ><a href="#import">원본 파일 다시 가져오기</a
             ><a href="#split">Text to Columns 사용 조건</a
-            ><a href="#verify">결과 검증</a>
+            ><a href="#verify">결과 검증</a><a href="#native-evidence">실제 Excel에서 확인한 결과</a>
           </nav>
           <div class="story-content">
             <section id="cause">
@@ -260,6 +260,20 @@
                   <span aria-hidden="true">↗</span></a
                 ><span>Column Harbor의 로컬 CSV 점검기와 합성 샘플</span>
               </div>
+            </section>
+            <section id="native-evidence">
+              <p class="story-section-number">06 / OBSERVED RESULT</p>
+              <h2>같은 파일, 다른 자료형으로<br />직접 가져와 비교했습니다</h2>
+              <p>2026년 10월 5일, Windows Excel 16.0 build 5569.0에서 위의 <a href="./semicolon-example.csv" download>세미콜론 CSV</a>를 실제 Excel QueryTables 텍스트 가져오기 엔진으로 읽었습니다. UTF-8, 세미콜론 구분자, 큰따옴표 한정자, 소수점 <code>.</code>을 명시하고 첫 열만 General과 Text로 바꿔 비교했습니다.</p>
+              <div class="sample-table-wrap"><table class="sample-table"><caption>같은 합성 입력의 실제 관측값</caption><thead><tr><th scope="col">확인 항목</th><th scope="col">sku: General</th><th scope="col">sku: Text</th></tr></thead><tbody><tr><th scope="row">데이터 레코드 / 열</th><td>2개 / 3개</td><td>2개 / 3개</td></tr><tr><th scope="row">첫 번째 sku 실제 값</th><td>숫자 123</td><td>문자열 00123</td></tr><tr><th scope="row">두 번째 sku 실제 값</th><td>숫자 456</td><td>문자열 00456</td></tr><tr><th scope="row">description 두 값</th><td>Mug, blue / Plate; small</td><td>Mug, blue / Plate; small</td></tr><tr><th scope="row">price 두 값</th><td>12.5 / 8</td><td>12.5 / 8</td></tr></tbody></table></div>
+              <p>두 설정 모두 세 열과 가격은 맞았습니다. 그러나 General에서는 상품 코드가 달라졌습니다. “열이 나뉘었고 합계가 맞으니 성공”으로 끝내지 않고, 식별자까지 확인해야 하는 이유입니다.</p>
+              <h3>내 파일에서 확인할 수식</h3>
+              <p>위 샘플이 A1:C3에 들어왔다면 빈 셀에서 다음 세 수식을 각각 실행하세요. Text로 보존된 첫 번째 코드는 <code>TRUE</code>, <code>5</code>, <code>TRUE</code>가 나와야 합니다. General로 변환된 값은 보존된 원본에서 다시 가져옵니다.</p>
+              <pre class="sample-code">=ISTEXT(A2)
+=LEN(A2)
+=EXACT(A2,"00123")</pre>
+              <div class="story-callout"><strong>검증 범위는 여기까지입니다.</strong><p>이 결과는 COM 자동화로 실행한 QueryTables 경로의 관측입니다. Power Query나 Text to Columns 화면을 클릭한 검증이 아니며, CSV 더블클릭의 기본 동작이나 모든 Excel 버전을 보장하지 않습니다. 앞의 메뉴 절차와 이 엔진 검증은 구분해야 합니다.</p></div>
+              <p><a href="https://learn.microsoft.com/en-us/office/vba/api/excel.querytable.textfilecolumndatatypes" target="_blank" rel="noopener noreferrer">Microsoft: 텍스트 가져오기 열 자료형 <span aria-hidden="true">↗</span></a> · <a href="./excel-leading-zeros.html#native-evidence">표시 서식만 바꾼 대조 실험 보기 →</a></p>
             </section>
           </div>
         </div>

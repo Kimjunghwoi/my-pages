@@ -7,7 +7,7 @@
     <meta name="google-adsense-account" content="ca-pub-6113316314236430" />
     <meta name="theme-color" content="#f6f7f2" />
     <title>회몬 · JH Soft Labs | 만들고, 기록하고, 나눕니다</title>
-    <meta name="description" content="개발자 회몬이 만드는 작은 도구와 실전 기록. 면접 답변 진단, AI 홍보 콘텐츠, 무료 Excel·CSV 도구와 학습 코스부터 개발자 커리어와 AI 부업 가이드까지 만나보세요." />
+    <meta name="description" content="CSV·Excel 문제를 합성 예제와 실제 검증 기록으로 해결합니다. 한국어 실무 가이드, 무료 데이터 도구, 개발자 회몬의 프로젝트와 시행착오를 함께 만나보세요." />
     <link rel="canonical" href="https://jhsoftlabs.com/" />
     <meta property="og:title" content="회몬 · JH Soft Labs" />
     <meta property="og:description" content="쓸모 있는 것을 만들고, 그 과정을 나눕니다. 직접 만든 프로젝트와 개발·커리어·AI 실전 기록." />
@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260930-column-harbor" />
+    <link rel="stylesheet" href="./styles.css?v=20261005-practical-guides" />
     <script defer src="./script.js"></script>
     <script defer src="./experiences.js"></script>
   </head>
@@ -39,7 +39,7 @@
           <span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span>
         </a>
         <nav class="main-nav" aria-label="주요 메뉴">
-          <a href="#projects">프로젝트</a><a href="./data-guides/">데이터 가이드</a><a href="#fieldnotes">실험 기록</a><a href="#collection">글·자료</a><a href="#about">소개</a>
+          <a href="#data-guides">문제 해결 가이드</a><a href="#projects">프로젝트</a><a href="#fieldnotes">실험 기록</a><a href="#collection">글·자료</a><a href="#about">소개</a>
         </nav>
         <a class="header-contact" href="https://open.kakao.com/o/sPFCjtni" target="_blank" rel="noopener noreferrer">이야기 나누기 <span aria-hidden="true">↗</span><span class="sr-only"> (카카오톡, 새 탭)</span></a>
       </div>
@@ -49,12 +49,26 @@
         <div class="intro-copy">
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> BUILT BY HOEMON</p>
           <h1 id="intro-title">쓸모 있는 것을 만들고,<br /><span>그 과정을 나눕니다.</span></h1>
-          <p class="intro-description">개발자의 커리어부터 AI로 만드는 작은 비즈니스까지.<br class="desktop-break" /> 직접 만든 서비스와, 실행하면서 배운 것들을 모았습니다.</p>
+          <p class="intro-description">CSV·Excel에서 막힌 문제는 작은 예제로 풀고,<br class="desktop-break" /> 직접 만든 서비스의 성공과 실패는 작업 기록으로 남깁니다.</p>
         </div>
         <a class="intro-profile" href="#about" aria-label="개발자 회몬 소개 보기">
           <div class="avatar-frame"><img src="./assets/hoemon-profile.jpg" alt="검은 후드티를 입은 회몬 캐릭터" width="112" height="112" fetchpriority="high" /></div>
           <div><strong>회몬 <span class="profile-stamp">개발자 · 메이커</span></strong><span class="profile-handle">@sashimi_mong</span><span class="profile-note">11년의 경험, 계속되는 실험 <span aria-hidden="true">↗</span></span></div>
         </a>
+      </section>
+
+      <section class="guide-start section" id="data-guides" aria-labelledby="data-guides-title">
+        <div class="guide-start-heading">
+          <div><p class="eyebrow">PRACTICAL DATA GUIDES · 한국어</p><h2 id="data-guides-title">지금 막힌 곳부터 풀어보세요.</h2><p>증상을 고르고, 연습 파일로 결과를 확인하세요. 가입 없이 읽을 수 있습니다.</p></div>
+          <a class="quiet-link" href="./data-guides/">가이드 전체 보기 <span aria-hidden="true">→</span></a>
+        </div>
+        <ol class="guide-start-list">
+          <li><a href="./data-guides/csv-one-column.html"><span class="guide-step">01 · CSV 가져오기</span><h3>CSV가 한 열에 몰려요</h3><p>세미콜론과 따옴표를 구분하고, 설명 안의 문장 부호를 지킵니다.</p><span class="guide-result">연습 CSV · 2개 레코드, 3개 열 확인 <span aria-hidden="true">→</span></span></a></li>
+          <li><a href="./data-guides/excel-leading-zeros.html"><span class="guide-step">02 · 상품 코드 보존</span><h3>앞자리 0이 사라졌어요</h3><p>표시만 바꾸는 것과 원본 문자열을 보존하는 것의 차이를 확인합니다.</p><span class="guide-result">Text 가져오기 · 실제 값과 자료형 대조 <span aria-hidden="true">→</span></span></a></li>
+          <li><a href="./data-guides/power-query-merge-rows.html"><span class="guide-step">03 · Power Query 병합</span><h3>병합 후 합계가 늘었어요</h3><p>중복을 지우기 전에 매치 수를 세고, 보고서 한 행의 의미를 정합니다.</p><span class="guide-result">판매·주소 CSV · 합계 42와 72 비교 <span aria-hidden="true">→</span></span></a></li>
+          <li><a href="./data-guides/excel-filter-spill.html"><span class="guide-step">04 · Excel 수식</span><h3>FILTER가 #SPILL!을 보여요</h3><p>출력 범위와 병합 셀을 확인합니다. 원본을 지우지 않고 원인을 좁힙니다.</p><span class="guide-result">연습 TSV · North 3개 행, 합계 6 확인 <span aria-hidden="true">→</span></span></a></li>
+        </ol>
+        <p class="guide-start-note">모든 연습 파일은 합성 데이터입니다. 실제 고객 자료가 아니며, 검증한 환경과 아직 확인하지 못한 범위는 각 글에 구분해 적습니다.</p>
       </section>
 
       <aside class="data-entry" aria-labelledby="data-entry-title">
@@ -178,11 +192,6 @@
           <li><a href="./stories/ai-answer-fidelity.html"><span class="fieldnote-meta">INTERVIEWER LENS · AI 품질</span><strong>AI가 내 경험을 대신 지어내지 않도록</strong><span>형식 검증만으로는 지킬 수 없던 사실, 생성·표시·복사의 경계를 맞췄습니다.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li>
           <li><a href="./stories/deep-constellation-retrospective.html"><span class="fieldnote-meta">DEEP CONSTELLATION · 수익화 회고 · 2026. 10. 03.</span><strong>만들 수 있다는 것과 팔 수 있다는 것은 달랐다</strong><span>수익을 만들지 못한 실험을 멈추며, 고객 검증과 다음의 중단 기준을 남겼습니다.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li>
         </ol>
-      </section>
-
-      <section class="fieldnotes section" id="data-guides" aria-labelledby="data-guides-title">
-        <div class="fieldnotes-intro"><span class="eyebrow">PRACTICAL DATA GUIDES</span><h2 id="data-guides-title">링크를 모으는 대신,<br/>여기서 바로 해결합니다.</h2><p>CSV·Excel·Power Query에서 자주 막히는 문제를 한국어로 설명했습니다. 원본 보존, 합성 예제와 예상 결과를 함께 확인합니다.</p><a class="fieldnotes-all" href="./data-guides/">한국어 데이터 가이드 4편 모두 보기 <span aria-hidden="true">→</span></a></div>
-        <ol class="fieldnotes-list"><li><a href="./data-guides/csv-one-column.html"><span class="fieldnote-meta">CSV · 구분자</span><strong>CSV가 Excel에서 한 열로 열릴 때</strong><span>쉼표와 세미콜론을 추측하지 않고 원본과 미리보기로 확인하기.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li><li><a href="./data-guides/excel-leading-zeros.html"><span class="fieldnote-meta">Excel · 식별자</span><strong>CSV의 앞자리 0을 Excel에서 지키기</strong><span>00123이 123으로 바뀌기 전에 Text 자료형으로 가져오기.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li><li><a href="./data-guides/power-query-merge-rows.html"><span class="fieldnote-meta">Power Query · 병합</span><strong>병합 후 행과 합계가 늘어날 때</strong><span>중복을 지우기 전에 매치 수와 one-to-many 관계 확인하기.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li></ol>
       </section>
 
       <section class="library section" id="collection" aria-labelledby="collection-title">

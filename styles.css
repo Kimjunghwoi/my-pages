@@ -53,6 +53,25 @@ h1 > span { color: var(--green); }
 .profile-handle { display: block; font-size: 11px; color: var(--muted); }
 .profile-note { display: block; margin-top: 13px; font-size: 10px; color: var(--muted); white-space: nowrap; }
 .profile-note span { margin-left: 7px; }
+.guide-start { padding: 26px 0 22px; border-top: 1px solid var(--line); }
+.guide-start-heading { display: flex; justify-content: space-between; align-items: end; gap: 18px; }
+.guide-start-heading h2 { margin: 10px 0 8px; font-size: clamp(22px, 3vw, 29px); letter-spacing: -1px; line-height: 1.5; word-break: keep-all; }
+.guide-start-heading p:not(.eyebrow), .guide-start-note { font-size: 12px; line-height: 1.9; color: var(--muted); word-break: keep-all; }
+.guide-start-heading .quiet-link { flex-shrink: 0; }
+.guide-start-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 30px; padding: 0; margin: 24px 0 12px; list-style: none; }
+.guide-start-list li { border-top: 1px solid var(--line); min-width: 0; }
+.guide-start-list a { display: flex; flex-direction: column; gap: 9px; height: 100%; padding: 19px 0; }
+.guide-step { font-size: 11px; color: var(--green); font-weight: 700; }
+.guide-start-list h3 { font-size: 19px; letter-spacing: -.6px; line-height: 1.6; word-break: keep-all; }
+.guide-start-list p { font-size: 13px; line-height: 1.8; color: var(--muted); word-break: keep-all; }
+.guide-result { display: flex; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 6px; font-size: 11px; line-height: 1.8; color: var(--green); }
+.guide-start-list a:hover h3 { text-decoration: underline; text-underline-offset: 5px; }
+@media (max-width: 580px) {
+  .guide-start-heading { display: block; }
+  .guide-start-heading .quiet-link { margin-top: 8px; }
+  .guide-start-list { grid-template-columns: minmax(0, 1fr); margin-top: 12px; }
+  .guide-start-list a { padding-block: 17px; }
+}
 .data-entry { display: grid; grid-template-columns: minmax(230px, .9fr) minmax(0, 2fr); align-items: center; gap: 24px; padding: 20px 0; margin-bottom: 24px; border-top: 1px solid var(--line); }
 .data-entry-copy h2 { margin-top: 7px; font-size: 17px; line-height: 1.6; letter-spacing: -.6px; word-break: keep-all; }
 .data-entry-copy > p:last-child { margin-top: 6px; font-size: 12px; line-height: 1.8; color: var(--muted); word-break: keep-all; }

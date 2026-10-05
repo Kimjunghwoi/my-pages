@@ -43,7 +43,7 @@ test("Column Harbor tools and learning are discoverable before projects without 
   ]);
   assert.ok(entry.includes("목록 비교") && entry.includes("중복 제거") && entry.includes("형식 변환"));
   assert.ok(entry.includes("예제와 정답") && entry.includes("영문"));
-  assert.ok(html.includes('href="./styles.css?v=20260930-column-harbor"'));
+  assert.ok(html.includes('href="./styles.css?v=20261005-practical-guides"'));
   links.forEach((match) => assert.ok(match[2].includes("새 탭")));
   anchors.filter((anchor) => ["https://csv.jhsoftlabs.com/guides", "https://csv.jhsoftlabs.com/learn/excel"].includes(anchor.href)).forEach((anchor) => {
     assert.doesNotMatch(anchor.content, /가이드\s*\d+편|Excel Academy\s*\d+강|\d+개 기초~실무 레슨/);
