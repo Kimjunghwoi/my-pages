@@ -41,7 +41,9 @@ test("earlier publishing and video records link to the later pause without delet
     assert.match(source, /aria-label="프로젝트 상태 업데이트"/);
     assert.ok(source.includes(`href="./${slug}"`));
     assert.ok(source.includes('"datePublished":"2026-09-13"'));
-    assert.ok(source.includes('"dateModified":"2026-10-03"'));
+    const metadata = JSON.parse(source.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    assert.ok(metadata.dateModified >= "2026-10-03");
+    assert.match(source, /2026\. 10\. 03\. · 추가 활동을 중단했습니다/);
     assert.ok(article.includes(`href="./${file}"`));
   }
 });

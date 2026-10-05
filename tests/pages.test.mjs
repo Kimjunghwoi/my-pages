@@ -31,7 +31,7 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
     mkdirSync(dirname(join(fixture, file)), { recursive: true });
     writeFileSync(join(fixture, file), readFileSync(join(root, file)));
   }
-  for (const privatePath of [".env", "docs/private.md", ".git/config", ".vercel/project.json", "assets/internal.txt", "templates/private/notes.md", "tools/admin/index.html"]) {
+  for (const privatePath of [".env", "docs/private.md", ".git/config", ".vercel/project.json", "assets/internal.txt", "assets/unapproved.mp4", "templates/private/notes.md", "tools/admin/index.html"]) {
     mkdirSync(dirname(join(fixture, privatePath)), { recursive: true });
     writeFileSync(join(fixture, privatePath), "PRIVATE SENTINEL");
   }
@@ -41,7 +41,7 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
   assert.ok(names.includes("privacy.html"));
   assert.ok(names.includes("data-guides/semicolon-example.csv"));
   assert.ok(names.includes("data-guides/filter-example.tsv"));
-  for (const file of ["data-guides/merge-lab.pq", "stories/retry-lab.mjs"]) {
+  for (const file of ["data-guides/merge-lab.pq", "stories/retry-lab.mjs", "assets/deep-constellation-promo-muted.mp4", "assets/guide-merge-multiplication.svg", "assets/guide-display-vs-value.svg", "assets/story-retry-boundary.svg"]) {
     assert.ok(names.includes(file));
     assert.deepEqual(readFileSync(join(first.output, file)), readFileSync(join(root, file)));
   }

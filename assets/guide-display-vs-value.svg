@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="720" viewBox="0 0 640 720" role="img" aria-labelledby="title desc">
+  <title id="title">같은 00123으로 보여도 셀의 자료형과 실제 값은 다릅니다</title>
+  <desc id="desc">숫자 123에 00000 표시 서식을 적용하면 화면에는 00123이 보이지만 내부 값은 123, ISTEXT는 FALSE입니다. 원본 00123을 Text로 가져오면 화면과 내부 값 모두 00123이며 ISTEXT는 TRUE입니다. 표시를 맞추는 것과 원본을 보존하는 것은 다릅니다.</desc>
+  <rect width="640" height="720" rx="12" fill="#f2f4eb"/>
+  <g font-family="'Noto Sans KR','Malgun Gothic',sans-serif" fill="#24392f">
+    <text x="32" y="49" font-size="18" letter-spacing="2">02 / DISPLAY IS NOT THE VALUE</text>
+    <text x="32" y="96" font-size="30" font-weight="700">보이는 0과 남아 있는 0</text>
+    <rect x="32" y="128" width="576" height="226" rx="8" fill="#fcf3e8" stroke="#d8b797"/>
+    <text x="54" y="168" font-size="26" font-weight="700">숫자 123 + 표시 서식 00000</text>
+    <text x="54" y="209" font-size="23">셀에 보이는 내용</text>
+    <text x="54" y="269" font-family="Consolas,monospace" font-size="52" font-weight="700">00123</text>
+    <path d="M54 290 H586" stroke="#d8b797"/>
+    <text x="54" y="327" font-size="25">내부 값: 123</text><text x="324" y="327" font-size="23">ISTEXT: FALSE</text>
+    <rect x="32" y="376" width="576" height="226" rx="8" fill="#fff" stroke="#b7c6ae"/>
+    <text x="54" y="416" font-size="26" font-weight="700">원본 00123을 Text로 가져오기</text>
+    <text x="54" y="457" font-size="23">셀에 보이는 내용</text>
+    <text x="54" y="517" font-family="Consolas,monospace" font-size="52" font-weight="700">00123</text>
+    <path d="M54 538 H586" stroke="#b7c6ae"/>
+    <text x="54" y="575" font-size="25">내부 값: 00123</text><text x="324" y="575" font-size="23">ISTEXT: TRUE</text>
+    <text x="32" y="650" font-size="27" font-weight="700">표시만 복구 ≠ 원본 식별자 보존</text>
+    <text x="32" y="692" font-size="18" fill="#5d6d59">관측값을 다시 그린 설명 이미지 · 실제 Excel 화면 아님</text>
+  </g>
+</svg>

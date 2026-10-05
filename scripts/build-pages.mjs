@@ -31,7 +31,7 @@ function pagesUrls(source, file, articles) {
 export function buildPages(root = repository) {
   root = realpathSync(root);
   const output = resolve(root, ".pages-dist");
-  const sources = ["index.html", "privacy.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "data-guides/merge-lab.pq", "stories/retry-lab.mjs"];
+  const sources = ["index.html", "privacy.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "data-guides/merge-lab.pq", "stories/retry-lab.mjs", "assets/deep-constellation-promo-muted.mp4"];
   const groups = {
     assets: /\.(?:svg|png|jpe?g|webp|woff2?)$/i,
     stories: /\.html$/,

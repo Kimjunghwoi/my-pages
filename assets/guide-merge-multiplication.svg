@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="820" viewBox="0 0 640 820" role="img" aria-labelledby="title desc">
+  <title id="title">고객 ID 병합으로 같은 판매가 두 번씩 나타나는 과정</title>
+  <desc id="desc">C10의 판매 S1은 10, S2는 20입니다. 고객에게 주소 A1과 A2가 있어 각 판매가 두 주소에 연결됩니다. 이 두 판매의 합계는 펼치기 전 30에서 60으로 보입니다. 나머지 판매 12를 더하면 전체 4행 42가 6행 72로 보입니다. 고객과 주소 ID를 함께 쓰면 전체 4행 42를 유지합니다.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#986039" stroke-width="1.5"/></marker></defs>
+  <rect width="640" height="820" rx="12" fill="#f2f4eb"/>
+  <g font-family="'Noto Sans KR','Malgun Gothic',sans-serif" fill="#24392f">
+    <text x="32" y="49" font-size="18" letter-spacing="2">01 / MERGE RELATIONSHIP</text>
+    <text x="32" y="96" font-size="30" font-weight="700">판매 두 건 × 주소 두 개</text>
+    <text x="32" y="137" font-size="23">같은 고객 C10을 기준으로 연결하면</text>
+    <text x="32" y="191" font-size="24" font-weight="700">원래 판매</text>
+    <text x="347" y="191" font-size="24" font-weight="700">주소를 펼친 결과</text>
+    <rect x="32" y="254" width="174" height="94" rx="8" fill="#fff" stroke="#b7c6ae"/>
+    <text x="54" y="292" font-size="24">S1 · C10</text><text x="54" y="329" font-size="30" font-weight="700">금액 10</text>
+    <rect x="32" y="430" width="174" height="94" rx="8" fill="#fff" stroke="#b7c6ae"/>
+    <text x="54" y="468" font-size="24">S2 · C10</text><text x="54" y="505" font-size="30" font-weight="700">금액 20</text>
+    <g fill="none" stroke="#986039" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M206 301 C270 301 285 252 329 252"/><path d="M206 301 C270 301 285 342 329 342"/>
+      <path d="M206 477 C270 477 285 428 329 428"/><path d="M206 477 C270 477 285 518 329 518"/>
+    </g>
+    <g fill="#fcf3e8" stroke="#d8b797"><rect x="343" y="216" width="265" height="72" rx="8"/><rect x="343" y="306" width="265" height="72" rx="8"/><rect x="343" y="392" width="265" height="72" rx="8"/><rect x="343" y="482" width="265" height="72" rx="8"/></g>
+    <g font-size="27" font-weight="600"><text x="363" y="262">S1 · A1 · 10</text><text x="363" y="352">S1 · A2 · 10</text><text x="363" y="438">S2 · A1 · 20</text><text x="363" y="528">S2 · A2 · 20</text></g>
+    <rect x="32" y="584" width="576" height="81" rx="8" fill="#263f32"/>
+    <text x="54" y="619" font-size="23" fill="#fff">나머지 판매 12까지 합치면</text>
+    <text x="54" y="649" font-size="26" font-weight="700" fill="#fff">전체 4행 · 42 → 6행 · 72</text>
+    <text x="32" y="711" font-size="25" font-weight="700">수정: 고객 ID + 선택한 주소 ID</text>
+    <text x="32" y="752" font-size="24">각 판매에 맞는 주소만 연결 → 4행 · 42</text>
+    <text x="32" y="791" font-size="18" fill="#5d6d59">설명용 도식 · 본문의 합성 데이터 · 실제 Excel 화면 아님</text>
+  </g>
+</svg>

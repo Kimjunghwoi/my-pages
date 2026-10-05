@@ -100,6 +100,15 @@
 .sample-table td { font-variant-numeric: tabular-nums; }
 .sample-code { overflow-x: auto; padding: 18px 20px; border: 1px solid var(--line); background: #e9ede3; font: 13px/1.7 Consolas, monospace; white-space: pre; }
 .sample-code--wrap { white-space: pre-wrap; overflow-wrap: anywhere; }
+.article-visual { margin: 28px 0; }
+.article-visual > a { display: block; width: 100%; max-width: 580px; margin-inline: auto; }
+.article-visual img { display: block; width: 100%; max-width: 580px; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+.article-visual figcaption, .article-video figcaption { margin-top: 12px; font-size: 13px; line-height: 1.85; color: var(--muted); word-break: keep-all; overflow-wrap: anywhere; }
+.article-visual figcaption a { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+.article-video { margin: 28px 0; }
+.article-video video { display: block; width: min(100%, 340px); height: auto; aspect-ratio: 9 / 16; margin-inline: auto; object-fit: contain; background: #18251e; border-radius: 8px; }
+.video-transcript .story-flow { padding: 8px 24px 24px; }
+.video-transcript + section { margin-top: 40px; }
 .story-revision { margin-top: 14px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .sample-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 14px 0 0; font-size: 13px; }
 .sample-links a { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }

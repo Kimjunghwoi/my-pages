@@ -61,9 +61,14 @@ test("journal and each article have a return path, unique metadata and valid sit
   assert.match(sitemap, /^<\?xml[^>]+>\s*<urlset[^>]+>(?:\s*<url><loc>https:\/\/[^<]+<\/loc><lastmod>\d{4}-\d{2}-\d{2}<\/lastmod><\/url>)+\s*<\/urlset>\s*$/);
 });
 
-test("new editorial pages add no application state, embeds or user inputs", () => {
+test("editorial pages add no application state, third-party embeds or user inputs", () => {
   for (const source of [journal, ...added.map((slug) => read(`stories/${slug}.html`))]) {
-    assert.doesNotMatch(source, /<(?:iframe|video|form|input|textarea)\b/);
+    assert.doesNotMatch(source, /<(?:iframe|form|input|textarea)\b/);
+    if (source.includes("<video")) {
+      assert.match(source, /<video controls playsinline preload="none"/);
+      assert.match(source, /src="\.\.\/assets\/deep-constellation-promo-muted\.mp4"/);
+      assert.doesNotMatch(source, /\s(?:autoplay|loop)(?:\s|=|>)/);
+    }
     assert.doesNotMatch(source, /localStorage|sessionStorage|innerHTML|fetch\(/);
     const scripts = [...source.matchAll(/<script[^>]+src="([^"]+)"/g)].map((m) => m[1]);
     assert.deepEqual(scripts, ["/_vercel/insights/script.js", "/_vercel/speed-insights/script.js"]);
