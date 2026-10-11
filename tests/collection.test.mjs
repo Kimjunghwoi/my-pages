@@ -70,13 +70,13 @@ function mount(initial = "https://jhsoftlabs.com/") {
   };
 }
 
-test("initial collection shows six of thirty-seven, expands all, and focuses the first newly revealed row", () => {
+test("initial collection shows six of thirty-eight, expands all, and focuses the first newly revealed row", () => {
   const ui = mount();
   assert.equal(ui.controls.hidden, false);
   assert.equal(ui.visible().length, 6);
-  assert.match(ui.ids["result-count"].textContent, /전체 37개/);
+  assert.match(ui.ids["result-count"].textContent, /전체 38개/);
   ui.click("collection-more");
-  assert.equal(ui.visible().length, 37);
+  assert.equal(ui.visible().length, 38);
   assert.equal(ui.focused, ui.rows[6]);
   assert.equal(ui.ids["collection-more"].attributes["aria-expanded"], "true");
   ui.click("collection-more");
@@ -84,10 +84,10 @@ test("initial collection shows six of thirty-seven, expands all, and focuses the
   assert.equal(ui.ids["collection-more"].scrolled, true);
 });
 
-test("project filter keeps exactly three services while data also includes the build note", () => {
+test("project filter includes the game while data also includes the build note", () => {
   const ui = mount();
   ui.filter("project");
-  assert.equal(ui.visible().length, 3);
+  assert.equal(ui.visible().length, 4);
   assert.equal(ui.url.searchParams.get("tab"), "project");
   ui.filter("data");
   assert.equal(ui.visible().length, 6);
@@ -139,7 +139,7 @@ test("shared URL restores query and unknown filters safely fall back to all", ()
   assert.equal(ui.visible().length, 1);
   assert.equal(ui.ids["collection-search"].value, "CSV 브라우저 원본");
   const invalid = mount("https://jhsoftlabs.com/?tab=missing");
-  assert.match(invalid.ids["result-count"].textContent, /^전체 37개/);
+  assert.match(invalid.ids["result-count"].textContent, /^전체 38개/);
 });
 
 test("record and template filters expose internal content without adding featured services", () => {
@@ -154,7 +154,17 @@ test("record and template filters expose internal content without adding feature
   assert.equal(ui.visible().length, 4);
   assert.ok(ui.visible().every((row) => row.textContent.includes("무료 양식")));
   ui.filter("project");
-  assert.equal(ui.visible().length, 3);
+  assert.equal(ui.visible().length, 4);
+});
+
+test("game is discoverable by its title and former name without duplicate projects", () => {
+  for (const query of ["밤팡", "보글보글", "bogle", "60초 웹게임"]) {
+    const ui = mount();
+    ui.filter("project");
+    ui.search(query);
+    assert.equal(ui.visible().length, 1);
+    assert.match(ui.visible()[0].textContent, /밤팡! 작은 가을 장터/);
+  }
 });
 
 test("legacy anchors preserve filters and navigate to the unified library", () => {

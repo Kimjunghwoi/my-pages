@@ -24,7 +24,7 @@ test("Pages HTML removes only known telemetry, preserving public content and met
 test("Pages artifact excludes private paths, preserves downloads and replaces stale output", () => {
   const fixture = mkdtempSync(join(tmpdir(), "mypages-pages-test-"));
   const roots = ["index.html", "privacy.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
-  for (const directory of ["assets", "stories", "data-guides", "templates", "tools/release-check"]) {
+  for (const directory of ["assets", "stories", "data-guides", "templates", "tools/release-check", "projects/bampang"]) {
     roots.push(...readdirSync(join(root, directory), { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => `${directory}/${entry.name}`));
   }
   for (const file of roots) {
@@ -39,6 +39,9 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
   const names = first.files.map((file) => file.path);
   assert.ok(names.includes("404.html"));
   assert.ok(names.includes("privacy.html"));
+  assert.ok(names.includes("projects/bampang/index.html"));
+  assert.ok(names.includes("projects/bampang/project.css"));
+  assert.ok(names.includes("assets/bampang-chestnut.svg"));
   assert.ok(names.includes("data-guides/semicolon-example.csv"));
   assert.ok(names.includes("data-guides/filter-example.tsv"));
   for (const file of ["data-guides/merge-lab.pq", "stories/retry-lab.mjs", "assets/deep-constellation-promo-muted.mp4", "assets/guide-merge-multiplication.svg", "assets/guide-display-vs-value.svg", "assets/story-retry-boundary.svg"]) {

@@ -70,30 +70,30 @@
   .verification-board figcaption { padding-inline: 20px; }
 }
 .story-layout { display: grid; grid-template-columns: 195px minmax(0, 1fr); gap: 50px; margin-top: 55px; }
-.story-toc { position: sticky; top: 120px; align-self: start; display: flex; flex-direction: column; gap: 2px; font-size: 12px; }
+.story-toc { position: sticky; top: 120px; align-self: start; display: flex; flex-direction: column; gap: 2px; font-size: 14px; line-height: 1.75; }
 .story-toc > span { font-weight: 600; margin-bottom: 12px; }
 .story-toc a { padding-block: 12px; color: var(--muted); }
 .story-toc a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 .story-content { min-width: 0; }
-.story-content section { scroll-margin-top: 110px; }
+.story-content section { scroll-margin-top: 24px; }
 .story-content section + section { margin-top: 56px; padding-top: 37px; border-top: 1px solid var(--line); }
 .story-section-number { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: #5b7350; }
 .story-content h2 { font-size: clamp(25px, 2.5vw, 32px); line-height: 1.5; letter-spacing: -1px; font-weight: 650; margin: 13px 0 22px; word-break: keep-all; }
-.story-content section > p:not(.story-section-number) { font-size: 16px; color: #4f5f53; line-height: 2; margin-top: 18px; word-break: keep-all; overflow-wrap: anywhere; }
+.story-content section > p:not(.story-section-number) { max-width: 44em; font-size: 17px; color: #435248; line-height: 1.95; margin-top: 22px; word-break: keep-all; overflow-wrap: anywhere; }
 .story-content p code { background: #e9ede3; border: 1px solid #dbe2d2; border-radius: 3px; padding: 1px 4px; font-size: .95em; }
 .story-content p a { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 .story-flow { margin: 27px 0; padding-left: 25px; }
 .story-flow li { padding: 12px 0 12px 10px; }
 .story-flow li::marker { color: var(--green); font-weight: 600; font-size: 13px; }
-.story-flow strong { display: block; font-size: 15px; font-weight: 600; }
-.story-flow span { display: block; margin-top: 6px; font-size: 14px; color: var(--muted); line-height: 1.9; }
+.story-flow strong { display: block; font-size: 16px; font-weight: 600; line-height: 1.8; }
+.story-flow span { display: block; margin-top: 8px; font-size: 16px; color: #4f5f53; line-height: 1.9; word-break: keep-all; overflow-wrap: anywhere; }
 .story-callout { margin-block: 27px; padding: 20px 23px; border-left: 3px solid #8d9f69; background: #ecefe3; }
 .story-callout strong { font-size: 15px; font-weight: 600; line-height: 1.8; }
-.story-callout p { margin-top: 9px; font-size: 14px; line-height: 1.9; color: #536448; }
+.story-callout p { margin-top: 9px; font-size: 16px; line-height: 1.9; color: #435638; overflow-wrap: anywhere; }
 .sample-block { margin: 27px 0; }
 .sample-block figcaption { margin-bottom: 11px; color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
 .sample-table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); background: #fff; }
-.sample-table { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.6; white-space: nowrap; }
+.sample-table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.7; white-space: nowrap; }
 .sample-table th, .sample-table td { padding: 11px 15px; border-bottom: 1px solid var(--line); text-align: left; }
 .sample-table tr:last-child td { border-bottom: 0; }
 .sample-table th { background: #e9ede3; color: var(--green); font-weight: 700; }
@@ -183,11 +183,11 @@
   .story-breadcrumb { padding-block: 17px; gap: 8px; }
   .story-header { margin-top: 10px; }
   .story-header h1 { font-size: clamp(29px, 7.8vw, 42px); letter-spacing: -1.8px; }
-  .story-intro { font-size: 15px; margin-top: 18px; }
+  .story-intro { font-size: 16px; margin-top: 18px; }
   .story-comparison { padding: 22px 18px 18px; gap: 13px; }
   .story-comparison code { font-size: 34px; letter-spacing: 0; }
   .story-content section + section { margin-top: 40px; padding-top: 28px; }
-  .story-content section > p:not(.story-section-number) { font-size: 15px; }
+  .story-content section > p:not(.story-section-number) { font-size: 16px; }
   .story-content h2 { font-size: 26px; }
   .story-content h2 br { display: none; }
   .story-byline { gap: 9px; }

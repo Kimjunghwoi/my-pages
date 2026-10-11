@@ -11,7 +11,7 @@ const attributes = (text) => Object.fromEntries([...text.matchAll(/([\w-]+)="([^
 const anchors = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].map((match) => ({ ...attributes(match[1]), content: match[2] }));
 const resources = anchors.filter((anchor) => anchor.class === "resource");
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
-const projectHosts = ["interview.jhsoftlabs.com", "image.jhsoftlabs.com", "csv.jhsoftlabs.com"];
+const projectHosts = ["interview.jhsoftlabs.com", "image.jhsoftlabs.com", "csv.jhsoftlabs.com", "bogle-chestnut.vercel.app"];
 
 test("homepage retains the approved Naver ownership verification in head", () => {
   const head = html.match(/<head>([\s\S]*?)<\/head>/)?.[1];
@@ -20,12 +20,12 @@ test("homepage retains the approved Naver ownership verification in head", () =>
   assert.ok(head.includes('<link rel="canonical" href="https://jhsoftlabs.com/" />'));
 });
 
-test("exactly three featured projects, each linked to its own service", () => {
+test("four featured projects keep their own service routes and the game introduction", () => {
   const cards = [...html.matchAll(/<article class="project-card[^>]*>([\s\S]*?)<\/article>/g)];
-  assert.equal(cards.length, 3);
+  assert.equal(cards.length, 4);
   cards.forEach((card, index) => {
     const urls = [...card[1].matchAll(/href="(https:[^"]+)"/g)].map((match) => new URL(match[1]));
-    assert.ok(urls.length >= 2);
+    assert.ok(urls.length >= (index === 3 ? 1 : 2));
     assert.ok(urls.every((url) => url.hostname === projectHosts[index]));
   });
 });
@@ -43,7 +43,7 @@ test("Column Harbor tools and learning are discoverable before projects without 
   ]);
   assert.ok(entry.includes("목록 비교") && entry.includes("중복 제거") && entry.includes("형식 변환"));
   assert.ok(entry.includes("예제와 정답") && entry.includes("영문"));
-  assert.ok(html.includes('href="./styles.css?v=20261005-practical-guides"'));
+  assert.ok(html.includes('href="./styles.css?v=20261011-readability"'));
   links.forEach((match) => assert.ok(match[2].includes("새 탭")));
   anchors.filter((anchor) => ["https://csv.jhsoftlabs.com/guides", "https://csv.jhsoftlabs.com/learn/excel"].includes(anchor.href)).forEach((anchor) => {
     assert.doesNotMatch(anchor.content, /가이드\s*\d+편|Excel Academy\s*\d+강|\d+개 기초~실무 레슨/);
@@ -52,16 +52,16 @@ test("Column Harbor tools and learning are discoverable before projects without 
 });
 
 test("library preserves all external resources and adds records and free templates", () => {
-  assert.equal(resources.length, 37);
+  assert.equal(resources.length, 38);
   assert.equal(new Set(resources.map((item) => item.href)).size, resources.length);
   assert.equal(resources.filter((item) => new URL(item.href, "https://jhsoftlabs.com/").hostname.endsWith("notion.site")).length, 7);
   assert.equal(resources.filter((item) => item.href.startsWith("https://csv.jhsoftlabs.com/guides/")).length, 4);
   const local = resources.filter((item) => item.href.startsWith("./"));
-  assert.equal(local.length, 18);
+  assert.equal(local.length, 19);
   assert.ok(local.some((item) => item.href === "./stories/column-harbor.html"));
   assert.equal(local[0].target, undefined);
   assert.ok(local.every((item) => !item.target));
-  assert.equal(resources.filter((item) => item["data-category"].split(" ").includes("project")).length, 3);
+  assert.equal(resources.filter((item) => item["data-category"].split(" ").includes("project")).length, 4);
 });
 
 test("every topic has a matching accessible filter", () => {
@@ -122,7 +122,7 @@ test("all public HTML documents have valid local destinations, assets, anchors a
     const file = `${directory}/${entry.name}`;
     return entry.isDirectory() ? publicHtml(file) : file.endsWith(".html") ? [file] : [];
   });
-  const files = ["index.html", ...["stories", "data-guides", "templates", "tools"].flatMap(publicHtml)];
+  const files = ["index.html", ...["stories", "data-guides", "templates", "tools", "projects"].flatMap(publicHtml)];
   const documents = new Map(files.map((file) => [file, readFileSync(resolve(root, file), "utf8")]));
   for (const [file, source] of documents) {
     const base = new URL(file === "index.html" ? "/" : `/${file}`, "https://jhsoftlabs.com");
@@ -152,8 +152,12 @@ test("all public HTML documents have valid local destinations, assets, anchors a
     for (const match of source.matchAll(/(?:src|href)="(\.\.?\/[^"?#]+)"/g)) {
       assert.ok(existsSync(resolve(root, dirname(file), match[1])), `${file}: ${match[1]}`);
     }
-    assert.ok(source.includes('/_vercel/insights/script.js'));
-    assert.ok(source.includes('/_vercel/speed-insights/script.js'));
+    if (!file.startsWith("projects/")) {
+      assert.ok(source.includes('/_vercel/insights/script.js'));
+      assert.ok(source.includes('/_vercel/speed-insights/script.js'));
+    } else {
+      assert.doesNotMatch(source, /<script[^>]*src=/);
+    }
   }
 });
 

@@ -38,6 +38,7 @@ export function buildPages(root = repository) {
     "data-guides": /\.(?:html|csv|tsv)$/,
     templates: /\.(?:html|md)$/,
     "tools/release-check": /\.(?:html|css|js)$/,
+    "projects/bampang": /\.(?:html|css)$/,
   };
   // Only approved public paths enter the artifact; never publish the repository root.
   for (const [directory, pattern] of Object.entries(groups)) {

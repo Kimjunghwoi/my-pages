@@ -1,0 +1,27 @@
+.game-project { padding-bottom: 65px; }
+.game-project .story-header { max-width: 790px; }
+.game-project .story-header h1 { color: #4b3629; }
+.game-project .story-intro { max-width: 710px; }
+.game-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 26px; }
+.game-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; font-weight: 600; color: var(--green); text-decoration: underline; text-underline-offset: 5px; }
+.game-meta { margin-top: 16px; font-size: 13px; line-height: 1.8; color: var(--muted); }
+.game-cover { margin: 0; padding: 34px 40px 22px; border: 1px solid #e0d7c8; border-radius: 8px; background: radial-gradient(ellipse at 15% 5%, #fff9e8, transparent 70%), #f1e4cd; }
+.game-cover-art { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 16px 0 32px; }
+.game-cover-art img { width: 180px; height: auto; }
+.game-cover-art span { color: #795437; font-size: 11px; letter-spacing: 1px; }
+.game-cover-art strong { display: block; margin-top: 15px; color: #67442c; font-size: clamp(30px, 4vw, 46px); line-height: 1.35; letter-spacing: -1.5px; }
+.game-cover figcaption { padding-top: 16px; border-top: 1px solid #daceb9; font-size: 13px; line-height: 1.8; color: #66533e; word-break: keep-all; overflow-wrap: anywhere; }
+.game-modes { margin: 24px 0 0; }
+.game-modes > div { padding: 24px 0; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 24px; border-top: 1px solid var(--line); }
+.game-modes dt { font-size: 20px; font-weight: 700; line-height: 1.6; }
+.game-modes dt span { display: block; margin-bottom: 6px; color: #825132; font-size: 13px; font-weight: 500; }
+.game-modes dd { margin: 0; color: #435248; font-size: 16px; line-height: 1.9; word-break: keep-all; overflow-wrap: anywhere; }
+@media (max-width: 580px) {
+  .game-cover { padding: 20px 18px 16px; }
+  .game-cover-art { gap: 20px; }
+  .game-cover-art img { width: 100px; }
+  .game-cover-art span { font-size: 10px; letter-spacing: 0; }
+  .game-cover-art strong { font-size: 28px; }
+  .game-modes > div { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .game-project .game-actions .button { width: 100%; justify-content: space-between; }
+}
