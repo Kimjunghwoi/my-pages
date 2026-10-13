@@ -47,7 +47,7 @@
         <header class="story-header">
           <p class="eyebrow">BUILD NOTE 01 · COLUMN HARBOR</p>
           <h1>숫자로 바꾸기 전에,<br /><span>원본을 한 번 더.</span></h1>
-          <p class="story-intro">데이터를 대신 고치는 것보다, 무엇이 달라질 수 있는지 먼저 보여주는 일. CSV 점검기 Column Harbor가 원본을 다루는 방식과 그 경계를 소개합니다.</p>
+          <p class="story-intro">CSV를 가져오는 과정에서 원래 값이 달라질 수 있습니다. Column Harbor는 데이터를 자동으로 고치기보다 어떤 값이 위험한지 먼저 보여주도록 만들었습니다. 원본을 다루는 방식과 도구의 한계를 소개합니다.</p>
           <div class="story-byline"><img src="../assets/hoemon-profile.jpg" alt="회몬 캐릭터" width="40" height="40" /><div><strong>회몬</strong><span>개발자 · 메이커</span></div><time datetime="2026-09-13">2026. 09. 13.</time></div>
         </header>
 
@@ -63,17 +63,17 @@
           <div class="story-content">
             <section id="problem" aria-labelledby="problem-title">
               <p class="story-section-number">01 / THE PROBLEM</p>
-              <h2 id="problem-title">숫자처럼 보여도,<br />계산할 값은 아닐 수 있습니다.</h2>
-              <p>상품 코드 <code>00123</code>은 숫자 123과 다른 식별자일 수 있습니다. CSV를 열면서 숫자로 해석하면 앞자리 0이 사라질 수 있고, 긴 ID는 숫자 정밀도의 영향을 받을 수 있습니다. Microsoft도 이런 값을 보존하기 위한 텍스트 가져오기 방식을 안내합니다. <a href="https://support.microsoft.com/en-us/excel/keeping-leading-zeros-and-large-numbers" target="_blank" rel="noopener noreferrer">공식 안내 읽기 <span aria-hidden="true">↗</span><span class="sr-only"> (영문, 새 탭)</span></a></p>
+              <h2 id="problem-title">숫자처럼 보여도<br />계산할 값은 아닐 수 있습니다.</h2>
+              <p>상품 코드 <code>00123</code>은 숫자 123과 다른 식별자일 수 있습니다. CSV를 열면서 숫자로 해석하면 앞자리 0이 사라질 수 있고 긴 ID는 숫자 정밀도의 영향을 받을 수 있습니다. Microsoft도 이런 값을 보존하기 위한 텍스트 가져오기 방식을 안내합니다. <a href="https://support.microsoft.com/en-us/excel/keeping-leading-zeros-and-large-numbers" target="_blank" rel="noopener noreferrer">공식 안내 읽기 <span aria-hidden="true">↗</span><span class="sr-only"> (영문, 새 탭)</span></a></p>
               <p>Column Harbor는 이 지점에서 출발하는 도구입니다. 파일이 이미 깨졌다고 단정하는 대신, 가져오기 전에 확인할 값과 위치를 보여줍니다. 경고의 의미는 ‘오류 확정’이 아니라 ‘이 값은 한 번 더 살펴보세요’에 가깝습니다.</p>
             </section>
 
             <section id="local" aria-labelledby="local-title">
               <p class="story-section-number">02 / THE FLOW</p>
-              <h2 id="local-title">파일을 선택해도,<br />서버로 올리지는 않습니다.</h2>
+              <h2 id="local-title">파일을 선택해도<br />서버로 올리지는 않습니다.</h2>
               <p>점검기는 선택한 파일이나 붙여 넣은 텍스트를 현재 브라우저에서 읽습니다. 내용을 서버에 보내 AI로 분석하는 방식이 아니라, 원본 문자열을 해석하고 정해진 규칙으로 위험 신호를 찾습니다.</p>
               <ol class="story-flow">
-                <li><strong>원본 읽기</strong><span>UTF-8 텍스트를 읽고, 선택한 구분자로 레코드와 필드를 나눕니다.</span></li>
+                <li><strong>원본 읽기</strong><span>UTF-8 텍스트를 읽고 선택한 구분자로 레코드와 필드를 나눕니다.</span></li>
                 <li><strong>값은 문자열로 유지</strong><span>상품 코드나 날짜처럼 보이는 값을 임의로 숫자·날짜로 바꾸지 않습니다.</span></li>
                 <li><strong>위험과 위치 보여주기</strong><span>앞자리 0, 긴 숫자, 날짜 패턴, 열 개수 등 확인할 부분과 원본 값을 표시합니다.</span></li>
               </ol>
@@ -91,8 +91,8 @@
             <section id="next" aria-labelledby="next-title">
               <p class="story-section-number">04 / WHAT COMES NEXT</p>
               <h2 id="next-title">경고 다음에는,<br />다음 행동이 있어야 합니다.</h2>
-              <p>위험 신호만 보여주고 끝나지 않도록, 점검 결과에서 관련 가이드로 이동할 수 있습니다. 앞자리 0은 텍스트로 가져오는 방법으로, 한 열에 몰린 값은 구분자와 가져오기 설정으로 이어집니다.</p>
-              <p>이 프로젝트가 맡는 역할은 작습니다. 원본이 어떻게 생겼는지 확인하고, 달라질 수 있는 부분을 찾고, 다음 행동을 고르는 것. 파일을 바꾸기 전에 한 번 멈춰 볼 수 있는 도구입니다.</p>
+              <p>위험 신호만 보여주고 끝나지 않도록 점검 결과에서 관련 가이드로 이동할 수 있습니다. 앞자리 0은 텍스트로 가져오는 방법으로, 한 열에 몰린 값은 구분자와 가져오기 설정으로 이어집니다.</p>
+              <p>이 프로젝트가 맡는 역할은 작습니다. 원본이 어떻게 생겼는지 확인하고 달라질 수 있는 부분을 찾고 다음 행동을 고르는 것. 파일을 바꾸기 전에 한 번 멈춰 볼 수 있는 도구입니다.</p>
               <div class="story-next"><a class="button button--dark" href="https://csv.jhsoftlabs.com/#checker" target="_blank" rel="noopener noreferrer">내 CSV 점검하기 <span aria-hidden="true">↗</span><span class="sr-only"> (영문 사이트, 새 탭)</span></a><span>무료 · 가입 불필요 · 영문 서비스</span></div>
             </section>
             <footer class="story-end"><p>2026년 9월 13일의 구현과 공개 안내를 확인해 작성한 설계 기록입니다. 기능과 제한은 이후 달라질 수 있습니다. 예시는 실제 고객 데이터가 아닙니다.</p><a href="./">개발기록 전체 보기 <span aria-hidden="true">→</span></a></footer>
