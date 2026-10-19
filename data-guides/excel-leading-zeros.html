@@ -38,8 +38,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css?v=20261011-readability" />
-    <link rel="stylesheet" href="../stories.css?v=20261011-readability" />
+    <link rel="stylesheet" href="../stories.css?v=20261019-reader" />
     <meta property="article:published_time" content="2026-09-19" />
+    <meta property="article:modified_time" content="2026-10-19" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -47,7 +48,7 @@
         "headline": "Excel에서 CSV 앞자리 0 지키기",
         "description": "CSV 식별자를 Text로 가져와 앞자리 0을 보존하는 방법",
         "datePublished": "2026-09-19",
-        "dateModified": "2026-10-05",
+        "dateModified": "2026-10-19",
         "inLanguage": "ko-KR",
         "author": {
           "@type": "Person",
@@ -83,8 +84,8 @@
         >
       </div>
     </header>
-    <main id="main" class="story-shell">
-      <nav class="story-breadcrumb">
+    <main id="main" class="story-shell" tabindex="-1">
+      <nav class="story-breadcrumb" aria-label="현재 위치">
         <a href="../">홈</a><span>/</span><a href="./">데이터 실무 가이드</a
         ><span>/</span><span aria-current="page">앞자리 0</span>
       </nav>
@@ -110,7 +111,7 @@
             </div>
             <time datetime="2026-09-19">2026. 09. 19.</time>
           </div>
-          <p class="story-revision">수정: <time datetime="2026-10-05">2026. 10. 05.</time> · 실제 Excel에서 표시 형식과 내부 값을 비교한 결과를 추가했습니다.</p>
+          <p class="story-revision">수정: <time datetime="2026-10-19">2026. 10. 19.</time> · 브라우저에서 텍스트 보존용 XLSX를 만드는 대안과 결과 확인 절차를 추가했습니다.</p>
         </header>
         <aside class="note-summary">
           <span class="eyebrow">판단 기준</span>
@@ -124,10 +125,10 @@
           </ol>
         </aside>
         <div class="story-layout">
-          <nav class="story-toc">
+          <nav class="story-toc" aria-label="목차">
             <span>이 글에서</span><a href="#meaning">숫자와 식별자 구분</a
             ><a href="#damage">서식만 바꾸면 부족한 이유</a
-            ><a href="#import">안전한 가져오기</a
+            ><a href="#import">안전한 가져오기</a><a href="#browser-export">브라우저에서 XLSX 만들기</a
             ><a href="#export">CSV로 다시 저장할 때</a
             ><a href="#check">검증 체크리스트</a><a href="#native-evidence">표시와 값의 대조 실험</a>
           </nav>
@@ -214,12 +215,23 @@
               </div>
               <figure class="sample-block">
                 <figcaption>입력 CSV · 파일을 더블클릭하지 말고 텍스트 가져오기를 사용하세요</figcaption>
-                <pre class="sample-code">item_id,quantity
+                <pre class="sample-code" tabindex="0" aria-label="앞자리 0 보존 실습 CSV 입력">item_id,quantity
 00123,2
 00007,1
 A-004,3</pre>
                 <p class="sample-links"><a href="./identifier-example.csv" download>합성 CSV 내려받기</a></p>
               </figure>
+            </section>
+            <section id="browser-export" aria-labelledby="browser-export-title">
+              <p class="story-section-number">BROWSER ALTERNATIVE</p>
+              <h2 id="browser-export-title">설치 없이 보존용 <br />XLSX 사본을 만들 수도 있습니다</h2>
+              <p>CSV를 먼저 Excel로 여는 대신 Column Harbor의 <a href="https://csv.jhsoftlabs.com/workspace/csv-to-excel" target="_blank" rel="noopener noreferrer">CSV→Excel 도구 (영문, 새 탭)</a>로 텍스트 셀로 된 XLSX를 만들 수 있습니다. 가입이나 파일 업로드 없이 브라우저에서 처리합니다. 원본 CSV는 덮어쓰지 않습니다.</p>
+              <ol class="story-flow">
+                <li><strong>바로 위 CSV 예제를 붙여넣습니다.</strong><span>CSV to convert 입력란에 헤더와 세 행을 넣고 구분자는 Comma로 둡니다. 원본 파일을 쓸 때도 식별자가 이미 손상되지 않았는지 먼저 확인하세요.</span></li>
+                <li><strong>Create Excel workbook을 누르고 미리보기를 대조합니다.</strong><span>데이터 3행, 열 2개인지 확인합니다. item_id는 00123, 00007, A-004이며 quantity는 2, 1, 3이어야 합니다.</span></li>
+                <li><strong>Download XLSX로 사본을 내려받습니다.</strong><span>Data 시트의 A2에서 =ISTEXT(A2), =LEN(A2), =EXACT(A2,"00123")을 빈 셀에 각각 입력해 TRUE, 5, TRUE인지 확인합니다. 파일 생성 성공과 내 Excel 환경에서의 결과 확인은 별개입니다.</span></li>
+              </ol>
+              <div class="story-callout"><strong>quantity도 텍스트로 저장됩니다.</strong><p>이 경로는 모든 셀을 텍스트로 보존하므로 계산용 통합문서를 자동 완성하는 기능이 아닙니다. 합계가 필요하면 Excel에서 quantity 같은 계산 대상 열만 검토한 뒤 숫자로 변환하세요. 이미 123으로 바뀐 원본에서 00123을 복원해 주지는 않습니다. 앞의 Power Query 경로는 식별자만 Text로, 수량은 숫자로 지정한다는 차이가 있습니다.</p></div>
             </section>
             <section id="export">
               <p class="story-section-number">04 / EXPORT</p>
@@ -253,8 +265,8 @@ A-004,3</pre>
                 어느 단계에서 값이 달라졌는지 구분할 수 있습니다.
               </p>
               <figure class="sample-block">
-                <figcaption>예상 결과 · item_id는 Text, quantity는 숫자</figcaption>
-                <div class="sample-table-wrap"><table class="sample-table"><thead><tr><th scope="col">item_id</th><th scope="col">quantity</th><th scope="col">검증</th></tr></thead><tbody><tr><td>00123</td><td>2</td><td>5글자 보존</td></tr><tr><td>00007</td><td>1</td><td>5글자 보존</td></tr><tr><td>A-004</td><td>3</td><td>문자와 하이픈 보존</td></tr></tbody></table></div>
+                <figcaption>Power Query 가져오기 예상 결과 · item_id는 Text, quantity는 숫자</figcaption>
+                <div class="sample-table-wrap" role="region" aria-label="Text 가져오기 예상 결과 표" tabindex="0"><table class="sample-table"><thead><tr><th scope="col">item_id</th><th scope="col">quantity</th><th scope="col">검증</th></tr></thead><tbody><tr><td>00123</td><td>2</td><td>5글자 보존</td></tr><tr><td>00007</td><td>1</td><td>5글자 보존</td></tr><tr><td>A-004</td><td>3</td><td>문자와 하이픈 보존</td></tr></tbody></table></div>
               </figure>
               <div class="story-next">
                 <a class="button button--outline" href="https://support.microsoft.com/en-us/excel/text-import-wizard" target="_blank" rel="noopener noreferrer">Microsoft 자료형 지정 안내 <span aria-hidden="true">↗</span></a>
@@ -271,7 +283,8 @@ A-004,3</pre>
               <p class="story-section-number">06 / OBSERVED RESULT</p>
               <h2>같은 00123으로 보여도<br />셀 안의 값은 달랐습니다</h2>
               <p>2026년 10월 5일, Excel 16.0 build 5569.0에서 <a href="./semicolon-example.csv" download>상품 코드가 들어 있는 합성 CSV</a>를 QueryTables 텍스트 가져오기로 읽었습니다. General로 변환한 셀과 Text로 보존한 셀을 비교한 뒤, 숫자 셀에만 사용자 지정 표시 형식 <code>00000</code>을 적용했습니다.</p>
-              <div class="sample-table-wrap"><table class="sample-table"><caption>직접 읽은 표시 문자열과 셀 내부 값</caption><thead><tr><th scope="col">설정</th><th scope="col">표시 또는 문자열</th><th scope="col">내부 값</th><th scope="col">자료형</th></tr></thead><tbody><tr><th scope="row">General 가져오기</th><td>123</td><td>123</td><td>숫자</td></tr><tr><th scope="row">숫자에 00000 서식</th><td>00123</td><td>123</td><td>숫자</td></tr><tr><th scope="row">Text 가져오기</th><td>00123</td><td>00123</td><td>문자열</td></tr></tbody></table></div>
+              <p class="sample-scroll-hint">넓은 표는 좌우로 스크롤할 수 있습니다. 키보드는 Tab으로 표 영역에 이동한 뒤 좌우 방향키를 누르세요.</p>
+              <div class="sample-table-wrap" role="region" aria-label="표시 문자열과 실제 값의 차이 비교 표" tabindex="0"><table class="sample-table"><caption>직접 읽은 표시 문자열과 셀 내부 값</caption><thead><tr><th scope="col">설정</th><th scope="col">표시 또는 문자열</th><th scope="col">내부 값</th><th scope="col">자료형</th></tr></thead><tbody><tr><th scope="row">General 가져오기</th><td>123</td><td>123</td><td>숫자</td></tr><tr><th scope="row">숫자에 00000 서식</th><td>00123</td><td>123</td><td>숫자</td></tr><tr><th scope="row">Text 가져오기</th><td>00123</td><td>00123</td><td>문자열</td></tr></tbody></table></div>
               <p>두 번째 셀의 표시 문자열은 <code>00123</code>이었지만, 실제 값은 여전히 숫자 123이었습니다. 다섯 자리가 업무 규칙으로 확정된 표시용 코드라면 이 서식이 유용할 수 있습니다. 다만 원래 값이 123, 0123, 00123 중 무엇이었는지를 복구했다는 증거는 아닙니다.</p>
               <h3>따라 해 볼 때의 완료 기준</h3>
               <ol class="story-flow"><li><strong>새 파일 두 개에 동일한 원본을 가져옵니다.</strong><span>한쪽은 식별자 열을 General, 다른 쪽은 Text로 지정합니다. 원본은 덮어쓰지 않습니다.</span></li><li><strong>General 쪽에만 00000 표시 서식을 줍니다.</strong><span>화면이 비슷해져도 수식 입력줄과 <code>=ISTEXT(A2)</code> 결과를 비교합니다. Text 쪽은 TRUE, 숫자 쪽은 FALSE여야 합니다.</span></li><li><strong>정확한 문자열과 길이를 대조합니다.</strong><span><code>=LEN(A2)</code>와 <code>=EXACT(A2,"00123")</code>를 함께 봅니다. 표시 형식이 아니라 원본 식별자 보존이 목표입니다.</span></li></ol>

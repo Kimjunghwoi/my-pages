@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { buildPages } from "./build-pages.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const checks = ["script.js", "experiences.js", "tools/release-check/checklist.js", "scripts/build-pages.mjs", "scripts/verify-pages.mjs"];
+const checks = ["script.js", "experiences.js", "tools/release-check/checklist.js", "scripts/build-pages.mjs", "scripts/verify-pages.mjs", "scripts/check-public.mjs"];
 const tests = readdirSync(resolve(root, "tests")).filter((name) => name.endsWith(".test.mjs")).sort().map((name) => `tests/${name}`);
 for (const args of [...checks.map((file) => ["--check", file]), ["--test", ...tests]]) {
   const result = spawnSync(process.execPath, args, { cwd: root, stdio: "inherit" });

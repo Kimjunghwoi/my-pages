@@ -35,8 +35,8 @@ test("native evidence retains executed outcomes and explicit testing boundaries"
     assert.match(article, /5569\.0/);
     assert.match(article, /Power Query/);
     assert.match(article, /검증[^<]*아니|검증[^<]*아닙/);
-    assert.match(article, /"dateModified": "2026-10-05"/);
+    assert.match(article, /"dateModified": "2026-10-19"/);
     assert.match(article, /ISTEXT\(A2\)/);
-    assert.ok(read("sitemap.xml").includes(`${slug}.html</loc><lastmod>2026-10-05</lastmod>`));
+    assert.ok(read("sitemap.xml").includes(`${slug}.html</loc><lastmod>2026-10-19</lastmod>`));
   }
 });

@@ -93,6 +93,7 @@
 .sample-block { margin: 27px 0; }
 .sample-block figcaption { margin-bottom: 11px; color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
 .sample-table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); background: #fff; }
+.sample-scroll-hint { margin: 12px 0 8px; font-size: 13px; line-height: 1.8; color: var(--muted); }
 .sample-table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.7; white-space: nowrap; }
 .sample-table th, .sample-table td { padding: 11px 15px; border-bottom: 1px solid var(--line); text-align: left; }
 .sample-table tr:last-child td { border-bottom: 0; }
@@ -171,6 +172,11 @@
   body { background: white; }
   .template-preview { break-inside: auto; }
   .story-content h2, .sheet-heading { break-after: avoid; }
+  .sample-scroll-hint { display: none; }
+  .sample-table-wrap { overflow: visible; }
+  .sample-table { white-space: normal; table-layout: fixed; }
+  .sample-table th, .sample-table td { overflow-wrap: anywhere; }
+  .sample-code, .template-preview pre.sample-code { white-space: pre-wrap; overflow: visible; overflow-wrap: anywhere; }
 }
 @media (max-width: 850px) {
   .story-shell { width: calc(100% - 40px); }
