@@ -34,3 +34,13 @@
 - 측정값: `outputs/reviews/homepage-2026-10-20/responsive.json`. 로컬은 `.pages-dist`를 일반 HTTP 서버로 읽었으므로 Pages의 확장자 없는 글 주소 전환은 배포 후 공개 호스트에서 별도 확인한다.
 
 이 검증은 브라우저 모사 viewport와 기능 점검이며 실제 휴대전화, 스크린리더, 검색 색인·사용자 반응·AdSense 승인 결과를 보장하지 않는다.
+
+## 공개 배포 확인
+
+- 앱 커밋 `8cfa07e`를 원격 main으로 push했다. GitHub Site checks와 Cloudflare Pages가 모두 성공했으며 Pages 배포 ID는 `a0801d77-0fa6-4fd6-af7a-323fb773be0e`다. 배포 대상은 기존 `jhsoftlabs` 프로젝트와 `https://jhsoftlabs.com/`이며 계정·환경 변수·DNS 설정을 바꾸지 않았다.
+- `node scripts/check-public.mjs`: sitemap 21페이지를 포함한 공개 HTTP 검사 **64건 통과, 실패 0건**. 새 CSS를 포함한 정적 자산이 로컬 산출물과 일치한다. 기존 글 주소 전환·canonical·실제 404·샘플 다운로드 무결성 검사도 포함한다. 기존 검사 도구의 출력 파일을 오늘의 기록 폴더에 복사해 `outputs/reviews/homepage-2026-10-20/public.json`으로 보관했다.
+- 공개 브라우저에서 새 메인 문구와 `home.css?v=20261020-editorial`, 네 프로젝트의 실제 DOM 순서, 비활성 광고 상태를 확인했다. 대표 가이드 링크는 확장자 없는 `https://jhsoftlabs.com/data-guides/excel-leading-zeros`로 정상 이동한다.
+- 공개 390px 화면에서 문서 폭 375px, 데스크톱 1280px 화면에서 문서 폭 1265px였다. 차이는 세로 스크롤바이며 가로 넘침은 없다. 공개 화면에도 광고 영역이나 로더가 나타나지 않는다.
+- 증거: 같은 기록 폴더의 `public-browser.json`, `public-home.png`, `public-mobile.png`. 브라우저 크기 변경은 검사 후 해제했다.
+
+실제 광고 활성화와 AdSense 재검토는 이번 배포에 포함되지 않았다. 검증 결과는 페이지 접근·표시·정적 자산에 관한 결과이며 심사 상태나 승인을 뜻하지 않는다.
