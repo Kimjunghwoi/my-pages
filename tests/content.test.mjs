@@ -31,7 +31,8 @@ test("downloadable templates and full no-JS previews are identical", () => {
   const previews = [...hub.matchAll(/<pre>([\s\S]*?)<\/pre>/g)];
   assert.equal(previews.length, 3);
   assert.equal((hub.match(/<details class="template-preview">/g) || []).length, 3);
-  assert.ok(!/<(?:input|textarea|form)\b/.test(hub));
+  assert.doesNotMatch(hub, /<(?:input|form)\b|<textarea\b(?![^>]*\breadonly\b)/);
+  assert.match(hub, /<textarea[^>]*data-share-url[^>]*readonly/);
   templates.forEach((slug, index) => {
     const content = read(`templates/${slug}.md`);
     assert.equal(decode(previews[index][1]), content);

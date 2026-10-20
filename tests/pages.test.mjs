@@ -23,7 +23,7 @@ test("Pages HTML removes only known telemetry, preserving public content and met
 
 test("Pages artifact excludes private paths, preserves downloads and replaces stale output", () => {
   const fixture = mkdtempSync(join(tmpdir(), "mypages-pages-test-"));
-  const roots = ["index.html", "privacy.html", "styles.css", "home.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
+  const roots = ["index.html", "privacy.html", "styles.css", "home.css", "stories.css", "growth.css", "sharing.js", "feed.xml", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
   for (const directory of ["assets", "stories", "data-guides", "templates", "tools/release-check", "projects/bampang"]) {
     roots.push(...readdirSync(join(root, directory), { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => `${directory}/${entry.name}`));
   }
@@ -40,6 +40,9 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
   assert.ok(names.includes("404.html"));
   assert.ok(names.includes("privacy.html"));
   assert.ok(names.includes("home.css"));
+  assert.ok(names.includes("growth.css"));
+  assert.ok(names.includes("sharing.js"));
+  assert.ok(names.includes("feed.xml"));
   assert.ok(names.includes("projects/bampang/index.html"));
   assert.ok(names.includes("projects/bampang/project.css"));
   assert.ok(names.includes("assets/bampang-chestnut.svg"));

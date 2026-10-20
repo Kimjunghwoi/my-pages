@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, realpathSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { createFeed } from "./build-feed.mjs";
 
 const repository = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const bootstrap = "window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); }; window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };";
@@ -31,7 +32,8 @@ function pagesUrls(source, file, articles) {
 export function buildPages(root = repository) {
   root = realpathSync(root);
   const output = resolve(root, ".pages-dist");
-  const sources = ["index.html", "privacy.html", "styles.css", "home.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "data-guides/merge-lab.pq", "stories/retry-lab.mjs", "assets/deep-constellation-promo-muted.mp4"];
+  const sources = ["index.html", "privacy.html", "styles.css", "home.css", "stories.css", "growth.css", "sharing.js", "feed.xml", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "data-guides/merge-lab.pq", "stories/retry-lab.mjs", "assets/deep-constellation-promo-muted.mp4"];
+  if (readFileSync(join(root, "feed.xml"), "utf8").replace(/\r\n/g, "\n") !== createFeed(root)) throw new Error("Stale feed.xml; run node scripts/build-feed.mjs --write");
   const groups = {
     assets: /\.(?:svg|png|jpe?g|webp|woff2?)$/i,
     stories: /\.html$/,

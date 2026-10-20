@@ -18,7 +18,8 @@ test("article code previews exactly match the downloadable self-contained labs",
     assert.equal(code(html, id).trim(), read(download).trim());
     assert.ok(html.includes(`href="./${download.split("/").at(-1)}" download`));
     assert.match(html, /"dateModified":\s*"2026-10-05"/);
-    assert.ok(read("sitemap.xml").includes(`${article}</loc><lastmod>2026-10-05</lastmod>`));
+    const discoveryUpdated = article === "stories/ai-retry-safety.html" ? "2026-10-20" : "2026-10-05";
+    assert.ok(read("sitemap.xml").includes(`${article}</loc><lastmod>${discoveryUpdated}</lastmod>`));
   }
 });
 

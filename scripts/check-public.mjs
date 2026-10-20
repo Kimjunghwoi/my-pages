@@ -1,12 +1,14 @@
 import assert from "node:assert/strict";
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { dirname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const artifact = join(root, ".pages-dist");
 const origin = "https://jhsoftlabs.com";
-const reportPath = join(root, "outputs/reviews/reader-2026-10-19/public.json");
+const reportIndex = process.argv.indexOf("--report");
+const reportPath = resolve(root, reportIndex === -1 ? "outputs/reviews/reader-2026-10-19/public.json" : process.argv[reportIndex + 1] || "");
+if (!reportPath.startsWith(resolve(root, "outputs") + sep) || !reportPath.endsWith(".json")) throw new Error("Report path must be a JSON file inside outputs/");
 const results = [];
 const textFile = /\.(?:css|js|mjs|xml|txt|csv|tsv|pq|md|svg)$/i;
 const normalize = (text) => text.replace(/\r\n/g, "\n");
@@ -41,6 +43,16 @@ for (const url of urls) {
     assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1);
     assert.doesNotMatch(html, /<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/i);
     const slug = new URL(url).pathname.split("/").at(-1);
+    if (["excel-trim-spaces", "excel-long-identifiers"].includes(slug)) {
+      assert.match(html, /"datePublished":"2026-10-20"/);
+      assert.match(html, /data-select-url/);
+      assert.ok(html.includes(`assets/share-${slug}.png`));
+      assert.match(html, /5574\.0/);
+    }
+    if (new URL(url).pathname === "/") {
+      assert.match(html, /class="new-guide-paths"/);
+      assert.match(html, /href="\.\/feed\.xml"/);
+    }
     if (["csv-one-column", "excel-leading-zeros"].includes(slug)) {
       assert.match(html, /"dateModified": "2026-10-19"/);
       assert.match(html, /property="article:modified_time" content="2026-10-19"/);
@@ -74,10 +86,10 @@ for (const file of files(artifact).filter(file => !file.endsWith(".html"))) {
   });
 }
 
-for (const path of ["/__reader-check-missing-2026-10-19", "/docs/reader-followup-2026-10-19.md", "/tests/reader-followup.test.mjs"]) {
+for (const path of ["/__reader-check-missing-2026-10-19", "/docs/reader-followup-2026-10-19.md", "/tests/reader-followup.test.mjs", "/docs/traffic-paths-2026-10-20.md", "/scripts/verify-traffic-excel.py"]) {
   await check("not-found", origin + path, response => assert.equal(response.status, 404));
 }
-for (const slug of ["csv-one-column", "excel-leading-zeros", "power-query-merge-rows", "excel-filter-spill"]) {
+for (const slug of ["csv-one-column", "excel-leading-zeros", "power-query-merge-rows", "excel-filter-spill", "excel-trim-spaces", "excel-long-identifiers"]) {
   await check("legacy-alias", `${origin}/data-guides/${slug}.html?reader=check`, response => {
     assert.equal(response.status, 200);
     assert.equal(response.url, `${origin}/data-guides/${slug}?reader=check`);

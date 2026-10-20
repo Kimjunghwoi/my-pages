@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="./home.css?v=20261020-editorial" />
     <script defer src="./script.js"></script>
     <script defer src="./experiences.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="회몬 · 실무 가이드와 개발기록" href="./feed.xml" />
+    <link rel="stylesheet" href="./growth.css?v=20261020-traffic" />
   </head>
   <body class="home">
     <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -86,6 +88,7 @@
             <li><a href="./data-guides/excel-filter-spill.html"><span class="guide-step">03 · Excel 수식</span><h3>FILTER가 #SPILL!을 보여요</h3><p>출력 범위와 병합 셀을 확인합니다. 원본을 지우지 않고 원인을 좁힙니다.</p><span class="guide-result">연습 TSV · North 3개 행, 합계 6 확인 <span aria-hidden="true">→</span></span></a></li>
           </ol>
         </div>
+        <nav class="new-guide-paths" aria-label="새로 추가한 실무 가이드"><span>새로 쓴 문제 해결 글</span><a href="./data-guides/excel-trim-spaces.html">TRIM으로 공백이 안 지워질 때 <span aria-hidden="true">→</span></a><a href="./data-guides/excel-long-identifiers.html">16자리 ID의 끝자리가 바뀔 때 <span aria-hidden="true">→</span></a></nav>
         <p class="guide-start-note">모든 연습 파일은 합성 데이터입니다. 실제 고객 자료가 아니며, 검증한 환경과 아직 확인하지 못한 범위는 각 글에 구분해 적습니다.</p>
       </section>
 
@@ -301,6 +304,8 @@
             <a class="resource" data-category="record ai-side" data-keywords="Deep Constellation 수익화 실패 중단 회고 고객 검증 수요 원가 AI 협업" href="./stories/deep-constellation-retrospective.html">
               <span class="resource-source">RETROSPECTIVE<span>프로젝트 회고</span></span><span class="resource-copy"><strong>만들 수 있다는 것과 팔 수 있다는 것은 달랐다</strong><span>수익 없는 실험을 멈추며. 기술적 완성과 사업적 검증을 나눈 기록.</span></span><span class="resource-arrow" aria-hidden="true">→</span>
             </a>
+            <a class="resource" data-category="data" data-keywords="한국어 Excel 엑셀 TRIM SUBSTITUTE NBSP 공백 160 8239" href="./data-guides/excel-trim-spaces.html"><span class="resource-source">GUIDE<span>한국어 데이터 실무</span></span><span class="resource-copy"><strong>TRIM으로 지워지지 않는 공백 해결하기</strong><span>공백의 문자 코드와 길이를 확인하고, 정리하면 안 되는 ID를 구분하기.</span></span><span class="resource-arrow" aria-hidden="true">→</span></a>
+            <a class="resource" data-category="data" data-keywords="한국어 Excel 엑셀 CSV 긴 숫자 ID 15자리 16자리 식별자 정밀도 Text EXACT LEN" href="./data-guides/excel-long-identifiers.html"><span class="resource-source">GUIDE<span>한국어 데이터 실무</span></span><span class="resource-copy"><strong>16자리 이상 ID의 끝자리가 바뀔 때</strong><span>같은 글자 수라도 달라진 값. 숫자 정밀도와 Text 보존을 비교하기.</span></span><span class="resource-arrow" aria-hidden="true">→</span></a>
             <a class="resource" data-category="record ai-side" data-keywords="Deep Constellation 시행착오 회고 배포 홍보" href="./stories/salon-publishing.html">
               <span class="resource-source">FIELD NOTE<span>실험 기록</span></span><span class="resource-copy"><strong>이미지를 만들었는데, 일은 끝나지 않았다</strong><span>게시와 배포, 소개 뒤에 남은 확인들.</span></span><span class="resource-arrow" aria-hidden="true">→</span>
             </a>
@@ -457,7 +462,7 @@
         <div class="about-story"><p>스타트업, 유니콘, 중견기업, 대기업.<br />11년 동안 서로 다른 환경에서 개발자로 일했습니다.</p><p>면접과 이직, 회사 선택, 직장인의 돈과 부업 이야기를 합니다.<br />일하면서 부딪힌 고민을 나누고, 아이디어가 생기면 직접 서비스로 만들어 봅니다. 그 결과물과 작업 기록을 이곳에 모았습니다.</p><a class="button button--dark" href="https://open.kakao.com/o/sPFCjtni" target="_blank" rel="noopener noreferrer">함께할 이야기가 있나요? <span aria-hidden="true">↗</span><span class="sr-only"> (카카오톡, 새 탭)</span></a></div>
       </section>
     </main>
-    <footer class="footer shell"><span>© <span id="current-year">2026</span> JH Soft Labs</span><span class="footer-note">Made with curiosity. Shared with you.</span><a href="./privacy.html" class="footer-privacy">개인정보처리 안내</a><a href="#top">맨 위로 <span aria-hidden="true">↑</span></a></footer>
+    <footer class="footer shell"><span>© <span id="current-year">2026</span> JH Soft Labs</span><span class="footer-note">Made with curiosity. Shared with you.</span><a href="./privacy.html" class="footer-privacy">개인정보처리 안내</a><a href="#top">맨 위로 <span aria-hidden="true">↑</span></a><a href="./feed.xml" type="application/rss+xml">RSS 구독</a></footer>
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };

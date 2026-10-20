@@ -3,14 +3,14 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
-const slugs = ["csv-one-column", "excel-leading-zeros", "power-query-merge-rows", "excel-filter-spill"];
+const slugs = ["csv-one-column", "excel-leading-zeros", "power-query-merge-rows", "excel-filter-spill", "excel-trim-spaces", "excel-long-identifiers"];
 const home = read("index.html");
 const hub = read("data-guides/index.html");
 const sitemap = read("sitemap.xml");
 const schema = (source) => JSON.parse(source.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
 
-test("data guide hub and four articles are substantial, discoverable static content", () => {
-  assert.equal(schema(hub).mainEntity.numberOfItems, 4);
+test("data guide hub and six articles are substantial, discoverable static content", () => {
+  assert.equal(schema(hub).mainEntity.numberOfItems, 6);
   assert.match(home, /href="\.\/data-guides\/"/);
   assert.match(sitemap, /<loc>https:\/\/jhsoftlabs\.com\/data-guides\/<\/loc>/);
   for (const slug of slugs) {
@@ -20,7 +20,7 @@ test("data guide hub and four articles are substantial, discoverable static cont
     const url = `https://jhsoftlabs.com/data-guides/${slug}.html`;
     assert.equal(data["@type"], "TechArticle");
     assert.equal(data.mainEntityOfPage, url);
-    assert.equal(data.datePublished, "2026-09-19");
+    assert.equal(data.datePublished, slugs.indexOf(slug) < 4 ? "2026-09-19" : "2026-10-20");
     assert.ok(text.length > 1800, `${slug}: thin article`);
     assert.match(source, new RegExp(`rel="canonical"\\s+href="${url.replaceAll(".", "\\.")}"`));
     assert.match(source, /합성|예제/);
@@ -34,7 +34,7 @@ test("data guide hub and four articles are substantial, discoverable static cont
 
 test("hub structured list matches article metadata and routes", () => {
   const items = schema(hub).mainEntity.itemListElement;
-  assert.deepEqual(items.map((item) => item.position), [1, 2, 3, 4]);
+  assert.deepEqual(items.map((item) => item.position), [1, 2, 3, 4, 5, 6]);
   items.forEach((item, index) => {
     const slug = slugs[index];
     const article = schema(read(`data-guides/${slug}.html`));

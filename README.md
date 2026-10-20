@@ -27,7 +27,7 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 
 프로젝트 이름과 용도를 시각 예시보다 먼저 표시합니다. 자료 목록은 외부 링크·작업 기록·템플릿·점검 도구와 메인 도메인의 한국어 데이터 실무 가이드를 함께 보여줍니다. `project` 필터는 실제 프로젝트 네 개, `record`는 작업 기록, `template`은 무료 양식과 점검 도구를 보여줍니다. 현재 링크 개수는 원본 HTML과 회귀 검사에서 확인합니다.
 
-`data-guides/`는 메인 도메인에서 직접 읽는 한국어 실무 콘텐츠입니다. 목록 1개와 상세 4개만 공개하며 사용자 입력·API·저장 기능은 없습니다. 각 글은 합성 예제, 확인 범위, 공식 문서와 Column Harbor의 더 긴 영어 실습 링크를 구분합니다. 새 글을 추가할 때 홈의 데이터 가이드 섹션, 자료 목록, 허브 JSON-LD, 사이트맵과 회귀 검사를 함께 갱신합니다.
+`data-guides/`는 메인 도메인에서 직접 읽는 한국어 실무 콘텐츠입니다. 목록 1개와 상세 6개를 공개하며 자유 입력·API·저장 기능은 없습니다. 공유 URL의 읽기 전용 출력은 사용자 데이터 입력과 구분합니다. 각 글은 합성 예제, 확인 범위, 공식 문서와 Column Harbor의 더 긴 영어 실습 링크를 구분합니다. 새 글을 추가할 때 홈의 데이터 가이드 섹션, 자료 목록, 허브 JSON-LD, 사이트맵, 피드 허용 목록과 회귀 검사를 함께 갱신합니다.
 
 네 가이드의 넓은 표와 코드에는 스크립트 없이 키보드로 들어갈 수 있는 이름과 `tabindex`가 있습니다. 표 셀의 값이나 실습 파일을 바꾸지 않고 접근성을 고칩니다. `stories.css`의 인쇄 규칙은 긴 코드와 표 내용을 줄바꿈합니다. 앞자리 0 가이드의 브라우저 대안은 외부 Column Harbor의 CSV→XLSX 도구이며 모든 셀을 Text로 저장합니다. 수량까지 숫자로 만들어 준다고 안내하지 않습니다. [2026-10-19 점검 및 수정](docs/reader-followup-2026-10-19.md).
 
@@ -47,6 +47,14 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 - `stories/column-harbor.html`은 확인된 구현을 설명하는 정적 제작기입니다. 레이아웃은 `stories.css`, 공통 테마는 `styles.css`를 사용합니다.
 - 제작기를 추가할 때 제목·설명·canonical·공유 메타·JSON-LD·작성일·사이트맵을 함께 갱신합니다. 게시/수정일은 실제 변경 날짜만 기록합니다.
 - 상세 제작기에 홈페이지용 `script.js`를 로딩하지 않습니다. Pages에서는 Cloudflare Web Analytics로 페이지뷰를 수집합니다. Vercel 전용 분석은 Pages 빌드 출력에서만 제거하며 사용자 정의 이벤트는 추가하지 않습니다.
+
+## 공유와 구독
+
+- `sharing.js`는 글의 canonical 주소만 복사/기본 공유합니다. 현재 query·검색어·hash는 보내지 않습니다. 읽기 전용 주소를 직접 선택하는 경로는 Clipboard API와 별도로 항상 제공합니다. 공유 대상·수신자·방문자 데이터를 수집하거나 이벤트로 기록하지 않습니다. 브라우저 기본 공유를 실제로 전송할지는 방문자가 선택합니다.
+- 관련 자료와 공유 UI는 `growth.css`가 담당합니다. 정리 전후 공백이 합쳐지지 않도록 본문 inline code의 공백도 보존합니다. JavaScript 없이도 관련 자료·정규 링크·RSS에 접근할 수 있습니다.
+- `scripts/build-feed.mjs`의 명시적 허용 목록은 자체 가이드 6편과 개발기록 10편입니다. `node scripts/build-feed.mjs --write`로 전체 본문 RSS인 `feed.xml`을 갱신합니다. 빌드는 오래된 피드를 허용하지 않습니다. 날짜만 있는 글의 RSS 시각은 해당 날짜 00:00 KST로 정규화하며 실제 게시 시각을 복원한 값은 아닙니다. 원문의 게시/수정일은 유지합니다.
+- 대표 가이드 6편·개발기록 3편·템플릿·게임 소개는 각자 다른 `assets/share-*.png`를 사용합니다. 원본 SVG와 `scripts/render-share-cards.mjs`를 함께 보관합니다. 로컬 작성 환경에 `sharp`가 있을 때 재렌더링하며, Pages는 커밋된 PNG를 사용하므로 해당 패키지를 설치하지 않습니다.
+- 새 글의 합성 예제는 `scripts/verify-traffic-excel.py`와 `docs/traffic-excel-evidence-2026-10-20.json`에서 실제 Excel 계산과 대조합니다. 별도 Excel 프로세스를 사용하며 UI·가져오기·왕복 저장 검증과 구분합니다.
 
 ## 실험 기록과 무료 양식
 
@@ -79,6 +87,6 @@ node scripts/verify-pages.mjs
 
 공개 배포 후 `node scripts/check-public.mjs`로 모든 사이트맵 페이지, 자산·실습 다운로드, 실제 404, 기존 `.html` 주소 이동을 확인합니다. 배포 전 원격 사이트를 새 산출물과 비교하면 아직 공개되지 않은 변경이 실패로 표시될 수 있습니다. 결과는 Git·웹 배포에서 제외되는 `outputs/reviews/reader-2026-10-19/public.json`에 남습니다.
 
-일상적인 코드 배포에서는 DNS를 변경하지 않습니다. `ads.txt`와 AdSense 소유 확인 메타를 유지합니다. Pages Web Analytics는 대시보드의 Metrics에서 활성화하며 다음 배포에 자동 삽입됩니다. 기존 Vercel 통계가 Cloudflare로 이관되는 것은 아닙니다. 소셜 공유 이미지는 `assets/share-card.svg`의 래스터 버전인 `assets/og-card.png`입니다.
+일상적인 코드 배포에서는 DNS를 변경하지 않습니다. `ads.txt`와 AdSense 소유 확인 메타를 유지합니다. Pages Web Analytics는 대시보드의 Metrics에서 활성화하며 다음 배포에 자동 삽입됩니다. 기존 Vercel 통계가 Cloudflare로 이관되는 것은 아닙니다. 기본 소셜 이미지는 `assets/share-card.svg`의 래스터 버전인 `assets/og-card.png`이며 대표 글에는 주제별 이미지를 씁니다. 오늘의 공개 검증 기록 경로는 `node scripts/check-public.mjs --report outputs/reviews/traffic-2026-10-20/public.json`처럼 지정할 수 있습니다.
 
 기존 개선 검증은 `docs/enhancement-plan-2026-09-13.md`, 새 콘텐츠 릴리즈 절차는 `docs/fieldnotes-release-2026-09-13.md`를 참고하세요.

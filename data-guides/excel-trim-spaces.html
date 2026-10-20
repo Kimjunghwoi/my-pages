@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="google-adsense-account" content="ca-pub-6113316314236430" />
+    <meta name="theme-color" content="#f6f7f2" />
+    <title>Excel TRIM으로 지워지지 않는 공백 해결하기 | JH Soft Labs</title>
+    <meta name="description" content="TRIM으로도 남는 NBSP 공백을 UNICODE와 LEN으로 확인하고, 원본을 지키며 SUBSTITUTE로 바꾸는 실습. 4개 합성 값과 실제 Excel 계산 결과, 식별자에 적용하면 안 되는 조건을 비교합니다." />
+    <link rel="canonical" href="https://jhsoftlabs.com/data-guides/excel-trim-spaces.html" />
+    <meta property="og:type" content="article" /><meta property="og:locale" content="ko_KR" />
+    <meta property="og:title" content="TRIM으로 안 지워지는 공백, 같은 빈칸이 아닙니다" />
+    <meta property="og:description" content="32 · 160 · 8239를 구분하고, 작은 예제로 바꾸기 전후를 확인합니다." />
+    <meta property="og:url" content="https://jhsoftlabs.com/data-guides/excel-trim-spaces.html" />
+    <meta property="og:image" content="https://jhsoftlabs.com/assets/share-excel-trim-spaces.png" />
+    <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="글의 주제와 설명용 예제를 담은 공유 이미지" />
+    <meta name="twitter:image" content="https://jhsoftlabs.com/assets/share-excel-trim-spaces.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css?v=20261011-readability" /><link rel="stylesheet" href="../stories.css?v=20261019-reader" />
+    <meta property="article:published_time" content="2026-10-20" /><meta property="article:modified_time" content="2026-10-20" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Excel TRIM으로 지워지지 않는 공백 해결하기","description":"NBSP를 구분하고 원본을 지키며 공백 정리 수식을 확인하는 합성 실습","datePublished":"2026-10-20","dateModified":"2026-10-20","inLanguage":"ko-KR","author":{"@type":"Person","name":"회몬","url":"https://jhsoftlabs.com/#about"},"image":"https://jhsoftlabs.com/assets/share-excel-trim-spaces.png","mainEntityOfPage":"https://jhsoftlabs.com/data-guides/excel-trim-spaces.html"}</script>
+    <link rel="alternate" type="application/rss+xml" title="회몬 · 실무 가이드와 개발기록" href="../feed.xml" />
+    <link rel="stylesheet" href="../growth.css?v=20261020-traffic" />
+    <script defer src="../sharing.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <header class="site-header"><div class="header-inner shell"><a class="wordmark" href="../" aria-label="JH Soft Labs 홈"><span class="monogram" aria-hidden="true">jh<span>.</span></span><span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span></a><nav class="main-nav" aria-label="주요 메뉴"><a href="./">데이터 가이드</a><a href="../stories/">개발기록</a><a href="../#about">소개</a></nav><a class="header-contact" href="https://csv.jhsoftlabs.com/guides/spreadsheet-trim-spaces" target="_blank" rel="noopener noreferrer">영문 가이드 <span aria-hidden="true">↗</span></a></div></header>
+    <main id="main" class="story-shell" tabindex="-1">
+      <nav class="story-breadcrumb" aria-label="현재 위치"><a href="../">홈</a><span>/</span><a href="./">데이터 실무 가이드</a><span>/</span><span aria-current="page">TRIM과 공백</span></nav>
+      <article>
+        <header class="story-header"><p class="eyebrow">EXCEL · TEXT CLEANUP</p><h1>TRIM으로 안 지워지는 공백,<br />같은 빈칸이 아닙니다.</h1><p class="story-intro">앞뒤가 비어 보이는데 조회가 실패하거나 길이가 예상보다 길다면, 공백의 종류부터 확인하세요. TRIM을 반복해도 바뀌지 않는 값에는 다른 문자가 들어 있을 수 있습니다. 원본 옆에 비교 열을 만들어 원인을 좁혀봅니다.</p><div class="story-byline"><img src="../assets/hoemon-profile.jpg" alt="회몬 캐릭터" width="40" height="40" /><div><strong>회몬</strong><span>11년차 개발자 · Column Harbor 운영</span></div><time datetime="2026-10-20">2026. 10. 20.</time></div></header>
+        <aside class="note-summary" aria-label="이 글의 기준"><span class="eyebrow">먼저 구분할 것</span><ol><li>일반 공백 32와 NBSP 160은 같은 문자가 아닙니다.</li><li>사람이 읽는 이름과 정확히 보존해야 하는 ID는 정리 규칙이 다릅니다.</li><li>이 수식은 모든 유니코드 공백을 제거하는 만능 해결책이 아닙니다.</li></ol></aside>
+        <div class="story-layout"><nav class="story-toc" aria-label="목차"><span>이 글에서</span><a href="#diagnose">공백 종류 확인</a><a href="#sample">4개 값으로 비교</a><a href="#formula">대체 수식 적용</a><a href="#boundaries">ID와 다른 공백</a><a href="#observed">실제 계산과 완료 기준</a></nav><div class="story-content">
+          <section id="diagnose"><p class="story-section-number">01 / DIAGNOSE</p><h2>눈으로 보기 전에<br />문자 코드를 확인합니다</h2><p>TRIM은 일반 공백인 ASCII 32를 정리합니다. 앞뒤 공백을 없애고 단어 사이의 연속 공백을 한 칸으로 줄입니다. 웹페이지에서 가져온 값에 자주 섞이는 NBSP는 U+00A0, 십진수 160입니다. Microsoft도 TRIM만으로 NBSP를 제거하지 못한다고 <a href="https://support.microsoft.com/en-us/excel/functions/trim-function" target="_blank" rel="noopener noreferrer">TRIM 문서<span class="sr-only"> (새 탭)</span></a>에서 구분합니다.</p><p>A3의 첫 문자가 의심된다면 <code>=UNICODE(LEFT(A3,1))</code>로 읽습니다. 160이면 NBSP이며 32라면 일반 공백입니다. 끝 문자라면 LEFT 대신 RIGHT를 씁니다. 빈 셀에는 이 검사가 오류를 낼 수 있으므로 비어 있지 않은 표본에서 시작하세요. 첫 문자 코드만 같다고 셀 전체가 같다는 뜻도 아닙니다.</p></section>
+          <section id="sample"><p class="story-section-number">02 / REPRODUCE</p><h2>원본 옆에서<br />네 가지 값을 나란히 봅니다</h2><p>빈 시트의 A1에 <code>raw_text</code>를 쓰고 A2:A5에 아래 수식을 각각 입력합니다. 눈에 보이지 않는 문자를 직접 복사하지 않아도 같은 입력을 만들 수 있습니다. 인수 구분자가 세미콜론인 환경에서는 쉼표를 맞춰 바꾸세요.</p><figure class="sample-block"><figcaption>A2부터 한 줄씩 입력할 합성 수식</figcaption><pre class="sample-code" tabindex="0" aria-label="TRIM 실습 입력 수식">="  Seoul  Center  "
+=UNICHAR(160)&amp;"Seoul"&amp;UNICHAR(160)&amp;"Center"&amp;UNICHAR(160)
+="AB  12"
+=UNICHAR(8239)&amp;"Seoul"&amp;UNICHAR(8239)</pre><p class="sample-links"><a href="./trim-example.tsv" download>같은 값이 담긴 합성 TSV 내려받기</a></p></figure><p>TSV의 첫 열에는 실제 공백 문자들이 들어 있습니다. 입력 수식으로 만들거나, TSV를 UTF-8·탭 구분·Text로 가져온 뒤 A열 값이 같은지 확인하세요. 파일 가져오기 UI는 이번 실행 검증 범위가 아닙니다. 이 예제의 값은 모두 합성 자료이며 고객 이름이나 실제 상품 코드가 아닙니다.</p></section>
+          <section id="formula"><p class="story-section-number">03 / COMPARE</p><h2>NBSP를 일반 공백으로 바꾼 뒤<br />TRIM을 적용합니다</h2><p>B2에는 <code>=TRIM(A2)</code>, C2에는 <code>=TRIM(SUBSTITUTE(A2,UNICHAR(160)," "))</code>를 입력하고 5행까지 채웁니다. SUBSTITUTE의 마지막 인수는 빈 문자열이 아니라 일반 공백 한 칸입니다. 이름 사이의 NBSP를 없애 버리면 SeoulCenter처럼 두 단어가 붙기 때문입니다.</p><p>D2에는 <code>=LEN(A2)</code>, E2에는 <code>=LEN(B2)</code>, F2에는 <code>=LEN(C2)</code>를 입력해 원본·TRIM·대체 후 길이를 비교합니다. G2의 <code>=EXACT(A2,C2)</code>는 대소문자까지 같은지 확인합니다. 길이가 줄었다는 사실만으로 정리가 올바르다고 판정하지 않습니다.</p><figure class="sample-block"><figcaption>2026. 10. 20. 실제 Excel 계산 결과 · 합성 데이터</figcaption><p class="sample-scroll-hint">표는 좌우로 스크롤할 수 있습니다. Tab으로 진입한 뒤 방향키로 확인하세요.</p><div class="sample-table-wrap" role="region" aria-label="공백 정리 전후 길이 비교" tabindex="0"><table class="sample-table"><thead><tr><th scope="col">입력</th><th scope="col">원본 길이</th><th scope="col">TRIM 길이</th><th scope="col">160 대체 후 길이</th><th scope="col">판단</th></tr></thead><tbody><tr><td>일반 공백 · A2</td><td>17</td><td>12</td><td>12</td><td>Seoul Center</td></tr><tr><td>NBSP · A3</td><td>14</td><td>14</td><td>12</td><td>160 대체가 필요</td></tr><tr><td>합성 ID · A4</td><td>6</td><td>5</td><td>5</td><td>원본과 다름</td></tr><tr><td>좁은 NBSP · A5</td><td>7</td><td>7</td><td>7</td><td>이 수식으로 안 바뀜</td></tr></tbody></table></div></figure></section>
+          <section id="boundaries"><p class="story-section-number">04 / BOUNDARIES</p><h2>공백을 줄이면<br />잘못되는 값도 있습니다</h2><p>A4의 <code>AB  12</code>는 가운데 공백 두 개가 포함된 합성 ID입니다. TRIM 결과는 <code>AB 12</code>로 바뀌고 EXACT는 FALSE가 됩니다. 원본 시스템이 두 값을 다른 키로 취급한다면 정리가 아니라 손상입니다. 표시용 이름을 고치는 규칙을 계정·상품·주문 ID에 그대로 적용하지 마세요.</p><p>A5의 U+202F는 코드 8239인 좁은 NBSP입니다. 160만 대체하는 이 수식으로는 남습니다. 코드 8203의 폭 없는 공백 등 다른 문자도 별개의 문제입니다. 문자를 확인하고 업무 규칙에 맞는 대체를 하나씩 정해야 합니다. 한꺼번에 모든 공백을 지우거나 눈에 보이지 않는다는 이유만으로 삭제하면 의미 있는 구분까지 잃습니다.</p><p>CLEAN을 추가하면 모두 해결될 것이라고 가정하지도 않습니다. <a href="https://support.microsoft.com/en-us/excel/functions/clean-function" target="_blank" rel="noopener noreferrer">Microsoft CLEAN 문서<span class="sr-only"> (새 탭)</span></a>는 처리하는 비인쇄 문자 범위를 별도로 설명합니다. 원본 열을 남겨 두고, 바뀐 행 수와 새로 충돌하는 키를 확인한 다음 결과 열만 사용하세요.</p></section>
+          <section id="observed"><p class="story-section-number">05 / VERIFY</p><h2>수식이 성공한 것과<br />내 데이터가 안전한 것은 다릅니다</h2><p>Windows Excel 16.0 build 5574.0의 별도 빈 통합문서에서 위 입력 수식과 TRIM·SUBSTITUTE·LEN·EXACT·UNICODE를 계산했습니다. NBSP 행은 14→14→12, 좁은 NBSP 행은 7→7→7이었고, 합성 ID는 원본과 달라졌습니다. 이 가이드의 원본 문자열과 결과를 실제 셀 값으로 대조했습니다.</p><div class="story-callout"><strong>이번 검증은 Excel COM 계산입니다.</strong><p>리본 메뉴 클릭, TSV 붙여넣기/가져오기, 저장 후 재열기나 Mac·웹 Excel을 검증한 결과는 아닙니다. 현재 설치 환경에서 수식이 지원되는지 확인하고 복사본의 표본부터 비교하세요.</p></div><ol class="story-flow"><li><strong>원본과 결과를 함께 보관합니다.</strong><span>새 열에서 정리하고 원본 열을 덮어쓰지 않습니다.</span></li><li><strong>사라진 것이 어떤 문자였는지 확인합니다.</strong><span>NBSP인지 다른 유니코드 문자인지, 정리 후 단어가 붙지 않았는지 봅니다.</span></li><li><strong>조회 키의 충돌을 검사합니다.</strong><span>기존에 다른 ID였던 두 행이 같은 값이 되면 정리 기준부터 다시 결정합니다. 병합 결과 행 수·합계도 비교합니다.</span></li></ol></section>
+        </div></div>
+      </article>
+      <aside class="reader-actions" data-reader-actions aria-labelledby="reader-actions-title">
+        <p class="eyebrow">TAKE THE NEXT STEP</p><h2 id="reader-actions-title">읽은 내용을, 내 작업으로.</h2>
+        <nav class="related-resources" aria-label="함께 읽고 써볼 자료">
+          <a href="./trim-example.tsv" download><small>실습 파일</small><strong>공백 네 종류 TSV</strong><span>원본 열을 보존하며 길이와 값을 대조하세요.</span></a>
+          <a href="./power-query-merge-rows.html"><small>이어 읽기</small><strong>병합 후 행이 늘었다면</strong><span>정리한 키가 충돌하는지도 확인합니다.</span></a>
+          <a href="https://csv.jhsoftlabs.com/guides/spreadsheet-trim-spaces" target="_blank" rel="noopener noreferrer"><small>영문 가이드 · 새 탭</small><strong>공백 정리의 다른 경우</strong><span>문자 종류와 정리 규칙을 구분하는 설명.</span></a>
+        </nav>
+        <div class="share-row"><div class="share-controls" data-share-controls hidden><button type="button" data-copy-link>링크 복사</button><button type="button" data-select-url>주소 직접 선택</button><button type="button" data-native-share hidden>기본 공유</button></div><a href="https://jhsoftlabs.com/data-guides/excel-trim-spaces.html">이 글의 정규 주소</a><a href="../feed.xml" type="application/rss+xml">RSS로 새 글 받기</a></div>
+        <p class="share-status" data-share-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="share-fallback" data-share-fallback hidden><label for="share-url">직접 선택해 복사할 정규 주소</label><textarea id="share-url" data-share-url readonly spellcheck="false">https://jhsoftlabs.com/data-guides/excel-trim-spaces.html</textarea></div>
+      </aside>
+    </main>
+    <footer class="footer shell"><a href="../privacy.html">개인정보처리 안내</a><a href="./">데이터 가이드 목록</a><a href="./power-query-merge-rows.html">다음: 병합 키와 행 수 확인 →</a></footer>
+  </body>
+</html>

@@ -13,19 +13,25 @@
   <meta property="og:title" content="작업에 바로 쓰는 무료 템플릿" />
   <meta property="og:description" content="회몬의 세 프로젝트 작업 기록에서 추린 공개용 빈 양식. 콘텐츠 게시, 가이드 검수, AI 서비스 실패·재시도 점검표를 가입 없이 내려받으세요." />
   <meta property="og:url" content="https://jhsoftlabs.com/templates/" />
-  <meta property="og:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <meta property="og:image" content="https://jhsoftlabs.com/assets/share-templates.png" />
   <meta property="og:image:alt" content="개발자 회몬의 프로젝트와 작업 기록" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="글의 주제와 설명용 예제를 담은 공유 이미지" />
+    <meta name="twitter:image" content="https://jhsoftlabs.com/assets/share-templates.png" />
+    <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="작업에 바로 쓰는 무료 템플릿" />
   <meta name="twitter:description" content="회몬의 세 프로젝트 작업 기록에서 추린 공개용 빈 양식. 콘텐츠 게시, 가이드 검수, AI 서비스 실패·재시도 점검표를 가입 없이 내려받으세요." />
-  <meta name="twitter:image" content="https://jhsoftlabs.com/assets/og-card.png" />
+  <meta name="twitter:image" content="https://jhsoftlabs.com/assets/share-templates.png" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css?v=20261011-readability" />
   <link rel="stylesheet" href="../stories.css?v=20261011-readability" />
-</head>
+    <link rel="alternate" type="application/rss+xml" title="회몬 · 실무 가이드와 개발기록" href="../feed.xml" />
+    <link rel="stylesheet" href="../growth.css?v=20261020-traffic" />
+    <script defer src="../sharing.js"></script>
+  </head>
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
   <header class="site-header"><div class="header-inner shell">
@@ -297,7 +303,17 @@
       </section>
     </div>
     <div class="template-end"><h2>체크했다고 끝난 것은 아닙니다.</h2><p>확인하지 못한 항목은 ‘미확인’으로 남겨도 좋습니다. 중요한 것은 완료 표시를 늘리는 것보다 다음에 무엇을 확인해야 하는지 아는 것입니다. 공유 전에는 작성한 내용에서 고객 정보와 비공개 운영 정보를 지워 주세요.</p><a href="../#fieldnotes">다른 작업 기록으로 돌아가기 <span aria-hidden="true">→</span></a></div>
-  </main>
+      <aside class="reader-actions" data-reader-actions aria-labelledby="reader-actions-title">
+        <p class="eyebrow">TAKE THE NEXT STEP</p><h2 id="reader-actions-title">읽은 내용을, 내 작업으로.</h2>
+        <nav class="related-resources" aria-label="함께 읽고 써볼 자료">
+          <a href="../data-guides/"><small>실무 가이드</small><strong>CSV·Excel 문제 해결</strong><span>작은 입력과 예상 결과를 대조하세요.</span></a>
+          <a href="../tools/release-check/"><small>작업 도구</small><strong>공개 전 여섯 가지 점검</strong><span>항목 상태를 Markdown으로 가져가세요.</span></a>
+        </nav>
+        <div class="share-row"><div class="share-controls" data-share-controls hidden><button type="button" data-copy-link>링크 복사</button><button type="button" data-select-url>주소 직접 선택</button><button type="button" data-native-share hidden>기본 공유</button></div><a href="https://jhsoftlabs.com/templates/">이 글의 정규 주소</a><a href="../feed.xml" type="application/rss+xml">RSS로 새 글 받기</a></div>
+        <p class="share-status" data-share-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="share-fallback" data-share-fallback hidden><label for="share-url">직접 선택해 복사할 정규 주소</label><textarea id="share-url" data-share-url readonly spellcheck="false">https://jhsoftlabs.com/templates/</textarea></div>
+      </aside>
+    </main>
   <footer class="footer shell"><span>© 2026 JH Soft Labs</span><span class="footer-note">Made with curiosity. Shared with you.</span><a href="../privacy.html">개인정보처리 안내</a><a href="../">홈으로 돌아가기 <span aria-hidden="true">↑</span></a></footer>
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); }; window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>

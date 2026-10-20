@@ -15,7 +15,8 @@ test("game introduction has matching metadata, visible modes and real play links
   assert.ok(page.includes(`property="og:url" content="${canonical}"`));
   assert.ok(read("sitemap.xml").includes(`<loc>${canonical}</loc>`));
   for (const text of ["밤팡 장터", "60초 밤판", "간식가게", "브라우저에 저장", "2026-10-11", "실제 게임 화면"]) assert.ok(page.includes(text), text);
-  assert.doesNotMatch(page, /<iframe|<video|autoplay|<script[^>]*src=/);
+  assert.doesNotMatch(page, /<iframe|<video|autoplay/);
+  assert.deepEqual([...page.matchAll(/<script[^>]*src="([^"]+)"/g)].map(match => match[1]), ["../../sharing.js"]);
   assert.ok(page.includes('href="../../#projects"'));
   assert.ok(page.includes('href="https://bogle-chestnut.vercel.app/privacy.html"'));
 });

@@ -1,0 +1,190 @@
+{
+  "checkedAt": "2026-10-20T13:25:04.552395+00:00",
+  "excelVersion": "16.0",
+  "excelBuild": 5574.0,
+  "method": "Isolated Excel COM workbook; fixed formulas, Text assignment and CalculateFull",
+  "limits": "Not UI-click, CSV import, clipboard, save/reopen or cross-version testing; all values are synthetic.",
+  "passed": 36,
+  "results": [
+    {
+      "check": "trim.2.1",
+      "observed": "  Seoul  Center  ",
+      "expected": "  Seoul  Center  "
+    },
+    {
+      "check": "trim.2.2",
+      "observed": "Seoul Center",
+      "expected": "Seoul Center"
+    },
+    {
+      "check": "trim.2.3",
+      "observed": "Seoul Center",
+      "expected": "Seoul Center"
+    },
+    {
+      "check": "trim.2.4",
+      "observed": 17.0,
+      "expected": 17
+    },
+    {
+      "check": "trim.2.5",
+      "observed": 12.0,
+      "expected": 12
+    },
+    {
+      "check": "trim.2.6",
+      "observed": 12.0,
+      "expected": 12
+    },
+    {
+      "check": "trim.2.7",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "check": "trim.3.1",
+      "observed": "\u00a0Seoul\u00a0Center\u00a0",
+      "expected": "\u00a0Seoul\u00a0Center\u00a0"
+    },
+    {
+      "check": "trim.3.2",
+      "observed": "\u00a0Seoul\u00a0Center\u00a0",
+      "expected": "\u00a0Seoul\u00a0Center\u00a0"
+    },
+    {
+      "check": "trim.3.3",
+      "observed": "Seoul Center",
+      "expected": "Seoul Center"
+    },
+    {
+      "check": "trim.3.4",
+      "observed": 14.0,
+      "expected": 14
+    },
+    {
+      "check": "trim.3.5",
+      "observed": 14.0,
+      "expected": 14
+    },
+    {
+      "check": "trim.3.6",
+      "observed": 12.0,
+      "expected": 12
+    },
+    {
+      "check": "trim.3.7",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "check": "trim.4.1",
+      "observed": "AB  12",
+      "expected": "AB  12"
+    },
+    {
+      "check": "trim.4.2",
+      "observed": "AB 12",
+      "expected": "AB 12"
+    },
+    {
+      "check": "trim.4.3",
+      "observed": "AB 12",
+      "expected": "AB 12"
+    },
+    {
+      "check": "trim.4.4",
+      "observed": 6.0,
+      "expected": 6
+    },
+    {
+      "check": "trim.4.5",
+      "observed": 5.0,
+      "expected": 5
+    },
+    {
+      "check": "trim.4.6",
+      "observed": 5.0,
+      "expected": 5
+    },
+    {
+      "check": "trim.4.7",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "check": "trim.5.1",
+      "observed": "\u202fSeoul\u202f",
+      "expected": "\u202fSeoul\u202f"
+    },
+    {
+      "check": "trim.5.2",
+      "observed": "\u202fSeoul\u202f",
+      "expected": "\u202fSeoul\u202f"
+    },
+    {
+      "check": "trim.5.3",
+      "observed": "\u202fSeoul\u202f",
+      "expected": "\u202fSeoul\u202f"
+    },
+    {
+      "check": "trim.5.4",
+      "observed": 7.0,
+      "expected": 7
+    },
+    {
+      "check": "trim.5.5",
+      "observed": 7.0,
+      "expected": 7
+    },
+    {
+      "check": "trim.5.6",
+      "observed": 7.0,
+      "expected": 7
+    },
+    {
+      "check": "trim.5.7",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "check": "trim.nbsp-code",
+      "observed": 160.0,
+      "expected": 160
+    },
+    {
+      "check": "trim.narrow-nbsp-code",
+      "observed": 8239.0,
+      "expected": 8239
+    },
+    {
+      "check": "id.numeric-rendered",
+      "observed": "1234567890123450",
+      "expected": "1234567890123450"
+    },
+    {
+      "check": "id.text-value",
+      "observed": "1234567890123456",
+      "expected": "1234567890123456"
+    },
+    {
+      "check": "id.exact",
+      "observed": false,
+      "expected": false
+    },
+    {
+      "check": "id.numeric-length",
+      "observed": 16.0,
+      "expected": 16
+    },
+    {
+      "check": "id.text-length",
+      "observed": 16.0,
+      "expected": 16
+    },
+    {
+      "check": "id.is-text",
+      "observed": true,
+      "expected": true
+    }
+  ]
+}

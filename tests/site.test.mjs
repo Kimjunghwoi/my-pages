@@ -52,12 +52,12 @@ test("Column Harbor tools and learning are discoverable before projects without 
 });
 
 test("library preserves all external resources and adds records and free templates", () => {
-  assert.equal(resources.length, 38);
+  assert.equal(resources.length, 40);
   assert.equal(new Set(resources.map((item) => item.href)).size, resources.length);
   assert.equal(resources.filter((item) => new URL(item.href, "https://jhsoftlabs.com/").hostname.endsWith("notion.site")).length, 7);
   assert.equal(resources.filter((item) => item.href.startsWith("https://csv.jhsoftlabs.com/guides/")).length, 4);
   const local = resources.filter((item) => item.href.startsWith("./"));
-  assert.equal(local.length, 19);
+  assert.equal(local.length, 21);
   assert.ok(local.some((item) => item.href === "./stories/column-harbor.html"));
   assert.equal(local[0].target, undefined);
   assert.ok(local.every((item) => !item.target));
@@ -152,11 +152,11 @@ test("all public HTML documents have valid local destinations, assets, anchors a
     for (const match of source.matchAll(/(?:src|href)="(\.\.?\/[^"?#]+)"/g)) {
       assert.ok(existsSync(resolve(root, dirname(file), match[1])), `${file}: ${match[1]}`);
     }
-    if (!file.startsWith("projects/")) {
+    if (!file.startsWith("projects/") && !["data-guides/excel-trim-spaces.html", "data-guides/excel-long-identifiers.html"].includes(file)) {
       assert.ok(source.includes('/_vercel/insights/script.js'));
       assert.ok(source.includes('/_vercel/speed-insights/script.js'));
     } else {
-      assert.doesNotMatch(source, /<script[^>]*src=/);
+      assert.deepEqual([...source.matchAll(/<script[^>]*src="([^"]+)"/g)].map(match => match[1]), [file.startsWith("projects/") ? "../../sharing.js" : "../sharing.js"]);
     }
   }
 });

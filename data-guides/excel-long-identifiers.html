@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="google-adsense-account" content="ca-pub-6113316314236430" /><meta name="theme-color" content="#f6f7f2" />
+    <title>Excel 16자리 이상 숫자 ID의 끝자리가 바뀔 때 | JH Soft Labs</title>
+    <meta name="description" content="Excel의 15자리 정밀도와 지수 표시를 구분하고 긴 식별자를 Text로 보존하는 방법. 같은 16글자라도 값이 달라지는 합성 예제, 실제 Excel 계산, CSV 가져오기와 XLSX 대안을 비교합니다." />
+    <link rel="canonical" href="https://jhsoftlabs.com/data-guides/excel-long-identifiers.html" />
+    <meta property="og:type" content="article" /><meta property="og:locale" content="ko_KR" />
+    <meta property="og:title" content="16글자인데, 같은 ID가 아니었습니다" /><meta property="og:description" content="LEN은 같아도 EXACT는 FALSE. 숫자 표시와 값 손상을 나눠 확인합니다." />
+    <meta property="og:url" content="https://jhsoftlabs.com/data-guides/excel-long-identifiers.html" /><meta property="og:image" content="https://jhsoftlabs.com/assets/share-excel-long-identifiers.png" />
+    <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="글의 주제와 설명용 예제를 담은 공유 이미지" />
+    <meta name="twitter:image" content="https://jhsoftlabs.com/assets/share-excel-long-identifiers.png" />
+    <meta name="twitter:card" content="summary_large_image" /><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+KR:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css?v=20261011-readability" /><link rel="stylesheet" href="../stories.css?v=20261019-reader" />
+    <meta property="article:published_time" content="2026-10-20" /><meta property="article:modified_time" content="2026-10-20" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Excel 16자리 이상 숫자 ID의 끝자리가 바뀔 때","description":"숫자 정밀도 손상과 표시 형식을 구분하고 긴 식별자를 Text로 보존하는 실습","datePublished":"2026-10-20","dateModified":"2026-10-20","inLanguage":"ko-KR","author":{"@type":"Person","name":"회몬","url":"https://jhsoftlabs.com/#about"},"image":"https://jhsoftlabs.com/assets/share-excel-long-identifiers.png","mainEntityOfPage":"https://jhsoftlabs.com/data-guides/excel-long-identifiers.html"}</script>
+    <link rel="alternate" type="application/rss+xml" title="회몬 · 실무 가이드와 개발기록" href="../feed.xml" />
+    <link rel="stylesheet" href="../growth.css?v=20261020-traffic" />
+    <script defer src="../sharing.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <header class="site-header"><div class="header-inner shell"><a class="wordmark" href="../" aria-label="JH Soft Labs 홈"><span class="monogram" aria-hidden="true">jh<span>.</span></span><span>JH SOFT LABS<span class="wordmark-sub">A maker's little corner</span></span></a><nav class="main-nav" aria-label="주요 메뉴"><a href="./">데이터 가이드</a><a href="../stories/">개발기록</a><a href="../#about">소개</a></nav><a class="header-contact" href="https://csv.jhsoftlabs.com/guides/excel-long-numbers" target="_blank" rel="noopener noreferrer">영문 가이드 <span aria-hidden="true">↗</span></a></div></header>
+    <main id="main" class="story-shell" tabindex="-1">
+      <nav class="story-breadcrumb" aria-label="현재 위치"><a href="../">홈</a><span>/</span><a href="./">데이터 실무 가이드</a><span>/</span><span aria-current="page">긴 숫자 ID</span></nav>
+      <article>
+        <header class="story-header"><p class="eyebrow">EXCEL · IDENTIFIER PRECISION</p><h1>16글자인데,<br />같은 ID가 아니었습니다.</h1><p class="story-intro">긴 상품 코드가 1.23E+15처럼 보이는 일과 끝자리 자체가 달라진 일은 다릅니다. 열 너비나 표시 서식으로 해결되는지, 이미 원본으로 돌아가야 하는 상태인지 먼저 구분하세요. 식별자라면 숫자로 계산할 필요가 있는지도 다시 확인합니다.</p><div class="story-byline"><img src="../assets/hoemon-profile.jpg" alt="회몬 캐릭터" width="40" height="40" /><div><strong>회몬</strong><span>11년차 개발자 · Column Harbor 운영</span></div><time datetime="2026-10-20">2026. 10. 20.</time></div></header>
+        <aside class="note-summary" aria-label="이 글의 기준"><span class="eyebrow">원본이 먼저입니다</span><ol><li>Excel 숫자는 유효숫자 15자리 정밀도 제한이 있습니다.</li><li>숫자로 변환한 뒤 Text 서식을 줘도 잃은 끝자리는 복원되지 않습니다.</li><li>LEN뿐 아니라 ISTEXT와 원본 문자열의 EXACT를 함께 확인합니다.</li></ol></aside>
+        <div class="story-layout"><nav class="story-toc" aria-label="목차"><span>이 글에서</span><a href="#display">표시와 값 구분</a><a href="#sample">16자리 재현 실습</a><a href="#import">원본에서 다시 가져오기</a><a href="#browser">브라우저 대안</a><a href="#verify">실제 결과와 완료 기준</a></nav><div class="story-content">
+          <section id="display"><p class="story-section-number">01 / DISPLAY OR DAMAGE</p><h2>지수 표시만 보고<br />손상 여부를 판단하지 않습니다</h2><p>열이 좁거나 일반 형식을 사용하면 긴 숫자가 지수 표기로 보일 수 있습니다. 표시만 바뀐 경우에는 열을 넓히고 수식 입력줄을 확인하면 원래 값이 남아 있을 수 있습니다. 하지만 유효숫자가 15자리를 넘는 식별자를 숫자로 취급하면서 끝자리가 사라졌다면 표시 형식의 문제가 아닙니다.</p><p><a href="https://support.microsoft.com/en-gb/excel/keeping-leading-zeros-and-large-numbers" target="_blank" rel="noopener noreferrer">Microsoft의 큰 숫자·앞자리 0 안내<span class="sr-only"> (새 탭)</span></a>도 숫자 정밀도와 텍스트 보존을 구분합니다. 상품 ID처럼 더하거나 평균을 내지 않는 값은 Text를 먼저 검토하세요. 큰 금액·측정값처럼 계산이 필요한 수라면 이 글의 식별자 보존법으로 정밀한 계산까지 해결된다고 보면 안 됩니다.</p></section>
+          <section id="sample"><p class="story-section-number">02 / REPRODUCE</p><h2>길이는 16으로 같아도<br />EXACT는 FALSE일 수 있습니다</h2><p>빈 시트 A2에 <code>=1234567890123456</code>을 입력합니다. B2는 입력 전에 셀 표시 형식을 Text로 지정하고 <code>1234567890123456</code>을 입력합니다. 이 합성 숫자는 실제 고객·계정 번호가 아닙니다. Text 대신 앞에 작은따옴표를 붙여 입력할 수도 있지만, 이미 손상된 셀 뒤에 붙이는 조치는 복구가 아닙니다.</p><p>C2에는 <code>=TEXT(A2,"0")</code>, D2에는 <code>=EXACT(C2,B2)</code>를 넣습니다. E2는 <code>=LEN(C2)</code>, F2는 <code>=LEN(B2)</code>, G2는 <code>=ISTEXT(B2)</code>입니다. TEXT는 현재 숫자를 문자열로 표시할 뿐 원본을 되살리지 않습니다.</p><figure class="sample-block"><figcaption>2026. 10. 20. 실제 Excel 계산 결과 · 합성 입력</figcaption><p class="sample-scroll-hint">표는 좌우로 스크롤할 수 있습니다. Tab으로 진입한 뒤 방향키로 확인하세요.</p><div class="sample-table-wrap" role="region" aria-label="16자리 숫자와 Text 보존 결과 비교" tabindex="0"><table class="sample-table"><thead><tr><th scope="col">경로</th><th scope="col">비교할 문자열</th><th scope="col">LEN</th><th scope="col">판단</th></tr></thead><tbody><tr><td>숫자 → TEXT</td><td>1234567890123450</td><td>16</td><td>끝자리가 달라짐</td></tr><tr><td>처음부터 Text</td><td>1234567890123456</td><td>16</td><td>원본과 같음</td></tr><tr><td>EXACT(C2,B2)</td><td>FALSE</td><td>—</td><td>길이만으로 검증 불가</td></tr></tbody></table></div></figure><p>같은 길이라는 이유로 검증을 끝내면 이 차이를 놓칩니다. 서로 다른 두 원본이 같은 숫자로 바뀌면 조회나 중복 검사 결과도 달라질 수 있습니다. 표시된 자릿수를 맞추거나 뒤에 0을 추측해 넣는 방법은 원본을 증명하지 못합니다.</p></section>
+          <section id="import"><p class="story-section-number">03 / IMPORT AGAIN</p><h2>변환되기 전 원본으로 돌아가<br />식별자 열만 Text로 지정합니다</h2><p>CSV가 이미 손상됐다면 덮어쓰지 말고 닫습니다. 수정하지 않은 원본 CSV나 시스템에서 다시 내보낸 파일을 확보하세요. 백업 없이 끝자리를 알아낼 수 없는 상태는 수식으로 복구한다고 약속할 수 없습니다.</p><figure class="sample-block"><figcaption>입력 CSV · 더블클릭 대신 Text 가져오기로 확인</figcaption><pre class="sample-code" tabindex="0" aria-label="긴 식별자 실습 CSV">item_id,quantity
+1234567890123456,2
+1234567890123450,1
+0000123456789012,3</pre><p class="sample-links"><a href="./long-id-example.csv" download>합성 CSV 내려받기</a></p></figure><ol class="story-flow"><li><strong>Data → From Text/CSV로 원본을 선택합니다.</strong><span>구분자와 인코딩을 확인합니다. 이 예제는 쉼표, 두 열, 데이터 세 행입니다.</span></li><li><strong>Transform Data에서 자동 자료형 변환을 확인합니다.</strong><span>Changed Type 단계가 item_id를 숫자로 바꿨다면 그 단계를 제거한 뒤, 변환 전 값에서 item_id를 Text로 지정합니다. 숫자로 손상된 결과를 다시 Text로 바꾸는 것과 다릅니다.</span></li><li><strong>수량은 별도로 숫자로 지정합니다.</strong><span>Close &amp; Load 후 item_id 세 문자열을 원본과 대조합니다. quantity 합계는 6이어야 합니다. ID를 합산하거나 숫자로 바꿔 비교하지 않습니다.</span></li></ol><p>일부 최신 Excel에는 Automatic Data Conversions 옵션이 있지만 버전·진입 경로에 따라 다릅니다. 이 글은 해당 옵션이 항상 있거나 모든 가져오기에 적용된다고 가정하지 않습니다. 작업 절차의 기준은 <a href="https://support.microsoft.com/en-us/excel/format-numbers-as-text" target="_blank" rel="noopener noreferrer">Microsoft의 숫자를 Text로 다루는 안내<span class="sr-only"> (새 탭)</span></a>와 사용 환경을 함께 확인하세요.</p></section>
+          <section id="browser"><p class="story-section-number">04 / BROWSER ALTERNATIVE</p><h2>보존용 XLSX가 필요하다면<br />모든 셀을 Text로 만드는 대안도 있습니다</h2><p><a href="https://csv.jhsoftlabs.com/workspace/csv-to-excel" target="_blank" rel="noopener noreferrer">Column Harbor CSV→Excel 도구<span class="sr-only"> (영문, 새 탭)</span></a>에 위 CSV를 붙여넣고 Comma로 해석한 뒤 미리보기 세 행과 두 열을 대조할 수 있습니다. XLSX 사본은 브라우저에서 만들어지며 원본 CSV를 덮어쓰지 않습니다. 내려받은 Data 시트에서 item_id 값과 ISTEXT를 확인하세요.</p><div class="story-callout"><strong>quantity도 Text입니다.</strong><p>이 경로는 모든 셀을 텍스트로 보존하는 대안입니다. 자동으로 계산용 파일을 완성해주지는 않습니다. 계산하려면 수량 같은 열만 별도 검토해 숫자로 바꿔야 합니다. 이미 1234567890123450으로 바뀐 입력의 끝자리를 복원하지도 않습니다.</p></div></section>
+          <section id="verify"><p class="story-section-number">05 / OBSERVED RESULT</p><h2>손상된 값이 아닌<br />원본 문자열과 대조합니다</h2><p>Windows Excel 16.0 build 5574.0의 별도 통합문서에서 숫자 리터럴, 미리 Text로 정한 셀, TEXT·LEN·EXACT·ISTEXT를 계산했습니다. 숫자에서 만든 문자열은 1234567890123450, Text 셀은 1234567890123456이었고 둘의 길이는 모두 16이었습니다. EXACT는 FALSE, Text 셀의 ISTEXT는 TRUE였습니다.</p><p>실행한 것은 Excel COM의 고정 수식 계산과 Text 셀 값 지정입니다. 리본 메뉴 클릭, CSV 가져오기, 브라우저 도구의 XLSX 내보내기, 저장 후 재열기나 모든 Excel 버전을 이번에 새로 검증한 결과가 아닙니다. 위 가져오기·브라우저 경로를 사용했다면 자신의 결과 파일을 따로 대조해야 합니다.</p><ol class="story-flow"><li><strong>첫 행뿐 아니라 값의 충돌도 확인합니다.</strong><span>첫 두 ID의 끝자리가 6과 0으로 구별되고, 세 번째 ID의 앞자리 0이 남아 있어야 합니다.</span></li><li><strong>문자열과 계산 열을 나눕니다.</strong><span>ID는 정확히 보존하고 quantity만 수치로 검토합니다. LEN만 맞거나 합계만 맞는 것으로 끝내지 않습니다.</span></li><li><strong>왕복 저장은 별도 확인합니다.</strong><span>CSV에는 Excel 셀 자료형이 저장되지 않습니다. 내보낸 원문에 문자가 남는지 확인하고 다시 가져올 때도 Text 규칙을 적용합니다.</span></li></ol></section>
+        </div></div>
+      </article>
+      <aside class="reader-actions" data-reader-actions aria-labelledby="reader-actions-title">
+        <p class="eyebrow">TAKE THE NEXT STEP</p><h2 id="reader-actions-title">읽은 내용을, 내 작업으로.</h2>
+        <nav class="related-resources" aria-label="함께 읽고 써볼 자료">
+          <a href="./long-id-example.csv" download><small>실습 파일</small><strong>긴 ID 세 개의 CSV</strong><span>숫자가 아닌 문자열로 가져와 비교하세요.</span></a>
+          <a href="./excel-leading-zeros.html"><small>이어 읽기</small><strong>표시 서식과 앞자리 0</strong><span>화면 표시만 고치는 것과 보존의 차이.</span></a>
+          <a href="https://csv.jhsoftlabs.com/workspace/csv-to-excel" target="_blank" rel="noopener noreferrer"><small>영문 도구 · 새 탭</small><strong>Text 보존용 XLSX 만들기</strong><span>수량도 Text로 저장되므로 계산 전 확인하세요.</span></a>
+        </nav>
+        <div class="share-row"><div class="share-controls" data-share-controls hidden><button type="button" data-copy-link>링크 복사</button><button type="button" data-select-url>주소 직접 선택</button><button type="button" data-native-share hidden>기본 공유</button></div><a href="https://jhsoftlabs.com/data-guides/excel-long-identifiers.html">이 글의 정규 주소</a><a href="../feed.xml" type="application/rss+xml">RSS로 새 글 받기</a></div>
+        <p class="share-status" data-share-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="share-fallback" data-share-fallback hidden><label for="share-url">직접 선택해 복사할 정규 주소</label><textarea id="share-url" data-share-url readonly spellcheck="false">https://jhsoftlabs.com/data-guides/excel-long-identifiers.html</textarea></div>
+      </aside>
+    </main>
+    <footer class="footer shell"><a href="../privacy.html">개인정보처리 안내</a><a href="./">데이터 가이드 목록</a><a href="./excel-leading-zeros.html">다음: 앞자리 0과 표시 서식 →</a></footer>
+  </body>
+</html>

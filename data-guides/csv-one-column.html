@@ -27,8 +27,11 @@
     />
     <meta
       property="og:image"
-      content="https://jhsoftlabs.com/assets/og-card.png"
+      content="https://jhsoftlabs.com/assets/share-csv-one-column.png"
     />
+    <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="글의 주제와 설명용 예제를 담은 공유 이미지" />
+    <meta name="twitter:image" content="https://jhsoftlabs.com/assets/share-csv-one-column.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,6 +61,9 @@
         "mainEntityOfPage": "https://jhsoftlabs.com/data-guides/csv-one-column.html"
       }
     </script>
+    <link rel="alternate" type="application/rss+xml" title="회몬 · 실무 가이드와 개발기록" href="../feed.xml" />
+    <link rel="stylesheet" href="../growth.css?v=20261020-traffic" />
+    <script defer src="../sharing.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -281,6 +287,17 @@
           </div>
         </div>
       </article>
+      <aside class="reader-actions" data-reader-actions aria-labelledby="reader-actions-title">
+        <p class="eyebrow">TAKE THE NEXT STEP</p><h2 id="reader-actions-title">읽은 내용을, 내 작업으로.</h2>
+        <nav class="related-resources" aria-label="함께 읽고 써볼 자료">
+          <a href="./excel-leading-zeros.html"><small>이어 읽기</small><strong>앞자리 0까지 지키기</strong><span>열이 나뉜 뒤 자료형도 확인합니다.</span></a>
+          <a href="./semicolon-example.csv" download><small>실습 파일</small><strong>구분자 비교 CSV</strong><span>따옴표 안의 쉼표와 세미콜론 예제.</span></a>
+          <a href="https://csv.jhsoftlabs.com/workspace/csv-to-excel" target="_blank" rel="noopener noreferrer"><small>영문 도구 · 새 탭</small><strong>CSV → Excel</strong><span>모든 셀을 Text로 보존하는 XLSX 사본.</span></a>
+        </nav>
+        <div class="share-row"><div class="share-controls" data-share-controls hidden><button type="button" data-copy-link>링크 복사</button><button type="button" data-select-url>주소 직접 선택</button><button type="button" data-native-share hidden>기본 공유</button></div><a href="https://jhsoftlabs.com/data-guides/csv-one-column.html">이 글의 정규 주소</a><a href="../feed.xml" type="application/rss+xml">RSS로 새 글 받기</a></div>
+        <p class="share-status" data-share-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="share-fallback" data-share-fallback hidden><label for="share-url">직접 선택해 복사할 정규 주소</label><textarea id="share-url" data-share-url readonly spellcheck="false">https://jhsoftlabs.com/data-guides/csv-one-column.html</textarea></div>
+      </aside>
     </main>
     <footer class="footer shell">
       <a href="../privacy.html">개인정보처리 안내</a>
