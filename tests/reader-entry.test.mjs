@@ -9,7 +9,8 @@ test("four Korean problem paths precede projects and work without JavaScript", (
   const start = home.match(/<section class="guide-start[\s\S]*?<\/section>/)?.[0];
   assert.ok(start);
   assert.ok(home.indexOf(start) < home.indexOf('id="projects"'));
-  assert.equal((start.match(/<li>/g) || []).length, 4);
+  assert.equal((start.match(/<li>/g) || []).length, 3);
+  assert.match(start, /<article class="featured-guide"/);
   for (const slug of ["csv-one-column", "excel-leading-zeros", "power-query-merge-rows", "excel-filter-spill"]) {
     assert.ok(start.includes(`href="./data-guides/${slug}.html"`));
   }

@@ -6,11 +6,11 @@
     <meta name="naver-site-verification" content="288cd3f4d4b7a5498e41f5633f0dc0e2536dc6e9" />
     <meta name="google-adsense-account" content="ca-pub-6113316314236430" />
     <meta name="theme-color" content="#f6f7f2" />
-    <title>회몬 · JH Soft Labs | 만들고, 기록하고, 나눕니다</title>
+    <title>회몬 · JH Soft Labs | CSV·Excel 도구와 개발 기록</title>
     <meta name="description" content="CSV·Excel 문제를 합성 예제와 실제 검증 기록으로 해결합니다. 한국어 실무 가이드, 무료 데이터 도구, 개발자 회몬의 프로젝트와 시행착오를 함께 만나보세요." />
     <link rel="canonical" href="https://jhsoftlabs.com/" />
     <meta property="og:title" content="회몬 · JH Soft Labs" />
-    <meta property="og:description" content="쓸모 있는 것을 만들고, 그 과정을 나눕니다. 직접 만든 프로젝트와 개발·커리어·AI 실전 기록." />
+    <meta property="og:description" content="CSV·Excel 문제를 작은 예제로 풀고, 직접 만든 도구와 개발 기록을 나눕니다. 한국어 실무 가이드부터 면접 답변 진단과 웹게임까지." />
     <meta property="og:image" content="https://jhsoftlabs.com/assets/og-card.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -20,17 +20,18 @@
     <meta property="og:url" content="https://jhsoftlabs.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="회몬 · JH Soft Labs" />
-    <meta name="twitter:description" content="쓸모 있는 것을 만들고, 그 과정을 나눕니다. 직접 만든 프로젝트와 개발·커리어·AI 실전 기록." />
+    <meta name="twitter:description" content="CSV·Excel 문제를 작은 예제로 풀고, 직접 만든 도구와 개발 기록을 나눕니다. 한국어 실무 가이드부터 면접 답변 진단과 웹게임까지." />
     <meta name="twitter:image" content="https://jhsoftlabs.com/assets/og-card.png" />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css?v=20261011-readability" />
+    <link rel="stylesheet" href="./home.css?v=20261020-editorial" />
     <script defer src="./script.js"></script>
     <script defer src="./experiences.js"></script>
   </head>
-  <body>
+  <body class="home">
     <a class="skip-link" href="#main">본문으로 건너뛰기</a>
     <header class="site-header">
       <div class="header-inner shell">
@@ -48,8 +49,9 @@
       <section class="intro" id="top" aria-labelledby="intro-title">
         <div class="intro-copy">
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> BUILT BY HOEMON</p>
-          <h1 id="intro-title">쓸모 있는 것을 만들고,<br /><span>그 과정을 나눕니다.</span></h1>
-          <p class="intro-description">CSV·Excel에서 막힌 문제를 작은 예제로 풀어봅니다.<br class="desktop-break" /> 직접 서비스를 만들며 잘된 점과 실패한 과정도 기록합니다.</p>
+          <h1 id="intro-title">CSV·Excel 문제를 풀고,<br /><span>직접 만든 도구를 나눕니다.</span></h1>
+          <p class="intro-description">앞자리 0이 사라질 때, 병합 후 합계가 달라질 때.<br class="desktop-break" /> 작은 예제로 확인하고, 직접 만들며 겪은 실패까지 기록합니다.</p>
+          <div class="intro-actions"><a class="button button--dark" href="#data-guides">문제 해결 가이드 <span aria-hidden="true">↓</span></a><a class="intro-project-link" href="#projects">도구와 프로젝트 둘러보기 <span aria-hidden="true">→</span></a></div>
         </div>
         <a class="intro-profile" href="#about" aria-label="개발자 회몬 소개 보기">
           <div class="avatar-frame"><img src="./assets/hoemon-profile.jpg" alt="검은 후드티를 입은 회몬 캐릭터" width="112" height="112" fetchpriority="high" /></div>
@@ -62,12 +64,28 @@
           <div><p class="eyebrow">PRACTICAL DATA GUIDES · 한국어</p><h2 id="data-guides-title">지금 막힌 곳부터 풀어보세요.</h2><p>증상을 고르고, 연습 파일로 결과를 확인하세요. 가입 없이 읽을 수 있습니다.</p></div>
           <a class="quiet-link" href="./data-guides/">가이드 전체 보기 <span aria-hidden="true">→</span></a>
         </div>
-        <ol class="guide-start-list">
-          <li><a href="./data-guides/csv-one-column.html"><span class="guide-step">01 · CSV 가져오기</span><h3>CSV가 한 열에 몰려요</h3><p>세미콜론과 따옴표를 구분하고, 설명 안의 문장 부호를 지킵니다.</p><span class="guide-result">연습 CSV · 2개 레코드, 3개 열 확인 <span aria-hidden="true">→</span></span></a></li>
-          <li><a href="./data-guides/excel-leading-zeros.html"><span class="guide-step">02 · 상품 코드 보존</span><h3>앞자리 0이 사라졌어요</h3><p>표시만 바꾸는 것과 원본 문자열을 보존하는 것의 차이를 확인합니다.</p><span class="guide-result">Text 가져오기 · 실제 값과 자료형 대조 <span aria-hidden="true">→</span></span></a></li>
-          <li><a href="./data-guides/power-query-merge-rows.html"><span class="guide-step">03 · Power Query 병합</span><h3>병합 후 합계가 늘었어요</h3><p>전체 쿼리를 직접 실행해 매치 수를 세고, 잘못된 병합과 수정 결과를 비교합니다.</p><span class="guide-result">실행 가능한 M 쿼리 · 합계 42와 72 비교 <span aria-hidden="true">→</span></span></a></li>
-          <li><a href="./data-guides/excel-filter-spill.html"><span class="guide-step">04 · Excel 수식</span><h3>FILTER가 #SPILL!을 보여요</h3><p>출력 범위와 병합 셀을 확인합니다. 원본을 지우지 않고 원인을 좁힙니다.</p><span class="guide-result">연습 TSV · North 3개 행, 합계 6 확인 <span aria-hidden="true">→</span></span></a></li>
-        </ol>
+        <div class="guide-overview">
+          <article class="featured-guide" aria-labelledby="featured-guide-title">
+            <div class="featured-guide-copy">
+              <p class="featured-kicker">처음 읽는다면 · 이 예제부터</p>
+              <h3 id="featured-guide-title">같아 보이는 00123,<br />원본도 같을까요?</h3>
+              <p>표시 서식으로 붙인 0과 원본에 남은 0은 다릅니다. 작은 CSV로 차이를 확인하고, 텍스트를 보존하는 XLSX 사본도 만들어 보세요.</p>
+              <p class="featured-guide-method">합성 CSV · 실제 Excel 관측 기록 · 브라우저 실습</p>
+              <a class="featured-guide-link" href="./data-guides/excel-leading-zeros.html">앞자리 0 보존 가이드 읽기 <span aria-hidden="true">→</span></a>
+            </div>
+            <figure class="featured-proof">
+              <figcaption>화면에는 둘 다 <code>00123</code></figcaption>
+              <div class="proof-cell"><span>숫자에 표시 서식만 적용</span><strong>00123</strong><p>실제 값 <code>123</code> · 숫자</p></div>
+              <div class="proof-cell proof-cell--text"><span>처음부터 Text로 가져오기</span><strong>00123</strong><p>실제 값 <code>"00123"</code> · 텍스트</p></div>
+              <p class="proof-note">합성 예제의 관측값을 재구성한 설명입니다. 실제 Excel 화면은 아닙니다.</p>
+            </figure>
+          </article>
+          <ol class="guide-start-list" aria-label="다른 증상으로 시작하기">
+            <li><a href="./data-guides/csv-one-column.html"><span class="guide-step">01 · CSV 가져오기</span><h3>CSV가 한 열에 몰려요</h3><p>세미콜론과 따옴표를 구분하고, 설명 안의 문장 부호를 지킵니다.</p><span class="guide-result">연습 CSV · 2개 레코드, 3개 열 확인 <span aria-hidden="true">→</span></span></a></li>
+            <li><a href="./data-guides/power-query-merge-rows.html"><span class="guide-step">02 · Power Query 병합</span><h3>병합 후 합계가 늘었어요</h3><p>전체 쿼리를 직접 실행해 매치 수를 세고, 잘못된 병합과 수정 결과를 비교합니다.</p><span class="guide-result">실행 가능한 M 쿼리 · 합계 42와 72 비교 <span aria-hidden="true">→</span></span></a></li>
+            <li><a href="./data-guides/excel-filter-spill.html"><span class="guide-step">03 · Excel 수식</span><h3>FILTER가 #SPILL!을 보여요</h3><p>출력 범위와 병합 셀을 확인합니다. 원본을 지우지 않고 원인을 좁힙니다.</p><span class="guide-result">연습 TSV · North 3개 행, 합계 6 확인 <span aria-hidden="true">→</span></span></a></li>
+          </ol>
+        </div>
         <p class="guide-start-note">모든 연습 파일은 합성 데이터입니다. 실제 고객 자료가 아니며, 검증한 환경과 아직 확인하지 못한 범위는 각 글에 구분해 적습니다.</p>
       </section>
 
@@ -86,59 +104,16 @@
 
       <section class="projects section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <div class="heading-title"><span class="section-index">01 /</span><h2 id="projects-title">직접 만든 프로젝트</h2></div>
-          <p class="section-note">운영 중인 서비스와 중단한 실험을 함께 모았습니다.</p>
+          <div class="heading-title"><span class="section-index">01 /</span><h2 id="projects-title">직접 만든 도구와 서비스</h2></div>
+          <p class="section-note">써볼 수 있는 프로젝트부터, 멈춘 실험의 기록까지.</p>
         </div>
         <nav class="project-jumps" aria-label="프로젝트 바로가기">
-          <a href="#project-interview">면접 답변 진단 <span aria-hidden="true">↓</span></a>
-          <a href="#project-image">AI 홍보 콘텐츠 <span aria-hidden="true">↓</span></a>
           <a href="#project-csv">Excel·CSV 도구·학습 <span aria-hidden="true">↓</span></a>
+          <a href="#project-interview">면접 답변 진단 <span aria-hidden="true">↓</span></a>
           <a href="#project-bampang">밤팡! 웹게임 <span aria-hidden="true">↓</span></a>
+          <a href="#project-image">중단한 실험 · 회고 <span aria-hidden="true">↓</span></a>
         </nav>
         <div class="project-grid">
-          <article class="project-card project-card--interview" id="project-interview">
-            <div class="project-heading">
-              <p class="project-category">개발자 면접 · AI 도구</p>
-              <h3><a href="https://interview.jhsoftlabs.com/" target="_blank" rel="noopener noreferrer">Interviewer Lens<span class="sr-only"> (새 탭)</span></a></h3>
-              <p class="project-summary">내 답변, 면접관에게는 어떻게 들릴까?</p>
-            </div>
-            <div class="project-visual interview-visual" role="img" aria-label="면접 답변 진단 예시: 답변 72점, 기여도와 수치 보완이 필요한 부분 표시">
-              <div class="visual-topline"><span>INTERVIEWER LENS</span><span>ANSWER REVIEW</span></div>
-              <div class="diagnosis-preview">
-                <div class="diagnosis-score"><div class="score-ring"><strong>72</strong><small>/ 100</small></div><div><span class="preview-caption">답변 진단</span><strong>경험은 충분해요.<br />근거를 더해볼까요?</strong></div></div>
-                <div class="diagnosis-point"><span class="point-mark">!</span> 나의 기여도를 더 구체적으로</div>
-                <div class="diagnosis-point"><span class="point-mark point-mark--green">+</span> 성과를 수치로 설명해 보세요</div>
-              </div>
-              <span class="visual-footnote">진단 화면을 재구성한 예시</span>
-            </div>
-            <div class="project-body">
-              <p class="project-description">면접관의 관점에서 답변의 부족한 부분을 짚고 예상 꼬리질문과 개선 초안을 보여줍니다. 결과를 보며 다시 연습해보세요.</p>
-              <a class="project-story" href="./stories/ai-retry-safety.html">작업 기록 · AI가 답한 뒤에 생기는 문제들 <span aria-hidden="true">→</span></a>
-              <div class="project-detail"><span class="small-dot"></span> 로그인 없이 첫 진단</div>
-              <div class="project-actions"><a class="project-cta" href="https://interview.jhsoftlabs.com/diagnosis" target="_blank" rel="noopener noreferrer">답변 진단 시작 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a><span class="project-domain">interview.jhsoftlabs.com</span></div>
-            </div>
-          </article>
-          <article class="project-card project-card--image" id="project-image">
-            <div class="project-heading">
-              <p class="project-category">AI 이미지 · 매장 홍보 콘텐츠 <span class="language-tag">활동 중단</span></p>
-              <h3><a href="https://image.jhsoftlabs.com/" target="_blank" rel="noopener noreferrer">Deep Constellation<span class="sr-only"> (새 탭)</span></a></h3>
-              <p class="project-summary">만들 수 있다는 것과 팔 수 있다는 것은 달랐습니다.</p>
-            </div>
-            <div class="project-visual salon-visual">
-              <div class="visual-topline"><span>DEEP CONSTELLATION</span><span>CONTENT STUDIO</span></div>
-              <div class="salon-collage">
-                <img class="salon-poster salon-poster--back" src="./assets/salon-season.webp" alt="계절 헤어스타일을 소개하는 AI 홍보물 제작 예시" width="512" height="640" decoding="async" />
-                <img class="salon-poster salon-poster--front" src="./assets/salon-opening.webp" alt="가상 미용실의 오픈 소식을 담은 AI 홍보물 제작 예시" width="512" height="640" decoding="async" />
-              </div>
-              <span class="visual-footnote">가상 매장 · AI 홍보물 제작 예시</span>
-            </div>
-            <div class="project-body">
-              <p class="project-description">미용실 홍보 이미지와 게시글로 수익을 내보려던 프로젝트입니다. 수익을 만들지 못했고, 수익성이 낮다고 판단해 추가 활동을 중단했습니다. 제작물과 개발 경험은 기록으로 남겨두었습니다.</p>
-              <a class="project-story" href="./stories/deep-constellation-retrospective.html">회고 읽기 · 만드는 일과 판매하는 일 사이 <span aria-hidden="true">→</span></a>
-              <div class="project-detail">2026. 10. 03. · 추가 활동 중단 · 기록 보존</div>
-              <div class="project-actions"><a class="project-cta" href="https://image.jhsoftlabs.com/hair-salon.html#cases" target="_blank" rel="noopener noreferrer">남겨둔 제작 예시 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a><span class="project-domain">image.jhsoftlabs.com</span></div>
-            </div>
-          </article>
           <article class="project-card project-card--csv" id="project-csv">
             <div class="project-heading">
               <p class="project-category">데이터 실무 · 무료 웹 도구 <span class="language-tag">EN</span></p>
@@ -163,17 +138,31 @@
             </div>
             <div class="project-body">
               <p class="project-description">CSV를 가져오기 전에 위험한 값을 점검하고 목록 비교·중복 제거·형식 변환을 할 수 있습니다. Excel 코스에서는 실습 예제를 풀고 정답과 비교해보세요.</p>
-              <div class="project-quicklinks" aria-label="Column Harbor 주요 서비스 바로가기">
-                <span class="quicklinks-title">지금 필요한 작업부터 시작하세요</span>
-                <ul>
-                  <li><a href="https://csv.jhsoftlabs.com/workspace" target="_blank" rel="noopener noreferrer"><span><strong>Workspace</strong><span>데이터 도구 · 수식 · 연습 파일</span></span><span aria-hidden="true">↗</span><span class="sr-only"> (영문 사이트, 새 탭)</span></a></li>
-                  <li><a href="https://csv.jhsoftlabs.com/learn/excel" target="_blank" rel="noopener noreferrer"><span><strong>Excel Academy</strong><span>기초부터 실무까지 · 예제와 정답</span></span><span aria-hidden="true">↗</span><span class="sr-only"> (영문 사이트, 새 탭)</span></a></li>
-                  <li><a href="https://csv.jhsoftlabs.com/guides" target="_blank" rel="noopener noreferrer"><span><strong>문제별 실무 가이드</strong><span>Power Query · 수식 · CSV 오류</span></span><span aria-hidden="true">↗</span><span class="sr-only"> (영문 사이트, 새 탭)</span></a></li>
-                </ul>
-              </div>
               <a class="project-story" href="./stories/column-harbor.html">만든 이야기 · 원본을 먼저 지키는 도구 <span aria-hidden="true">→</span></a>
               <div class="project-detail"><span class="small-dot"></span> 무료 · 가입 불필요 · 영문 서비스</div>
               <div class="project-actions"><a class="project-cta" href="https://csv.jhsoftlabs.com/#checker" target="_blank" rel="noopener noreferrer">CSV 점검하기 <span aria-hidden="true">↗</span><span class="sr-only"> (영문 사이트, 새 탭)</span></a><span class="project-domain">csv.jhsoftlabs.com</span></div>
+            </div>
+          </article>
+          <article class="project-card project-card--interview" id="project-interview">
+            <div class="project-heading">
+              <p class="project-category">개발자 면접 · AI 도구</p>
+              <h3><a href="https://interview.jhsoftlabs.com/" target="_blank" rel="noopener noreferrer">Interviewer Lens<span class="sr-only"> (새 탭)</span></a></h3>
+              <p class="project-summary">내 답변, 면접관에게는 어떻게 들릴까?</p>
+            </div>
+            <div class="project-visual interview-visual" role="img" aria-label="면접 답변 진단 예시: 답변 72점, 기여도와 수치 보완이 필요한 부분 표시">
+              <div class="visual-topline"><span>INTERVIEWER LENS</span><span>ANSWER REVIEW</span></div>
+              <div class="diagnosis-preview">
+                <div class="diagnosis-score"><div class="score-ring"><strong>72</strong><small>/ 100</small></div><div><span class="preview-caption">답변 진단</span><strong>경험은 충분해요.<br />근거를 더해볼까요?</strong></div></div>
+                <div class="diagnosis-point"><span class="point-mark">!</span> 나의 기여도를 더 구체적으로</div>
+                <div class="diagnosis-point"><span class="point-mark point-mark--green">+</span> 성과를 수치로 설명해 보세요</div>
+              </div>
+              <span class="visual-footnote">진단 화면을 재구성한 예시</span>
+            </div>
+            <div class="project-body">
+              <p class="project-description">면접관의 관점에서 답변의 부족한 부분을 짚고 예상 꼬리질문과 개선 초안을 보여줍니다. 결과를 보며 다시 연습해보세요.</p>
+              <a class="project-story" href="./stories/ai-retry-safety.html">작업 기록 · AI가 답한 뒤에 생기는 문제들 <span aria-hidden="true">→</span></a>
+              <div class="project-detail"><span class="small-dot"></span> 로그인 없이 첫 진단</div>
+              <div class="project-actions"><a class="project-cta" href="https://interview.jhsoftlabs.com/diagnosis" target="_blank" rel="noopener noreferrer">답변 진단 시작 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a><span class="project-domain">interview.jhsoftlabs.com</span></div>
             </div>
           </article>
           <article class="project-card project-card--game" id="project-bampang">
@@ -195,6 +184,30 @@
             </div>
           </article>
         </div>
+        <div class="project-archive">
+          <p class="archive-kicker">멈춘 프로젝트도, 배운 점은 남깁니다.</p>
+          <article class="project-card project-card--image" id="project-image">
+            <div class="project-heading">
+              <p class="project-category">AI 이미지 · 매장 홍보 콘텐츠 <span class="language-tag">활동 중단</span></p>
+              <h3><a href="https://image.jhsoftlabs.com/" target="_blank" rel="noopener noreferrer">Deep Constellation<span class="sr-only"> (새 탭)</span></a></h3>
+              <p class="project-summary">만들 수 있다는 것과 팔 수 있다는 것은 달랐습니다.</p>
+            </div>
+            <div class="project-visual salon-visual">
+              <div class="visual-topline"><span>DEEP CONSTELLATION</span><span>CONTENT STUDIO</span></div>
+              <div class="salon-collage">
+                <img class="salon-poster salon-poster--back" src="./assets/salon-season.webp" alt="계절 헤어스타일을 소개하는 AI 홍보물 제작 예시" width="512" height="640" loading="lazy" decoding="async" />
+                <img class="salon-poster salon-poster--front" src="./assets/salon-opening.webp" alt="가상 미용실의 오픈 소식을 담은 AI 홍보물 제작 예시" width="512" height="640" loading="lazy" decoding="async" />
+              </div>
+              <span class="visual-footnote">가상 매장 · AI 홍보물 제작 예시</span>
+            </div>
+            <div class="project-body">
+              <p class="project-description">미용실 홍보 이미지와 게시글로 수익을 내보려던 프로젝트입니다. 수익을 만들지 못했고, 수익성이 낮다고 판단해 추가 활동을 중단했습니다. 제작물과 개발 경험은 기록으로 남겨두었습니다.</p>
+              <a class="project-story" href="./stories/deep-constellation-retrospective.html">회고 읽기 · 만드는 일과 판매하는 일 사이 <span aria-hidden="true">→</span></a>
+              <div class="project-detail">2026. 10. 03. · 추가 활동 중단 · 기록 보존</div>
+              <div class="project-actions"><a class="project-cta" href="https://image.jhsoftlabs.com/hair-salon.html#cases" target="_blank" rel="noopener noreferrer">남겨둔 제작 예시 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a><span class="project-domain">image.jhsoftlabs.com</span></div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="fieldnotes section" id="fieldnotes" aria-labelledby="fieldnotes-title">
@@ -212,6 +225,13 @@
           <li><a href="./stories/deep-constellation-retrospective.html"><span class="fieldnote-meta">DEEP CONSTELLATION · 수익화 회고 · 2026. 10. 03.</span><strong>만들 수 있다는 것과 팔 수 있다는 것은 달랐다</strong><span>수익을 만들지 못해 추가 활동을 멈췄습니다. 다음에 확인할 고객 행동과 중단 기준을 적었습니다.</span><span class="fieldnote-arrow" aria-hidden="true">→</span></a></li>
         </ol>
       </section>
+
+      <template id="home-ad-template" data-ad-state="disabled">
+        <aside class="home-ad-slot" aria-labelledby="home-ad-label">
+          <p class="home-ad-label" id="home-ad-label">광고</p>
+          <div class="home-ad-container"></div>
+        </aside>
+      </template>
 
       <section class="library section" id="collection" aria-labelledby="collection-title">
         <div class="library-sidebar">

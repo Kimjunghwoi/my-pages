@@ -11,7 +11,7 @@ const attributes = (text) => Object.fromEntries([...text.matchAll(/([\w-]+)="([^
 const anchors = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].map((match) => ({ ...attributes(match[1]), content: match[2] }));
 const resources = anchors.filter((anchor) => anchor.class === "resource");
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
-const projectHosts = ["interview.jhsoftlabs.com", "image.jhsoftlabs.com", "csv.jhsoftlabs.com", "bogle-chestnut.vercel.app"];
+const projectHosts = ["csv.jhsoftlabs.com", "interview.jhsoftlabs.com", "bogle-chestnut.vercel.app", "image.jhsoftlabs.com"];
 
 test("homepage retains the approved Naver ownership verification in head", () => {
   const head = html.match(/<head>([\s\S]*?)<\/head>/)?.[1];
@@ -25,7 +25,7 @@ test("four featured projects keep their own service routes and the game introduc
   assert.equal(cards.length, 4);
   cards.forEach((card, index) => {
     const urls = [...card[1].matchAll(/href="(https:[^"]+)"/g)].map((match) => new URL(match[1]));
-    assert.ok(urls.length >= (index === 3 ? 1 : 2));
+    assert.ok(urls.length >= (index === 2 ? 1 : 2));
     assert.ok(urls.every((url) => url.hostname === projectHosts[index]));
   });
 });

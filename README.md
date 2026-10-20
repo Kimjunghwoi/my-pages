@@ -32,6 +32,8 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 네 가이드의 넓은 표와 코드에는 스크립트 없이 키보드로 들어갈 수 있는 이름과 `tabindex`가 있습니다. 표 셀의 값이나 실습 파일을 바꾸지 않고 접근성을 고칩니다. `stories.css`의 인쇄 규칙은 긴 코드와 표 내용을 줄바꿈합니다. 앞자리 0 가이드의 브라우저 대안은 외부 Column Harbor의 CSV→XLSX 도구이며 모든 셀을 Text로 저장합니다. 수량까지 숫자로 만들어 준다고 안내하지 않습니다. [2026-10-19 점검 및 수정](docs/reader-followup-2026-10-19.md).
 
 - 대표 프로젝트: `.project-grid`의 카드와 해당 `.resource` 항목을 함께 수정합니다.
+- 홈의 타이포그래피와 강조 배치는 `home.css`에서만 조정합니다. 대표 가이드 1편과 나머지 증상 3개를 구분하고, 프로젝트는 Column Harbor·Interviewer Lens·밤팡 순서로 보여줍니다. 중단한 Deep Constellation은 `.project-archive`에 설명·제작 예시·회고 주소를 유지합니다.
+- `home-ad-template`은 실험 기록과 자료 모음 사이의 **비활성 HTML template**입니다. 페이지에 빈 광고 공간을 만들거나 광고를 요청하지 않습니다. 실제 활성화에는 소유자의 별도 지시, 실제 광고 단위 설정, 개인정보·동의 처리와 배치 검증이 필요합니다. 임의의 슬롯 ID를 넣거나 검색어/URL로 활성화하지 않습니다.
 - 글/가이드: `.resource-list`에 링크를 추가합니다. `data-category`에는 공백으로 구분한 주제들을 지정할 수 있습니다.
 - 검색 보조어: `data-keywords`에 한영 별칭을 넣습니다. 방문자가 입력한 검색어는 HTML로 삽입하지 않습니다.
 - 분류: `data-filter` 버튼과 `data-category`가 일치해야 합니다. `data`는 데이터 실무, `ai-side`는 AI·부업입니다.

@@ -16,14 +16,14 @@ test("Pages HTML removes only known telemetry, preserving public content and met
   assert.match(result, /google-adsense-account/);
   assert.match(result, /src="\.\/script.js"/);
   assert.match(result, /src="\.\/experiences.js"/);
-  assert.equal(result.match(/<body>[\s\S]*<\/footer>/)[0], source.match(/<body>[\s\S]*<\/footer>/)[0]);
+  assert.equal(result.match(/<body\b[^>]*>[\s\S]*<\/footer>/)[0], source.match(/<body\b[^>]*>[\s\S]*<\/footer>/)[0]);
   assert.equal(result.match(/rel="canonical"[^>]+/)[0], source.match(/rel="canonical"[^>]+/)[0]);
   assert.throws(() => pagesHtml('<script src="/_vercel/unknown.js"></script>'), /Unrecognized/);
 });
 
 test("Pages artifact excludes private paths, preserves downloads and replaces stale output", () => {
   const fixture = mkdtempSync(join(tmpdir(), "mypages-pages-test-"));
-  const roots = ["index.html", "privacy.html", "styles.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
+  const roots = ["index.html", "privacy.html", "styles.css", "home.css", "stories.css", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
   for (const directory of ["assets", "stories", "data-guides", "templates", "tools/release-check", "projects/bampang"]) {
     roots.push(...readdirSync(join(root, directory), { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => `${directory}/${entry.name}`));
   }
@@ -39,6 +39,7 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
   const names = first.files.map((file) => file.path);
   assert.ok(names.includes("404.html"));
   assert.ok(names.includes("privacy.html"));
+  assert.ok(names.includes("home.css"));
   assert.ok(names.includes("projects/bampang/index.html"));
   assert.ok(names.includes("projects/bampang/project.css"));
   assert.ok(names.includes("assets/bampang-chestnut.svg"));
