@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { assertCanonicalHostRedirect, canonicalHostCases } from "./canonical-hosts.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const artifact = join(root, ".pages-dist");
@@ -93,6 +94,19 @@ for (const slug of ["csv-one-column", "excel-leading-zeros", "power-query-merge-
   await check("legacy-alias", `${origin}/data-guides/${slug}.html?reader=check`, response => {
     assert.equal(response.status, 200);
     assert.equal(response.url, `${origin}/data-guides/${slug}?reader=check`);
+  });
+}
+
+for (const { url, expectedStatus } of canonicalHostCases) {
+  await check("canonical-host", url, async response => {
+    const first = await fetch(url, { redirect: "manual", signal: AbortSignal.timeout(20000) });
+    try {
+      const target = assertCanonicalHostRedirect(url, first);
+      assert.equal(response.url, target);
+      assert.equal(response.status, expectedStatus);
+    } finally {
+      await first.body?.cancel();
+    }
   });
 }
 
