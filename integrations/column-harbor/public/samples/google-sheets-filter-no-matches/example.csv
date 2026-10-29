@@ -1,0 +1,7 @@
+ticket,team,status,hours
+T101,Support,Open,2
+T102,Sales,Open,3
+T103,Support,Closed,1
+T104,Support,Open,0
+T105,Sales,Closed,4
+T106,Support,Open,5

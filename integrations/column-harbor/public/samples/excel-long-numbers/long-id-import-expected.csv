@@ -1,0 +1,5 @@
+case_id,id_is_text,id_length,matches_original,stock_is_number
+display_only,TRUE,15,TRUE,TRUE
+long_id_a,TRUE,16,TRUE,TRUE
+long_id_b,TRUE,16,TRUE,TRUE
+another_long_id,TRUE,16,TRUE,TRUE

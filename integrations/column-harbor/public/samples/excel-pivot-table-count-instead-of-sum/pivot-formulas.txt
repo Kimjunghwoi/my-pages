@@ -1,0 +1,6 @@
+=ISNUMBER([@amount_text])
+=IF([@amount_text]="","",NUMBERVALUE([@amount_text],".",","))
+=COUNT(AmountSource[amount]) -> 4
+=SUM(AmountSource[amount]) -> 35
+=COUNTA(AmountSource[record_id]) -> 5
+After paste as values, explicitly Clear Contents for the missing R5 amount; retain its row.

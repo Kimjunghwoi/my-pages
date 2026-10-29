@@ -1,0 +1,12 @@
+Synthetic data in A1:C7. All amounts are numeric. Summary labels E10:E13; formulas F10:F13.
+Labels: Full dataset (SUM); SUBTOTAL 9; Visible amount (109); Visible record count (103).
+F10 =SUM(C2:C7)
+F11 =SUBTOTAL(9,C2:C7)
+F12 =SUBTOTAL(109,C2:C7)
+F13 =SUBTOTAL(103,A2:A7)
+Baseline: no filter enabled; all source rows visible. Results: 480 / 480 / 480 / 6.
+Exercise 1, filter only: select A1:C7; Data > Filter; select region North. Do not manually hide any row. Results: 480 / 230 / 230 / 4.
+Reset before Exercise 2: clear the region filter; turn Data > Filter off; unhide rows 2:7. Verify baseline 480 / 480 / 480 / 6.
+Exercise 2, manual hide only: with filtering off, manually hide worksheet row 5 (S-04, amount 40). Results: 480 / 480 / 440 / 5.
+Unhide row 5 to restore baseline. These are separate exercises, not a filter followed by a hide.
+Combined filter/hide behavior is not the 9-versus-109 demonstration. A native Excel 16.0 Build 5569 run returned 480 / 190 / 190 / 3 for North plus manual hide. Do not assume 9 retains that hidden amount under an active filter.

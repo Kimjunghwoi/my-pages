@@ -1,0 +1,12 @@
+A1:C1: timestamp, category, amount
+A2: =DATE(2026,8,31)+TIME(23,59,0)
+A3: =DATE(2026,9,1)+TIME(0,0,0)
+A4: =DATE(2026,9,15)+TIME(12,30,0)
+A5: =DATE(2026,9,30)+TIME(0,0,0)
+A6: =DATE(2026,9,30)+TIME(18,45,0)
+A7: =DATE(2026,10,1)+TIME(0,0,0)
+A8: =DATE(2026,9,20)+TIME(9,0,0)
+E2: =DATE(2026,9,1)
+F2: =DATE(2026,9,30)
+H2: Parts
+Enter B2:C8 from the input CSV. Format A2:A8 as yyyy-mm-dd hh:mm:ss.

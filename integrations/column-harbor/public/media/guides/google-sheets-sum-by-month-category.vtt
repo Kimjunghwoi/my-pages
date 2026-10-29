@@ -1,0 +1,21 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.000
+1. Start with typed transactions
+Eight records total 365, including a refund. Dates and amounts must be numeric.
+
+00:00:06.000 --> 00:00:12.000
+2. Select Travel and the inclusive start
+Keep Travel on or after January 1, 2026. January 2025 is a different period.
+
+00:00:12.000 --> 00:00:18.000
+3. Stop before the next month starts
+Date < February 1 includes January 31 at 23:59:59. Exactly February 1 is excluded.
+
+00:00:18.000 --> 00:00:24.000
+4. See why a midnight cutoff fails
+Date <= January 31 means midnight at the start of that day. It misses the late-night 60.
+
+00:00:24.000 --> 00:00:30.000
+5. Reconcile the complete summary
+Keep the year in every month key. All category totals sum back to the original 365.

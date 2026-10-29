@@ -1,0 +1,11 @@
+A1: start_date
+B1: workdays
+C1: deadline
+H1: excluded_dates
+A2: =DATE(2026,9,4)
+B2: 3
+H2: =DATE(2026,9,7)
+H3: =DATE(2026,9,10)
+C2: =WORKDAY(A2,B2,$H$2:$H$3)
+Format A2, C2, H2:H3 as yyyy-mm-dd.
+Expected C2: 2026-09-11

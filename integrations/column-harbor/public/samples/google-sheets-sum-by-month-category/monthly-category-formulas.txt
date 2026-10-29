@@ -1,0 +1,33 @@
+Column Harbor synthetic monthly category practice
+
+Input: monthly-category-input.csv in A1:C9.
+Expected: monthly-category-expected.csv; comparison reference, not appended input.
+
+Only for text timestamps with exact YYYY-MM-DD hh:mm:ss shape:
+D2: =DATE(VALUE(LEFT(A2,4)),VALUE(MID(A2,6,2)),VALUE(MID(A2,9,2)))+TIME(VALUE(MID(A2,12,2)),VALUE(MID(A2,15,2)),VALUE(RIGHT(A2,2)))
+E2: =IFERROR(TEXT(D2,"yyyy-mm-dd hh:mm:ss")=A2,FALSE)
+All E results must be TRUE before pasting D values back into working A.
+
+F2: =IFERROR(IF(AND(ISNUMBER(A2),LEN(TRIM(B2))>0,ISNUMBER(C2)),"Ready","Review"),"Review")
+Fill F2:F9. Every baseline row must be Ready.
+
+G1: month_start
+H1: Travel
+I1: Office
+G2: =DATE(2025,1,1)
+G3: =DATE(2026,1,1)
+G4: =DATE(2026,2,1)
+G5: =DATE(2026,3,1)
+H2: =SUMIFS($C$2:$C$9,$B$2:$B$9,H$1,$A$2:$A$9,">="&$G2,$A$2:$A$9,"<"&EDATE($G2,1))
+Fill H2:I2, then H2:I5.
+Expected H2:I5: 90/0; 90/25; 80/35; 0/45.
+=SUM(H2:I5) and =SUM(C2:C9): both 365.
+
+Optional added row, separate from canonical expected CSV:
+A10: =DATE(2026,1,15)
+B10: Travel
+C10: 5
+Expand every source range to row 10 and fill F10.
+January 2026 Travel: 95. Summary total: 370.
+
+Illustrations are synthetic data diagrams, not app screenshots.

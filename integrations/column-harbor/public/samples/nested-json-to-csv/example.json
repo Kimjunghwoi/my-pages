@@ -1,0 +1,4 @@
+[
+  {"order_id":"0007","customer":{"name":"Mina"},"items":[{"sku":"00123","quantity":2},{"sku":"00456","quantity":1}]},
+  {"order_id":"0008","customer":{"name":"José"},"items":[]}
+]

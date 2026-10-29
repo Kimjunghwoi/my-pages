@@ -1,0 +1,11 @@
+Enter in A1:C7
+region	product_id	rate
+East	P101	12
+West	P101	13
+East	P102	0
+East	P101	15
+[empty]	P101	99
+East	P103	[empty]
+
+Selectors: F1=region, G1=product_id
+F2=East, G2=P101

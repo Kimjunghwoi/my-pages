@@ -1,0 +1,4 @@
+Select A2:B9 with A2 active. Applies to: =$A$2:$B$9
+All occurrences: =AND($A2<>"",$B2<>"",SUMPRODUCT(--($A$2:$A$9=$A2),--($B$2:$B$9=$B2))>1)
+Later only: =AND($A2<>"",$B2<>"",SUMPRODUCT(--($A$2:$A2=$A2),--($B$2:$B2=$B2))>1)
+Expected all: worksheet rows 2, 4, 6, 7. Later only: 4, 7.

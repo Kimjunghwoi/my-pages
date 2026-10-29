@@ -1,0 +1,5 @@
+Missing-label policy: null, empty text "", whitespace-only text "   " become null.
+Nonempty labels remain unchanged.
+Numeric value zero is not missing and must never be filled.
+Leading null in each batch remains null; fill never crosses batch IDs.
+Verification limit: these checks simulate values; these checks do not execute the Power Query engine. Test the query in your own Excel version before using it with production data.

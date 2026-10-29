@@ -1,0 +1,9 @@
+Synthetic examples. UTF-8; comma delimiter; dot decimal separator.
+Date serials use the Excel 1900 system, with dates in 2026. Import serials as decimal numbers; preserve row order.
+Time-fraction rows have no calendar date or time-zone identity. Display them as hh:mm:ss.
+Expected date/time columns are readable control strings, not a claim that CSV stores Excel formatting.
+Never coerce a missing input to zero. Never infer the date system from a plausible display.
+30 minutes = 30/1440 days; use the formula, not a shortened decimal.
+Modern system control: 44562.75 in 1904 corresponds to 46024.75 in 1900.
+Serial 60 in the 1900 system is a fictitious Gregorian date; flag it.
+The independent checks validate arithmetic and fixtures, not execution inside Excel.

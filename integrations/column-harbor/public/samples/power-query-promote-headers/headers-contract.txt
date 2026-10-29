@@ -1,0 +1,5 @@
+UTF-8 CSV; comma separator; exactly 2 preamble records
+Required headers: item_id,region,quantity
+item_id and region: Text; quantity: Whole Number
+3 data rows; total quantity 10; zero retained
+Repeated item_id across regions is allowed

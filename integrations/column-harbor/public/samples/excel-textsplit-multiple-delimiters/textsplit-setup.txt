@@ -1,0 +1,7 @@
+A2: R-07,North;High|Open
+A3: R-08,,Low|Closed
+C1:F1: record, region, priority, status
+C2: =TEXTSPLIT(A2,{",",";","|"},,FALSE)
+Copy C2 to C3.
+A6: R-11,North|R-12,South
+C6: =TEXTSPLIT(A6,",","|",FALSE,0,"[missing]")

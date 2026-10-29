@@ -1,0 +1,13 @@
+Input: sumif-patterns-input.csv in A1:B8; numeric, error-free B2:B8.
+Pattern examples (separate summary cells):
+=SUMIF(A2:A8,"SKU*",B2:B8) -> 220
+=SUMIF(A2:A8,"SKU~*",B2:B8) -> 10
+=SUMIF(A2:A8,"SKU~?",B2:B8) -> 20
+=SUMIF(A2:A8,"SKU-?",B2:B8) -> 30
+=SUMIF(A2:A8,"*~**",B2:B8) -> 10
+=SUMIF(A2:A8,"SKU",B2:B8) -> 70
+Literal product code in E2; formula in F2:
+=SUMPRODUCT(($A$2:$A$8=E2)*$B$2:$B$8)
+SKU*:10; SKU?:20; SKU~:50; SKU-A:30; sku-a:30; missing:0
+The documented SKU~~ criterion returned 0 rather than 50 in the tested browser Sheet (2026-10-05). Use equality for this fixture, not an untested generalized escape helper.
+Separate edge exercise: append SKU*,-3 and SKU*,0 at rows 9 and 10. Extend both ranges to row 10; pattern=217, literal=7.

@@ -51,8 +51,10 @@ for (const url of urls) {
       assert.match(html, /5574\.0/);
     }
     if (new URL(url).pathname === "/") {
-      assert.match(html, /class="new-guide-paths"/);
-      assert.match(html, /href="\.\/feed\.xml"/);
+      assert.match(html, /href="\/workspace\/compare-csv-files"/);
+      assert.match(html, /href="\/learn\/excel"/);
+      assert.match(html, /href="\/about\/"/);
+      assert.match(html, /href="\/feed\.xml"/);
     }
     if (["csv-one-column", "excel-leading-zeros"].includes(slug)) {
       assert.match(html, /"dateModified": "2026-10-19"/);
@@ -76,7 +78,7 @@ for (const url of urls) {
   });
 }
 
-for (const file of files(artifact).filter(file => !file.endsWith(".html"))) {
+for (const file of files(artifact).filter(file => !file.endsWith(".html") && file !== "_headers")) {
   await check("asset", `${origin}/${file}`, async response => {
     assert.equal(response.status, 200);
     const actual = Buffer.from(await response.arrayBuffer());

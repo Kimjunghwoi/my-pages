@@ -1,0 +1,6 @@
+Source: A1:C6
+Criterion: K2 = North
+Headers: F1:H1
+Formula in F2: =FILTER(A2:C6,B2:B6=K2,"No matching tickets")
+Controlled blocker: note in G3. Move it out of F2:H4.
+Expected: three rows, total hours 6.

@@ -1,0 +1,10 @@
+Status,Earlier record,Later record,Issues,Earlier key 1: order_id,Later key 1: order_id,Changed field numbers,Earlier field 1: customer,Later field 1: customer,Earlier field 2: total,Later field 2: total,Earlier field 3: region,Later field 3: region
+removed,2,"","",00101,"","",Ana Müller,"",120.50,"",North,""
+changed,3,3,"",00102,00102,2,Jordan Lee,Jordan Lee,85.00,90.00,South,South
+unchanged,4,2,"",00103,00103,"",Sam Taylor,Sam Taylor,42.00,42.00,North,North
+unresolved,5,"",Duplicate key in earlier table,00104,"","",Riley Chen,"",99.95,"",West,""
+unresolved,6,"",Duplicate key in earlier table,00104,"","",Riley Chen,"",100.00,"",West,""
+unresolved,"",5,Duplicate key in earlier table,"",00104,"","",Riley Chen,"",99.95,"",West
+unresolved,7,"",Blank key component,"","","",Missing ID,"",7.00,"",East,""
+unchanged,8,6,"",0,0,"",Zero identifier,Zero identifier,0,0,North,North
+added,"",4,"","",00105,"","",Casey Park,"",15.00,"",East

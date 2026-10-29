@@ -1,0 +1,7 @@
+4 parent tickets; 6 nonempty tag occurrences; 3 represented tickets
+T1: red twice, blue once; positions 1,2,3
+T2: green plus 2 empty token slots; retain position 1
+T3: no tag; 0 child rows
+T4: trim outer spaces; blue and yellow
+Unique ticket-tag result, if separately requested: 5 rows
+Refresh edge: red;;blue gives positions 1 and 3

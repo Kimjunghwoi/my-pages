@@ -1,0 +1,7 @@
+task_id,category,done
+T01,Setup,TRUE
+T02,Setup,FALSE
+T03,Review,TRUE
+T04,Review,FALSE
+T05,Review,TRUE
+,,FALSE

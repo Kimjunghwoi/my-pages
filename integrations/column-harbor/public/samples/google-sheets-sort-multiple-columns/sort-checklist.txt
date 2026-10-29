@@ -1,0 +1,17 @@
+Multi-column SORT practice checklist
+Synthetic fixture only; this file is not a spreadsheet.
+
+A1:D8: import sort-input.csv.
+E2:E8: =ISNUMBER(C2), filled down -> all TRUE.
+F1:I1 and K1:N1: copy the four source headers.
+F2: =SORT(A2:D8,2,TRUE,3,FALSE,1,TRUE)
+Department-first IDs: R04,R02,R03,R06,R05,R01,R07.
+K2: =SORT(A2:D8,3,FALSE,2,TRUE,1,TRUE)
+Score-first IDs: R05,R04,R02,R03,R01,R07,R06.
+P2: =COUNTA(F2:F8) -> 7.
+P3: =SUM(H2:H8) -> 535.
+P4: =COUNTIF(H2:H8,0) -> 1.
+Confirm R02/Dee and R03/Ada remain paired in both reports.
+Keep source rows; do not put manual notes inside either spill range.
+Fixture preconditions: numeric scores, no missing departments/scores, unique record IDs.
+Real missing keys need an explicit policy; complete ties need a unique final key.

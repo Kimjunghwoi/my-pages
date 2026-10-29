@@ -1,0 +1,5 @@
+product_id,region,units,unit_price
+P001," North ",2,15.00
+P002,South,3,12.50
+P003,North,4,8.00
+P004,West,0,99.00

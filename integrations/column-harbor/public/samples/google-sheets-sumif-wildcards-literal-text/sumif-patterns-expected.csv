@@ -1,0 +1,7 @@
+criterion,total,matched_codes
+SKU*,220,all codes beginning SKU
+SKU~*,10,SKU*
+SKU~?,20,SKU?
+SKU-?,30,SKU-A
+*~**,10,SKU*
+SKU,70,SKU

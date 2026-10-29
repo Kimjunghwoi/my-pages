@@ -1,0 +1,8 @@
+case,inclusive_count,exclusive_start_count
+main,4,3
+custom_weekend,3,3
+same_workday,1,0
+same_closure,0,0
+closure_endpoints,2,2
+weekend_only,0,0
+reversed,Check date order,Check date order

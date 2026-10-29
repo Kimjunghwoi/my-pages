@@ -1,0 +1,7 @@
+record_id,region,amount
+A101,East,10
+A102,West,20
+A101,East,15
+,North,5
+A103,West,8
+A102,West,20

@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "name": "Column Harbor",
+  "url": "https://jhsoftlabs.com/workspace",
+  "language": "en",
+  "dataHandling": "The listed tools run in the browser. This catalog is descriptive metadata, not a CSV upload API.",
+  "tools": [
+    {
+      "id": "compare-csv-files",
+      "name": "Compare Two CSV Files by Key: Added, Removed and Changed Rows",
+      "url": "https://jhsoftlabs.com/workspace/compare-csv-files",
+      "description": "Check the next order, product or database export against the previous one. Match by ID instead of row position, choose the fields to compare and download a before/after report. Try the worked order example without preparing files.",
+      "steps": [
+        "Load the before and after files. Select the correct separator for each source.",
+        "Map a unique key and the fields to compare, including columns whose names or positions differ.",
+        "Compare and download the complete report or a status-specific report. Review blank and duplicate keys before drawing conclusions."
+      ],
+      "workedExample": "The worked order exports reorder both columns and rows. Order 00102 changes total from 85.00 to 90.00, 00101 is removed, 00105 is added and 00103 plus the literal ID 0 are unchanged. The two earlier 00104 records, their later match and a blank earlier key are four unresolved source records.",
+      "limits": "Comparison is based on the selected fields, not every cell automatically. Values compare as text: 12.50 differs from 12.5. Key normalization is optional and can create collisions. Ambiguous keys are never guessed or expanded into many-to-many rows. Combined inputs are limited to 20,000 records and 250,000 cells.",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-21",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/compare-csv-added-missing-ids",
+        "https://jhsoftlabs.com/guides/excel-compare-two-lists",
+        "https://jhsoftlabs.com/guides/power-query-merge-duplicates-extra-rows"
+      ],
+      "sources": []
+    },
+    {
+      "id": "csv-to-excel",
+      "name": "CSV to Excel Without Losing Leading Zeros or Long IDs",
+      "url": "https://jhsoftlabs.com/workspace/csv-to-excel",
+      "description": "A CSV has no cell types. This exporter creates a real Excel workbook with every cell explicitly stored as text, so the original strings remain visible instead of being interpreted as numbers, dates or formulas.",
+      "steps": [
+        "Paste a CSV with its header or read a local UTF-8 text file. Choose Tab when pasting cells from Excel.",
+        "Create the workbook and check the preview against the original source.",
+        "Download XLSX. Review the file in Excel, then convert only the amount or date columns you intend to calculate."
+      ],
+      "workedExample": "The example preserves product 00123, an 18-digit barcode, 12.50, a negative amount, a two-line note and the literal text =1+1. None of these strings becomes an executable formula.",
+      "limits": "All cells are text, including quantities and dates. This is a preservation export, not an automatic typed accounting workbook. It cannot recover digits already lost in the source. Input is CSV/TSV, not XLSX; one Data sheet is produced. Unsupported XML controls, excessive cell lengths and oversized output fail rather than being silently removed.",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/excel-leading-zeros",
+        "https://jhsoftlabs.com/guides/excel-long-numbers",
+        "https://jhsoftlabs.com/guides/csv-vs-xlsx"
+      ],
+      "sources": [
+        {
+          "title": "Microsoft: Keeping leading zeros and large numbers",
+          "url": "https://support.microsoft.com/en-us/excel/keeping-leading-zeros-and-large-numbers"
+        },
+        {
+          "title": "Microsoft: Excel specifications and limits",
+          "url": "https://support.microsoft.com/en-us/excel/excel-specifications-and-limits"
+        }
+      ]
+    },
+    {
+      "id": "repeat-cleanup",
+      "name": "Save and Repeat a CSV Cleanup Workflow in Your Browser",
+      "url": "https://jhsoftlabs.com/workspace/repeat-cleanup",
+      "description": "Prepare a recurring export in one workflow. Choose which columns to clean, whether to keep the first duplicate, and which columns to return. Preserve the original and download removed rows separately.",
+      "steps": [
+        "Read the source and choose the columns for cleanup, duplicate keys and final output order.",
+        "Review the current column mapping and run the workflow. Compare the final output with the removed-row report.",
+        "Save the settings on this browser. Load a new file, restore the settings and review the mapping again before running."
+      ],
+      "workedExample": "The synthetic order export contains leading-zero IDs, labels with extra spaces and a repeated order. Cleanup runs before duplicate detection; a duplicate report retains the full cleaned row before output columns are removed.",
+      "limits": "Saved settings contain numeric indices, counts and switches only; no header names, filenames or cell values. Matching column counts do not prove matching column meanings. Settings do not sync between devices. Storage failure leaves the workflow usable. Keeping the first row is an explicit policy, not a claim that the row is newest or correct.",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/spreadsheet-trim-spaces",
+        "https://jhsoftlabs.com/guides/excel-remove-duplicates-keep-latest",
+        "https://jhsoftlabs.com/guides/excel-remove-blank-rows-safely"
+      ],
+      "sources": []
+    },
+    {
+      "id": "shopify-csv-checker",
+      "name": "Shopify Product CSV Checker: Review Import Issues Locally",
+      "url": "https://jhsoftlabs.com/workspace/shopify-csv-checker",
+      "description": "Check a product CSV before opening the Shopify import screen. This tool reviews supported file rules and shows the exact record, field and value that needs attention. It does not connect to or change your store.",
+      "steps": [
+        "Select the intended import mode and load a UTF-8 product CSV, retaining a source backup.",
+        "Run the supported checks and read errors, warnings and the live-store checklist.",
+        "Download the findings, correct the source deliberately and validate the import in Shopify. A clean local report is not import approval."
+      ],
+      "workedExample": "Load the built-in synthetic product example to inspect its declared issues and a legitimate continuation row. A continuation row must not be treated as a separate new product solely because its title is blank.",
+      "limits": "Rules reviewed October 13, 2026. This is a limited file preflight: store-specific conflicts, inventory locations, metafield references, image availability and import outcomes need Shopify itself. Unknown columns and unsupported formats require review rather than invented errors. No automatic repair or upload is performed.",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/csv-commas-double-quotes",
+        "https://jhsoftlabs.com/guides/csv-utf8-accents",
+        "https://jhsoftlabs.com/guides/csv-different-column-counts"
+      ],
+      "sources": [
+        {
+          "title": "Shopify: Using product CSV files",
+          "url": "https://help.shopify.com/en/manual/products/import-export/using-csv"
+        },
+        {
+          "title": "Shopify: Common product CSV import issues",
+          "url": "https://help.shopify.com/en/manual/products/import-export/common-import-issues"
+        }
+      ]
+    },
+    {
+      "id": "compare-two-lists",
+      "name": "Compare Two Lists: Find Matches and Missing Values",
+      "url": "https://jhsoftlabs.com/workspace/compare-two-lists",
+      "description": "Check which IDs or labels appear in both lists and which belong to only one. Paste one value per line, choose your matching rules and download the result without uploading the lists.",
+      "steps": [
+        "Paste one value per line into List A and List B. Do not include a column header unless it is itself a value to compare.",
+        "Review Trim edges and Ignore letter case before comparing. The defaults trim edges and keep letter case significant. Repeated values count once under the chosen rule.",
+        "Compare lists, inspect the Only A, In both and Only B totals, then choose a result filter. Copy or download exports only the selected result category; All exports the full comparison."
+      ],
+      "workedExample": "The built-in invoice lists return 2 only in A (INV-1001 and INV-1003), 2 in both (INV-1002 and INV-1004), and 2 only in B (INV-1005 and INV-1006). The repeated INV-1004 in List A is reported as one collapsed entry. Choose Only A to download the two missing invoice values rather than all six comparison rows.",
+      "limits": "This is a unique-value comparison, not a row-by-row table join or an occurrence-count reconciliation. Empty lines are skipped; with Trim edges enabled, whitespace-only lines are skipped too. Trimming also changes the displayed output value, and case-insensitive matching retains the first encountered spelling. Use the related Excel guide when repeated IDs represent separate records. Each input is limited to 5 MiB and 20,000 lines. The default CSV export protection prefixes formula-like values, including negative numbers, with an apostrophe; review it when exact strings are required. CSV output cannot enforce Excel cell types.",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/excel-compare-two-lists",
+        "https://jhsoftlabs.com/guides/compare-csv-added-missing-ids",
+        "https://jhsoftlabs.com/guides/spreadsheet-trim-spaces"
+      ],
+      "sources": []
+    },
+    {
+      "id": "clean-csv",
+      "name": "Clean CSV Whitespace: Trim Spaces, Tabs and Nonbreaking Spaces",
+      "url": "https://jhsoftlabs.com/workspace/clean-csv",
+      "description": "Prepare labels for matching without converting IDs, dates or amounts to spreadsheet types. Choose the columns to clean and keep meaningful internal spacing unless you explicitly ask to collapse it.",
+      "steps": [
+        "Paste a table with its header, or open a local UTF-8 CSV or TSV file. Choose the input delimiter and read the table before selecting columns.",
+        "Select the columns to clean. Edge trimming and nonbreaking-space replacement start enabled; collapsing repeated spaces and tabs starts disabled. Enable collapse only when that matches your data rule.",
+        "Clean selected columns and inspect the changed-cell count and preview. Review the CSV export options, then copy or download the cleaned table. The source file is never overwritten."
+      ],
+      "workedExample": "Load the built-in five-row order table, select only customer and keep the default cleanup switches. Exactly 2 cells change: the two copies of the padded Ana Müller label lose their edge spaces. Sam  Taylor keeps its two internal spaces. Enable Collapse repeated spaces & tabs and run again to change 3 cells, including Sam Taylor. The five order IDs, all amounts and the duplicate order remain in place.",
+      "limits": "Cleanup handles ordinary spaces and tabs plus the explicit U+00A0 nonbreaking-space replacement. It does not remove every invisible Unicode character. Headers and unselected columns are unchanged; embedded line breaks remain within their fields. Removing duplicates is a separate task. Inputs require a rectangular headered table and are limited to 5 MiB of UTF-8 text, 20,000 data records, 200 columns and 250,000 cells including headers. CSV does not store Excel cell types. Export protection starts enabled and may prefix an apostrophe to formula-like values, including negative amounts; the preview shows values before that option is applied.",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/spreadsheet-trim-spaces",
+        "https://jhsoftlabs.com/guides/csv-utf8-accents",
+        "https://jhsoftlabs.com/guides/excel-leading-zeros"
+      ],
+      "sources": []
+    },
+    {
+      "id": "remove-csv-duplicates",
+      "name": "Remove CSV Duplicates by Selected Columns and Keep the First Row",
+      "url": "https://jhsoftlabs.com/workspace/remove-csv-duplicates",
+      "description": "Remove repeated records using an explicit single-column or composite key. Keep the first matching row in source order and retain a separate download of the removed rows so you can review the decision.",
+      "steps": [
+        "Read a headered CSV or TSV with the correct delimiter. All columns are selected initially, so the first run matches complete rows.",
+        "Select only the columns that define a duplicate. Keep exact matching, or deliberately enable edge-space or letter-case matching. If you need the newest record, sort and review the source first using the related guide.",
+        "Remove duplicates, compare the kept and removed totals, and inspect the retained table. Download the main result and the separate Removed rows report before replacing any source data."
+      ],
+      "workedExample": "The built-in example contains 5 order records, including two identical 00101 rows. With all columns selected and matching options off, 4 rows remain and 1 row is available in Removed rows. Selecting only order_id gives the same result for this example. In a real file, selecting only that key would also remove later versions whose customer or amount differs; selecting all columns would retain those distinct versions.",
+      "limits": "First means first in the current input order, not newest or most accurate. The tool does not sort by date or combine fields from conflicting rows. Blank keys can match other blank keys. Matching normalization changes comparisons but does not rewrite retained cell values. Work on an exception copy if missing IDs must remain separate. Inputs require consistent row widths and are limited to 5 MiB, 20,000 data records, 200 columns and 250,000 cells including headers. Downloaded CSV values may receive an apostrophe under the default formula-like-value protection, including negative numbers; review the export option when exact strings are needed.",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/excel-remove-duplicates-keep-latest",
+        "https://jhsoftlabs.com/guides/power-query-merge-duplicates-extra-rows",
+        "https://jhsoftlabs.com/guides/spreadsheet-trim-spaces"
+      ],
+      "sources": []
+    },
+    {
+      "id": "convert-csv",
+      "name": "Convert CSV or TSV to JSON, Comma, Semicolon, Tab or Pipe",
+      "url": "https://jhsoftlabs.com/workspace/convert-csv",
+      "description": "Change a text table's output format while keeping its parsed field values explicit. Read comma, semicolon, tab or pipe input, then choose JSON or another delimiter. JSON is an output format; this tool does not read JSON input.",
+      "steps": [
+        "Paste a headered delimited table or open a UTF-8 CSV or TSV file. Set Input delimiter to match the source and read the table; use Tab for cells copied from Excel.",
+        "Choose Output format. Comma is the initial output; select JSON for an array of objects, or choose semicolon, tab or pipe for delimited text. JSON requires non-empty, unique header names.",
+        "Convert the table and inspect the result. JSON values are all strings. For delimited output, review formula-like-value protection and the optional UTF-8 BOM before copying or downloading."
+      ],
+      "workedExample": "Load the built-in order table, choose JSON and convert. The result contains 5 objects: the first order_id is the string \"00101\", amount is the string \"120.50\", and the two padded Ana Müller labels remain padded. The repeated 00101 order remains a separate object. Choose Tab instead to export the same four columns and five records as TSV; conversion does not clean whitespace or remove duplicates.",
+      "limits": "Input must be delimited text with a header and consistent row widths; JSON and XLSX input are unsupported. All JSON values remain strings, including quantities and empty fields; numeric or null typing needs a different explicit conversion rule. Delimited output may change its quoting and line endings while retaining parsed values, except for the selected export protection that can prefix formula-like values with an apostrophe. The tool supports its documented quoting rules, not every TSV dialect. Inputs are limited to 5 MiB, 20,000 data records, 200 columns and 250,000 cells including headers; JSON output is limited to 20 MiB. It cannot restore digits already lost before input.",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/csv-to-json-preserve-types",
+        "https://jhsoftlabs.com/guides/tsv-to-csv",
+        "https://jhsoftlabs.com/guides/csv-commas-double-quotes"
+      ],
+      "sources": []
+    },
+    {
+      "id": "extract-csv-columns",
+      "name": "Extract and Reorder CSV Columns Without Changing Row Order",
+      "url": "https://jhsoftlabs.com/workspace/extract-csv-columns",
+      "description": "Build a smaller CSV for the next step in your workflow. Select columns by their header and position, move them into the required output order and keep the original sequence of data records.",
+      "steps": [
+        "Read a headered CSV or TSV using the correct input delimiter. Review the detected column names and positions; all columns start selected.",
+        "Use Select none, then choose the required columns. Review Columns in output order and use the up and down controls to set the final sequence.",
+        "Extract columns and inspect the preview before downloading CSV. Confirm that excluded fields are absent and review the export protection if the recipient needs exact formula-like strings."
+      ],
+      "workedExample": "Load the built-in table, choose Select none, then select order_id and amount. Move amount up so it comes before order_id, then extract. The result has headers amount,order_id and 5 data records; the first pair is 120.50,00101. The duplicate 00101 record remains in its original position. Customer and region are absent from the output.",
+      "limits": "This selects whole columns and reorders their positions. It does not filter rows, join another table, rename fields or evaluate formulas. Column selection uses positions, so review duplicate or blank header names carefully. At least one distinct column must be selected. A rectangular source header is required, with limits of 5 MiB, 20,000 data records, 200 columns and 250,000 cells including headers. The result is CSV rather than an XLSX workbook. The default export protection may prefix an apostrophe to formula-like values, including negative numbers; the preview is shown before that protection. CSV cannot preserve or enforce spreadsheet cell types.",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/csv-opens-in-one-column",
+        "https://jhsoftlabs.com/guides/csv-vs-xlsx",
+        "https://jhsoftlabs.com/guides/csv-different-column-counts"
+      ],
+      "sources": []
+    },
+    {
+      "id": "split-csv",
+      "name": "Split a CSV by Data Records and Repeat the Header in Every File",
+      "url": "https://jhsoftlabs.com/workspace/split-csv",
+      "description": "Divide a headered CSV into smaller files without cutting through a quoted multiline field. Set the number of data records per file, keep their source order and include the original header in each part.",
+      "steps": [
+        "Read a headered CSV or TSV with the correct delimiter. Review the parsed data-row count rather than relying on the number of physical text lines.",
+        "Set Data rows per file to a whole number from 1 to 20,000. The header is additional and does not count toward that value; choose a size that produces no more than 100 files.",
+        "Split into files, inspect the total and download each numbered part. Review the export protection and optional UTF-8 BOM before downloading. Parts are comma-delimited CSV even when the input uses another separator."
+      ],
+      "workedExample": "The built-in order table has 5 data records. Keep the default size of 2 and split to produce part-001.csv, part-002.csv and part-003.csv with 2, 2 and 1 data records respectively. Each file also contains the four-column header. The repeated 00101 order appears in part-002 because splitting preserves source order and does not deduplicate. A line break inside a quoted field belongs to that record and does not consume another record slot.",
+      "limits": "This is a record-count split, not a byte-size, group-by-column or Excel worksheet split. The source must have a consistent header and row width and fit within 5 MiB, 20,000 data records, 200 columns and 250,000 cells including headers. At most 100 parts can be created; increase the rows per file if necessary. A header-only table produces no parts. Download each part separately; no ZIP archive is generated. Optional export protection starts enabled and can prefix formula-like values, including negative numbers, with an apostrophe. CSV output cannot enforce Excel cell types, and delimiters or line endings can differ from the source.",
+      "datePublished": "2026-10-19",
+      "dateModified": "2026-10-19",
+      "relatedGuides": [
+        "https://jhsoftlabs.com/guides/csv-row-count-newlines",
+        "https://jhsoftlabs.com/guides/csv-commas-double-quotes",
+        "https://jhsoftlabs.com/guides/csv-different-column-counts"
+      ],
+      "sources": []
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+order,customer,status,amount
+O-101,C-7,Open,20
+O-102,C-8,Open,30
+O-103,C-7,Closed,15
+O-104,C-7,Open,25
+O-105,C-9,Open,10
+O-106,C-7,Open,20

@@ -1,0 +1,8 @@
+code,amount
+SKU*,10
+SKU?,20
+SKU-A,30
+SKU-AB,40
+SKU~,50
+OTHER,60
+SKU,70

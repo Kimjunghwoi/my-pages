@@ -1,0 +1,17 @@
+QUERY mixed-type practice checklist
+Synthetic fixture only; this file is not a spreadsheet.
+
+A1:C6: import query-mixed-input.csv.
+D2:D6: =ISNUMBER(B2), filled down -> TRUE, TRUE, FALSE, TRUE, FALSE.
+Raw J1: =QUERY(A1:C6,"select A,B,C",1) -> 5 records; B03/B05 room fields blank; 15 hours.
+Raw N1: =QUERY(A1:C6,"select A,B,C where B is not null",1) -> B01,B02,B04; 6 hours.
+B2:B6: custom number format 0, preserving mixed source types.
+E1:G1: booking_id, room_text, hours.
+E2: =A2; F2: =TO_TEXT(B2); G2: =C2; fill E2:G2 down to row 6.
+Repaired J1: =QUERY(E1:G6,"select E,F,G where E is not null",1) -> 5 records, 5 intact labels, 15 hours.
+Studio-A N1: =QUERY(E1:G6,"select E,F,G where F = 'Studio-A'",1) -> B03,Studio-A,4.
+R2: =COUNTA(J2:J6) -> 5.
+R3: =COUNTBLANK(K2:K6) -> 0.
+R4: =SUM(L2:L6) -> 15.
+Compare labels as well as totals; source blanks need review, not guessed replacements.
+Keep source A:C. TO_TEXT cannot recover lost leading zeroes.

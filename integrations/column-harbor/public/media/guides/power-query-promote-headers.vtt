@@ -1,0 +1,21 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.000
+1. Start with all six source records
+Keep the parsed Source rows before automatic promotion or type conversion.
+
+00:00:06.000 --> 00:00:12.000
+2. Remove only the two report rows
+The real heading is now the first row. It is still a row, not a data record.
+
+00:00:12.000 --> 00:00:18.000
+3. Promote the real header once
+One row becomes column names. All three inventory records survive.
+
+00:00:18.000 --> 00:00:24.000
+4. Assign types after promotion
+Keep item_id as Text. Quantity becomes a whole number; the zero remains.
+
+00:00:24.000 --> 00:00:30.000
+5. Reconcile the complete result
+The repeated 0012 IDs belong to different regions. Do not remove either row.

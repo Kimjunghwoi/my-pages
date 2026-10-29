@@ -1,0 +1,6 @@
+Order	Region	Amount	Status
+O-101	North	60	Open
+O-102	South	40	Closed
+O-103	North	120	Open
+O-104	South	80	Open
+O-105	North	40	Closed

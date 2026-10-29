@@ -1,0 +1,5 @@
+ticket_id,status
+T01,Open
+T02,Closed
+T03,In progress
+T04,Waiting

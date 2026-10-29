@@ -1,0 +1,4 @@
+record_id,region,jan,feb,mar
+R01,East,10,12,14
+R02,West,8,9,11
+R03,North,6,7,8

@@ -1,0 +1,5 @@
+product,region,month,amount
+P100,North,2026-01,10
+P100,North,2026-03,0
+P200,South,2026-01,5
+P200,South,2026-03,8

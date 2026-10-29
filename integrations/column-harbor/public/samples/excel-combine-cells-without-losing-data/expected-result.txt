@@ -1,0 +1,1 @@
+With source fields in A2:C4, outputs are Ada Lane, Omar K Reed and Mei Chen. No empty middle-name field should create a double separator in this fixture, and all three original records remain.

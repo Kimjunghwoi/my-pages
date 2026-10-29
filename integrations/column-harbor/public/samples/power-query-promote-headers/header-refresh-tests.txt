@@ -1,0 +1,3 @@
+Positive: append 0020,West,3 below the data. Expect 4 data rows and quantity total 13.
+Negative: insert another report line above the header. Fixed skip=2 must be reviewed; do not accept the wrong header.
+Negative: repeat quantity as a second header. Investigate schema semantics rather than accepting an automatic suffix.

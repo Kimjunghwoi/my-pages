@@ -1,0 +1,7 @@
+sale_id,customer_id,amount,address_id,city
+S1,C10,10,A1,Northport
+S1,C10,10,A2,Eastford
+S2,C10,20,A1,Northport
+S2,C10,20,A2,Eastford
+S3,C20,5,A3,Westhaven
+S4,C99,7,,

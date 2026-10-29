@@ -1,0 +1,4 @@
+source_file,data_rows,amount_total,missing_optional,ignored_extra
+a.csv,2,10,,
+b.csv,1,5,note,
+c.csv,1,-2,,export_version

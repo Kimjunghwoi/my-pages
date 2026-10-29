@@ -1,0 +1,5 @@
+case,nonblank,distinct,exactly_once
+main,6,4,2
+all_empty,0,0,0
+all_repeated,4,2,0
+single,1,1,1

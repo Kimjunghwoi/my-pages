@@ -1,0 +1,9 @@
+worksheet_row,order,sku,highlight_all_occurrences,highlight_later_only
+2,O-01,P-A,TRUE,FALSE
+3,O-01,P-B,FALSE,FALSE
+4,O-01,P-A,TRUE,TRUE
+5,O-02,P-A,FALSE,FALSE
+6,O-03,P-C,TRUE,FALSE
+7,O-03,P-C,TRUE,TRUE
+8,,P-C,FALSE,FALSE
+9,O-04,,FALSE,FALSE

@@ -1,0 +1,42 @@
+COLUMN HARBOR - TWO-LIST COMPARISON
+https://jhsoftlabs.com/guides/excel-compare-two-lists
+Synthetic text IDs; case-insensitive, spaces preserved.
+Import list-a.csv into A1 and list-b.csv into D1.
+Default formulas: Excel 2016+. FILTER: Excel 2021/2024 or Microsoft 365.
+
+Enter in B2, then fill through B8
+=IF(A2="","Skip blank",IF(SUMPRODUCT(--($D$2:$D$7=A2))=0,"Only in A","In both"))
+
+Enter in E2, then fill through E7
+=IF(D2="","Skip blank",IF(SUMPRODUCT(--($A$2:$A$8=D2))=0,"Only in B","In both"))
+
+Occurrence audit for H2 = A102
+I2: =SUMPRODUCT(--($A$2:$A$8=H2))
+J2: =SUMPRODUCT(--($D$2:$D$7=H2))
+K2: =I2-J2
+
+Expected: count_A = 2, count_B = 1, A_minus_B = 1
+
+Case-sensitive alternative for B2
+=IF(A2="","Skip blank",IF(SUMPRODUCT(--EXACT(A2,$D$2:$D$7))=0,"Only in A","In both"))
+
+Two independent formatting rules; do not paste into worksheet cells
+Applies to: =$A$2:$A$8
+Formula: =$B2="Only in A"
+
+Applies to: =$D$2:$D$7
+Formula: =$E2="Only in B"
+
+Extract from the same-sheet sample; Microsoft 365 / Excel 2021 / 2024
+M2: =FILTER(A2:A8,B2:B8="Only in A","No missing IDs")
+O2: =FILTER(D2:D7,E2:E7="Only in B","No missing IDs")
+Q2: =FILTER(A2:A8,B2:B8="In both","No matches")
+
+Alternative two-sheet layout in the same workbook
+Previous!B2, fill to B8:
+=IF(A2="","Skip blank",IF(SUMPRODUCT(--(Current!$A$2:$A$7=A2))=0,"Only in Previous","In both"))
+
+Current!B2, fill to B7:
+=IF(A2="","Skip blank",IF(SUMPRODUCT(--(Previous!$A$2:$A$8=A2))=0,"Only in Current","In both"))
+
+Expected results are provided separately as CSV; this file is a formula reference, not an executable workbook.

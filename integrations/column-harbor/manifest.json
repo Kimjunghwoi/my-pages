@@ -1,0 +1,4477 @@
+{
+  "version": 1,
+  "importedOn": "2026-10-29",
+  "sourceCommit": "65920846c70a488af63e2ef325120263ea31021d",
+  "deploymentOrigin": "https://jhsoftlabs.com",
+  "adsEnabled": false,
+  "derivation": [
+    "Build metadata on the main origin before React serialization",
+    "Add dedicated checker and method routes",
+    "Preserve all computational samples and article dates",
+    "Remove advertising requests, keep ownership metadata",
+    "Add main-domain navigation"
+  ],
+  "verifiedAt": "2026-10-29T14:00:11.380Z",
+  "fingerprints": {
+    "source": "266a6957ab83b456d4b6615a0fb6f9df7e384e6033c938607ef41794109a51b5",
+    "artifact": "74fd579d227f8a34e0f8351524508ed286ed2adb95e23f8a5d3b64018a9b9115",
+    "artifactFiles": 895
+  },
+  "counts": {
+    "guides": 63,
+    "lessons": 24,
+    "tools": 10
+  },
+  "files": [
+    {
+      "path": "_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2",
+      "bytes": 16540,
+      "sha256": "58a6b173d5ca1dec92166ea3c6cb1a84a4144556d10928ac14e8e6b40e4787bd"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2",
+      "bytes": 7968,
+      "sha256": "f689f638f29fff460a2d5749edb5d5c38d7bef0389f32032d871f23fc6ebb008"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2",
+      "bytes": 14900,
+      "sha256": "6129fc8571c3e0cb0a4c41f5160c974a843b055009dc4ad8858bd808e18a2d86"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+      "bytes": 29288,
+      "sha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2",
+      "bytes": 7252,
+      "sha256": "b7a545bbb08256bd809f11cfe66d88da3e22d169ea4407737b1ef0ec1ed3d791"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+      "bytes": 23108,
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2",
+      "bytes": 5892,
+      "sha256": "d67e4a94ba498635f764ddca7d1ec4271f5642f032eb24b426764480f66f8497"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2",
+      "bytes": 14712,
+      "sha256": "745994b5cd950ec201b66526375f057d540847cccfc70f4f24f5f571d26d3923"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2",
+      "bytes": 12872,
+      "sha256": "75b3bedbebc35f347c0ae3b416aa871941555357e7b0f83767eb5987875589ed"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2",
+      "bytes": 7728,
+      "sha256": "16e1d48b6dd29eb240aec5db36184eb182933c082cd43de7f35af686d58087d2"
+    },
+    {
+      "path": "_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2",
+      "bytes": 6204,
+      "sha256": "e27f657e38d52887baa3b6b2f812bef93dfdd356f0810e40edd4ee284cc7e9f6"
+    },
+    {
+      "path": "_next/static/3b09c278-ac5d-4936-8b1e-9f9a0abebd51/_buildManifest.js",
+      "bytes": 159,
+      "sha256": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb"
+    },
+    {
+      "path": "_next/static/3b09c278-ac5d-4936-8b1e-9f9a0abebd51/_ssgManifest.js",
+      "bytes": 76,
+      "sha256": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479"
+    },
+    {
+      "path": "_next/static/chunks/academy-directory-CWQxV0r_.js",
+      "bytes": 5986,
+      "sha256": "528998255fae9a9c5e5d67f168350f27a7cb4c8a5e132656293924c171a525b8"
+    },
+    {
+      "path": "_next/static/chunks/academy-interactions-CsWYda8o.js",
+      "bytes": 3141,
+      "sha256": "1041b890bc8879419cb875abe2efb50d5228b31f4f6567f071bec1d3a88637a0"
+    },
+    {
+      "path": "_next/static/chunks/academy-progress-CTaYjPkM.js",
+      "bytes": 4212,
+      "sha256": "edeeae2cfe78feb3019e856980b3f02b6007c6eba1d2c14478273bb3c751d526"
+    },
+    {
+      "path": "_next/static/chunks/arrow-right-DuBxOAoW.js",
+      "bytes": 165,
+      "sha256": "8377f8f93de77f1481ea084545834b8b4f1444c87a85034c257969a49edf5c55"
+    },
+    {
+      "path": "_next/static/chunks/arrow-up-DlOP-4_X.js",
+      "bytes": 274,
+      "sha256": "85a0975d9b73406aaa9ea8f18c5c9338c9ff5d3138643577836132016c19f6fb"
+    },
+    {
+      "path": "_next/static/chunks/button-KRRSrCNo.js",
+      "bytes": 40253,
+      "sha256": "035b24b7904c1b5706c44397566c1b9652342feca33ddca55457f60135b0c88d"
+    },
+    {
+      "path": "_next/static/chunks/columns-3-DzMGfckw.js",
+      "bytes": 223,
+      "sha256": "ac737a22a0d44c1cd73c9eae8063408f5782fa37f6e50208b1d3c0ae26fe0204"
+    },
+    {
+      "path": "_next/static/chunks/copy-wQjWqvIC.js",
+      "bytes": 236,
+      "sha256": "ab0071f1ba672688c36bc998e521d71f0d273552fc81196f073a91161a4c6fa0"
+    },
+    {
+      "path": "_next/static/chunks/createBaseUIEventDetails-HcErmlOi.js",
+      "bytes": 2607,
+      "sha256": "7403e7cb229f056baf0cf97577c53f59c2b5c40583a66d89cbbd5d1ba3df6a41"
+    },
+    {
+      "path": "_next/static/chunks/createLucideIcon-YxXw--sX.js",
+      "bytes": 558,
+      "sha256": "94938962b8128c21e411a4382ad3d424da403b85adddd8f75c807c74eb80533e"
+    },
+    {
+      "path": "_next/static/chunks/csv-checker-B9q7NPzt.js",
+      "bytes": 109592,
+      "sha256": "2639aa90225b371afa261793afcf285eb6c2be359859f67f21d22903b64745a2"
+    },
+    {
+      "path": "_next/static/chunks/csv-CIaf8tsz.js",
+      "bytes": 7699,
+      "sha256": "ed37c0912540b99c42ae4485201465045f992db2bdceb6784fc1d4501341cf45"
+    },
+    {
+      "path": "_next/static/chunks/csv-to-excel-tool-Y3GlEnTk.js",
+      "bytes": 15863,
+      "sha256": "21649bedeac21aeec8f36156623a50e2b3eec484269dd253825ee3898dc8e09d"
+    },
+    {
+      "path": "_next/static/chunks/download-CqTYdtla.js",
+      "bytes": 232,
+      "sha256": "56e1cb9ffc4815a6c58e49d04e1e7764397e91bd3823c08655cf67fc6c7d29ea"
+    },
+    {
+      "path": "_next/static/chunks/file-compare-tool-DSOQAT87.js",
+      "bytes": 17114,
+      "sha256": "f10d452c17c8f138ec3da477161cbc07eb6edad83a6d6327abd0ca5ffa48af36"
+    },
+    {
+      "path": "_next/static/chunks/framework-DTZGTDtF.js",
+      "bytes": 190109,
+      "sha256": "2a1edf81f32a49b1eacafc3546b371bca024c82a9191836e274d90890212e9df"
+    },
+    {
+      "path": "_next/static/chunks/Icon-Dx0GS-zQ.js",
+      "bytes": 1082,
+      "sha256": "c8c4e7efd87c6c2dbc70da0d69ca8948e00e1b4aa57b2e1ef457e4713bba2d37"
+    },
+    {
+      "path": "_next/static/chunks/index-DE_x8UJU.js",
+      "bytes": 181891,
+      "sha256": "a5ba5527979a085cce7a8a9e8138a7e1d76898c46428f46cc876712b7bad9c14"
+    },
+    {
+      "path": "_next/static/chunks/layout-segment-context-ChD58Ytr.js",
+      "bytes": 496,
+      "sha256": "73c02c4111d4965f793b49780f7be7d5ebb8975cf1db689b4e846bd6ada95d7b"
+    },
+    {
+      "path": "_next/static/chunks/local-csv-input-BdFa9U0S.js",
+      "bytes": 2466,
+      "sha256": "543f5d93efae28c6e9b05ecbbdd04d56348709f9c4e97670011893d736b6ba9f"
+    },
+    {
+      "path": "_next/static/chunks/native-select-D2yUD1nF.js",
+      "bytes": 3778,
+      "sha256": "9e81e614086e4db86a873577b0fdc197634a2cb52f7f4dd22b4a6b8ee95b98f0"
+    },
+    {
+      "path": "_next/static/chunks/repeat-cleanup-tool-Ceajnn5s.js",
+      "bytes": 14415,
+      "sha256": "f1a89d605e6946a7a115e4ead1625b1c2ac13fa0ddd11cc953937f6b17783071"
+    },
+    {
+      "path": "_next/static/chunks/rolldown-runtime-hePW80VL.js",
+      "bytes": 716,
+      "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
+    },
+    {
+      "path": "_next/static/chunks/search-BCBQKbOy.js",
+      "bytes": 410,
+      "sha256": "cc79d2f146db5142fad34f5057f65baf9f24dc6395650655e2ac30f2c982e96a"
+    },
+    {
+      "path": "_next/static/chunks/shadowDom-BfdE_c1K.js",
+      "bytes": 1321,
+      "sha256": "1f5f82d25677f91bd319e6a8d66a196120af23e26557e501ed375a22b0544147"
+    },
+    {
+      "path": "_next/static/chunks/shield-check-y0kCrlz0.js",
+      "bytes": 320,
+      "sha256": "fe921f41017282c082e93f83588f2c3f0a61fb86cf32ff2987fc5f8fe6898e1f"
+    },
+    {
+      "path": "_next/static/chunks/shopify-csv-tool-BS6FJcwf.js",
+      "bytes": 21360,
+      "sha256": "74958baac5f94f6e33b9e43eeed2b2ec3cfba2fc63db2aa7bc8dd22c852a85a9"
+    },
+    {
+      "path": "_next/static/chunks/site-chrome-0AjYtK18.js",
+      "bytes": 2166,
+      "sha256": "e41389836e48f84ad391a4243bbd3a0044ca6eb886f61261149794dc7ab1618a"
+    },
+    {
+      "path": "_next/static/chunks/textarea-BAHJZERs.js",
+      "bytes": 1151,
+      "sha256": "24f1c3e3a116164a496d07bc355b32f3bff025ea30cb66143bdb805126bce1d5"
+    },
+    {
+      "path": "_next/static/chunks/use-tool-ready-5CMZLJoL.js",
+      "bytes": 209,
+      "sha256": "080d3bb53c0597680ceb171d80f687fa024736ffe69b6d894f8940931276288f"
+    },
+    {
+      "path": "_next/static/chunks/vinext-CS7dakAl.js",
+      "bytes": 110943,
+      "sha256": "381b2acab4bd62a0cd9e9b64a54a6ec72b7b450262e5b3fd772b8d3c9e87d439"
+    },
+    {
+      "path": "_next/static/chunks/workspace-B7rlwvYZ.js",
+      "bytes": 12556,
+      "sha256": "1881687cafe275d4282327a71ac4a76a1f022745afa444479ee7625957101d7a"
+    },
+    {
+      "path": "_next/static/chunks/workspace-DdEQq6Kz.js",
+      "bytes": 74215,
+      "sha256": "312394d88153cc405f7eec292bbda42bd020d5d6696ae5e048438daa0cc5a34d"
+    },
+    {
+      "path": "_next/static/chunks/workspace-standalone-tool-D_Jmizrv.js",
+      "bytes": 912,
+      "sha256": "9829a795c3c52b0a694098af835275ccc4e92ee59fec56336e09378b04bf900b"
+    },
+    {
+      "path": "_next/static/chunks/workspace-table-tool-B4GARhOo.js",
+      "bytes": 14311,
+      "sha256": "5fa5cdf3f9e46a4e3d810105b939ddc9777aa5243087a9681c3ade7001d84c4d"
+    },
+    {
+      "path": "_next/static/css/academy.BN_bQfIC.css",
+      "bytes": 16536,
+      "sha256": "d79fb1bbcd0376d8dcac6a1546aef9c4fbf11c56450b2a04fd324b8c8b92892d"
+    },
+    {
+      "path": "_next/static/css/index.DitS2ZvF.css",
+      "bytes": 219342,
+      "sha256": "febf7b84d80320c157bf72cfc6afc966fa4b60c928bf3380f96939df83b4f826"
+    },
+    {
+      "path": "_next/static/css/workspace.15TwN2IR.css",
+      "bytes": 25034,
+      "sha256": "199e47a3c0f070fb31d839eb4fae0257bb96782076dc0d5fb4c6f96f34c868fd"
+    },
+    {
+      "path": "404.html",
+      "bytes": 15810,
+      "sha256": "c899e1c3b4ab77d835f7f156da62dfc3bea57cb2503ec5ed693e5bd2cbbe07da"
+    },
+    {
+      "path": "csv-checker.html",
+      "bytes": 59382,
+      "sha256": "8fbc9945efc70090dbb99078b0e7b0ed17e4d368ecc3b02300f783889eba6c00"
+    },
+    {
+      "path": "csv-checker.txt",
+      "bytes": 17398,
+      "sha256": "a03d8ae818bb06adee2ce41f566ec1dfbad17f0a5330353d28a6ab98488e10c1"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 718,
+      "sha256": "3e8863288c2d43dd33d2a71de317dcf9198f09932ea8d61e0def1b846a865435"
+    },
+    {
+      "path": "guides.html",
+      "bytes": 107536,
+      "sha256": "4f9bcf7e54c7c23cb685ec116ed4678a18ebb1d913e4285e24281db457fb9f27"
+    },
+    {
+      "path": "guides.txt",
+      "bytes": 50694,
+      "sha256": "697fdfe57bb124c0f320b51ef0944fb38257f2587b6725b53aae764b7fb4322f"
+    },
+    {
+      "path": "guides/append-vs-merge.html",
+      "bytes": 56321,
+      "sha256": "5d7416ec8446815347e15c41a42c1aa8cdbbc6427ace68105ca969e74287735f"
+    },
+    {
+      "path": "guides/append-vs-merge.txt",
+      "bytes": 26183,
+      "sha256": "4344572f2e3650979deef1402972ba25f8cf9ffbc8b30fa5bdf5bf0235cca8d7"
+    },
+    {
+      "path": "guides/combine-csv-files-excel.html",
+      "bytes": 57108,
+      "sha256": "d53fe62f60ac75a51a6b231eb8c70fa0bcee9beac5c16ae636bc71edaa22db4f"
+    },
+    {
+      "path": "guides/combine-csv-files-excel.txt",
+      "bytes": 26608,
+      "sha256": "46ce79a7e20488ff73c360ed246f690282463dfa055e2ed58fa95b214b3d42c2"
+    },
+    {
+      "path": "guides/compare-csv-added-missing-ids.html",
+      "bytes": 61595,
+      "sha256": "c61fdae96028d8058f940c9def720ac73f5a6894f9f1ac06be4faf8aa329ebc3"
+    },
+    {
+      "path": "guides/compare-csv-added-missing-ids.txt",
+      "bytes": 28341,
+      "sha256": "58697cad3ccb2be7e8750d173e3222834307e9ff933b89429ab83eab8c61eadc"
+    },
+    {
+      "path": "guides/csv-commas-double-quotes.html",
+      "bytes": 55934,
+      "sha256": "cc6c4c5501815cdac4f5b3829e2c54d7b7fb9fbd72ba770d324caa257408495c"
+    },
+    {
+      "path": "guides/csv-commas-double-quotes.txt",
+      "bytes": 25565,
+      "sha256": "85d7881ce76b158dbb31abcc9f1279c90c96d832b73794fd85987f71e7fe8b97"
+    },
+    {
+      "path": "guides/csv-dates-day-month.html",
+      "bytes": 54108,
+      "sha256": "785b0c5434c80f1b9f02b15e3b44471d97f4eb3d564714da68b9da52c1ea836d"
+    },
+    {
+      "path": "guides/csv-dates-day-month.txt",
+      "bytes": 24892,
+      "sha256": "c391a5aba8459e12314183f9ec8e30cfe90ffb647cd46c9985507175b4ee6f51"
+    },
+    {
+      "path": "guides/csv-different-column-counts.html",
+      "bytes": 56496,
+      "sha256": "b3d72e7d15c7b825c3c3e95eb2c50a7655db0b73f34f0eb8d6d44349fd68488e"
+    },
+    {
+      "path": "guides/csv-different-column-counts.txt",
+      "bytes": 25960,
+      "sha256": "4e9f5cc315989e7367f6fc15be243c6eb86d6820bf53d666298562247532563b"
+    },
+    {
+      "path": "guides/csv-opens-in-one-column.html",
+      "bytes": 68113,
+      "sha256": "3fffeb7650734ec866a0426431a86fdfb0ca4558bfbc46087f65305ba700fbf8"
+    },
+    {
+      "path": "guides/csv-opens-in-one-column.txt",
+      "bytes": 33139,
+      "sha256": "e537cb5cf6116af09ccfe8d6beda1c3c8dafd9a84f78309d5b9e9e0f4db0cd26"
+    },
+    {
+      "path": "guides/csv-row-count-newlines.html",
+      "bytes": 57253,
+      "sha256": "e510691f8798b32c9e0b16178867d475c6511b49bcc3d4f9e42dd84db36b3cc6"
+    },
+    {
+      "path": "guides/csv-row-count-newlines.txt",
+      "bytes": 26139,
+      "sha256": "e77c976799c691752a94a291604023c81c7565e6191692ed5b3b17f2deba86c6"
+    },
+    {
+      "path": "guides/csv-to-json-preserve-types.html",
+      "bytes": 71001,
+      "sha256": "017adbc41bdaf6bbb306918d684782f4d909fba3a312527ce6b9b210bd9a2678"
+    },
+    {
+      "path": "guides/csv-to-json-preserve-types.txt",
+      "bytes": 34108,
+      "sha256": "9b5f2613357ac4c6274e7a900d9a71301fcb4e0b912d2ed24e7d22cba2a2b320"
+    },
+    {
+      "path": "guides/csv-utf8-accents.html",
+      "bytes": 54863,
+      "sha256": "6d44ebf431ab17e576830bb7b93996d74a3248b5c96d873acc77673e8d2d3eb5"
+    },
+    {
+      "path": "guides/csv-utf8-accents.txt",
+      "bytes": 25283,
+      "sha256": "7135595111fb9114664b1ff0ed06b3db8f7bfce2a24c843e43482f5db6f0c047"
+    },
+    {
+      "path": "guides/csv-vs-xlsx.html",
+      "bytes": 56218,
+      "sha256": "03132b44a18993c293b3cb4bf5e5446b3f9165aaf3cb6bdea0c2b1410ad09a60"
+    },
+    {
+      "path": "guides/csv-vs-xlsx.txt",
+      "bytes": 26204,
+      "sha256": "15fc00e046a1e708c717ebe2c92110c6a77c6a3ce47304145d72232add916ec3"
+    },
+    {
+      "path": "guides/excel-codes-turn-into-dates.html",
+      "bytes": 57841,
+      "sha256": "883eb4a482749ca6a88b1128f9945bee75ba488cb695e5c1f5e425fe95d157cf"
+    },
+    {
+      "path": "guides/excel-codes-turn-into-dates.txt",
+      "bytes": 26708,
+      "sha256": "fc3231827d2f0b2d24975b06749a39e49ecf19b0f0c673b78492e4e2af799fcf"
+    },
+    {
+      "path": "guides/excel-combine-cells-without-losing-data.html",
+      "bytes": 52087,
+      "sha256": "59a0d09950befcc2434e7c510c890752fa71082ded2659463f2e1400794c03ac"
+    },
+    {
+      "path": "guides/excel-combine-cells-without-losing-data.txt",
+      "bytes": 23486,
+      "sha256": "376d889679f9a8d2d581e3b1e492e0b912e7f65d02c0f5e2797183d58e9b5d6f"
+    },
+    {
+      "path": "guides/excel-compare-two-lists.html",
+      "bytes": 90781,
+      "sha256": "04ede05959ff88b667c97843144050ee4d0338758cf57607b431cbb7c3565eb1"
+    },
+    {
+      "path": "guides/excel-compare-two-lists.txt",
+      "bytes": 46647,
+      "sha256": "46c9435cc2a3c6ac527ad22058068290ce34bc60f1f97f7968576daf759b9d41"
+    },
+    {
+      "path": "guides/excel-conditional-formatting-duplicate-rows.html",
+      "bytes": 62199,
+      "sha256": "41acde803ce95f6e44f43c6bf82c3ab5c23ed9bc435bcb73d120580a01239136"
+    },
+    {
+      "path": "guides/excel-conditional-formatting-duplicate-rows.txt",
+      "bytes": 29646,
+      "sha256": "797167424392f5604e70d0a6731d0daea9b0aa6cfede70d830ce4947025a4101"
+    },
+    {
+      "path": "guides/excel-count-distinct-values.html",
+      "bytes": 60664,
+      "sha256": "f261f320bef7a73960c1622fc50564dd942c5d33173d3b4c9eb69ba17b24c82c"
+    },
+    {
+      "path": "guides/excel-count-distinct-values.txt",
+      "bytes": 28560,
+      "sha256": "6c0621f598bf9bd05f63907a9129e0c7e49ebaa7d71c84d51cfe91208e5deb2c"
+    },
+    {
+      "path": "guides/excel-date-serial-numbers.html",
+      "bytes": 68785,
+      "sha256": "02c5cae4ccebb26566c6cb0a3cd794ad26341fcc7e98bce0e7776d7a47cff152"
+    },
+    {
+      "path": "guides/excel-date-serial-numbers.txt",
+      "bytes": 33685,
+      "sha256": "4f6c152b640eb0c464a41d156f93d3dda4a7818448f03e82317e93393934587f"
+    },
+    {
+      "path": "guides/excel-dates-sort-as-text.html",
+      "bytes": 60874,
+      "sha256": "f64eac82bbdd8d0200e36e12ad9a9aee532143e502465fca8c9a5090e9a9af35"
+    },
+    {
+      "path": "guides/excel-dates-sort-as-text.txt",
+      "bytes": 28901,
+      "sha256": "1d1382fb7b2a9f25fd06905b378228a78d1a253dc41b05f19cb0b9253a2317e0"
+    },
+    {
+      "path": "guides/excel-decimal-comma.html",
+      "bytes": 58377,
+      "sha256": "aa179123d194a3fb3644fb5268a52f0e32112409754ec50b98dcd8b7340df249"
+    },
+    {
+      "path": "guides/excel-decimal-comma.txt",
+      "bytes": 27257,
+      "sha256": "c04317499a466144fd785a072a245e7df1ce25f8b8dc414ebcb9e95116138e88"
+    },
+    {
+      "path": "guides/excel-drop-down-list-not-updating.html",
+      "bytes": 54980,
+      "sha256": "0f9ec9f4fb6eb6c46af9cc93609ac53d02bee86e260ee9f283cddf4e44f97b91"
+    },
+    {
+      "path": "guides/excel-drop-down-list-not-updating.txt",
+      "bytes": 25379,
+      "sha256": "282707de6e0cd974ed0f52b550d4b67e107ba6a38d140127bcbfe379bc906c83"
+    },
+    {
+      "path": "guides/excel-filter-spill-error.html",
+      "bytes": 56601,
+      "sha256": "4ec476c063d1613bf8fb276a08d693edb0c2baaeed2fcbdfb1724afff7058d2e"
+    },
+    {
+      "path": "guides/excel-filter-spill-error.txt",
+      "bytes": 26424,
+      "sha256": "0e7f2643e3322d0d49656ab1426565bed7d756ac163cef58912d9a1e283fa5ae"
+    },
+    {
+      "path": "guides/excel-formulas-not-calculating.html",
+      "bytes": 52281,
+      "sha256": "45f4cee64e9afd82094dd19c9fa2bc2d568bf41535e2b4384726129d31e6d918"
+    },
+    {
+      "path": "guides/excel-formulas-not-calculating.txt",
+      "bytes": 23715,
+      "sha256": "96c4191242b72e865fffd6281d71a47e5f5725521c9c842274477fb14630fe1a"
+    },
+    {
+      "path": "guides/excel-freeze-rows-and-columns-together.html",
+      "bytes": 54694,
+      "sha256": "3a20e2071065973116c823b713aeaa885e0ce09b0916cf4d35399a4d846ddafe"
+    },
+    {
+      "path": "guides/excel-freeze-rows-and-columns-together.txt",
+      "bytes": 25287,
+      "sha256": "8058ad07786373f4eb85169b4f19833a7900c0202672109174367858875f55d4"
+    },
+    {
+      "path": "guides/excel-leading-zeros.html",
+      "bytes": 65969,
+      "sha256": "719792e940995a695cb8d071301be34e4ddae0541a911088530cadf6cd87483e"
+    },
+    {
+      "path": "guides/excel-leading-zeros.txt",
+      "bytes": 31423,
+      "sha256": "d6d9cf9b9a37cfc911b9b70b7f2090fb466389e9c8e7a05d52e5ee50d6e88399"
+    },
+    {
+      "path": "guides/excel-long-numbers.html",
+      "bytes": 90863,
+      "sha256": "f2e1de9f1704bf2c83c1f735732c30925389f5341f75a22e22f37d9af39e42e5"
+    },
+    {
+      "path": "guides/excel-long-numbers.txt",
+      "bytes": 46913,
+      "sha256": "6941e049d891862cbdaf80a656a97a6434270d543d0863d88f60c6d336e1f594"
+    },
+    {
+      "path": "guides/excel-networkdays-working-days.html",
+      "bytes": 67146,
+      "sha256": "f8d72b3abda7717d594dccece0422317d9431e93ef57372d925f06605b436346"
+    },
+    {
+      "path": "guides/excel-networkdays-working-days.txt",
+      "bytes": 32434,
+      "sha256": "5b909e85805d051e6d8fbe42a7f02431ca4f4d3fe2436fc457848c2c42c4b0ac"
+    },
+    {
+      "path": "guides/excel-percentage-change-zero-baseline.html",
+      "bytes": 50545,
+      "sha256": "6a212a07440ccde736ce12e4acabcfef1c2d2d59810865f60f9e1f28b265c749"
+    },
+    {
+      "path": "guides/excel-percentage-change-zero-baseline.txt",
+      "bytes": 22641,
+      "sha256": "ea167cdde0c9f39179551ff160beca24139fb2c6f164052528f55b88935a1c37"
+    },
+    {
+      "path": "guides/excel-pivot-table-count-instead-of-sum.html",
+      "bytes": 63696,
+      "sha256": "2d89797c3a1ab632e28c1334f743af5e13d151b0cfd2de1a6bbfd64187148391"
+    },
+    {
+      "path": "guides/excel-pivot-table-count-instead-of-sum.txt",
+      "bytes": 30637,
+      "sha256": "39fdd29fd2977ba018661dab0c91ac18fefffae05247c9ca6756c99448bcd8ce"
+    },
+    {
+      "path": "guides/excel-pivot-table-missing-new-rows.html",
+      "bytes": 62439,
+      "sha256": "0ea3c02ebe300f654d0ebb5faa7a6f775edfc3f7a1436b7cba7b7c29c62b984b"
+    },
+    {
+      "path": "guides/excel-pivot-table-missing-new-rows.txt",
+      "bytes": 29848,
+      "sha256": "0abc61031bc49ed96e33628067e5aac4f19e96635bccb3e5931a4b231ea54797"
+    },
+    {
+      "path": "guides/excel-remove-blank-rows-safely.html",
+      "bytes": 60001,
+      "sha256": "526fa6e2829c5ebcbbcd52735b1873f21f6611a5bc1ff12a14cb6f1a2ea4288a"
+    },
+    {
+      "path": "guides/excel-remove-blank-rows-safely.txt",
+      "bytes": 28383,
+      "sha256": "85bc17fa1cf21577140340183c48a2ed8a907dcd75b33d0ef5411a20eb2ee4b1"
+    },
+    {
+      "path": "guides/excel-remove-duplicates-keep-latest.html",
+      "bytes": 63371,
+      "sha256": "cc12d5b266dcf1a5586f8ef186f596b8cb8234411a7d65a59b8c41a757e4fd94"
+    },
+    {
+      "path": "guides/excel-remove-duplicates-keep-latest.txt",
+      "bytes": 30393,
+      "sha256": "89e287d63517d402668c629cad13a53f696a137c125cea1d491bf4609a3432e2"
+    },
+    {
+      "path": "guides/excel-repeat-header-row-print-every-page.html",
+      "bytes": 56224,
+      "sha256": "ffaed3eb61270da960d0e9f90283e452945995e7bcffc6a3a47b83cef066cc70"
+    },
+    {
+      "path": "guides/excel-repeat-header-row-print-every-page.txt",
+      "bytes": 26104,
+      "sha256": "89ea458bb7f37c7f6c613d24151af6b597a7f7268ed87122c14f2af315949bfe"
+    },
+    {
+      "path": "guides/excel-sum-hours-over-24.html",
+      "bytes": 52602,
+      "sha256": "2dd5eb09adcb080e0ed868e70d5abb17b49125701fe44aa56810a3b327d19645"
+    },
+    {
+      "path": "guides/excel-sum-hours-over-24.txt",
+      "bytes": 23984,
+      "sha256": "1109aaf3edacf96e57a5406a35122bee0ea4aa07ba90579d5f3e0b502028bd2f"
+    },
+    {
+      "path": "guides/excel-sum-numbers-as-text.html",
+      "bytes": 58379,
+      "sha256": "061ae5791f11d34cdf9a01ed40345b64d2612ebd98c01ffa78fc0cc16d6af656"
+    },
+    {
+      "path": "guides/excel-sum-numbers-as-text.txt",
+      "bytes": 27219,
+      "sha256": "cd61399a5ce32d5a16de7cadfa9326650eda7e5dc4a4a260f7b5739ee91211e2"
+    },
+    {
+      "path": "guides/excel-sum-visible-rows-subtotal.html",
+      "bytes": 60737,
+      "sha256": "c37ca505624aefd3e17fe96cc07a966d206867150df39208d049fe617264fc31"
+    },
+    {
+      "path": "guides/excel-sum-visible-rows-subtotal.txt",
+      "bytes": 28883,
+      "sha256": "37632e3e6932b62045e53e419d3d70fe072186d7390082b8c2c691f3652a6d59"
+    },
+    {
+      "path": "guides/excel-sumifs-date-range.html",
+      "bytes": 61097,
+      "sha256": "8b0767389f516964d80e8785f8196ad58a12a68c3df864abb2683e6ad250ffec"
+    },
+    {
+      "path": "guides/excel-sumifs-date-range.txt",
+      "bytes": 28794,
+      "sha256": "4212d268468cf40966122e0f7417b15d661683266de9da0895f5e4883038d258"
+    },
+    {
+      "path": "guides/excel-textsplit-multiple-delimiters.html",
+      "bytes": 59796,
+      "sha256": "4056113ca56d52bfbce0fa86245f9a9b8b3995c687c248b1a6369d57bd7b6b22"
+    },
+    {
+      "path": "guides/excel-textsplit-multiple-delimiters.txt",
+      "bytes": 28107,
+      "sha256": "50553a6da88f5fb42c8b1374258d1483cf7000fca19d9c750b9d4778577a515f"
+    },
+    {
+      "path": "guides/excel-vlookup-between-sheets.html",
+      "bytes": 59627,
+      "sha256": "97c65b43729f8113a229c898a075f0ca7cccdc333f862c7661b7d215bf1f8f1c"
+    },
+    {
+      "path": "guides/excel-vlookup-between-sheets.txt",
+      "bytes": 28078,
+      "sha256": "905040e7977cd9705f3ffb3ed335272e7696074fbdd9a3079435311108df2617"
+    },
+    {
+      "path": "guides/excel-workday-holidays.html",
+      "bytes": 60140,
+      "sha256": "1e6dd8d98702c611b04d5b20b120f0f7482c6ae266cbe44629656e63ec43a5e1"
+    },
+    {
+      "path": "guides/excel-workday-holidays.txt",
+      "bytes": 28463,
+      "sha256": "9a3c8062e10d21de17cce9e291863b7499267df60da7533cb2c5ac0ba16208a0"
+    },
+    {
+      "path": "guides/excel-xlookup-multiple-criteria.html",
+      "bytes": 62284,
+      "sha256": "540e567f9d4d6e0986ce0f9518c980ed45ddaaabeb9be1c93d246111aa615580"
+    },
+    {
+      "path": "guides/excel-xlookup-multiple-criteria.txt",
+      "bytes": 29544,
+      "sha256": "980706764e644bf89e46cda8a7956c812938903a4ca092e554544047c38a87f4"
+    },
+    {
+      "path": "guides/excel-xlookup-return-all-matches.html",
+      "bytes": 58700,
+      "sha256": "644a45858d80ac6a49232060e410e897053fb306aa9b4cd298c25dae1ffe163a"
+    },
+    {
+      "path": "guides/excel-xlookup-return-all-matches.txt",
+      "bytes": 27520,
+      "sha256": "ccdab2c51789bd5c00565f83e4d89cb099e4dd00a330e8257573de3cb23880eb"
+    },
+    {
+      "path": "guides/google-sheets-countif-checkboxes.html",
+      "bytes": 62666,
+      "sha256": "798a15434c113a08b6ce2bfa31c1575f1c0787ee5f8839422447bd928f4d29d6"
+    },
+    {
+      "path": "guides/google-sheets-countif-checkboxes.txt",
+      "bytes": 29529,
+      "sha256": "dd8dac59d964d1bc8947332047dcfa469f9efa9c02170129f618ed9d91f88fe2"
+    },
+    {
+      "path": "guides/google-sheets-filter-no-matches.html",
+      "bytes": 60413,
+      "sha256": "2fd255cde57e98405cb16a46d7b561dbe06e031514e18b165a3d8098edac26ac"
+    },
+    {
+      "path": "guides/google-sheets-filter-no-matches.txt",
+      "bytes": 28586,
+      "sha256": "8ba6cf87716fdd200e9ac5f3dbab6bcabb712bdd3882a256a590acc078208f8f"
+    },
+    {
+      "path": "guides/google-sheets-highlight-duplicate-rows-by-id.html",
+      "bytes": 57656,
+      "sha256": "15f5d0c098c3ba2cad6b034abb04f9a4722935946c84db73612e2da27fdebb83"
+    },
+    {
+      "path": "guides/google-sheets-highlight-duplicate-rows-by-id.txt",
+      "bytes": 26946,
+      "sha256": "0c1c6fbac8342dc38af0eba71b75d9e170021fc9b366e1da6b6ab3a86fcb853d"
+    },
+    {
+      "path": "guides/google-sheets-query-group-by.html",
+      "bytes": 55974,
+      "sha256": "a5a273ec94f171dabc791e7d124e3c095a223d12521b55c7503012861a9c0c81"
+    },
+    {
+      "path": "guides/google-sheets-query-group-by.txt",
+      "bytes": 25940,
+      "sha256": "9c8dc1fba223badc767b50b323795f5af7baa308d0f56daed477261752ab9561"
+    },
+    {
+      "path": "guides/google-sheets-query-mixed-data-types.html",
+      "bytes": 70509,
+      "sha256": "68ac8946e1ea3a4fd30155da001e15079dd7db20814e63a98f937fcf9649a20d"
+    },
+    {
+      "path": "guides/google-sheets-query-mixed-data-types.txt",
+      "bytes": 34642,
+      "sha256": "c82e1142f5185e86a8723f25d0bd2a0d818f130e0ab92b2ef3b1814ab2ee2268"
+    },
+    {
+      "path": "guides/google-sheets-remove-duplicates.html",
+      "bytes": 56506,
+      "sha256": "57219d705ed827499bef0626f4341339023d4f7de21c958c49d3c052f50d53b8"
+    },
+    {
+      "path": "guides/google-sheets-remove-duplicates.txt",
+      "bytes": 26325,
+      "sha256": "bfe9df8868494a77c43861127c1a80dae2e1b8d26766722645838005f0c954cb"
+    },
+    {
+      "path": "guides/google-sheets-sort-multiple-columns.html",
+      "bytes": 67490,
+      "sha256": "28ad2c59aacee221d3aaeba084b796fd515d66a18f4b482fb1a315f1c1c6cacf"
+    },
+    {
+      "path": "guides/google-sheets-sort-multiple-columns.txt",
+      "bytes": 32873,
+      "sha256": "b2e21d0d1825a8ce6a6748b6230fceaca15a449ad3c49470920b132beb011628"
+    },
+    {
+      "path": "guides/google-sheets-split-empty-fields.html",
+      "bytes": 55226,
+      "sha256": "db0db37567a721c5f7f7f388c21bd7a157dfb96715109e401d84436ffdfd85c1"
+    },
+    {
+      "path": "guides/google-sheets-split-empty-fields.txt",
+      "bytes": 25367,
+      "sha256": "7ca2e4eece4ce6b194fba975ef60cfeebd9f41d9cd22461b63c43d992cf64a6c"
+    },
+    {
+      "path": "guides/google-sheets-sum-by-month-category.html",
+      "bytes": 82567,
+      "sha256": "dae621632c91ce927b4c1c89c411184841b0b280b1ed97a624681ca0b6aa01dc"
+    },
+    {
+      "path": "guides/google-sheets-sum-by-month-category.txt",
+      "bytes": 41200,
+      "sha256": "4b2867d6a551372b2738adfe1e0911eab0a2ecd39c440e88aca38e158a9a0a87"
+    },
+    {
+      "path": "guides/google-sheets-sumif-wildcards-literal-text.html",
+      "bytes": 64108,
+      "sha256": "83f7b36a65a87e43c85de942539d269bf25a071ffead15802be87199469405fb"
+    },
+    {
+      "path": "guides/google-sheets-sumif-wildcards-literal-text.txt",
+      "bytes": 30742,
+      "sha256": "64bfc5f9bb629453356c1a40c43245d15d945e54052956c11bc195f1485691ca"
+    },
+    {
+      "path": "guides/nested-json-to-csv.html",
+      "bytes": 61861,
+      "sha256": "b99b85987e135d36c637b5138a0c9c766decac49bf3999b335be5cb4291a784c"
+    },
+    {
+      "path": "guides/nested-json-to-csv.txt",
+      "bytes": 28343,
+      "sha256": "a87557050417d26bc068cdd98748eafc70905a7bd178bc6d7589493593386c08"
+    },
+    {
+      "path": "guides/power-query-change-type-using-locale.html",
+      "bytes": 72528,
+      "sha256": "779543df63a5237b6869c44972b3fd91e4d91e3481f05181075e795809f81216"
+    },
+    {
+      "path": "guides/power-query-change-type-using-locale.txt",
+      "bytes": 35574,
+      "sha256": "6186e7646d9d3beafbd076743b2e0884e5833f0bad5489ad9722185db6161d6f"
+    },
+    {
+      "path": "guides/power-query-combine-files-schema-drift.html",
+      "bytes": 74825,
+      "sha256": "0ffdb96e2c7817d56c8c83e12786f81a72671370e98fbcee0435861abe8e0a3b"
+    },
+    {
+      "path": "guides/power-query-combine-files-schema-drift.txt",
+      "bytes": 36472,
+      "sha256": "78f911a0750768a46f88ead98eeb13510fc24bc62ef2d3a1fd262011d6dc3715"
+    },
+    {
+      "path": "guides/power-query-fill-down-null-values.html",
+      "bytes": 61105,
+      "sha256": "afe96698670f65705a19697578cd56c8cf7ffa422a58e01fa35bc005b74b5b3e"
+    },
+    {
+      "path": "guides/power-query-fill-down-null-values.txt",
+      "bytes": 28926,
+      "sha256": "892e0a1a04fc080a9d3cd94b75bd90c425d1fab2ae8a6459fed78635ef3e808f"
+    },
+    {
+      "path": "guides/power-query-left-anti-join-missing-rows.html",
+      "bytes": 63980,
+      "sha256": "7209fe7e91dc667b2979125db5a856763b9bca49e154556aa33050db16e7e249"
+    },
+    {
+      "path": "guides/power-query-left-anti-join-missing-rows.txt",
+      "bytes": 30569,
+      "sha256": "8359211e28f5f7420a4b42ae375625ae6dfaa64b0a285c25ed1557f5f7a3b187"
+    },
+    {
+      "path": "guides/power-query-merge-duplicates-extra-rows.html",
+      "bytes": 77623,
+      "sha256": "12a1d84dd3fe1cb38ace3a97278ac1a50a9ec0d83e85541643b0bd781519744a"
+    },
+    {
+      "path": "guides/power-query-merge-duplicates-extra-rows.txt",
+      "bytes": 38833,
+      "sha256": "767bc2beb1d0424deb10958273234751783bdca00aa57f4fe5d26275d8c2ff23"
+    },
+    {
+      "path": "guides/power-query-promote-headers.html",
+      "bytes": 78569,
+      "sha256": "296818474e70b10989b19b81e367b1281e6aadd5838e4d5e440312b6233febe3"
+    },
+    {
+      "path": "guides/power-query-promote-headers.txt",
+      "bytes": 38793,
+      "sha256": "50dcf849c90af61a02288ca0a003f5db6d08b6f6594d2d2237778c6831d12fb7"
+    },
+    {
+      "path": "guides/power-query-split-column-into-rows.html",
+      "bytes": 73315,
+      "sha256": "3893a182a288012fc56f47201e251f3e78c98cc3a343e4d8a33f02974926c36c"
+    },
+    {
+      "path": "guides/power-query-split-column-into-rows.txt",
+      "bytes": 35583,
+      "sha256": "784ef1bb56fd0b2f548fe2b036522ae3dff680c4e0f94c54e99a4a43ab3013c4"
+    },
+    {
+      "path": "guides/power-query-unpivot-month-columns.html",
+      "bytes": 65405,
+      "sha256": "a9692dff714702b11952f579c6817b6fc025833fefc0bd99734207998156b184"
+    },
+    {
+      "path": "guides/power-query-unpivot-month-columns.txt",
+      "bytes": 31416,
+      "sha256": "0ef1e0a29764ab1ab9788785924c5bfa5a17b217a606503c892dacce91ef96bf"
+    },
+    {
+      "path": "guides/spreadsheet-trim-spaces.html",
+      "bytes": 78749,
+      "sha256": "60f5aad10a3d64b1a0694fcdc835a681d665dc458464bd186fee2076045d1fcc"
+    },
+    {
+      "path": "guides/spreadsheet-trim-spaces.txt",
+      "bytes": 39237,
+      "sha256": "5a5a8a291c35d09120fcb9395541204b2541143b62056c29c7b7b98fbc9afdbf"
+    },
+    {
+      "path": "guides/tsv-to-csv.html",
+      "bytes": 65813,
+      "sha256": "ad050fa722c587926117265c3a01d9914818b69570eec7a9b114b65f349d5b08"
+    },
+    {
+      "path": "guides/tsv-to-csv.txt",
+      "bytes": 30969,
+      "sha256": "6155115c599b21e8020e3bd0816ce76b02d461404baeea609c2aa195edcd61de"
+    },
+    {
+      "path": "guides/vlookup-identical-ids-na.html",
+      "bytes": 57738,
+      "sha256": "100f1fac9207580c70b6e390d939b4e1ad13b0a6b5436fcf2527f2d020bf0ee3"
+    },
+    {
+      "path": "guides/vlookup-identical-ids-na.txt",
+      "bytes": 26844,
+      "sha256": "ec9ec189e3cdd718b52acfaabf44539710797be2da9125e4fa57093ab22ca1f4"
+    },
+    {
+      "path": "images/guides/append-vs-merge-1-mobile.svg",
+      "bytes": 1945,
+      "sha256": "6496d7c12b10b9addc647d33868993614f85e4957832c4288bd369ef558b45b0"
+    },
+    {
+      "path": "images/guides/append-vs-merge-1.svg",
+      "bytes": 1929,
+      "sha256": "bfd3d5d9fbfe9c5f85a79eac115e273b44689d49fc314d095e2cbe694fc5408b"
+    },
+    {
+      "path": "images/guides/append-vs-merge-4-mobile.svg",
+      "bytes": 2088,
+      "sha256": "c4ba8519fd9e0563e7593c0db73c9eb7f2d38c604f3354584cf537aad3656821"
+    },
+    {
+      "path": "images/guides/append-vs-merge-4.svg",
+      "bytes": 2073,
+      "sha256": "cb604e76b3949b99fe50fa3fffadfa84cc48b2fb86d9815df424b1678fdc5390"
+    },
+    {
+      "path": "images/guides/combine-csv-files-excel-1-mobile.svg",
+      "bytes": 2065,
+      "sha256": "8cf1446ec2e73fd5b60930b9313bfdff2ced74bd78eefca676ad2f4d37b0129e"
+    },
+    {
+      "path": "images/guides/combine-csv-files-excel-1.svg",
+      "bytes": 2049,
+      "sha256": "aaf66a151b12a9f3cabc12aa4893973b3935b3dcf23e5313a2be8f6278ae79ff"
+    },
+    {
+      "path": "images/guides/combine-csv-files-excel-4-mobile.svg",
+      "bytes": 2130,
+      "sha256": "3637df0b5c8864fe85d879ee0f776335dd0a28d73512da22d9310678c9af3c6f"
+    },
+    {
+      "path": "images/guides/combine-csv-files-excel-4.svg",
+      "bytes": 2115,
+      "sha256": "8620ccfbc94b365966e0ffc54e39affd08b832e185125f307a7792b1e7fa3c0a"
+    },
+    {
+      "path": "images/guides/compare-csv-added-missing-ids-1-mobile.svg",
+      "bytes": 1863,
+      "sha256": "a8c48d847f7cdb68e582940dab5de381a2bd9c7ca8a313a0a9c3b325aa4dae74"
+    },
+    {
+      "path": "images/guides/compare-csv-added-missing-ids-1.svg",
+      "bytes": 1846,
+      "sha256": "0ea00c5d5445a95a3bd10cc68309a27cef4f7835d49bc6c28f2eecdb54a2949c"
+    },
+    {
+      "path": "images/guides/compare-csv-added-missing-ids-4-mobile.svg",
+      "bytes": 1974,
+      "sha256": "af65ae575fe391c6f1730c6434a7998a3cdd2c91da5ffc514b2b9f5b25302ef9"
+    },
+    {
+      "path": "images/guides/compare-csv-added-missing-ids-4.svg",
+      "bytes": 1957,
+      "sha256": "9f679663490b9a54b34c8b623c75d891eecdead935e7e68b9819b577dfe6586f"
+    },
+    {
+      "path": "images/guides/csv-commas-double-quotes-1-mobile.svg",
+      "bytes": 1979,
+      "sha256": "b1a649f96acab635f8a054fc4cfb106a833c76308d4526a8d98da2541397f519"
+    },
+    {
+      "path": "images/guides/csv-commas-double-quotes-1.svg",
+      "bytes": 1963,
+      "sha256": "5eb0fde2a464d0edd19fdaa7bee73fd1fcfe8dd8c7a5387951a90699b64b54a3"
+    },
+    {
+      "path": "images/guides/csv-commas-double-quotes-4-mobile.svg",
+      "bytes": 1899,
+      "sha256": "f27a4f16a156b9b6a9751f53b0625069af9217d550fabd1651c3c13f2f9c9230"
+    },
+    {
+      "path": "images/guides/csv-commas-double-quotes-4.svg",
+      "bytes": 1882,
+      "sha256": "b1671c08536ecf3d6e93d9738494c2e3b427edb28f6c84f7f96a42918905df41"
+    },
+    {
+      "path": "images/guides/csv-dates-day-month-2-mobile.svg",
+      "bytes": 1869,
+      "sha256": "d80d3c10f8e036cf14e8254dd629b4ef7c3ec629e9f604d9f70cc7e1291f4826"
+    },
+    {
+      "path": "images/guides/csv-dates-day-month-2.svg",
+      "bytes": 1852,
+      "sha256": "534ddd540aab07cb439a02aaa053ddfb6c8e94929ed740f491988b0a0987a2bc"
+    },
+    {
+      "path": "images/guides/csv-dates-day-month-4-mobile.svg",
+      "bytes": 1962,
+      "sha256": "06fc9fb513a18b0fb86bfa964c458715f27e48c8496ec0d6a8ba62d24c951d0b"
+    },
+    {
+      "path": "images/guides/csv-dates-day-month-4.svg",
+      "bytes": 1975,
+      "sha256": "b9cb07fe00e98cce32eda036e298665e5d6e819fa0043dcc4d28a9a0713c8454"
+    },
+    {
+      "path": "images/guides/csv-different-column-counts-1-mobile.svg",
+      "bytes": 1877,
+      "sha256": "8edcde88ab83a257fda6cc65459979b7b3f3c368c0b829d8cc149b08b6c1f7f1"
+    },
+    {
+      "path": "images/guides/csv-different-column-counts-1.svg",
+      "bytes": 1860,
+      "sha256": "ecc142d4fec8c9f2b3ab2ab70100bbb01494e993d86df11d470f8a2b102e3096"
+    },
+    {
+      "path": "images/guides/csv-different-column-counts-4-mobile.svg",
+      "bytes": 1929,
+      "sha256": "4334e1630cb4f907e0c16c0e497a5a15c64ed0466c50ceaaae6a7a7a789e23e8"
+    },
+    {
+      "path": "images/guides/csv-different-column-counts-4.svg",
+      "bytes": 1912,
+      "sha256": "8ff80a9922ac1be40346ad7dccbace87b8a0fa5cfa11949b4b5ff9cb2be7570e"
+    },
+    {
+      "path": "images/guides/csv-opens-in-one-column-1-mobile.svg",
+      "bytes": 1903,
+      "sha256": "b54fc3aea7beaf471fe10ec71a990b6a394548762f83cac33839f4cf160a1103"
+    },
+    {
+      "path": "images/guides/csv-opens-in-one-column-1.svg",
+      "bytes": 1916,
+      "sha256": "94a43c11e0817500b580f40d2770cb31e228a093f78eef9ea7d029eb1b350410"
+    },
+    {
+      "path": "images/guides/csv-opens-in-one-column-4-mobile.svg",
+      "bytes": 1926,
+      "sha256": "cec6a312684054cf247832bc023cf09029aad44d66bdd98ae704b2d4fc8ede70"
+    },
+    {
+      "path": "images/guides/csv-opens-in-one-column-4.svg",
+      "bytes": 1909,
+      "sha256": "73b70a4fb4253b72274f25f14727de675435e52cab315abed3e1fefe51120d71"
+    },
+    {
+      "path": "images/guides/csv-opens-in-one-column-5-mobile.svg",
+      "bytes": 1926,
+      "sha256": "cec6a312684054cf247832bc023cf09029aad44d66bdd98ae704b2d4fc8ede70"
+    },
+    {
+      "path": "images/guides/csv-opens-in-one-column-5.svg",
+      "bytes": 1909,
+      "sha256": "73b70a4fb4253b72274f25f14727de675435e52cab315abed3e1fefe51120d71"
+    },
+    {
+      "path": "images/guides/csv-row-count-newlines-1-mobile.svg",
+      "bytes": 1988,
+      "sha256": "d080334d17f07fac3690a1647a7fa82663650e7717e9cfa003f90c568378b657"
+    },
+    {
+      "path": "images/guides/csv-row-count-newlines-1.svg",
+      "bytes": 1972,
+      "sha256": "bb8f47c4a69b9e4d54b561ec7fc3003ae832e276e7dd269f705297930bd71291"
+    },
+    {
+      "path": "images/guides/csv-row-count-newlines-4-mobile.svg",
+      "bytes": 1966,
+      "sha256": "1e67d25af392cddbb0a9dce37a55a2e54d826b8af23c0345747e297125ae1c88"
+    },
+    {
+      "path": "images/guides/csv-row-count-newlines-4.svg",
+      "bytes": 1979,
+      "sha256": "f0469bf3f4be4cf6dc37f79d7d479df550f5a18a2932befecef236a8e0c0f078"
+    },
+    {
+      "path": "images/guides/csv-to-json-preserve-types-1-mobile.svg",
+      "bytes": 1963,
+      "sha256": "10614a60189cf4574cac56faf3a14a58c10c0607a39534c621c8a6ba8c9ab4b4"
+    },
+    {
+      "path": "images/guides/csv-to-json-preserve-types-1.svg",
+      "bytes": 1946,
+      "sha256": "3fd07274d26370536ccf80f1e3908b6e2c27c1fb043c75cebbf775b6847afbfa"
+    },
+    {
+      "path": "images/guides/csv-to-json-preserve-types-4-mobile.svg",
+      "bytes": 2022,
+      "sha256": "ffcf0a3f800c3962b8f82ed5c783ee6d15d05ec2227e891db171aac439d88776"
+    },
+    {
+      "path": "images/guides/csv-to-json-preserve-types-4.svg",
+      "bytes": 2006,
+      "sha256": "5c222faef2d88b419dedbc1d1837430ea14073d0586c5fd785ca9a7162aca586"
+    },
+    {
+      "path": "images/guides/csv-utf8-accents-2-mobile.svg",
+      "bytes": 2034,
+      "sha256": "f2cea270ae30ddd36c560efb9b3aa0a40214fe97e840d5a7b5c70bb549d62bae"
+    },
+    {
+      "path": "images/guides/csv-utf8-accents-2.svg",
+      "bytes": 2019,
+      "sha256": "873fcbfe169ee077dddf7de2172da6df30e11145eba135f05dff40484ff62b18"
+    },
+    {
+      "path": "images/guides/csv-utf8-accents-4-mobile.svg",
+      "bytes": 1993,
+      "sha256": "21676acfcc455081ca3deff3eb09bfdd02a76f1fa2d3d7fda1a6c06b083cd628"
+    },
+    {
+      "path": "images/guides/csv-utf8-accents-4.svg",
+      "bytes": 1977,
+      "sha256": "fdd15a19e1aa9a3327b545f619879e635c103e0ab682b8e6c21d87364c7f8d58"
+    },
+    {
+      "path": "images/guides/csv-vs-xlsx-1-mobile.svg",
+      "bytes": 2141,
+      "sha256": "b0ec2133586997d58f473732f100263a46ab0fb37ed95ac72be917623247eeec"
+    },
+    {
+      "path": "images/guides/csv-vs-xlsx-1.svg",
+      "bytes": 2125,
+      "sha256": "cdb2ed0cfeb59251b1083e99b67bccbe54529815c80ea82ad210d42fb9c54653"
+    },
+    {
+      "path": "images/guides/csv-vs-xlsx-4-mobile.svg",
+      "bytes": 1949,
+      "sha256": "f761edba2a10ce5abe521572877ffb99ef4cca0e16004de55380889d96212a0e"
+    },
+    {
+      "path": "images/guides/csv-vs-xlsx-4.svg",
+      "bytes": 1932,
+      "sha256": "d25206bb41f07ce7d644b14c98fb16b9cc55343b83f46d4281983bcff053d2d0"
+    },
+    {
+      "path": "images/guides/excel-codes-turn-into-dates-2-mobile.svg",
+      "bytes": 1883,
+      "sha256": "aee528d92d6ffd33a616ef6cb811fe955528fb15bb6105e669533fb55dc069ea"
+    },
+    {
+      "path": "images/guides/excel-codes-turn-into-dates-2.svg",
+      "bytes": 1896,
+      "sha256": "aeedf3b783701c54b9106c63cf779c0af7f0fdc3890116eb279ff4f0be10add9"
+    },
+    {
+      "path": "images/guides/excel-codes-turn-into-dates-4-mobile.svg",
+      "bytes": 2082,
+      "sha256": "8f5025d7f9cc9fa29e916d72ba46cb2154c714aad8656eca16f040213d252e4f"
+    },
+    {
+      "path": "images/guides/excel-codes-turn-into-dates-4.svg",
+      "bytes": 2066,
+      "sha256": "719cbebc075a417a644c342054b007a4ecc1dacb8a4ad9f21626f69121f50252"
+    },
+    {
+      "path": "images/guides/excel-combine-cells-without-losing-data-2-mobile.svg",
+      "bytes": 1901,
+      "sha256": "adec208dfd0636d516ad59fbd8feb4712885b12c55f80e364e884cc28d29371c"
+    },
+    {
+      "path": "images/guides/excel-combine-cells-without-losing-data-2.svg",
+      "bytes": 1884,
+      "sha256": "c2bb0d2a052ff75b07cdddb3a3e65fa7215110cce58f3519af2d14c81a4453ed"
+    },
+    {
+      "path": "images/guides/excel-combine-cells-without-losing-data-5-mobile.svg",
+      "bytes": 1875,
+      "sha256": "3c9b16d8cda06c47e5a278a74fcc700bbb2e1ea4fb12c695e7a1fd5037f9b663"
+    },
+    {
+      "path": "images/guides/excel-combine-cells-without-losing-data-5.svg",
+      "bytes": 1887,
+      "sha256": "ccc46c0b1dcad7bb54f58ef072a3b79a442a393c1929617795eec1ccfd931cea"
+    },
+    {
+      "path": "images/guides/excel-compare-two-lists-3-mobile.svg",
+      "bytes": 2023,
+      "sha256": "13247dc85acfc95924efdbfc29a2e9f3e1d1ef130032f569fa5e20e3bff6e157"
+    },
+    {
+      "path": "images/guides/excel-compare-two-lists-3.svg",
+      "bytes": 2008,
+      "sha256": "93d255060adf0bc3552b00f74e44140e5fd0236356edbbbf5f3affe054a0b9e2"
+    },
+    {
+      "path": "images/guides/excel-compare-two-lists-5-mobile.svg",
+      "bytes": 1895,
+      "sha256": "da1c8af550bfee1d77253f6ef60bce37ad99aae80649ee2527fad46fc1b5e82c"
+    },
+    {
+      "path": "images/guides/excel-compare-two-lists-5.svg",
+      "bytes": 1879,
+      "sha256": "893b9308383bf1498b09bc214e48779dc9bed21f6f6bca983d91dfdaaa98984b"
+    },
+    {
+      "path": "images/guides/excel-conditional-formatting-duplicate-rows-2-mobile.svg",
+      "bytes": 2076,
+      "sha256": "b8b3b7ab1491d268a77e113f53538fac4ced9b3dc9dcc5b630f68c58b92a52fc"
+    },
+    {
+      "path": "images/guides/excel-conditional-formatting-duplicate-rows-2.svg",
+      "bytes": 2031,
+      "sha256": "0c8f26058cce2b74d7effb0e1ca24ae22925afacdc0edf31b37f8efb732a96ff"
+    },
+    {
+      "path": "images/guides/excel-conditional-formatting-duplicate-rows-4-mobile.svg",
+      "bytes": 1896,
+      "sha256": "15133040cb902cb6d66de88e2b3bbf9991354c6e296cc2267c11d59baafe6663"
+    },
+    {
+      "path": "images/guides/excel-conditional-formatting-duplicate-rows-4.svg",
+      "bytes": 1909,
+      "sha256": "9c75f701b44cf950c386b5800299b3b85bd2abb343e3799815816050c1435477"
+    },
+    {
+      "path": "images/guides/excel-count-distinct-values-2-mobile.svg",
+      "bytes": 1934,
+      "sha256": "49f271ed3c2e2683386d12f263dede11f925534e2867804ecb8901922cf09e38"
+    },
+    {
+      "path": "images/guides/excel-count-distinct-values-2.svg",
+      "bytes": 1918,
+      "sha256": "5e32169a39b8b7f2b25e1db723956a93ce91dc71571da6f23c9bd48ff52070fa"
+    },
+    {
+      "path": "images/guides/excel-count-distinct-values-4-mobile.svg",
+      "bytes": 2012,
+      "sha256": "f2fd9b56ba15e59569d762feebafb727055018e2213277cfbd657ec65afed64a"
+    },
+    {
+      "path": "images/guides/excel-count-distinct-values-4.svg",
+      "bytes": 1996,
+      "sha256": "9747896f276f5a646c2683b95e2d14b5e4d063236d95e29599d73e423bf7f973"
+    },
+    {
+      "path": "images/guides/excel-date-serial-numbers-2-mobile.svg",
+      "bytes": 1916,
+      "sha256": "880a9e17dbc253e7b76e82dfcdde5826ea4e85ed8d88368be9abfcdb3ca1092f"
+    },
+    {
+      "path": "images/guides/excel-date-serial-numbers-2.svg",
+      "bytes": 1929,
+      "sha256": "1681cfce3f5003a55a3a1f9fe9ba211bdbb076988d86ffca7fecf9c64167e715"
+    },
+    {
+      "path": "images/guides/excel-date-serial-numbers-4-mobile.svg",
+      "bytes": 1975,
+      "sha256": "95841dbea805a82fcdf8bc2091853636fb3338cef5378e82ed99708c0b5ebb82"
+    },
+    {
+      "path": "images/guides/excel-date-serial-numbers-4.svg",
+      "bytes": 1959,
+      "sha256": "70a6868e8fcbee066bc9b64f1a66cac1e888322d8b61068f62e9a6db64d6affb"
+    },
+    {
+      "path": "images/guides/excel-dates-sort-as-text-2-mobile.svg",
+      "bytes": 1963,
+      "sha256": "e08c66b6b0c9df130cc5aef06229d361a7ab671b037c5bccaf23f9ae69c32435"
+    },
+    {
+      "path": "images/guides/excel-dates-sort-as-text-2.svg",
+      "bytes": 1947,
+      "sha256": "32787fbcb1444f8c0b9c4283ab626a1747eea0479753084c750f33cb8b969031"
+    },
+    {
+      "path": "images/guides/excel-dates-sort-as-text-4-mobile.svg",
+      "bytes": 2012,
+      "sha256": "a568b01d8b23d39a24398045a005e5548c1847638685da475d247016b0e7260a"
+    },
+    {
+      "path": "images/guides/excel-dates-sort-as-text-4.svg",
+      "bytes": 1996,
+      "sha256": "0b93f758b3c70a15a6a6165bb29b1b240b383185120bb75425d0a6c727d640dc"
+    },
+    {
+      "path": "images/guides/excel-dates-sort-as-text-5-mobile.svg",
+      "bytes": 2012,
+      "sha256": "a568b01d8b23d39a24398045a005e5548c1847638685da475d247016b0e7260a"
+    },
+    {
+      "path": "images/guides/excel-dates-sort-as-text-5.svg",
+      "bytes": 1996,
+      "sha256": "0b93f758b3c70a15a6a6165bb29b1b240b383185120bb75425d0a6c727d640dc"
+    },
+    {
+      "path": "images/guides/excel-decimal-comma-1-mobile.svg",
+      "bytes": 1972,
+      "sha256": "514f617660444b99ca631f1507eba691c9964dc16c26288235d3c845a2858cd4"
+    },
+    {
+      "path": "images/guides/excel-decimal-comma-1.svg",
+      "bytes": 1956,
+      "sha256": "253633b89f361812871e191e58e1ef5e0c88c21ae64b1f738fb30acf1cd2a1f5"
+    },
+    {
+      "path": "images/guides/excel-decimal-comma-4-mobile.svg",
+      "bytes": 1951,
+      "sha256": "45ce12fb329e616a69c8605b8183290c7cbd21025a9bcffa63846c20bb32e877"
+    },
+    {
+      "path": "images/guides/excel-decimal-comma-4.svg",
+      "bytes": 1935,
+      "sha256": "04a34bfcf09d1ddde867fa648d70f2be53b1030c81ce6426656b5447cc45b24f"
+    },
+    {
+      "path": "images/guides/excel-drop-down-list-not-updating-2-mobile.svg",
+      "bytes": 1990,
+      "sha256": "2c743f06d8a764528528043f7704a845078b5d163adc5ad4f6ec7698ac7948a3"
+    },
+    {
+      "path": "images/guides/excel-drop-down-list-not-updating-2.svg",
+      "bytes": 1973,
+      "sha256": "8d70bb67802f1f51dc1a3b4d6333b2d16129375189f96a531f352389c2a5e387"
+    },
+    {
+      "path": "images/guides/excel-drop-down-list-not-updating-5-mobile.svg",
+      "bytes": 1982,
+      "sha256": "f780ecf377efb123686145ab0dff15253e0cb6240b58979c2f5eaca620e2c5e3"
+    },
+    {
+      "path": "images/guides/excel-drop-down-list-not-updating-5.svg",
+      "bytes": 1965,
+      "sha256": "39e34e46c1fe7064eb8ce0e81ed43ef96265bda6b266ab1844fb608a9a1189d4"
+    },
+    {
+      "path": "images/guides/excel-filter-spill-error-2-mobile.svg",
+      "bytes": 1963,
+      "sha256": "e3921e970cb5250aa5994f6343bef4748750975fbad9794b16d1f6ef05d115ee"
+    },
+    {
+      "path": "images/guides/excel-filter-spill-error-2.svg",
+      "bytes": 1947,
+      "sha256": "3d286222730c40d64a417195e5052302971eb55c053ab094c3879f2f537d0ab8"
+    },
+    {
+      "path": "images/guides/excel-filter-spill-error-4-mobile.svg",
+      "bytes": 2014,
+      "sha256": "912ede467702a87b70943dc758fe013b1f90379ef29107e0183b928e760fd9e9"
+    },
+    {
+      "path": "images/guides/excel-filter-spill-error-4.svg",
+      "bytes": 1998,
+      "sha256": "1ebe0a6e62b7b2e11124df288d9f7fcbf6b0f0adfbaa0278183b6862287b4c5c"
+    },
+    {
+      "path": "images/guides/excel-formulas-not-calculating-2-mobile.svg",
+      "bytes": 2043,
+      "sha256": "ad323be0306b2afa688b0b2136f8224745195e3fea8f3e34f649ebd141e50b49"
+    },
+    {
+      "path": "images/guides/excel-formulas-not-calculating-2.svg",
+      "bytes": 2026,
+      "sha256": "dd1b1f12598dea5a99edb2ad9498479de9b30621e53cc7b7bf9ee9e5b751777c"
+    },
+    {
+      "path": "images/guides/excel-formulas-not-calculating-5-mobile.svg",
+      "bytes": 1918,
+      "sha256": "d298b2cda6626da4602b6f0de64e143a696517245e09307fd9063835e9114b74"
+    },
+    {
+      "path": "images/guides/excel-formulas-not-calculating-5.svg",
+      "bytes": 1901,
+      "sha256": "16be8f0f95a9ebcb9713e4e8600ff750ec3d939988f8ae9e570e19c49e071f77"
+    },
+    {
+      "path": "images/guides/excel-freeze-rows-and-columns-together-2-mobile.svg",
+      "bytes": 1963,
+      "sha256": "26038775f50216c587ee5607c0335304a2ec9398ca29acbd4f52d541bdff1696"
+    },
+    {
+      "path": "images/guides/excel-freeze-rows-and-columns-together-2.svg",
+      "bytes": 1946,
+      "sha256": "48ed438c60f961d8d4b420155099f154c04439118297305a4b993c20f0f11516"
+    },
+    {
+      "path": "images/guides/excel-freeze-rows-and-columns-together-5-mobile.svg",
+      "bytes": 1988,
+      "sha256": "108812fe1a4c36b2eee51ca4ae7a37cc886255b429908c409ebdee03cd76d273"
+    },
+    {
+      "path": "images/guides/excel-freeze-rows-and-columns-together-5.svg",
+      "bytes": 1942,
+      "sha256": "38cf655bf18d010e48d2f8d2efdc75be35571c191baf17e03244f9b3ab9eea3a"
+    },
+    {
+      "path": "images/guides/excel-leading-zeros-2-mobile.svg",
+      "bytes": 1898,
+      "sha256": "3ac98b52e6605aabc12970efa2b6d7199e957e46dc166149a4bc2969a7962de2"
+    },
+    {
+      "path": "images/guides/excel-leading-zeros-2.svg",
+      "bytes": 1881,
+      "sha256": "de82376117d160023ff7de8dc2605333bd4b9aa4c5533775c3d407594337ceae"
+    },
+    {
+      "path": "images/guides/excel-leading-zeros-4-mobile.svg",
+      "bytes": 1935,
+      "sha256": "fd730de64c7b7abbfad4994154d616d06ff257875723a2d71dc9b3eafd71c281"
+    },
+    {
+      "path": "images/guides/excel-leading-zeros-4.svg",
+      "bytes": 1919,
+      "sha256": "fce425c5db9bdedc79836dcc91be988bd2fdb4868ee53d9988b250245fd45fed"
+    },
+    {
+      "path": "images/guides/excel-long-numbers-1-mobile.svg",
+      "bytes": 2267,
+      "sha256": "23b1055aef329774ca35e12a1770d10fe1923d75387a5a3c579efcb07a8737a3"
+    },
+    {
+      "path": "images/guides/excel-long-numbers-1.svg",
+      "bytes": 2253,
+      "sha256": "3a9f3b4e740165595fac4a12456e5e01c7cc960aa4fcd2c165ceb8c69a7f5193"
+    },
+    {
+      "path": "images/guides/excel-long-numbers-2-mobile.svg",
+      "bytes": 1932,
+      "sha256": "3f15010f9d51abe6ed0f4fcc4332604ed9dfcc26927cf45e85c496b4e99cf1df"
+    },
+    {
+      "path": "images/guides/excel-long-numbers-2.svg",
+      "bytes": 1916,
+      "sha256": "548eb212d09c68f6b52d98263d7bcd1f7c40d90c3b294a7b4cbb6248fa8fc706"
+    },
+    {
+      "path": "images/guides/excel-long-numbers-4-mobile.svg",
+      "bytes": 1935,
+      "sha256": "3cabbd64e032f47766c4a8524be51baeef3649dcf438c31f2c81d09a2a52f0eb"
+    },
+    {
+      "path": "images/guides/excel-long-numbers-4.svg",
+      "bytes": 1918,
+      "sha256": "969bf96aeeb8b086c4883e55e02dd7d7b8ac096946f5bc9f298787cd34828a6f"
+    },
+    {
+      "path": "images/guides/excel-long-numbers-6-mobile.svg",
+      "bytes": 2309,
+      "sha256": "aa31a873e8d7158e6b2f2208ce31c1002be30986ce19145df215f8547912df65"
+    },
+    {
+      "path": "images/guides/excel-long-numbers-6.svg",
+      "bytes": 2237,
+      "sha256": "bdecad23efd296150ae61f522e29c559c129d11f9cb6e05ae87c7ca9ad44985d"
+    },
+    {
+      "path": "images/guides/excel-networkdays-working-days-2-mobile.svg",
+      "bytes": 1926,
+      "sha256": "372663a8c3bd802d62a27e6bc16e6fa60c4ae59f099a93d0ab8ad7b8863e4689"
+    },
+    {
+      "path": "images/guides/excel-networkdays-working-days-2.svg",
+      "bytes": 1939,
+      "sha256": "69b785f5af1bacc9198629cd0cf5e7b3c112d9f2a702fa479838ae7837f38c30"
+    },
+    {
+      "path": "images/guides/excel-networkdays-working-days-4-mobile.svg",
+      "bytes": 2024,
+      "sha256": "9da555ad3c829eb9c59032a81800d4faa2ee91989609357076ce80495d168d34"
+    },
+    {
+      "path": "images/guides/excel-networkdays-working-days-4.svg",
+      "bytes": 2008,
+      "sha256": "f80123f0ca106775750ec120c9481e1758e5c82ebe2cca94f8c3ba2960d7b960"
+    },
+    {
+      "path": "images/guides/excel-percentage-change-zero-baseline-2-mobile.svg",
+      "bytes": 1926,
+      "sha256": "36bd999c286f445a29bae4e692c7cf86b562eb0ee731483fb179f393c18ded4b"
+    },
+    {
+      "path": "images/guides/excel-percentage-change-zero-baseline-2.svg",
+      "bytes": 1909,
+      "sha256": "245d1cfceb8aa2282d572146ee2a901e894a8fe0acac8ba89b15ba3920be7631"
+    },
+    {
+      "path": "images/guides/excel-percentage-change-zero-baseline-5-mobile.svg",
+      "bytes": 1961,
+      "sha256": "ea533296f15b7d136bcde855a1525ed9b0323a8f265438158371033e465d3f12"
+    },
+    {
+      "path": "images/guides/excel-percentage-change-zero-baseline-5.svg",
+      "bytes": 1945,
+      "sha256": "02a1313c6d30d589e080fed95701069348c855470d96de0c5f71e21d6bbc443d"
+    },
+    {
+      "path": "images/guides/excel-pivot-table-count-instead-of-sum-1-mobile.svg",
+      "bytes": 1973,
+      "sha256": "1cb3407680f38e476b283320711e48b39b79d4ea8a42b958d94b502c3fd630d6"
+    },
+    {
+      "path": "images/guides/excel-pivot-table-count-instead-of-sum-1.svg",
+      "bytes": 1957,
+      "sha256": "9a5f17e69eb0718d48147a02882f31ddd6f52eb4806ddf16ba7880079ae576dd"
+    },
+    {
+      "path": "images/guides/excel-pivot-table-count-instead-of-sum-5-mobile.svg",
+      "bytes": 2044,
+      "sha256": "c13e61be62d3ecf400abfa8651cbb5f136375d5f8057f33d3a05d31388a8abe7"
+    },
+    {
+      "path": "images/guides/excel-pivot-table-count-instead-of-sum-5.svg",
+      "bytes": 2028,
+      "sha256": "bd175d365255f52030a678c7b6d51301d3329a72ffbfed34df714dfec18d732d"
+    },
+    {
+      "path": "images/guides/excel-pivot-table-missing-new-rows-1-mobile.svg",
+      "bytes": 1891,
+      "sha256": "16fcc64d0aaa0ade147c769196e7e595a9a47242b348b55d20c4a96d11f0d0db"
+    },
+    {
+      "path": "images/guides/excel-pivot-table-missing-new-rows-1.svg",
+      "bytes": 1874,
+      "sha256": "dd5698fb93417b883b541aa9c4d47b6791c1aa5506fcc35fcbbd1325352993ce"
+    },
+    {
+      "path": "images/guides/excel-pivot-table-missing-new-rows-5-mobile.svg",
+      "bytes": 1963,
+      "sha256": "87983ef6802470b62cc9e833aa6ad4125bf735260a2b928cc9fea8d56ea93d97"
+    },
+    {
+      "path": "images/guides/excel-pivot-table-missing-new-rows-5.svg",
+      "bytes": 1947,
+      "sha256": "882412672680e79490fb8325dff9cbdeea30abaefb51b1f9869d457d9aedd722"
+    },
+    {
+      "path": "images/guides/excel-remove-blank-rows-safely-1-mobile.svg",
+      "bytes": 1952,
+      "sha256": "80d2c47ee5baebdf25fd788133d20efb14a28b28b0619fcc6cfe947a7117cd1a"
+    },
+    {
+      "path": "images/guides/excel-remove-blank-rows-safely-1.svg",
+      "bytes": 1935,
+      "sha256": "c1dc7a7298b956ef00def576262b2c955e177eecddba9e52c09888204347479c"
+    },
+    {
+      "path": "images/guides/excel-remove-blank-rows-safely-5-mobile.svg",
+      "bytes": 2000,
+      "sha256": "015e96230b93406ed2272448051c7f546e8ed6dd4fd7506d3f3bfd3378894b9f"
+    },
+    {
+      "path": "images/guides/excel-remove-blank-rows-safely-5.svg",
+      "bytes": 1984,
+      "sha256": "bb2339fa70342e6460aa93d1f9ccf64c6add1de2976fcbbd5a5b70f95224dba7"
+    },
+    {
+      "path": "images/guides/excel-remove-duplicates-keep-latest-2-mobile.svg",
+      "bytes": 1938,
+      "sha256": "bc49ca57803db1b557869fec68c401a5a47ae3bd8c2e972f4153021bf96ea22e"
+    },
+    {
+      "path": "images/guides/excel-remove-duplicates-keep-latest-2.svg",
+      "bytes": 1951,
+      "sha256": "dd61272d98ec80ce3bdbafeb8319b347f86eb4bb9146dbcb01c1aff6579bd68b"
+    },
+    {
+      "path": "images/guides/excel-remove-duplicates-keep-latest-4-mobile.svg",
+      "bytes": 1996,
+      "sha256": "acac0acb74becc99e86ab20101c04f1ad0431a34a777402d70073c9b0badc8c9"
+    },
+    {
+      "path": "images/guides/excel-remove-duplicates-keep-latest-4.svg",
+      "bytes": 1979,
+      "sha256": "4cb5c85b72e2aa8dc519d927b19dfbba8ceca072a90d96507b662f1e14f67a32"
+    },
+    {
+      "path": "images/guides/excel-repeat-header-row-print-every-page-2-mobile.svg",
+      "bytes": 1978,
+      "sha256": "477323142f6161480b1f0fe68f5402429dc8cd5d6d41141a7d6dc1b5a56a4d5c"
+    },
+    {
+      "path": "images/guides/excel-repeat-header-row-print-every-page-2.svg",
+      "bytes": 1961,
+      "sha256": "3a65961acc87e2c04ce77a430969c58cf1effde017953469fa5472340d7b3e96"
+    },
+    {
+      "path": "images/guides/excel-repeat-header-row-print-every-page-5-mobile.svg",
+      "bytes": 2000,
+      "sha256": "20c58a4e3b87399ff1a800c8ce78e565c0c03c585643245ba64c6ff373d155a9"
+    },
+    {
+      "path": "images/guides/excel-repeat-header-row-print-every-page-5.svg",
+      "bytes": 1984,
+      "sha256": "796839b9f065534c0149c29e7f73d22dcd28eff53ec7261cec2639db5202e68a"
+    },
+    {
+      "path": "images/guides/excel-sum-hours-over-24-2-mobile.svg",
+      "bytes": 1963,
+      "sha256": "00a7490088c35a8af65a1dd8733b2c9f6ebd110cfb9f7a18e6cf901ddc94f35c"
+    },
+    {
+      "path": "images/guides/excel-sum-hours-over-24-2.svg",
+      "bytes": 1917,
+      "sha256": "d0cef1cbaa9cf506b2d06cca9b57cda241fb231b0302bc86b700c21937d3ee14"
+    },
+    {
+      "path": "images/guides/excel-sum-hours-over-24-5-mobile.svg",
+      "bytes": 1964,
+      "sha256": "26be91af452fc90c4a17750ba994954545c5e1e15522690509f4c021e01aa480"
+    },
+    {
+      "path": "images/guides/excel-sum-hours-over-24-5.svg",
+      "bytes": 1948,
+      "sha256": "91d83535bbf2e31d16f5040ca56d4eefe53cb901021dd6c2d277506906167e0d"
+    },
+    {
+      "path": "images/guides/excel-sum-numbers-as-text-1-mobile.svg",
+      "bytes": 2032,
+      "sha256": "8dcbfe5fda59ae0dd00cff32cfb70e8a92f6efbb46bafc2f795df4e57d0ef7e9"
+    },
+    {
+      "path": "images/guides/excel-sum-numbers-as-text-1.svg",
+      "bytes": 2016,
+      "sha256": "38f4c52219ce9f7ec2696a7a31dbdf15725fd49a50fc50da065354dfacf09b1c"
+    },
+    {
+      "path": "images/guides/excel-sum-numbers-as-text-4-mobile.svg",
+      "bytes": 1975,
+      "sha256": "a78672b316f6fd56fbf622264298d92fecda720c4d4799e71c8b8d6f920223b4"
+    },
+    {
+      "path": "images/guides/excel-sum-numbers-as-text-4.svg",
+      "bytes": 1988,
+      "sha256": "c213cb5d7050380b3ec3bb0ec832f4942682c46b29763046cb44e43cd85c4cfd"
+    },
+    {
+      "path": "images/guides/excel-sum-visible-rows-subtotal-2-mobile.svg",
+      "bytes": 1991,
+      "sha256": "68961a5d618e75e689c1528900e348915b70f280ae0ae90525e7658ca204c83a"
+    },
+    {
+      "path": "images/guides/excel-sum-visible-rows-subtotal-2.svg",
+      "bytes": 1975,
+      "sha256": "43a8b28b0ad6f1bb8b84a4105ca6133ff56ea263f1c789c38ecc8ed27780d60d"
+    },
+    {
+      "path": "images/guides/excel-sum-visible-rows-subtotal-3-mobile.svg",
+      "bytes": 2032,
+      "sha256": "c94244076a08791eb4c13cccc4488650bf7e563d3302ff9b0fad97e56b289c17"
+    },
+    {
+      "path": "images/guides/excel-sum-visible-rows-subtotal-3.svg",
+      "bytes": 2016,
+      "sha256": "140a19370cafa50700fad763f640fc6c93d38011c78f2f76a2369fc1b74d01f5"
+    },
+    {
+      "path": "images/guides/excel-sumifs-date-range-2-mobile.svg",
+      "bytes": 1969,
+      "sha256": "d8705a3184a8533c65d3a2d215c9d3469d66a5a9bbdc5f905f826a99fdad0646"
+    },
+    {
+      "path": "images/guides/excel-sumifs-date-range-2.svg",
+      "bytes": 1953,
+      "sha256": "6bb193140bc2ef2780ba020a62cb08dfca9bbe110ff81d651948469e4edc8d94"
+    },
+    {
+      "path": "images/guides/excel-sumifs-date-range-4-mobile.svg",
+      "bytes": 2032,
+      "sha256": "9f211cc8cad598b91ac4413f448048a49aa1fd86fa16bc9e4345fd2a0f0eeccb"
+    },
+    {
+      "path": "images/guides/excel-sumifs-date-range-4.svg",
+      "bytes": 2016,
+      "sha256": "7ce56c0e83c8d7b272152216aee7d4153f7825644101865a8de63ea7febaee3b"
+    },
+    {
+      "path": "images/guides/excel-textsplit-multiple-delimiters-2-mobile.svg",
+      "bytes": 2039,
+      "sha256": "abd4a63407251eb4ce18488f4e8791d545b4bcaceafcea23b80149532cddf0e9"
+    },
+    {
+      "path": "images/guides/excel-textsplit-multiple-delimiters-2.svg",
+      "bytes": 2023,
+      "sha256": "de785d0b1261bc333e57b6a2de520281318953af37408d4d179be43964b6995c"
+    },
+    {
+      "path": "images/guides/excel-textsplit-multiple-delimiters-3-mobile.svg",
+      "bytes": 2011,
+      "sha256": "2711d754c4c52ae0fd548fbcab26a5563fd7a3bc89521b06a907e4f627a98645"
+    },
+    {
+      "path": "images/guides/excel-textsplit-multiple-delimiters-3.svg",
+      "bytes": 1995,
+      "sha256": "48f5e7c380259565481263b32099b1649853ca03c28c52a22fdd9191212bd0dc"
+    },
+    {
+      "path": "images/guides/excel-vlookup-between-sheets-2-mobile.svg",
+      "bytes": 1927,
+      "sha256": "38dfb6f09473fd72a027362bd932e97d9927c43e5a226e2c2299ad9a28f61f76"
+    },
+    {
+      "path": "images/guides/excel-vlookup-between-sheets-2.svg",
+      "bytes": 1911,
+      "sha256": "460dba6d852cdbae7f1f4907321209964ceb80b8773615064215572d47606088"
+    },
+    {
+      "path": "images/guides/excel-vlookup-between-sheets-5-mobile.svg",
+      "bytes": 1891,
+      "sha256": "39c5a41f33ea1d58ef2a4ca7de6f7375269a6902257744e4dc2f292f80a6d17a"
+    },
+    {
+      "path": "images/guides/excel-vlookup-between-sheets-5.svg",
+      "bytes": 1874,
+      "sha256": "95a020997038a34b2735a5589521859e7d89c12a46f03ea6c25587b11051a8ad"
+    },
+    {
+      "path": "images/guides/excel-workday-holidays-2-mobile.svg",
+      "bytes": 1999,
+      "sha256": "9b320d8a536064e5f7729699dde1a9a3093be08265e24e9b7d58d7cc936657c1"
+    },
+    {
+      "path": "images/guides/excel-workday-holidays-2.svg",
+      "bytes": 1983,
+      "sha256": "72d9b07f7e537ba2fd8061c552901de3a81dd8639c4af9bbf5500d1ce9752edb"
+    },
+    {
+      "path": "images/guides/excel-workday-holidays-4-mobile.svg",
+      "bytes": 2056,
+      "sha256": "2e3900fef04aa852f92222f77ba34233ff40c75b5f30dd2b0f66bbb46715ab91"
+    },
+    {
+      "path": "images/guides/excel-workday-holidays-4.svg",
+      "bytes": 2040,
+      "sha256": "46a90a0fa59272089d25dffe4bf856f786586308e3a980d0b78b36aa18b07986"
+    },
+    {
+      "path": "images/guides/excel-xlookup-multiple-criteria-2-mobile.svg",
+      "bytes": 1975,
+      "sha256": "d69564089a5ae20c69da5a4db5ee72cb69cd951efe03b6ebb5f19d11000de220"
+    },
+    {
+      "path": "images/guides/excel-xlookup-multiple-criteria-2.svg",
+      "bytes": 1959,
+      "sha256": "d866db58cc6763d30f821f113830a23de4de9d0b51321f8c2a0d1df3522daff6"
+    },
+    {
+      "path": "images/guides/excel-xlookup-multiple-criteria-5-mobile.svg",
+      "bytes": 1928,
+      "sha256": "dffedc974648937881aeb4878f1b859b39911a9ac59ccedd64855337e2cc700b"
+    },
+    {
+      "path": "images/guides/excel-xlookup-multiple-criteria-5.svg",
+      "bytes": 1942,
+      "sha256": "57b0710a0dd37f08de17435beceea29dd0f6989d4ddbd80d2d088c53c1b94da2"
+    },
+    {
+      "path": "images/guides/excel-xlookup-return-all-matches-2-mobile.svg",
+      "bytes": 2063,
+      "sha256": "7118800dd8b0b815a4c35c8902b1a0a9275399df45a03e6243d444a8ea4b9f13"
+    },
+    {
+      "path": "images/guides/excel-xlookup-return-all-matches-2.svg",
+      "bytes": 2047,
+      "sha256": "bc86a596453feac5aa6b1b6bab98d718142dfdb3c8788d57304520239f90af7c"
+    },
+    {
+      "path": "images/guides/excel-xlookup-return-all-matches-4-mobile.svg",
+      "bytes": 2075,
+      "sha256": "4a3ee59dbbcb693d79a083e4c708f93624a17da28dda86e0260fc680350757f3"
+    },
+    {
+      "path": "images/guides/excel-xlookup-return-all-matches-4.svg",
+      "bytes": 2059,
+      "sha256": "519ebb6712f353ff9684762a04e688e3c18ffd307bdc96b511d10d6c5a8f7a3f"
+    },
+    {
+      "path": "images/guides/google-sheets-countif-checkboxes-3-mobile.svg",
+      "bytes": 2030,
+      "sha256": "c001945b7bbe1cfcbe4682d44d2d3adc44c561a02d3cf07f8379034135ffad88"
+    },
+    {
+      "path": "images/guides/google-sheets-countif-checkboxes-3.svg",
+      "bytes": 2014,
+      "sha256": "778a29de7c0826149889ed8f6ec78a118eb8beba8798226c99c6825ecdf1317a"
+    },
+    {
+      "path": "images/guides/google-sheets-countif-checkboxes-6-mobile.svg",
+      "bytes": 1956,
+      "sha256": "0ffb0a38b1f0f48b6281abbaca6734581beed6d10ba856fa8296aa8a53806cdd"
+    },
+    {
+      "path": "images/guides/google-sheets-countif-checkboxes-6.svg",
+      "bytes": 1939,
+      "sha256": "d8f9c46d5d9b2f0efa3dc0869761c5cf816deaca340b059fad1884bba6a979c6"
+    },
+    {
+      "path": "images/guides/google-sheets-filter-no-matches-3-mobile.svg",
+      "bytes": 2016,
+      "sha256": "2a6ebce838581fa159519f705830cb48f0d5c8ab4672ff07ba0aeb8245eb5ea6"
+    },
+    {
+      "path": "images/guides/google-sheets-filter-no-matches-3.svg",
+      "bytes": 1999,
+      "sha256": "fa716f952f011fd354ed36483764abd15d786f66d0059d8eeafb5be80654a02c"
+    },
+    {
+      "path": "images/guides/google-sheets-filter-no-matches-6-mobile.svg",
+      "bytes": 2002,
+      "sha256": "d09b5519b71f1d217437a3fb22d764d602119348315a19a0fcffabf968c86192"
+    },
+    {
+      "path": "images/guides/google-sheets-filter-no-matches-6.svg",
+      "bytes": 1985,
+      "sha256": "dcbccc0a068e6487f632e2e868ba0c81b6e1855818c85126dbe720f6112acf45"
+    },
+    {
+      "path": "images/guides/google-sheets-highlight-duplicate-rows-by-id-2-mobile.svg",
+      "bytes": 1963,
+      "sha256": "f3fcd7d60389587f49c4cadd7b60fce97a87b7e85502b880aa363dfef37e52f6"
+    },
+    {
+      "path": "images/guides/google-sheets-highlight-duplicate-rows-by-id-2.svg",
+      "bytes": 1946,
+      "sha256": "accb5cedf0b10c3543e4e61b5cfc5458270aa57a6709571bd92610fb8200b7d4"
+    },
+    {
+      "path": "images/guides/google-sheets-highlight-duplicate-rows-by-id-5-mobile.svg",
+      "bytes": 2023,
+      "sha256": "ab9c432129da931e2a33046ad848fe99f8d76b9f394791b7201d10f7559ffd49"
+    },
+    {
+      "path": "images/guides/google-sheets-highlight-duplicate-rows-by-id-5.svg",
+      "bytes": 2006,
+      "sha256": "b7636a0fc9a5f1976db05e1f8b45bc341a2cd7378f6043a5a71ffe44f8936e49"
+    },
+    {
+      "path": "images/guides/google-sheets-query-group-by-2-mobile.svg",
+      "bytes": 2025,
+      "sha256": "a605863cac5915b18aa1ce6383ed7349f4c787aec821499056a808db9680e3a0"
+    },
+    {
+      "path": "images/guides/google-sheets-query-group-by-2.svg",
+      "bytes": 1980,
+      "sha256": "a6d05a481bd4086a0f895785965495932da01bcae4217537c9290616fd627d41"
+    },
+    {
+      "path": "images/guides/google-sheets-query-group-by-4-mobile.svg",
+      "bytes": 2029,
+      "sha256": "694fa3be6aa43a12552edfbcd62cef6ab2507519a3b9d1bce5dda7018cc8f625"
+    },
+    {
+      "path": "images/guides/google-sheets-query-group-by-4.svg",
+      "bytes": 2013,
+      "sha256": "331f7aa84b44875052d8d191cfe24b1e11c970ec8024afaac67a0484ee7f43fc"
+    },
+    {
+      "path": "images/guides/google-sheets-query-mixed-data-types-2-mobile.svg",
+      "bytes": 1906,
+      "sha256": "7fc44d8802503c5e775683f49c307bc74da2f69bf3ac45135fe370850ee41c0e"
+    },
+    {
+      "path": "images/guides/google-sheets-query-mixed-data-types-2.svg",
+      "bytes": 1889,
+      "sha256": "6005f14cb5f4434f7d9f00c7f8348540d54d0d19f56460512e112620c5cc2178"
+    },
+    {
+      "path": "images/guides/google-sheets-query-mixed-data-types-6-mobile.svg",
+      "bytes": 1998,
+      "sha256": "46d4ebfd13deafa2b7fbce71b3a70096ac18bf6778ee12c42367ff3570679910"
+    },
+    {
+      "path": "images/guides/google-sheets-query-mixed-data-types-6.svg",
+      "bytes": 1981,
+      "sha256": "b167a980fdbbe1808944778bfa54c12f42103d56abfad1bc89347bc04c0f1c05"
+    },
+    {
+      "path": "images/guides/google-sheets-remove-duplicates-2-mobile.svg",
+      "bytes": 2019,
+      "sha256": "ce965590ce2c71c98e96e2e1565941de1a53d592cc0e09b385359b305d6f6363"
+    },
+    {
+      "path": "images/guides/google-sheets-remove-duplicates-2.svg",
+      "bytes": 2003,
+      "sha256": "2b96e8d29a316fd1de6237395e329ecb7cfc02d3a7e0433cbf4a5151854afec2"
+    },
+    {
+      "path": "images/guides/google-sheets-remove-duplicates-4-mobile.svg",
+      "bytes": 2108,
+      "sha256": "c1776fc6d3a97fe582734206f272b87fb490926bac3e740b8539231f3662a353"
+    },
+    {
+      "path": "images/guides/google-sheets-remove-duplicates-4.svg",
+      "bytes": 2093,
+      "sha256": "98ae6c02fbe32ca7f36945ea965e3baf6cdfff6ad9a46a25098fe877969689f7"
+    },
+    {
+      "path": "images/guides/google-sheets-sort-multiple-columns-3-mobile.svg",
+      "bytes": 2070,
+      "sha256": "20cc0e605f5342aa85410c5629f61c6dcb1de33e64b2212e037ae0ecb9e86d73"
+    },
+    {
+      "path": "images/guides/google-sheets-sort-multiple-columns-3.svg",
+      "bytes": 2055,
+      "sha256": "f23180924dc0bdfcc5883c6cf2bde49cf966485c3d6b31c5ecc13ec281eb0265"
+    },
+    {
+      "path": "images/guides/google-sheets-sort-multiple-columns-5-mobile.svg",
+      "bytes": 1956,
+      "sha256": "bd386640b216d7ab7d1ca22593c67c075e1b2f88d4e45cdd74559a2c7d9f9cac"
+    },
+    {
+      "path": "images/guides/google-sheets-sort-multiple-columns-5.svg",
+      "bytes": 1939,
+      "sha256": "f728387620bf032aaa5fba35602f96b0ae20d54c6d9b427b2c888be31f348fcf"
+    },
+    {
+      "path": "images/guides/google-sheets-split-empty-fields-2-mobile.svg",
+      "bytes": 2109,
+      "sha256": "81d1e96633afe6ee5b5c1ada5ea96a80af2bdeeca4af765da0b9cbae462b48e5"
+    },
+    {
+      "path": "images/guides/google-sheets-split-empty-fields-2.svg",
+      "bytes": 2094,
+      "sha256": "c3dfdf17f5e872b2459a0da4d5e6245b445b8cdb673b6b9530f311547e5d20bf"
+    },
+    {
+      "path": "images/guides/google-sheets-split-empty-fields-4-mobile.svg",
+      "bytes": 2073,
+      "sha256": "10063e4bd29b7ef9d82362c95d8b45f92abee24cf01b3683da220b96c78f3a8d"
+    },
+    {
+      "path": "images/guides/google-sheets-split-empty-fields-4.svg",
+      "bytes": 2028,
+      "sha256": "9cb6b5cc0e2ed539a47742102b2f82fd24c0a5606d606c2fef416f9a6d3d9d3b"
+    },
+    {
+      "path": "images/guides/google-sheets-sum-by-month-category-3-mobile.svg",
+      "bytes": 1965,
+      "sha256": "b2ee423dd3c585dae8860b99dd5f129a04b8148ccde172e6d933f753fcf3eda8"
+    },
+    {
+      "path": "images/guides/google-sheets-sum-by-month-category-3.svg",
+      "bytes": 1948,
+      "sha256": "5298aa71151250e03759afba08b95c4db458ada92b305f73914578b105720b04"
+    },
+    {
+      "path": "images/guides/google-sheets-sum-by-month-category-5-mobile.svg",
+      "bytes": 2003,
+      "sha256": "b91bb2b2bb10bb19e008f2d1e28fd4387a870dd327d1dccf66250fe1838e0083"
+    },
+    {
+      "path": "images/guides/google-sheets-sum-by-month-category-5.svg",
+      "bytes": 2016,
+      "sha256": "3f5edad7e9271fb7a09ba3db921cf1eedd89585c2700715161047de7b98ae50b"
+    },
+    {
+      "path": "images/guides/google-sheets-sumif-wildcards-literal-text-2-mobile.svg",
+      "bytes": 1984,
+      "sha256": "3b5bbe8473bbc834c570f2b4e6fd4be921470eb830a341b933ecddbf02b22137"
+    },
+    {
+      "path": "images/guides/google-sheets-sumif-wildcards-literal-text-2.svg",
+      "bytes": 1967,
+      "sha256": "71d553302b0607cbe3aa9a7b1b9b74929705009bd34857ba0f614bcd6f6086d1"
+    },
+    {
+      "path": "images/guides/google-sheets-sumif-wildcards-literal-text-6-mobile.svg",
+      "bytes": 1942,
+      "sha256": "d852b0fb233dafeaaab81c5d53bab07702527631d39871fc2668454455611515"
+    },
+    {
+      "path": "images/guides/google-sheets-sumif-wildcards-literal-text-6.svg",
+      "bytes": 1925,
+      "sha256": "b0c6b07dfc8bda8cc19e8d2be16579eee276457d3a0cbe1b6c65cc325db4d5a0"
+    },
+    {
+      "path": "images/guides/nested-json-to-csv-1-mobile.svg",
+      "bytes": 2036,
+      "sha256": "602450793ed8f36412b5b4dedd4558c0cfd4c6d767b9b58c6671f643f481d6be"
+    },
+    {
+      "path": "images/guides/nested-json-to-csv-1.svg",
+      "bytes": 2020,
+      "sha256": "ae557756aea1ca210a137f572e47616a049d3481caaf30e0a2a072a179341b18"
+    },
+    {
+      "path": "images/guides/nested-json-to-csv-4-mobile.svg",
+      "bytes": 2001,
+      "sha256": "a441c12dd9264a57e368f07d9d3cf08a12e61ad5f6bf998631cecf7d82ec55c1"
+    },
+    {
+      "path": "images/guides/nested-json-to-csv-4.svg",
+      "bytes": 1984,
+      "sha256": "dcae93652569391b07e15b62017a7e23aad767786366793bfb142b25ec5f6d5e"
+    },
+    {
+      "path": "images/guides/power-query-change-type-using-locale-1-mobile.svg",
+      "bytes": 1865,
+      "sha256": "743eb67d90d36320c860773a9a95d021fda55a919eac0c0a12d19452d76683d1"
+    },
+    {
+      "path": "images/guides/power-query-change-type-using-locale-1.svg",
+      "bytes": 1848,
+      "sha256": "27ff58d88cad86f3a8e92dcd067ed6ba87b16d72c3cb3e87c76f22dd709a809e"
+    },
+    {
+      "path": "images/guides/power-query-change-type-using-locale-5-mobile.svg",
+      "bytes": 1963,
+      "sha256": "587fd83a112b7068cf971cae12f6781a67686af3c9318c015ee29e7d4d82d43a"
+    },
+    {
+      "path": "images/guides/power-query-change-type-using-locale-5.svg",
+      "bytes": 1947,
+      "sha256": "0fd03cea8eb5e18004126d43a336c65d6765bba5bd87c899937c413faa08ffbd"
+    },
+    {
+      "path": "images/guides/power-query-change-type-using-locale-6-mobile.svg",
+      "bytes": 1963,
+      "sha256": "587fd83a112b7068cf971cae12f6781a67686af3c9318c015ee29e7d4d82d43a"
+    },
+    {
+      "path": "images/guides/power-query-change-type-using-locale-6.svg",
+      "bytes": 1947,
+      "sha256": "0fd03cea8eb5e18004126d43a336c65d6765bba5bd87c899937c413faa08ffbd"
+    },
+    {
+      "path": "images/guides/power-query-combine-files-schema-drift-1-mobile.svg",
+      "bytes": 2133,
+      "sha256": "050e493bdc4ab1f8edbb054bd72a60e151aa8e0ad7b96fc32f986d48f5dc7de7"
+    },
+    {
+      "path": "images/guides/power-query-combine-files-schema-drift-1.svg",
+      "bytes": 2118,
+      "sha256": "0b53ccfdc24aba4b843f3ba2556f3c1d77398f976e52b5a712416955fce57efe"
+    },
+    {
+      "path": "images/guides/power-query-combine-files-schema-drift-5-mobile.svg",
+      "bytes": 2089,
+      "sha256": "01c4eb8aa506c42bb628bdfaa2281f7333d6b3e78be4aaaae01b84e956fd29b4"
+    },
+    {
+      "path": "images/guides/power-query-combine-files-schema-drift-5.svg",
+      "bytes": 2044,
+      "sha256": "a47824866d1c256de22ffc08262bda7144d0a18e743e7e3dc94326496f0d7773"
+    },
+    {
+      "path": "images/guides/power-query-fill-down-null-values-1-mobile.svg",
+      "bytes": 1968,
+      "sha256": "25a8fcc321d74c14ae2dae46324b42f6806c15ec7c8314ad2d663c39c779e758"
+    },
+    {
+      "path": "images/guides/power-query-fill-down-null-values-1.svg",
+      "bytes": 1952,
+      "sha256": "71f35e9b601c1e2d0ea7ee5ef336e5dd4cb0b7719710eac86c860f41f5ad5770"
+    },
+    {
+      "path": "images/guides/power-query-fill-down-null-values-5-mobile.svg",
+      "bytes": 1921,
+      "sha256": "54312303c175ab139ece2d3502c05cdb0dfbbd20e6a6241b5b56f9e0586cf234"
+    },
+    {
+      "path": "images/guides/power-query-fill-down-null-values-5.svg",
+      "bytes": 1904,
+      "sha256": "f978bd440888591baa696da4167ff437dc1675e29cd3c23de808b3967d210cd6"
+    },
+    {
+      "path": "images/guides/power-query-left-anti-join-missing-rows-1-mobile.svg",
+      "bytes": 2156,
+      "sha256": "83e90801edfb8ebfb9bc12e9ece8780cb3c069f57bcdd1cd7928f25d8fd5d8be"
+    },
+    {
+      "path": "images/guides/power-query-left-anti-join-missing-rows-1.svg",
+      "bytes": 2112,
+      "sha256": "816e7b3a0019edb3145af3eb07f20fb9358e990f3d27687bc341645e8905a549"
+    },
+    {
+      "path": "images/guides/power-query-left-anti-join-missing-rows-5-mobile.svg",
+      "bytes": 1971,
+      "sha256": "0c820e877e59c3f3c3bce781aa7a7b4218715f7ad20f5569ec75d8b1b65e7ceb"
+    },
+    {
+      "path": "images/guides/power-query-left-anti-join-missing-rows-5.svg",
+      "bytes": 1984,
+      "sha256": "08e975927c7b03b4653570bf4816897a1be665497c95d211a4d6baf6b9065a9b"
+    },
+    {
+      "path": "images/guides/power-query-merge-duplicates-extra-rows-1-mobile.svg",
+      "bytes": 1897,
+      "sha256": "783f86993fd9e5bc4a86d11352e4337e41403fe899ed0bc7fb23633a4b7c7bf6"
+    },
+    {
+      "path": "images/guides/power-query-merge-duplicates-extra-rows-1.svg",
+      "bytes": 1880,
+      "sha256": "869d069703a689de731a36ab4f92066fb81b5cc91e8f156c5d84210be5292f3e"
+    },
+    {
+      "path": "images/guides/power-query-merge-duplicates-extra-rows-4-mobile.svg",
+      "bytes": 2051,
+      "sha256": "ed57ff401e3f3507bdb7757965bc7a954feaff39f25d4d36bd9b060fdee69d66"
+    },
+    {
+      "path": "images/guides/power-query-merge-duplicates-extra-rows-4.svg",
+      "bytes": 2036,
+      "sha256": "e1ccc271d645864c3958e4be8985008452a68c3c6210bf8a3c80bfe691118faf"
+    },
+    {
+      "path": "images/guides/power-query-promote-headers-1-mobile.svg",
+      "bytes": 2150,
+      "sha256": "a4e4ede8833b56fa167201ceddbcea63ec932d71b21a231288fca05fb53bf4f3"
+    },
+    {
+      "path": "images/guides/power-query-promote-headers-1.svg",
+      "bytes": 2135,
+      "sha256": "3be7861932e437368ccf28809acb2369d111817e0fa4023c6e84244410678edc"
+    },
+    {
+      "path": "images/guides/power-query-promote-headers-6-mobile.svg",
+      "bytes": 2075,
+      "sha256": "4cebac63b00fc5f63247144dcf88c58b7a970577efb17919ef4693fbb0883877"
+    },
+    {
+      "path": "images/guides/power-query-promote-headers-6.svg",
+      "bytes": 2059,
+      "sha256": "1d61c064e6b4d19a6c86be43033d2d4fe2c8aa905ae48801b1146c92f98eba18"
+    },
+    {
+      "path": "images/guides/power-query-split-column-into-rows-1-mobile.svg",
+      "bytes": 1949,
+      "sha256": "a3140814d2ce667aa264e08006fb4dfd806b2d44858ceaa8a419cafc4323f3e4"
+    },
+    {
+      "path": "images/guides/power-query-split-column-into-rows-1.svg",
+      "bytes": 1933,
+      "sha256": "53fa15d4813fdf4aecc10176ea5a5397ef2ea39ab58e76f7903eacc6e85fe68f"
+    },
+    {
+      "path": "images/guides/power-query-split-column-into-rows-5-mobile.svg",
+      "bytes": 1966,
+      "sha256": "7d1de8a85c46feda92c2246d6034b22c5f0ac79976860040d3c0dea672ccf6a9"
+    },
+    {
+      "path": "images/guides/power-query-split-column-into-rows-5.svg",
+      "bytes": 1950,
+      "sha256": "26ecb73f2bfea608b302f101ad19163173c5fd114eb6e4162324bb4fe33ced67"
+    },
+    {
+      "path": "images/guides/power-query-unpivot-month-columns-1-mobile.svg",
+      "bytes": 2026,
+      "sha256": "c71530c1e11667c6a9e940373582141090d25e9b7c9bb71b23743e55006e800e"
+    },
+    {
+      "path": "images/guides/power-query-unpivot-month-columns-1.svg",
+      "bytes": 2009,
+      "sha256": "5023edc4fa656cc28a0c3321fb3f9e87770aaaae4d0dde7a18e7234b62d5ed88"
+    },
+    {
+      "path": "images/guides/power-query-unpivot-month-columns-4-mobile.svg",
+      "bytes": 2012,
+      "sha256": "452f09f6b55d21f29a2d4aca5f837725ef3692088c97a7b326bff1e90445c358"
+    },
+    {
+      "path": "images/guides/power-query-unpivot-month-columns-4.svg",
+      "bytes": 1996,
+      "sha256": "9bec10a8637fa281ed3599e1e6e20027424ea191a21a0db9e85920d2a57455f3"
+    },
+    {
+      "path": "images/guides/spreadsheet-trim-spaces-2-mobile.svg",
+      "bytes": 1964,
+      "sha256": "df93f30357bb7f6fe1ede384e60b80524d43fa8ae1077e44f86bfb0034a4c2ea"
+    },
+    {
+      "path": "images/guides/spreadsheet-trim-spaces-2.svg",
+      "bytes": 1977,
+      "sha256": "3307f10e52de4ecc3f3553bae8f387d6519d10d592cbb128bff7851a69d07c3e"
+    },
+    {
+      "path": "images/guides/spreadsheet-trim-spaces-4-mobile.svg",
+      "bytes": 1893,
+      "sha256": "008d78661bfabf98ea548fdb82d66c6a7bd35b1b70557523b76191e433995c01"
+    },
+    {
+      "path": "images/guides/spreadsheet-trim-spaces-4.svg",
+      "bytes": 1906,
+      "sha256": "03e172297504b3fc9e144f94680f5caf3f0958f82dff016f86bb596c736d079a"
+    },
+    {
+      "path": "images/guides/tsv-to-csv-1-mobile.svg",
+      "bytes": 2036,
+      "sha256": "de4b666e86a9db967ad61091e3d6591c278f6c0118ee2ece4aa6727540a435ea"
+    },
+    {
+      "path": "images/guides/tsv-to-csv-1.svg",
+      "bytes": 2019,
+      "sha256": "7ad0cdc78c01ce671c6c78b5f243431cfe9b4efb2432fe3c12338d9878caaab8"
+    },
+    {
+      "path": "images/guides/tsv-to-csv-4-mobile.svg",
+      "bytes": 2115,
+      "sha256": "6ab08a1bad422c4c57d7f8a43b89eba6d7f3d22048aed2ecd7b6fdb09e043104"
+    },
+    {
+      "path": "images/guides/tsv-to-csv-4.svg",
+      "bytes": 2099,
+      "sha256": "9355dcae749fb37ddf8b81ac76b93272a95eeb79dc45f8ed6fae7935ee842a5f"
+    },
+    {
+      "path": "images/guides/vlookup-identical-ids-na-1-mobile.svg",
+      "bytes": 1950,
+      "sha256": "b07cad1a5c7b22c320a50e1bbe0fbd523611d6f76e4d3f5e18b6aa07711f8696"
+    },
+    {
+      "path": "images/guides/vlookup-identical-ids-na-1.svg",
+      "bytes": 1933,
+      "sha256": "f2b1718c32fb2391b1bfdf8a57dc0db65c06766cfc9d5222b8981846240841ac"
+    },
+    {
+      "path": "images/guides/vlookup-identical-ids-na-4-mobile.svg",
+      "bytes": 1943,
+      "sha256": "803a619faf1fb1ecaa996d92b134a95ae07996f63a8fc4d743d9150256a35b44"
+    },
+    {
+      "path": "images/guides/vlookup-identical-ids-na-4.svg",
+      "bytes": 1926,
+      "sha256": "fed8dfc94ca9ea48cb2cbe110111df535fd3961bb71d92a0dd212963800e7b4b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 59154,
+      "sha256": "7059b9d9f0263331eb0fe5732210a76b991afa3b54b2863507deb5a67984f185"
+    },
+    {
+      "path": "index.txt",
+      "bytes": 17221,
+      "sha256": "99899f333030a75901ba408e9964a1f2a7ad54f40d7b265a824e9ee45b1faf9d"
+    },
+    {
+      "path": "learn/excel.html",
+      "bytes": 49003,
+      "sha256": "3268936e41242cd641d2fec3dcab68d8fc0a2268e2a333468345bdcc90bf4d51"
+    },
+    {
+      "path": "learn/excel.txt",
+      "bytes": 13099,
+      "sha256": "23763c1d31637e5716f1fb1bbfb80e89340d07c2f5029aaa635dfe7c280b8c66"
+    },
+    {
+      "path": "learn/excel/charts-that-explain.html",
+      "bytes": 63023,
+      "sha256": "821f57806f4c05dd514708636c47e4290a78c4fe56f31f6608cb172809247bf8"
+    },
+    {
+      "path": "learn/excel/charts-that-explain.txt",
+      "bytes": 26116,
+      "sha256": "bf65d96d3a715c46cce3f7d3b796c3e9d023637862ea10a03470959e56ad6f53"
+    },
+    {
+      "path": "learn/excel/clean-text.html",
+      "bytes": 68160,
+      "sha256": "b4229b0aea6ca84918aad36253eb1cef4935339e9690705ab7672c8fe6f20b98"
+    },
+    {
+      "path": "learn/excel/clean-text.txt",
+      "bytes": 28272,
+      "sha256": "3adaf0309fcf43ac5a5e92e0ec9bcb501b6b10f2a5a716ae9347d9758b90d1b9"
+    },
+    {
+      "path": "learn/excel/conditional-formatting.html",
+      "bytes": 64485,
+      "sha256": "fb053ba356d5d88b9f1efdfed1c543d72cb08c5a7ed51e28fc3a4477cde604af"
+    },
+    {
+      "path": "learn/excel/conditional-formatting.txt",
+      "bytes": 26157,
+      "sha256": "4a493348da9e040ddcbf4d12478628e3f43f02f586e703adb548749946404472"
+    },
+    {
+      "path": "learn/excel/data-validation.html",
+      "bytes": 63413,
+      "sha256": "c3cdaf6637bd6ef922f350fae8eb1fdae6adf8cf529a473eca6ebcffa73021ad"
+    },
+    {
+      "path": "learn/excel/data-validation.txt",
+      "bytes": 26941,
+      "sha256": "c783ea361430cb898957e2b0849211d2cff8e1c8abac47e8a42583168fb887a2"
+    },
+    {
+      "path": "learn/excel/dates-times.html",
+      "bytes": 67107,
+      "sha256": "c9c213885c95df8a7da13dba5f9518f8ebbfb4eeda5fdbc74961dfcc11742e37"
+    },
+    {
+      "path": "learn/excel/dates-times.txt",
+      "bytes": 28072,
+      "sha256": "e643d14583969686224eb139106570e74844ae09ace9f6913017316747a90e70"
+    },
+    {
+      "path": "learn/excel/dynamic-arrays.html",
+      "bytes": 69608,
+      "sha256": "56a0908964d68a01682bfe570f583c5435f32e9c928f29dff594602ce6d390a6"
+    },
+    {
+      "path": "learn/excel/dynamic-arrays.txt",
+      "bytes": 28599,
+      "sha256": "3d0978b9ad9bd63bf5ccdf2c3d9a4d880272573ea51a4efe3a6b42bb3f44971b"
+    },
+    {
+      "path": "learn/excel/enter-edit-data.html",
+      "bytes": 66206,
+      "sha256": "79e62635a853428047aa7ea2fa67896c052f72610f447f855dd1f0c5f214c0d0"
+    },
+    {
+      "path": "learn/excel/enter-edit-data.txt",
+      "bytes": 28252,
+      "sha256": "8b55b6c1924ce99dfb941a3303454992649f77a0f0d46fe7a9541bd37fe47a5f"
+    },
+    {
+      "path": "learn/excel/excel-tables.html",
+      "bytes": 65556,
+      "sha256": "9334afb90abb4ec60d41b7d30f072127548d3bf10c321e83f341b34b1d906cf7"
+    },
+    {
+      "path": "learn/excel/excel-tables.txt",
+      "bytes": 27209,
+      "sha256": "0a24cf48dfa869e4c67240493704d1c438851d05625295aa72b33d03d2746458"
+    },
+    {
+      "path": "learn/excel/first-formulas.html",
+      "bytes": 65889,
+      "sha256": "5a34814dde170a3eafacd404606ed612aa093f9895e7ab1e02129a61937eafce"
+    },
+    {
+      "path": "learn/excel/first-formulas.txt",
+      "bytes": 27257,
+      "sha256": "b89e3a93f980bd7193aa13e622d2112059549313aa5d34d69769792f0ec5f818"
+    },
+    {
+      "path": "learn/excel/if-and-or.html",
+      "bytes": 67172,
+      "sha256": "862843e0462a36e4587207007aee5fbe226c9a510152c44016b0c3f0eab16058"
+    },
+    {
+      "path": "learn/excel/if-and-or.txt",
+      "bytes": 27884,
+      "sha256": "2b2e83df80de4763bf3cb21e39c7df5eca562f83fa70d437dc7688ce1c09d57d"
+    },
+    {
+      "path": "learn/excel/import-csv-safely.html",
+      "bytes": 69892,
+      "sha256": "18b1d1e23ccae28071d3dee888993ebbce141b106a61eb487c754511eb20301d"
+    },
+    {
+      "path": "learn/excel/import-csv-safely.txt",
+      "bytes": 29482,
+      "sha256": "473b2c7f5fb9a1e42371fd2d2ea6766bac5261fa08c0e15a125e889da1f20188"
+    },
+    {
+      "path": "learn/excel/index-match.html",
+      "bytes": 69994,
+      "sha256": "f8450394a0cd425f561200eec5c825a64503ceb2ed30301452a26b8fb3833d07"
+    },
+    {
+      "path": "learn/excel/index-match.txt",
+      "bytes": 28825,
+      "sha256": "9f96d5fa5bb0e27df9d0454660a981d5d4db2c36c1abc151b0692ae14aa27308"
+    },
+    {
+      "path": "learn/excel/monthly-report-capstone.html",
+      "bytes": 67570,
+      "sha256": "7fd80e590f3652813d0098578a716c69b8d17a5396b3903493d749061392f226"
+    },
+    {
+      "path": "learn/excel/monthly-report-capstone.txt",
+      "bytes": 26292,
+      "sha256": "ae7e6a5296f259d35757228d97b14f8200deabee9719ccbc4d6cb0ad22e4e26a"
+    },
+    {
+      "path": "learn/excel/number-formats.html",
+      "bytes": 67040,
+      "sha256": "9e7094a60fd41d740626a8a8aacfdc0c8924eadc2a0a9ed9745156df4ff34ed6"
+    },
+    {
+      "path": "learn/excel/number-formats.txt",
+      "bytes": 28292,
+      "sha256": "f0b1689914b42dc925371cf64567824a898272487016207ad169a4292de573f8"
+    },
+    {
+      "path": "learn/excel/pivot-tables.html",
+      "bytes": 66213,
+      "sha256": "eccb6505c7c7fbbfb8f5f4c9ea2b0cd5f99253be43536cae31f84961c9585ebd"
+    },
+    {
+      "path": "learn/excel/pivot-tables.txt",
+      "bytes": 27690,
+      "sha256": "d0c951af4dbc6e3d8f8a73efd35cc9e3505305176b0f84c8c54f4944ffbe66d9"
+    },
+    {
+      "path": "learn/excel/power-query-first-import.html",
+      "bytes": 70195,
+      "sha256": "9a8510301b3e13f3ed56136f241f3dfeaa8c95707eed75301aa78589e220e054"
+    },
+    {
+      "path": "learn/excel/power-query-first-import.txt",
+      "bytes": 30283,
+      "sha256": "aa18f1c95eef6e00b2557197b56543cc1e77d7dcb3005eea2c1d1c7520023d3c"
+    },
+    {
+      "path": "learn/excel/power-query-merge-append.html",
+      "bytes": 69276,
+      "sha256": "16fffb3a45cc12451968d1dc49eb081cb8e7dc42c3cc85b8e4b6d6e430975882"
+    },
+    {
+      "path": "learn/excel/power-query-merge-append.txt",
+      "bytes": 30576,
+      "sha256": "7477f63ce6dbe2d68a4d41dbd3ccf254c378ff42654f431214445e8be3b26a1f"
+    },
+    {
+      "path": "learn/excel/relative-absolute-references.html",
+      "bytes": 64395,
+      "sha256": "7d3e900b10baa2a3765d49fc946c6151bff1be5bf7a9a72f2c0248c58379ac8a"
+    },
+    {
+      "path": "learn/excel/relative-absolute-references.txt",
+      "bytes": 26669,
+      "sha256": "b3a50b46d8b0f9c47db551570b35271b36d58ad68bfc2fa26a4a27def7c3efcd"
+    },
+    {
+      "path": "learn/excel/sort-filter.html",
+      "bytes": 65581,
+      "sha256": "9d4504a6f30e29dba41d10225544baca142ed8600cccd9cf1844e6b172e979ee"
+    },
+    {
+      "path": "learn/excel/sort-filter.txt",
+      "bytes": 27819,
+      "sha256": "286c5d1ecca7092070e04d04b16bd32721efb6c620497aab957d65392de54149"
+    },
+    {
+      "path": "learn/excel/sum-average-count.html",
+      "bytes": 68308,
+      "sha256": "fc31d4180abbb1512694a162941c3ffba3a42fdc346536221bc4ff4de413227d"
+    },
+    {
+      "path": "learn/excel/sum-average-count.txt",
+      "bytes": 28749,
+      "sha256": "2fbf071c11918331c93fc59803d045ce991d17b99d451f742a5ab974e5b7f260"
+    },
+    {
+      "path": "learn/excel/sumifs-countifs.html",
+      "bytes": 67862,
+      "sha256": "4832cd6e90ac7c4cb7897465b40d6aff477933cffeede78cb94ea2f7dfdf4328"
+    },
+    {
+      "path": "learn/excel/sumifs-countifs.txt",
+      "bytes": 28356,
+      "sha256": "135938b2748982548abd0ccf37bd392da8776df8edf52f44e8db17f52405d9ed"
+    },
+    {
+      "path": "learn/excel/what-if-analysis.html",
+      "bytes": 61901,
+      "sha256": "555dd1c484479b3158db3a818721a1aabdf0d0d45b02e2fae89c1e1f9bbc9011"
+    },
+    {
+      "path": "learn/excel/what-if-analysis.txt",
+      "bytes": 25844,
+      "sha256": "8d14f4429ace4949baaadb21e0fbde06d5ae30001935844d673a169e9b9dd496"
+    },
+    {
+      "path": "learn/excel/workbook-cells-ranges.html",
+      "bytes": 62607,
+      "sha256": "0d9490ab02129be81c614a2cb0911db07ed2408a5f80df6076eebce9d287ad29"
+    },
+    {
+      "path": "learn/excel/workbook-cells-ranges.txt",
+      "bytes": 26349,
+      "sha256": "5a82db44e2975ed5c7fe7f25cd7010a756bf312839f1e04c2074267e232dd4ca"
+    },
+    {
+      "path": "learn/excel/xlookup-exact-match.html",
+      "bytes": 67103,
+      "sha256": "d100e47db830b1397e5087a7c58f1373aafa4cc07df7b0afac8d64a7d93075d0"
+    },
+    {
+      "path": "learn/excel/xlookup-exact-match.txt",
+      "bytes": 27958,
+      "sha256": "35b333ad746a3c27f732f56a0a6c54bc47345c8f56e9b13a954d9515de57c4cd"
+    },
+    {
+      "path": "llms-full.txt",
+      "bytes": 655249,
+      "sha256": "9b627676ea398a1ae1a51045a37a4e7b110490ec70660107c6ed3b6f1926cf6e"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 29577,
+      "sha256": "594069316d86579540c797168cd08d8dde48b3e652842850fe6b074de1dc2660"
+    },
+    {
+      "path": "media/guides/google-sheets-sum-by-month-category-poster.jpg",
+      "bytes": 91743,
+      "sha256": "6f9ef95dfaa668d0f037791556fa4970b24b13a227f6259f71d03c95ede024ab"
+    },
+    {
+      "path": "media/guides/google-sheets-sum-by-month-category.mp4",
+      "bytes": 285667,
+      "sha256": "b74ef4557064f64a29164cb976208b13c462bf659ca8934318329134b813d988"
+    },
+    {
+      "path": "media/guides/google-sheets-sum-by-month-category.vtt",
+      "bytes": 776,
+      "sha256": "2f1038616eb7f6f2bdb09366d38907bb097c49a976e3bcabff26ab394bcae8b4"
+    },
+    {
+      "path": "media/guides/power-query-promote-headers-poster.jpg",
+      "bytes": 79170,
+      "sha256": "c07cc5d513ba24b1d393529e198b832a7d5afb4daa273b234bae13193515c791"
+    },
+    {
+      "path": "media/guides/power-query-promote-headers.mp4",
+      "bytes": 235083,
+      "sha256": "428bad11de2d1edd82433d2d9ef45ade3c30651fe136b013b6d431cc020b7230"
+    },
+    {
+      "path": "media/guides/power-query-promote-headers.vtt",
+      "bytes": 721,
+      "sha256": "a784f026ccb048cf4033ceb2f02a62055bed3badb10f6d8e39b38d2b7d01d083"
+    },
+    {
+      "path": "media/guides/power-query-split-column-into-rows-poster.jpg",
+      "bytes": 78932,
+      "sha256": "22263949de95e72022d65fa9b084f6f2d11309ddbf1e2791af8b3241877a709a"
+    },
+    {
+      "path": "media/guides/power-query-split-column-into-rows.mp4",
+      "bytes": 247062,
+      "sha256": "9bd58ee7d95b342f73725836a33a1a571eec51409a480d850e90fd66e64201b7"
+    },
+    {
+      "path": "media/guides/power-query-split-column-into-rows.vtt",
+      "bytes": 710,
+      "sha256": "a66b13f32819c00d2603305e0732d72c14a744fd2e2953b3f9bd552a096aba92"
+    },
+    {
+      "path": "method.html",
+      "bytes": 26035,
+      "sha256": "9c4dce2499c495ad8a93f882ab6639ed81bf92b19e067dd055283510166b8894"
+    },
+    {
+      "path": "method.txt",
+      "bytes": 9009,
+      "sha256": "603b5dddee7dfb6614397ced125166ddcfedf4f92351291f452a345293e55967"
+    },
+    {
+      "path": "privacy.html",
+      "bytes": 34404,
+      "sha256": "07b866899943d1267993686842c8c37c16b12249e3b72bc036745c21635d4b51"
+    },
+    {
+      "path": "privacy.txt",
+      "bytes": 12967,
+      "sha256": "92e7986d8002f3b92b417e0245ced80ef9564c831c373dd99670c52e2cb8e981"
+    },
+    {
+      "path": "samples/academy/charts-that-explain/monthly-orders-chart.tsv",
+      "bytes": 55,
+      "sha256": "efe3d639743cec5e30fe7b09b8f8eccb7b6d63634f62ee8ec43fc9b8f0effce2"
+    },
+    {
+      "path": "samples/academy/charts-that-explain/README.txt",
+      "bytes": 314,
+      "sha256": "058bf680313e781ec95f08cc8bfde9c8df3d74271e1b92c4fc8a1b137c50a912"
+    },
+    {
+      "path": "samples/academy/clean-text/hidden-spaces.tsv",
+      "bytes": 71,
+      "sha256": "8c3dd1f2ad6d516c14a3fddcc5388eeed3d88822db9652c0a3f47b49e68bf996"
+    },
+    {
+      "path": "samples/academy/clean-text/README.txt",
+      "bytes": 330,
+      "sha256": "75c9dbe261a9a65d7efa5f64dca4c0f9bcc16a6cebf60bfc4a09bbec54dcab95"
+    },
+    {
+      "path": "samples/academy/conditional-formatting/README.txt",
+      "bytes": 318,
+      "sha256": "a34d90d81c9e26feac5e17fe2abc28afafe47fcb01d9cd6033aba8913c6ea096"
+    },
+    {
+      "path": "samples/academy/conditional-formatting/stock-rule.tsv",
+      "bytes": 87,
+      "sha256": "faebec93db9aa9aa546de49b5599054790738867371d270b5f7ceb41bfcc10d6"
+    },
+    {
+      "path": "samples/academy/data-validation/README.txt",
+      "bytes": 315,
+      "sha256": "d730d2fa6ec82520eb16dd1a5a28ed103dac2fbd552090e945e1fc502a015e2f"
+    },
+    {
+      "path": "samples/academy/data-validation/task-entry.tsv",
+      "bytes": 58,
+      "sha256": "6c284b21dc4fcbfefdf69a1ade78960681797870a0d2152bdbf0632e81e169d4"
+    },
+    {
+      "path": "samples/academy/dates-times/date-time-components.tsv",
+      "bytes": 102,
+      "sha256": "2e22d71825c1376d007aa1a2ab91ce2fc02e07867e20fa676f402048a4d4b2c5"
+    },
+    {
+      "path": "samples/academy/dates-times/README.txt",
+      "bytes": 328,
+      "sha256": "f76e7f8d23a93d8248d76d23ba35c9babaefe1022af943f151bd800e55acce9c"
+    },
+    {
+      "path": "samples/academy/dynamic-arrays/README.txt",
+      "bytes": 306,
+      "sha256": "0e5d17dc35a3023595270ce0f50872b1c517cc6ecc817ba899b97b232b812e17"
+    },
+    {
+      "path": "samples/academy/dynamic-arrays/regions-for-dynamic-arrays.tsv",
+      "bytes": 85,
+      "sha256": "8fd7a0404f66654a996158fca3d47443aac3ebde3d14c297ed2f65be3d47a385"
+    },
+    {
+      "path": "samples/academy/enter-edit-data/enter-edit-data.tsv",
+      "bytes": 100,
+      "sha256": "1164e0f3cc5783ecfbdb7a2521a3565f6d5be283d9f5ed837627be290c34a7a3"
+    },
+    {
+      "path": "samples/academy/enter-edit-data/README.txt",
+      "bytes": 354,
+      "sha256": "b52de31050085c4cbc96a60b71e38d8999e0833f286135f711e5199fb76f962d"
+    },
+    {
+      "path": "samples/academy/excel-tables/orders-for-table.tsv",
+      "bytes": 76,
+      "sha256": "513a86fc9ec556980b030266a469b65399be23491ad067f86e616dbbfb4d498f"
+    },
+    {
+      "path": "samples/academy/excel-tables/README.txt",
+      "bytes": 293,
+      "sha256": "eb3dda6a15c5b694cfcc1742a49a3ba27ef0d04d10b434d52e9b33ae63faa179"
+    },
+    {
+      "path": "samples/academy/first-formulas/first-formulas.tsv",
+      "bytes": 68,
+      "sha256": "f521ae4172dbf9ee6179b3ebd929cd5b78f9158f24623b43c34032b11638e53c"
+    },
+    {
+      "path": "samples/academy/first-formulas/README.txt",
+      "bytes": 325,
+      "sha256": "1e7b0ee16ba0af172bc2846c8cb32a23d2988c2561d429641b866be6fbfad514"
+    },
+    {
+      "path": "samples/academy/if-and-or/if-and-or.tsv",
+      "bytes": 84,
+      "sha256": "5d29545aa5ee796fb2e3b47052f2caa665e1ef04355e07ff98ad3cb76b0ae202"
+    },
+    {
+      "path": "samples/academy/if-and-or/README.txt",
+      "bytes": 326,
+      "sha256": "e821c2b7c488d1a3f9b8ba2c15e1d743d3c0de76262f7216dae115780329e50d"
+    },
+    {
+      "path": "samples/academy/import-csv-safely/README.txt",
+      "bytes": 325,
+      "sha256": "8788a0897d18f5b8d86728d8be19b810852001ec57aa9cfdc0854ed29b62915e"
+    },
+    {
+      "path": "samples/academy/import-csv-safely/safe-import.csv",
+      "bytes": 144,
+      "sha256": "1c1146818089d29c0b74866f0b2abf185f41742865c67423caedf01f5b1273a0"
+    },
+    {
+      "path": "samples/academy/index-match/catalog-for-index-match.tsv",
+      "bytes": 61,
+      "sha256": "efed3cb1fa7eb8aea4ff056add20e460a059ca12c8b4565955bc3f38d21a3400"
+    },
+    {
+      "path": "samples/academy/index-match/README.txt",
+      "bytes": 279,
+      "sha256": "df36da479197b51b14f67c71e77a93b3be9e7ef6ee4425ae2495076b858b056c"
+    },
+    {
+      "path": "samples/academy/monthly-report-capstone/monthly-report-formula-reference.xlsx",
+      "bytes": 10066,
+      "sha256": "a4a80bf0bd44c2d66fa04c6ae7581442f28f39066348187a6ca33bccb63e2180"
+    },
+    {
+      "path": "samples/academy/monthly-report-capstone/monthly-report.csv",
+      "bytes": 207,
+      "sha256": "9069e64159beafb763e12f08dd13c2a450114adab933c407421cc0dd840428fb"
+    },
+    {
+      "path": "samples/academy/monthly-report-capstone/README.txt",
+      "bytes": 340,
+      "sha256": "32f023bb7527871b98120485c2477ac3d4f86947e635238dc459242866d81543"
+    },
+    {
+      "path": "samples/academy/number-formats/number-formats.tsv",
+      "bytes": 91,
+      "sha256": "94ff0e20749be0dc1d792cd7976d115843b3fdecd35a3925bccd05085143cdfa"
+    },
+    {
+      "path": "samples/academy/number-formats/README.txt",
+      "bytes": 384,
+      "sha256": "d18ba1e0d7c7cb82de19d23c56c3ad9bda5127e6ee6c8364aa67dfa8a869bd46"
+    },
+    {
+      "path": "samples/academy/pivot-tables/pivot-orders.tsv",
+      "bytes": 162,
+      "sha256": "7b29c2f3d865c241897563fede329ba7747c5f7540d09d0a13f5aebcda59aad8"
+    },
+    {
+      "path": "samples/academy/pivot-tables/README.txt",
+      "bytes": 314,
+      "sha256": "96f6058b765586665e627b72b880f2829f0f8c6d70e9a31f6cc269469c9ad77b"
+    },
+    {
+      "path": "samples/academy/power-query-first-import/first-query.csv",
+      "bytes": 113,
+      "sha256": "9d478c8e00b4655c99f137555f012d3711cc127dbfa8775cda94e5309b030a96"
+    },
+    {
+      "path": "samples/academy/power-query-first-import/README.txt",
+      "bytes": 329,
+      "sha256": "6e1ed099fd6a9d57cec80f35d34de2736d7ff897cdc176313bd424954d622199"
+    },
+    {
+      "path": "samples/academy/power-query-merge-append/january-orders.tsv",
+      "bytes": 50,
+      "sha256": "6f77c2630ef400fd01da83ba920d6bc856ea501449fd098a378b282c16706e31"
+    },
+    {
+      "path": "samples/academy/power-query-merge-append/README.txt",
+      "bytes": 339,
+      "sha256": "3953b2f207ad32c23830de6f35b5374fb3fc869f94abcc5912fa5af3ff55f7cf"
+    },
+    {
+      "path": "samples/academy/relative-absolute-references/README.txt",
+      "bytes": 352,
+      "sha256": "d6183cb6a6be027220af5a64089639e88949aa3145a5e3ff6698c5df24ac820a"
+    },
+    {
+      "path": "samples/academy/relative-absolute-references/relative-absolute-references.tsv",
+      "bytes": 43,
+      "sha256": "e371f477252dee2d80ebb6af2c7f2ae2b18812f725b35d327ad6e78d12c50be0"
+    },
+    {
+      "path": "samples/academy/sort-filter/README.txt",
+      "bytes": 307,
+      "sha256": "e53a4f1cd79d7d8390a5ef6f2b266bbf856958dd688a90e3083bd51376e7e0b1"
+    },
+    {
+      "path": "samples/academy/sort-filter/sort-filter.tsv",
+      "bytes": 132,
+      "sha256": "e52e3c6147ea595e171f46c4cea77f7ee46db23520f7135298d791a1b7f2bcb0"
+    },
+    {
+      "path": "samples/academy/sum-average-count/README.txt",
+      "bytes": 322,
+      "sha256": "a82da38c45a83759f46028e493612db597d9e1288775633ef8d36a25759f4353"
+    },
+    {
+      "path": "samples/academy/sum-average-count/sum-average-count.tsv",
+      "bytes": 67,
+      "sha256": "12ca0eefcdc243cd6897ee207ddf324a2216c6ebe1affbda858be14b1349442b"
+    },
+    {
+      "path": "samples/academy/sumifs-countifs/orders-for-criteria.tsv",
+      "bytes": 155,
+      "sha256": "e14c2e21857bac5eafe88f35042ed78f2e046cbf6eb308dacfc60f66cf2ca14b"
+    },
+    {
+      "path": "samples/academy/sumifs-countifs/README.txt",
+      "bytes": 301,
+      "sha256": "3dbea0e1abf16d6620b6ab692beb642d228c8aeb01c73cdf13261593d8cf339b"
+    },
+    {
+      "path": "samples/academy/what-if-analysis/goal-seek-model.tsv",
+      "bytes": 70,
+      "sha256": "4db3114b87e35a20209ff8e63c9349f9594e8a6002b5017dfd3569c11ca92e8d"
+    },
+    {
+      "path": "samples/academy/what-if-analysis/README.txt",
+      "bytes": 303,
+      "sha256": "912dc2235417ef9e37efc911e6e87cd5df611d501ca2de703fb34221ff8d65ae"
+    },
+    {
+      "path": "samples/academy/workbook-cells-ranges/README.txt",
+      "bytes": 334,
+      "sha256": "d420dd188038804eb2666b7c01e3e3ce5369c5799913383f7213328d058781cd"
+    },
+    {
+      "path": "samples/academy/workbook-cells-ranges/workbook-cells-ranges.tsv",
+      "bytes": 53,
+      "sha256": "356a276b6901c2c2f757c3bea791bddb932118b64d2fd950dde95df531bd4211"
+    },
+    {
+      "path": "samples/academy/xlookup-exact-match/product-catalog.tsv",
+      "bytes": 61,
+      "sha256": "06bacd8637a596aec7b3aeef60133a557c2fa844faeeea83cc43b470b8b02967"
+    },
+    {
+      "path": "samples/academy/xlookup-exact-match/README.txt",
+      "bytes": 311,
+      "sha256": "cefa70e131cd32abf466fc676e2733f40dc063f66f3c5da9a6f6f4390da15171"
+    },
+    {
+      "path": "samples/append-vs-merge/example.txt",
+      "bytes": 146,
+      "sha256": "ae7b18a15db42b67e0294ed53e2f07fe18ad772d70e2f1f54df292411d225b8f"
+    },
+    {
+      "path": "samples/append-vs-merge/february.csv",
+      "bytes": 23,
+      "sha256": "f8ed4ee0874f6de1d1f7046c014c49c8a4ff6d057c3fe7a8341edcf7f3dff3c1"
+    },
+    {
+      "path": "samples/append-vs-merge/january.csv",
+      "bytes": 33,
+      "sha256": "995843028ab975fb98195e1d01b4c94ed67aff9781f61d64af21c5e51ab95cd3"
+    },
+    {
+      "path": "samples/append-vs-merge/products.csv",
+      "bytes": 50,
+      "sha256": "b543450f03d523f81bbc355c0f7a8b6ad2f7c7b97f59e23d2190ecce4e18a49f"
+    },
+    {
+      "path": "samples/append-vs-merge/README.txt",
+      "bytes": 396,
+      "sha256": "3b6ebe92b561a0bea933170fb24d5734edd7fe711afd13899a9454d6b17d4a3e"
+    },
+    {
+      "path": "samples/combine-csv-files-excel/example.txt",
+      "bytes": 106,
+      "sha256": "4f3178ba14c3b31f28b0849aa241354f92fdb91f3299ccfc4684f62929eecc86"
+    },
+    {
+      "path": "samples/combine-csv-files-excel/february.csv",
+      "bytes": 34,
+      "sha256": "e3c619428f9ef62277f0e463d935ffe7d6aa9df48db3d3732a3227c351398c56"
+    },
+    {
+      "path": "samples/combine-csv-files-excel/january.csv",
+      "bytes": 46,
+      "sha256": "66c02ac96dc9e34caf7fe1ff16f3b81d0b88228b2e92a73e166648722a7706c4"
+    },
+    {
+      "path": "samples/combine-csv-files-excel/README.txt",
+      "bytes": 384,
+      "sha256": "4708664880b2b5151c2ae415dfff62dd286c71b763f6604a335aaf617f189144"
+    },
+    {
+      "path": "samples/compare-csv-added-missing-ids/example-2.py",
+      "bytes": 1182,
+      "sha256": "2dc9e04a6b8eaf57abe29d463126e6f49dc218e26a1a7c273fc60b1aad3c736c"
+    },
+    {
+      "path": "samples/compare-csv-added-missing-ids/example.txt",
+      "bytes": 104,
+      "sha256": "68b3f4fac237cb925dbd11f0054d1b25d45e2b7303d3eef44728c0c12115801a"
+    },
+    {
+      "path": "samples/compare-csv-added-missing-ids/new.csv",
+      "bytes": 46,
+      "sha256": "1f096141232292cab8d443c80cfb3eaa7d1b77f6d54d24d65392ee02ac890b01"
+    },
+    {
+      "path": "samples/compare-csv-added-missing-ids/old.csv",
+      "bytes": 41,
+      "sha256": "2291c3825bc04c4becc6f6b308dff0befb17c70c545747701f4a8f540f9f6256"
+    },
+    {
+      "path": "samples/compare-csv-added-missing-ids/README.txt",
+      "bytes": 382,
+      "sha256": "9116f252d0d7d7ddd5c715f8efab264643cc9c49c62d9281d8e51883b75df964"
+    },
+    {
+      "path": "samples/csv-commas-double-quotes/example-3.py",
+      "bytes": 381,
+      "sha256": "c3e111e6271fa8f9427b55e4cf367a078e4ccca13036a44d504cb8d5b250c0c2"
+    },
+    {
+      "path": "samples/csv-commas-double-quotes/example.csv",
+      "bytes": 100,
+      "sha256": "f542c045fb34c984d193364bd7ebfd0f4bf7e26510c0e9411b5feffdcdf045ec"
+    },
+    {
+      "path": "samples/csv-commas-double-quotes/README.txt",
+      "bytes": 421,
+      "sha256": "64766bfdc9e33ea494a85abeb86757c34464625fadc76baaff3daf9b83bc2de7"
+    },
+    {
+      "path": "samples/csv-compare/after.csv",
+      "bytes": 175,
+      "sha256": "521fbeabe232743b28722ed273107a5eb722cb89089040fd91c2a9d1938a8c44"
+    },
+    {
+      "path": "samples/csv-compare/before.csv",
+      "bytes": 233,
+      "sha256": "b64782a82322000ac7d0a815c42fda2f673846c90ee9d47ed7821d08979d17f2"
+    },
+    {
+      "path": "samples/csv-compare/expected-changed-cells.csv",
+      "bytes": 202,
+      "sha256": "d877da635cbcc813379ad58a4470881a3b8e378aa48c1055158b2fb7eddad150"
+    },
+    {
+      "path": "samples/csv-compare/expected-full-report.csv",
+      "bytes": 948,
+      "sha256": "1b0b4f2e14cd2794ac07dfe8092a874c3f7b515b965823b512cc9598c1e6d4a6"
+    },
+    {
+      "path": "samples/csv-dates-day-month/example.csv",
+      "bytes": 68,
+      "sha256": "65cfae7fb594b0566ddcbcde1cfcae5d06b8a61513ac0b096efd31ea4058df7a"
+    },
+    {
+      "path": "samples/csv-dates-day-month/README.txt",
+      "bytes": 389,
+      "sha256": "19d3e7a0af9734bc0b2053268919ed5c1958d0b1c1f33fcc58f223f8376e0687"
+    },
+    {
+      "path": "samples/csv-different-column-counts/example-2.py",
+      "bytes": 522,
+      "sha256": "1ecd7c0eb8c652074379ee670d9edd23d945c0b314934bf62c80c53d5c685d40"
+    },
+    {
+      "path": "samples/csv-different-column-counts/example.csv",
+      "bytes": 80,
+      "sha256": "04189ec2c8b64646deea4ec600c1c29b4da48e342117e3691871447ff93dbf63"
+    },
+    {
+      "path": "samples/csv-different-column-counts/README.txt",
+      "bytes": 450,
+      "sha256": "2130e48708bb0976ef001b318caf754b23626cfd7896cce49fea1707e58e5784"
+    },
+    {
+      "path": "samples/csv-opens-in-one-column/example.csv",
+      "bytes": 72,
+      "sha256": "98440c430c34295a86e4d277c65ac6c25724fa0bd432496054e06b488e44d6a5"
+    },
+    {
+      "path": "samples/csv-opens-in-one-column/README.txt",
+      "bytes": 485,
+      "sha256": "642d8ed91cf5e6bfea28146ca8ca456c304fd14172af68a357879c68e1066800"
+    },
+    {
+      "path": "samples/csv-row-count-newlines/example-2.py",
+      "bytes": 491,
+      "sha256": "28f0eca157c46fef60fd9891f16a91b6d997b6d7e84416c40011e49f8b990a5c"
+    },
+    {
+      "path": "samples/csv-row-count-newlines/example.csv",
+      "bytes": 89,
+      "sha256": "1f123903b99d744a3b002c6eb2372a3276e3b9c540676f0e95e8a30c517559b0"
+    },
+    {
+      "path": "samples/csv-row-count-newlines/README.txt",
+      "bytes": 394,
+      "sha256": "e422a6dfc32bdfa358415bb2d7e9369f53e5118ca59701e34d47c8e68dd0a973"
+    },
+    {
+      "path": "samples/csv-to-json-preserve-types/example-2.py",
+      "bytes": 1514,
+      "sha256": "029ed13cc6d03e35aa1808b9b2e69b2a0d52b622a7561f41701f6089f78f1432"
+    },
+    {
+      "path": "samples/csv-to-json-preserve-types/example-3.py",
+      "bytes": 1479,
+      "sha256": "9bbfa1785226d5dce01280dec82ef8868959f154945b8bf61f51aeb2cc7b8097"
+    },
+    {
+      "path": "samples/csv-to-json-preserve-types/example.csv",
+      "bytes": 42,
+      "sha256": "389d23c55ee7e07f2ffc433de8a6be9c461bc9bde08ec816d324089f6c6a6437"
+    },
+    {
+      "path": "samples/csv-to-json-preserve-types/README.txt",
+      "bytes": 443,
+      "sha256": "da3cd8189805501d87dbd9f0e5c816987f724ee0ca9e59302a99e05acd9fd1fc"
+    },
+    {
+      "path": "samples/csv-utf8-accents/example.csv",
+      "bytes": 45,
+      "sha256": "2a02351f50c63e29ff2eca98eab7b1f826b7f6d4facbd7f2584308f9a1f3432c"
+    },
+    {
+      "path": "samples/csv-utf8-accents/README.txt",
+      "bytes": 348,
+      "sha256": "55c2118d488d8f31ee72c49d324ce89ae369b32629094bb67b8baaddc3240996"
+    },
+    {
+      "path": "samples/csv-vs-xlsx/example.txt",
+      "bytes": 194,
+      "sha256": "43ce457ab91bc9a955c0e14d241740155ef346cf04987b3327ac58340caf2f05"
+    },
+    {
+      "path": "samples/csv-vs-xlsx/README.txt",
+      "bytes": 436,
+      "sha256": "f1b6ba6e491f76653a65401f35a46f9ab1aefd40f24e6654e2902e52aa60efbf"
+    },
+    {
+      "path": "samples/excel-codes-turn-into-dates/example.csv",
+      "bytes": 39,
+      "sha256": "80facbbccf3b50d6eab6215e7cf2d3162d42e8ace7678e002058a123beafbc57"
+    },
+    {
+      "path": "samples/excel-codes-turn-into-dates/README.txt",
+      "bytes": 407,
+      "sha256": "94158dbecda9ed16d170d838452b3e04107f15fd13e970582f81bb99be2b9e3a"
+    },
+    {
+      "path": "samples/excel-combine-cells-without-losing-data/example.csv",
+      "bytes": 50,
+      "sha256": "4c3ddb5a0c2744a28735120265aed82520bfebe28c35c683dd5d49ac7a40ea97"
+    },
+    {
+      "path": "samples/excel-combine-cells-without-losing-data/expected-result.txt",
+      "bytes": 193,
+      "sha256": "76c62eb58ba32626544a080371eecd7f6ec7d521d866067575c1ddfbc07fa37a"
+    },
+    {
+      "path": "samples/excel-combine-cells-without-losing-data/practice-input.csv",
+      "bytes": 50,
+      "sha256": "4c3ddb5a0c2744a28735120265aed82520bfebe28c35c683dd5d49ac7a40ea97"
+    },
+    {
+      "path": "samples/excel-combine-cells-without-losing-data/README.txt",
+      "bytes": 465,
+      "sha256": "7e7842db54edd467b2931cf3fcfc52080d6cac02171b51e8c4a4798a4af4f626"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/compare-two-lists-practice.xlsx",
+      "bytes": 4761,
+      "sha256": "36ffb8de0104384de809755076ab718a8b4a9b87d5bcb1409529d727715168e8"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/comparison-formulas.txt",
+      "bytes": 1584,
+      "sha256": "152bb6a1b082faa3f00f09751362b742d4c74039e4612202354319a2a1d95827"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/counts-expected.csv",
+      "bytes": 110,
+      "sha256": "6d7e24aef74761a27df3c7dc0da69f031de0518d37c181f7c6bc3f1b76325651"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/example.txt",
+      "bytes": 185,
+      "sha256": "ee0282814d6fb8f31b7e620617935294e6b6d139d5c001e5833c45f91e003c57"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/list-a-expected.csv",
+      "bytes": 108,
+      "sha256": "165ca304eaeee78fbb48469d8db1abbe7304668042361b0fe444a15f4e846bf1"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/list-a.csv",
+      "bytes": 38,
+      "sha256": "508b30e508a806a8a38b682424492ec5d8fa1b97498620145cbbe9cbc163fb5c"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/list-b-expected.csv",
+      "bytes": 94,
+      "sha256": "a5c65270fd000480b6355e23407ebde750c60245e269a5230fa9d84c66641a67"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/list-b.csv",
+      "bytes": 32,
+      "sha256": "17a9cadaa18b2baf4cbb467ce431917e5229ac6f293e955e192b01128a4e2607"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/matches-from-a.csv",
+      "bytes": 24,
+      "sha256": "3bbc7e790db4a68a7dcdbfc5a6cf0ab05f8f2969e3aecfc1b47a6f65352bc8b0"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/only-in-a.csv",
+      "bytes": 14,
+      "sha256": "988a68f001f6023590c0a4392590ff32a00baea1a1bb6086883fc308541f6e56"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/only-in-b.csv",
+      "bytes": 13,
+      "sha256": "ddf9b08aae19893afacaedc4b24ba49be2e3bf696099a5cad47cc215386ceace"
+    },
+    {
+      "path": "samples/excel-compare-two-lists/README.txt",
+      "bytes": 527,
+      "sha256": "ee1fe614fc871acaf1bbd06836a2b1def0e34fbe53d32d31f3c2898889333c33"
+    },
+    {
+      "path": "samples/excel-conditional-formatting-duplicate-rows/duplicate-pairs-expected.csv",
+      "bytes": 242,
+      "sha256": "a128a5bb8f20035c131ff8ef31f1f1951d85a7b3bafdbd2f6a9ed4f757b23286"
+    },
+    {
+      "path": "samples/excel-conditional-formatting-duplicate-rows/duplicate-pairs-input.csv",
+      "bytes": 75,
+      "sha256": "350baa80c3c26a2757add8fe63339d1ade8790c90c4073079cef93209c64f757"
+    },
+    {
+      "path": "samples/excel-conditional-formatting-duplicate-rows/duplicate-pairs-rules.txt",
+      "bytes": 282,
+      "sha256": "cb968c9af3d3050a627cb5410c1787a4ee498fc527f95ba66d809e402d78e2e9"
+    },
+    {
+      "path": "samples/excel-conditional-formatting-duplicate-rows/example.csv",
+      "bytes": 75,
+      "sha256": "350baa80c3c26a2757add8fe63339d1ade8790c90c4073079cef93209c64f757"
+    },
+    {
+      "path": "samples/excel-conditional-formatting-duplicate-rows/README.txt",
+      "bytes": 472,
+      "sha256": "2982cda3ea85232f22abacbb54d36a56db0158e21505505681e91c118dc3f40f"
+    },
+    {
+      "path": "samples/excel-count-distinct-values/distinct-counts-expected.csv",
+      "bytes": 95,
+      "sha256": "330e86c26862bbded979ecdf72ba64a1e8dc8c8eddcdb6cf200124575198482c"
+    },
+    {
+      "path": "samples/excel-count-distinct-values/distinct-expected.csv",
+      "bytes": 34,
+      "sha256": "50893a5aac3ed9870ea7f4c652e3366d397aebe981db2992a99e73cbeb9ec508"
+    },
+    {
+      "path": "samples/excel-count-distinct-values/distinct-input.csv",
+      "bytes": 50,
+      "sha256": "7356598821d27296c41cc1107d769c6527877c80ac375ed553162d6f75b9bb15"
+    },
+    {
+      "path": "samples/excel-count-distinct-values/exactly-once-expected.csv",
+      "bytes": 24,
+      "sha256": "74796c83c84465f7c0f6062ce043847b9e7fc6b48d26d603852f6a86dc36f62c"
+    },
+    {
+      "path": "samples/excel-count-distinct-values/example.csv",
+      "bytes": 50,
+      "sha256": "7356598821d27296c41cc1107d769c6527877c80ac375ed553162d6f75b9bb15"
+    },
+    {
+      "path": "samples/excel-count-distinct-values/README.txt",
+      "bytes": 417,
+      "sha256": "b348a38bb2a8099d91a97298932e6ac77813f7770c111892ad2ec7584c79802e"
+    },
+    {
+      "path": "samples/excel-date-serial-numbers/date-serial-expected.csv",
+      "bytes": 248,
+      "sha256": "837f59897f41b9bb22fa865997f8759aced5cb16ef2bf567c4850be4c6e3b165"
+    },
+    {
+      "path": "samples/excel-date-serial-numbers/date-serial-input.csv",
+      "bytes": 61,
+      "sha256": "fc906952aa31fb869c79f6d209be34d8ea4ea876bcf0537f6ca256b5497f1881"
+    },
+    {
+      "path": "samples/excel-date-serial-numbers/date-serial-sample-contract.txt",
+      "bytes": 764,
+      "sha256": "6e55c694bcbbd3a484271c22bf7a2d44843178a189c2bdaca40c40b920922ee5"
+    },
+    {
+      "path": "samples/excel-date-serial-numbers/example.csv",
+      "bytes": 61,
+      "sha256": "fc906952aa31fb869c79f6d209be34d8ea4ea876bcf0537f6ca256b5497f1881"
+    },
+    {
+      "path": "samples/excel-date-serial-numbers/README.txt",
+      "bytes": 425,
+      "sha256": "ec3e03d9209750c6adbfcd553b3e59582b16032e4af827f451876de46e795402"
+    },
+    {
+      "path": "samples/excel-date-serial-numbers/time-fraction-expected.csv",
+      "bytes": 206,
+      "sha256": "ab186c183675559191e17d3669f60836f78aededc5533ea0320db80fda9dcd9f"
+    },
+    {
+      "path": "samples/excel-date-serial-numbers/time-fraction-input.csv",
+      "bytes": 51,
+      "sha256": "48bdae7b55701647ad73edddfee1a25a31925f110398aaccfcd1e1c21d9c0f60"
+    },
+    {
+      "path": "samples/excel-dates-sort-as-text/example.csv",
+      "bytes": 59,
+      "sha256": "20bf2924146c4dbf5051dabcaf25e687b762080656e17731283f45de4b2db6fd"
+    },
+    {
+      "path": "samples/excel-dates-sort-as-text/README.txt",
+      "bytes": 415,
+      "sha256": "882ad960a9eb68c0cc0db975288d4bc6553dc1e506412ad4a3d0d3f1bf5c1509"
+    },
+    {
+      "path": "samples/excel-decimal-comma/example.csv",
+      "bytes": 53,
+      "sha256": "1da1fc5aaba55934eb79c49b4490831e13afc983d2e61e237b74e2bc530a2125"
+    },
+    {
+      "path": "samples/excel-decimal-comma/README.txt",
+      "bytes": 390,
+      "sha256": "da14cf080bd9b163857c76ae95b9ff1e234f58ac373d62d9aadb5552ea8cdef6"
+    },
+    {
+      "path": "samples/excel-drop-down-list-not-updating/example.csv",
+      "bytes": 65,
+      "sha256": "b8507a51b5b108206ae8ec18e0a7e2f02a17623a7fa8ddf61507b90f77bb9137"
+    },
+    {
+      "path": "samples/excel-drop-down-list-not-updating/expected-result.txt",
+      "bytes": 197,
+      "sha256": "d51db659d4613ef630dcd19549f5c2474ac6abd9288d46693f373035e1f78f41"
+    },
+    {
+      "path": "samples/excel-drop-down-list-not-updating/practice-input.csv",
+      "bytes": 65,
+      "sha256": "b8507a51b5b108206ae8ec18e0a7e2f02a17623a7fa8ddf61507b90f77bb9137"
+    },
+    {
+      "path": "samples/excel-drop-down-list-not-updating/practice-workbook.xlsx",
+      "bytes": 5850,
+      "sha256": "8fea67eeb0a8bea259ab349ac4930a9d1a58114090439bf9c23df61fbbf1432a"
+    },
+    {
+      "path": "samples/excel-drop-down-list-not-updating/README.txt",
+      "bytes": 462,
+      "sha256": "f7e3f3237e668269cf84e6a2a3eb466c62173716c7a6da121595c850d87ee126"
+    },
+    {
+      "path": "samples/excel-filter-spill-error/example.csv",
+      "bytes": 82,
+      "sha256": "4be356891838bab4cfd3307609522207a31f6897d7980b375f29aedd8e4ede1f"
+    },
+    {
+      "path": "samples/excel-filter-spill-error/filter-spill-expected.csv",
+      "bytes": 57,
+      "sha256": "cece21655ecb585c53d18dd64a3a49e55886c5497a0c8c105653e349a1fd863e"
+    },
+    {
+      "path": "samples/excel-filter-spill-error/filter-spill-input.csv",
+      "bytes": 82,
+      "sha256": "4be356891838bab4cfd3307609522207a31f6897d7980b375f29aedd8e4ede1f"
+    },
+    {
+      "path": "samples/excel-filter-spill-error/filter-spill-setup.txt",
+      "bytes": 203,
+      "sha256": "c72f28f2a72c818f283ec1defa8a8e32e7b1c8fcb1052903087f5405e8af8805"
+    },
+    {
+      "path": "samples/excel-filter-spill-error/README.txt",
+      "bytes": 422,
+      "sha256": "ad9d1a6bce4abfee54a664d6080df5d8b93480740200b39d8acf409d138f8873"
+    },
+    {
+      "path": "samples/excel-formulas-not-calculating/example.csv",
+      "bytes": 42,
+      "sha256": "521e26762c4f7b62416f9feb86508b498f56be30f605e7164a8fd64f74ee8ad3"
+    },
+    {
+      "path": "samples/excel-formulas-not-calculating/expected-result.txt",
+      "bytes": 160,
+      "sha256": "e5f6b0c8f145d26b5e2ee2fbcf9b78f6ef4cd8e8f897aada1e1eeae47d104a69"
+    },
+    {
+      "path": "samples/excel-formulas-not-calculating/practice-input.csv",
+      "bytes": 42,
+      "sha256": "521e26762c4f7b62416f9feb86508b498f56be30f605e7164a8fd64f74ee8ad3"
+    },
+    {
+      "path": "samples/excel-formulas-not-calculating/README.txt",
+      "bytes": 427,
+      "sha256": "83b4db7274f6bd845ecf416e0bf958d1b27ed30712a606953a5ca43b46effc4c"
+    },
+    {
+      "path": "samples/excel-freeze-rows-and-columns-together/example.csv",
+      "bytes": 79,
+      "sha256": "629a2e5991c8d4e95560ad8707dd693745fa420fdafa8ef0f570e11676d14958"
+    },
+    {
+      "path": "samples/excel-freeze-rows-and-columns-together/expected-result.txt",
+      "bytes": 199,
+      "sha256": "9df987d497be5dbad8fccd6cc0e792db13b19db21ec182a7ccaa2f7258bf6d11"
+    },
+    {
+      "path": "samples/excel-freeze-rows-and-columns-together/practice-input.csv",
+      "bytes": 79,
+      "sha256": "629a2e5991c8d4e95560ad8707dd693745fa420fdafa8ef0f570e11676d14958"
+    },
+    {
+      "path": "samples/excel-freeze-rows-and-columns-together/practice-workbook.xlsx",
+      "bytes": 4251,
+      "sha256": "79bd2a6aa050b7ba2cdcc66fb6cbb6377bd4caff9ea38807a42739209ecc1e0d"
+    },
+    {
+      "path": "samples/excel-freeze-rows-and-columns-together/README.txt",
+      "bytes": 458,
+      "sha256": "f460154d24469f8e6f65d8a5d487c68bec710cafb985743368191f9e76a20841"
+    },
+    {
+      "path": "samples/excel-leading-zeros/example.csv",
+      "bytes": 29,
+      "sha256": "32e66b198cb096f77ef3d4b1c663f55c274032757d5064b67f4aa519c4b3af4c"
+    },
+    {
+      "path": "samples/excel-leading-zeros/README.txt",
+      "bytes": 357,
+      "sha256": "6990c402f0580fe6e41a2bb8c9494ebfe4966e45450b22256a235fd49f634ab8"
+    },
+    {
+      "path": "samples/excel-long-numbers/example.csv",
+      "bytes": 150,
+      "sha256": "e8688027e62731e5d0d5a0a3a52ad2f2d059164b56adae0da9c0dc62daa57b51"
+    },
+    {
+      "path": "samples/excel-long-numbers/long-id-damage-expected.csv",
+      "bytes": 202,
+      "sha256": "e32d69a609f0158ee5972a604428ca2d18c39aa493b9857a0cfc3f21fc9bd945"
+    },
+    {
+      "path": "samples/excel-long-numbers/long-id-import-expected.csv",
+      "bytes": 183,
+      "sha256": "265a3daaf687a3e99a447a33636d577de84ca5f31cd885e06afdcf73fa6f8f73"
+    },
+    {
+      "path": "samples/excel-long-numbers/long-id-input.csv",
+      "bytes": 150,
+      "sha256": "e8688027e62731e5d0d5a0a3a52ad2f2d059164b56adae0da9c0dc62daa57b51"
+    },
+    {
+      "path": "samples/excel-long-numbers/long-id-known-damage.csv",
+      "bytes": 226,
+      "sha256": "585d69fd5b2f65e797456271f08d4516505fb6901e3ba737a5abd8172043f6d3"
+    },
+    {
+      "path": "samples/excel-long-numbers/README.txt",
+      "bytes": 499,
+      "sha256": "235ec1014ebb32436ac962fede995f4b123db96718ff7b305b62dd8f2af23938"
+    },
+    {
+      "path": "samples/excel-networkdays-working-days/example.csv",
+      "bytes": 337,
+      "sha256": "45be62d303a12644256e40e8911da7e959b98fc1fbc0e3f96b53f528f6a0312f"
+    },
+    {
+      "path": "samples/excel-networkdays-working-days/networkdays-cases.csv",
+      "bytes": 337,
+      "sha256": "45be62d303a12644256e40e8911da7e959b98fc1fbc0e3f96b53f528f6a0312f"
+    },
+    {
+      "path": "samples/excel-networkdays-working-days/networkdays-closures.csv",
+      "bytes": 36,
+      "sha256": "70912bd9c617dbe578b3ffd07e04b2abfec8acc51083aa631a4cfe56f5976ba1"
+    },
+    {
+      "path": "samples/excel-networkdays-working-days/networkdays-expected.csv",
+      "bytes": 187,
+      "sha256": "9f975c6fe7b156227efe2b3336c15e559aa159ee5a8c3baa71392503ad64d336"
+    },
+    {
+      "path": "samples/excel-networkdays-working-days/networkdays-setup.txt",
+      "bytes": 1299,
+      "sha256": "b4ece9231abef061511093b5bcbf0dc23532bb852c66bc2e559f7b45fa036269"
+    },
+    {
+      "path": "samples/excel-networkdays-working-days/README.txt",
+      "bytes": 502,
+      "sha256": "d8977baa752ee2f9acfdf84b3a08c53cf1b2231245e944ab42777a18d180de20"
+    },
+    {
+      "path": "samples/excel-percentage-change-zero-baseline/example.csv",
+      "bytes": 56,
+      "sha256": "d861128647ade08b1b47d8c0eb5a29fa62ae5ae0bd5c20fbfc0f1b0d8243be70"
+    },
+    {
+      "path": "samples/excel-percentage-change-zero-baseline/expected-result.txt",
+      "bytes": 178,
+      "sha256": "7979ff538c7e3b3de63949bd17c7bdc9f4b4e4573c102a7904453c7190573856"
+    },
+    {
+      "path": "samples/excel-percentage-change-zero-baseline/practice-input.csv",
+      "bytes": 56,
+      "sha256": "d861128647ade08b1b47d8c0eb5a29fa62ae5ae0bd5c20fbfc0f1b0d8243be70"
+    },
+    {
+      "path": "samples/excel-percentage-change-zero-baseline/README.txt",
+      "bytes": 443,
+      "sha256": "d049bfa036e4de4a60040c508d8f5e8f9840dbfb6ad468c1c2adae5ebbabc125"
+    },
+    {
+      "path": "samples/excel-pivot-table-count-instead-of-sum/example.csv",
+      "bytes": 97,
+      "sha256": "3288581e2b8536b376692fa8be365e653fc5a88d31dc0486741f249f097e21de"
+    },
+    {
+      "path": "samples/excel-pivot-table-count-instead-of-sum/pivot-amounts-input.csv",
+      "bytes": 97,
+      "sha256": "3288581e2b8536b376692fa8be365e653fc5a88d31dc0486741f249f097e21de"
+    },
+    {
+      "path": "samples/excel-pivot-table-count-instead-of-sum/pivot-clean-values-expected.csv",
+      "bytes": 92,
+      "sha256": "51805bda858239461068a4db6f39a77af74bc236f282326353e87dc5b393e0ca"
+    },
+    {
+      "path": "samples/excel-pivot-table-count-instead-of-sum/pivot-formulas.txt",
+      "bytes": 285,
+      "sha256": "bbc04758c7f6363baf9a8520831be6932b61a9bd0c479aeba27ff2a4dacebc95"
+    },
+    {
+      "path": "samples/excel-pivot-table-count-instead-of-sum/pivot-summary-expected.csv",
+      "bytes": 106,
+      "sha256": "5dd8a249dd89de97f55d6c1132e419dc0510b108e52f8653ce39dbbc163073a3"
+    },
+    {
+      "path": "samples/excel-pivot-table-count-instead-of-sum/README.txt",
+      "bytes": 560,
+      "sha256": "74ba1ea4e1c11c75c75eb8b30658453f70ce97bf924c3e2eaa45ad9f3968af4d"
+    },
+    {
+      "path": "samples/excel-pivot-table-missing-new-rows/example.csv",
+      "bytes": 101,
+      "sha256": "70115f1450a5caed6883d728b5000f5cfd9fc4825aae7f166b9c38e47a080c05"
+    },
+    {
+      "path": "samples/excel-pivot-table-missing-new-rows/pivot-orders-expanded.csv",
+      "bytes": 101,
+      "sha256": "70115f1450a5caed6883d728b5000f5cfd9fc4825aae7f166b9c38e47a080c05"
+    },
+    {
+      "path": "samples/excel-pivot-table-missing-new-rows/pivot-orders-initial.csv",
+      "bytes": 75,
+      "sha256": "3de60c731725d7b309e162521ebe04de615555b5b2320649a5145ca085b8255e"
+    },
+    {
+      "path": "samples/excel-pivot-table-missing-new-rows/README.txt",
+      "bytes": 462,
+      "sha256": "ec18c7e307e611d43666f83e0564c6318a9a623219a6cffd2ee641bc0e1456cc"
+    },
+    {
+      "path": "samples/excel-remove-blank-rows-safely/blank-row-expected.csv",
+      "bytes": 93,
+      "sha256": "8b723bc331dd65e8a5438ff03bae102702dc0e5298392a6ddf146ca654575a86"
+    },
+    {
+      "path": "samples/excel-remove-blank-rows-safely/blank-row-input.csv",
+      "bytes": 101,
+      "sha256": "459de28a04abef1c661f1f7aeb11dd25c6b73cba00e20c5518eb6fcf26ed7ceb"
+    },
+    {
+      "path": "samples/excel-remove-blank-rows-safely/example.csv",
+      "bytes": 101,
+      "sha256": "459de28a04abef1c661f1f7aeb11dd25c6b73cba00e20c5518eb6fcf26ed7ceb"
+    },
+    {
+      "path": "samples/excel-remove-blank-rows-safely/README.txt",
+      "bytes": 483,
+      "sha256": "00084ab2612e398c06eaa4b371385f413ac156237601e4ae84c0ecf6bfbc4cf4"
+    },
+    {
+      "path": "samples/excel-remove-duplicates-keep-latest/customer-history.csv",
+      "bytes": 194,
+      "sha256": "fa886b22e5d27aa3120e661debe41b6be032c96f963eeafc23654ba82f70ae60"
+    },
+    {
+      "path": "samples/excel-remove-duplicates-keep-latest/example.txt",
+      "bytes": 208,
+      "sha256": "7aae18f5ad54ba4771e088427835bd449103645471f5b47aecb02f11f9981a7b"
+    },
+    {
+      "path": "samples/excel-remove-duplicates-keep-latest/README.txt",
+      "bytes": 505,
+      "sha256": "12c7d04efe23f0c678c1eef287a0e695c4c552f6f74010da25f1e0a092b7a109"
+    },
+    {
+      "path": "samples/excel-repeat-header-row-print-every-page/example.csv",
+      "bytes": 61,
+      "sha256": "5a500f30e901026c793aedcdd572de83153b78d0b718b158a666d1b93f062298"
+    },
+    {
+      "path": "samples/excel-repeat-header-row-print-every-page/expected-result.txt",
+      "bytes": 209,
+      "sha256": "e01ae99bf9bd8cd934808b357e4ee2212bc1f4fccb71475518a1c1188c8d0473"
+    },
+    {
+      "path": "samples/excel-repeat-header-row-print-every-page/practice-input.csv",
+      "bytes": 61,
+      "sha256": "5a500f30e901026c793aedcdd572de83153b78d0b718b158a666d1b93f062298"
+    },
+    {
+      "path": "samples/excel-repeat-header-row-print-every-page/practice-workbook.xlsx",
+      "bytes": 4314,
+      "sha256": "c1dd5c48306611311cf4b0cbba6cc38eb87a4648f2229bd194553c1e6d05f939"
+    },
+    {
+      "path": "samples/excel-repeat-header-row-print-every-page/README.txt",
+      "bytes": 481,
+      "sha256": "74c65f6cfb58d3b4e9c6e7431c3eede743d17081669111bf69ca0a518cda0782"
+    },
+    {
+      "path": "samples/excel-repeat-header-row-print-every-page/repeat-header-native-excel.pdf",
+      "bytes": 6189,
+      "sha256": "e7c162219b4a28717f481e1fe01643a483d9cc20fc50202bf7e5605a35ff90de"
+    },
+    {
+      "path": "samples/excel-sum-hours-over-24/example.csv",
+      "bytes": 50,
+      "sha256": "394e1b0b3ec48ad2c6d9bb248b94a4d6eaad9cca70d7c3cbbd13ce8868123f34"
+    },
+    {
+      "path": "samples/excel-sum-hours-over-24/expected-result.txt",
+      "bytes": 181,
+      "sha256": "a62b67a5ca00595f720a8de5e27add462e7b92f7aeebc98c5763e4f034df5731"
+    },
+    {
+      "path": "samples/excel-sum-hours-over-24/practice-input.csv",
+      "bytes": 50,
+      "sha256": "394e1b0b3ec48ad2c6d9bb248b94a4d6eaad9cca70d7c3cbbd13ce8868123f34"
+    },
+    {
+      "path": "samples/excel-sum-hours-over-24/README.txt",
+      "bytes": 421,
+      "sha256": "a7b01d896407a64e878590bbd2878053457599cbf7b65323c37673d38f92718c"
+    },
+    {
+      "path": "samples/excel-sum-numbers-as-text/example.csv",
+      "bytes": 44,
+      "sha256": "45a2c636eea88ee56dbf3ca5d3bb244ccf52eafc9517772b691bb215bee8e3bf"
+    },
+    {
+      "path": "samples/excel-sum-numbers-as-text/README.txt",
+      "bytes": 472,
+      "sha256": "fc51525c36e8d5c40e2aebac2970f45d9e27512f1bf7e48b0d72b3a7922a5207"
+    },
+    {
+      "path": "samples/excel-sum-visible-rows-subtotal/example.csv",
+      "bytes": 107,
+      "sha256": "3541b6538f70fda1916c74300038e8eb5893160ca01b6b3c1c0c95beabef694f"
+    },
+    {
+      "path": "samples/excel-sum-visible-rows-subtotal/README.txt",
+      "bytes": 517,
+      "sha256": "e39c015e9cdf76d3d2a541504f1bd7c0b1eacff3aea626f01959eb432a50d62d"
+    },
+    {
+      "path": "samples/excel-sum-visible-rows-subtotal/subtotal-expected-states.csv",
+      "bytes": 147,
+      "sha256": "c5f4f11be2968a1a9b3f49dff266d3b06c7511fa03581b084765e7e07125636b"
+    },
+    {
+      "path": "samples/excel-sum-visible-rows-subtotal/subtotal-input.csv",
+      "bytes": 107,
+      "sha256": "3541b6538f70fda1916c74300038e8eb5893160ca01b6b3c1c0c95beabef694f"
+    },
+    {
+      "path": "samples/excel-sum-visible-rows-subtotal/subtotal-setup.txt",
+      "bytes": 1072,
+      "sha256": "48bcaebb9349b016fb7232e7a99894d53d123c76aca9afd417eaa5de4cb73191"
+    },
+    {
+      "path": "samples/excel-sumifs-date-range/example.csv",
+      "bytes": 230,
+      "sha256": "edc58d075ec99f8c0c268e391c16cc4f42a1360b20a2d49e881d40a4d7705431"
+    },
+    {
+      "path": "samples/excel-sumifs-date-range/README.txt",
+      "bytes": 458,
+      "sha256": "536214d55e3e1e0736fadeed17bb1bb0cec99eb0faf70220b9c2dd0df2b1db57"
+    },
+    {
+      "path": "samples/excel-sumifs-date-range/sumifs-dates-expected.csv",
+      "bytes": 103,
+      "sha256": "f127b98d9b31270eb023bbf23f111fc999578412c9970a4481216c36b377a853"
+    },
+    {
+      "path": "samples/excel-sumifs-date-range/sumifs-dates-input.csv",
+      "bytes": 230,
+      "sha256": "edc58d075ec99f8c0c268e391c16cc4f42a1360b20a2d49e881d40a4d7705431"
+    },
+    {
+      "path": "samples/excel-sumifs-date-range/sumifs-dates-setup.txt",
+      "bytes": 391,
+      "sha256": "7b2f2e0cbe34f29de18604811a6f2988a2c52e7fdb962e9399820639b7af9808"
+    },
+    {
+      "path": "samples/excel-textsplit-multiple-delimiters/example.csv",
+      "bytes": 76,
+      "sha256": "0b0cd93f526d9ae62b32359df6b330cfb12f28b56b7bd8950514b99f4037ca0a"
+    },
+    {
+      "path": "samples/excel-textsplit-multiple-delimiters/README.txt",
+      "bytes": 470,
+      "sha256": "dbbae4f32600992727567e1419acd62a0a1d0223cad51adcadd2ad813495bd5a"
+    },
+    {
+      "path": "samples/excel-textsplit-multiple-delimiters/textsplit-ignore-expected.csv",
+      "bytes": 95,
+      "sha256": "ddf32de5d0ee74dc77b8812e8e24613fac28976b78ad1f9cadc7c9c398683b13"
+    },
+    {
+      "path": "samples/excel-textsplit-multiple-delimiters/textsplit-input.csv",
+      "bytes": 76,
+      "sha256": "0b0cd93f526d9ae62b32359df6b330cfb12f28b56b7bd8950514b99f4037ca0a"
+    },
+    {
+      "path": "samples/excel-textsplit-multiple-delimiters/textsplit-preserve-expected.csv",
+      "bytes": 68,
+      "sha256": "b3647337bcde20eb28209db42482005c46212c4536e3c1d68321ba5284321d30"
+    },
+    {
+      "path": "samples/excel-textsplit-multiple-delimiters/textsplit-setup.txt",
+      "bytes": 214,
+      "sha256": "a1d7211dca8dd60b5c00521692e21be28c359afb7ded3def427d9ed5535776a8"
+    },
+    {
+      "path": "samples/excel-textsplit-multiple-delimiters/textsplit-two-dimensional-expected.csv",
+      "bytes": 36,
+      "sha256": "d2527bdcef701a6254273e0590e55fd767f3d19318fe602d69b713a3552c904d"
+    },
+    {
+      "path": "samples/excel-vlookup-between-sheets/example.txt",
+      "bytes": 165,
+      "sha256": "03ba05206d84df005116a5e15959422500dcce27ab179d234727cea81d2d5a19"
+    },
+    {
+      "path": "samples/excel-vlookup-between-sheets/order-ids.csv",
+      "bytes": 39,
+      "sha256": "705935fda1c9a25f473e37f1b9c5674c370b4fc332a96d149440a81f62f0fa54"
+    },
+    {
+      "path": "samples/excel-vlookup-between-sheets/price-list.csv",
+      "bytes": 83,
+      "sha256": "24f732bbc496edd9c3c688ba859f5581635533fbe66a4c1dc3c210148770f40c"
+    },
+    {
+      "path": "samples/excel-vlookup-between-sheets/README.txt",
+      "bytes": 483,
+      "sha256": "9fbf5ea09135bd621a672e2393b121f657ca38d741e0871e3e5624fa5f0c85c5"
+    },
+    {
+      "path": "samples/excel-workday-holidays/example.csv",
+      "bytes": 106,
+      "sha256": "83bb9f34a11c9fcc7ee53160a31e77c9200a0d555acbee18a4dd2cdf56417137"
+    },
+    {
+      "path": "samples/excel-workday-holidays/README.txt",
+      "bytes": 514,
+      "sha256": "7c1bfa09be3ed7801f75a6767cf191f304561c47c0ead6a9d72f5b5ad8aa0108"
+    },
+    {
+      "path": "samples/excel-workday-holidays/workday-calendar-example.txt",
+      "bytes": 217,
+      "sha256": "72914353a20efd84660f44e33d01826a28360fd6b58bfac2e106c1a00e666c12"
+    },
+    {
+      "path": "samples/excel-xlookup-multiple-criteria/example.txt",
+      "bytes": 177,
+      "sha256": "bade790adf0b6a69da1151ac70f604a979397549562ee9d1aafe6968df5155ec"
+    },
+    {
+      "path": "samples/excel-xlookup-multiple-criteria/README.txt",
+      "bytes": 492,
+      "sha256": "620325f3f581b3e155cc1990a53bd5826972243314cc53b78ab43f5bdee9daef"
+    },
+    {
+      "path": "samples/excel-xlookup-multiple-criteria/regional-rates.csv",
+      "bytes": 94,
+      "sha256": "7f9d0efcd5b3a33162bf60a057e1a54e0644baa539fda4d9755a4adc772b384a"
+    },
+    {
+      "path": "samples/excel-xlookup-return-all-matches/all-matches-expected.csv",
+      "bytes": 103,
+      "sha256": "9f39922c140c7bba82fdcbdcb8a039e27ec1ee62fb06b66d4f8764fd6ff1d5a7"
+    },
+    {
+      "path": "samples/excel-xlookup-return-all-matches/all-matches-input.csv",
+      "bytes": 139,
+      "sha256": "442e98c62fc27b1c415a83eb47acf69ec0043803f8b093eec458b1dc86ca0f40"
+    },
+    {
+      "path": "samples/excel-xlookup-return-all-matches/all-matches-summary-expected.csv",
+      "bytes": 71,
+      "sha256": "0800df67b8e4f167e53e12d2d6f0007b2923d750f984bffe481a5c08e6219e46"
+    },
+    {
+      "path": "samples/excel-xlookup-return-all-matches/example.csv",
+      "bytes": 139,
+      "sha256": "442e98c62fc27b1c415a83eb47acf69ec0043803f8b093eec458b1dc86ca0f40"
+    },
+    {
+      "path": "samples/excel-xlookup-return-all-matches/open-matches-expected.csv",
+      "bytes": 83,
+      "sha256": "62f94a028143c3472246d4d52310f4da9cc29fef6169c323fd6c21b2db284192"
+    },
+    {
+      "path": "samples/excel-xlookup-return-all-matches/README.txt",
+      "bytes": 456,
+      "sha256": "78f0ec99f9d18d6dbca84be1d3858670067c33f83a2f048f951c373a15f91057"
+    },
+    {
+      "path": "samples/google-sheets-countif-checkboxes/checkbox-custom-expected.csv",
+      "bytes": 32,
+      "sha256": "4b9f7b689e1e3fa66bf9ec9c99a77752b7b772a08003cc2e295d9b6b99a284b1"
+    },
+    {
+      "path": "samples/google-sheets-countif-checkboxes/checkbox-custom-input.csv",
+      "bytes": 107,
+      "sha256": "176a65699a00c63098e5390ae41c08751d376f9520ca9cbc16bf1dcacca357d5"
+    },
+    {
+      "path": "samples/google-sheets-countif-checkboxes/checkbox-input.csv",
+      "bytes": 110,
+      "sha256": "eba2480b739b2a58abd682c298544bc71036cc0ae0396289db0a07be80f1b636"
+    },
+    {
+      "path": "samples/google-sheets-countif-checkboxes/checkbox-summary-expected.csv",
+      "bytes": 99,
+      "sha256": "463af13db5cf771df6bf1b80405eb5515462a736b9cf88b0ac9755258a50a4c8"
+    },
+    {
+      "path": "samples/google-sheets-countif-checkboxes/example.csv",
+      "bytes": 110,
+      "sha256": "eba2480b739b2a58abd682c298544bc71036cc0ae0396289db0a07be80f1b636"
+    },
+    {
+      "path": "samples/google-sheets-countif-checkboxes/README.txt",
+      "bytes": 512,
+      "sha256": "24f83ad0f4a337896928d2d703f691d46c794c336ee2998ed14aab33d3d500e0"
+    },
+    {
+      "path": "samples/google-sheets-filter-no-matches/example.csv",
+      "bytes": 145,
+      "sha256": "fee04a8eb449de0091b30b92e42caa6c6591319b0c4d5aa69b370a46f6895106"
+    },
+    {
+      "path": "samples/google-sheets-filter-no-matches/filter-input.csv",
+      "bytes": 145,
+      "sha256": "fee04a8eb449de0091b30b92e42caa6c6591319b0c4d5aa69b370a46f6895106"
+    },
+    {
+      "path": "samples/google-sheets-filter-no-matches/filter-scenarios-expected.csv",
+      "bytes": 75,
+      "sha256": "1f1fbe2f0eb62f536a8107703991184df7f691ed1d0e004cec80f4f48795442a"
+    },
+    {
+      "path": "samples/google-sheets-filter-no-matches/filter-support-open-expected.csv",
+      "bytes": 85,
+      "sha256": "3e36c997d20ff706d6f974599191ada89ad68ffab1ed0f6396fb89ce29729d10"
+    },
+    {
+      "path": "samples/google-sheets-filter-no-matches/README.txt",
+      "bytes": 464,
+      "sha256": "49058fd8cfbfbf21cbe8d151cb50bdd3f42851a9e4133277d46003508cfa9a1a"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/example.csv",
+      "bytes": 97,
+      "sha256": "e629508271e973dc0c93430053fbcb1f5b5b1337a77bec42cc12e9b69e2abcf3"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/expected-extended-highlighted-rows.csv",
+      "bytes": 154,
+      "sha256": "3c511461eafb29b685fd980ad1e7f5d16811d7b09332a06d4fbd1a971cab6e06"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/expected-highlighted-rows.csv",
+      "bytes": 138,
+      "sha256": "84807b1e6a39f1f18f0fa05efb82a9a72eaf9e1da2b94ed5db4eff36d5d380a0"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/expected-result.txt",
+      "bytes": 204,
+      "sha256": "b72f57145d6f65a54d57bd50292c67e2df49cf913b2180b435cd02d6dcb1a3e0"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/extension-test.csv",
+      "bytes": 110,
+      "sha256": "25cfd9a8c41e02c24efebc6595a08d6e034f0095416e5e8f187057566fe70896"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/google-sheets-all-occurrences.jpg",
+      "bytes": 62494,
+      "sha256": "0d99ba975633661933656e885d590ec1d7c597925cf11ff94f01c72c1ae4eee6"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/google-sheets-later-occurrences.jpg",
+      "bytes": 62716,
+      "sha256": "55cb06c6644d71e7007dcd466488e6e6b1e97c58b66905e66f2ce541d1607e89"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/practice-input.csv",
+      "bytes": 97,
+      "sha256": "e629508271e973dc0c93430053fbcb1f5b5b1337a77bec42cc12e9b69e2abcf3"
+    },
+    {
+      "path": "samples/google-sheets-highlight-duplicate-rows-by-id/README.txt",
+      "bytes": 465,
+      "sha256": "4eea1d52a84ece34df487e4d8bf677797cd0b08b975decf062a6b3d9087d9b87"
+    },
+    {
+      "path": "samples/google-sheets-query-group-by/example.csv",
+      "bytes": 115,
+      "sha256": "936587adb98f91bdfd3fbd561f72c0b2179b9997bcaea113a8887a2c401bf74e"
+    },
+    {
+      "path": "samples/google-sheets-query-group-by/query-group-by-expected.csv",
+      "bytes": 78,
+      "sha256": "a3e158ea96766ac15158892a62cb536e13c48295083e9bcd5836510e6db617b7"
+    },
+    {
+      "path": "samples/google-sheets-query-group-by/query-group-by-input.csv",
+      "bytes": 115,
+      "sha256": "936587adb98f91bdfd3fbd561f72c0b2179b9997bcaea113a8887a2c401bf74e"
+    },
+    {
+      "path": "samples/google-sheets-query-group-by/README.txt",
+      "bytes": 491,
+      "sha256": "223d2cb5bd054d60027b9ac86d40e497af2f021b095910fadaf8b49dcd26d80f"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/example.csv",
+      "bytes": 82,
+      "sha256": "e05ef2bddd1bd06f38bca0c96f2d87c7e988150d04caa60724a3d71f1775a97a"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/query-checklist.txt",
+      "bytes": 948,
+      "sha256": "5f3f6de70be259009db2d019e629fd057a5e1153d814d981f9bc297a5ff94929"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/query-mixed-input.csv",
+      "bytes": 82,
+      "sha256": "e05ef2bddd1bd06f38bca0c96f2d87c7e988150d04caa60724a3d71f1775a97a"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/query-preserved-expected.csv",
+      "bytes": 87,
+      "sha256": "459d8bbfcf24fbf79203ad946f96b6aa46a1a6299625cef483f2fd6f96891b13"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/query-raw-nonnull-expected.csv",
+      "bytes": 52,
+      "sha256": "cda1407394b8a9b081cbe16c86eb8c5e272f4d120ae6391d9cee1def6dc5b9fb"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/query-raw-select-expected.csv",
+      "bytes": 66,
+      "sha256": "765b2b23ef18b8a7d0752d1e09b5996bb26d388204606e325f06933ac52d012f"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/query-studio-expected.csv",
+      "bytes": 42,
+      "sha256": "cd2b14c5401edec26e342bc7515f7029e5dafaed839ce5880f65fb4b748c5e87"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/query-types-input.csv",
+      "bytes": 92,
+      "sha256": "6619be43d1658641460c6931235ec11abde5a5878ba77135eb8ade92898b4def"
+    },
+    {
+      "path": "samples/google-sheets-query-mixed-data-types/README.txt",
+      "bytes": 513,
+      "sha256": "383fc758f65555ec91d5572b5039ad01ab75f0086c9982108cf9dd46a931466b"
+    },
+    {
+      "path": "samples/google-sheets-remove-duplicates/example.csv",
+      "bytes": 91,
+      "sha256": "9a8de722ae83ea8ce55f84f23104a5f5c1b545caf73ec772618603957ce938a3"
+    },
+    {
+      "path": "samples/google-sheets-remove-duplicates/README.txt",
+      "bytes": 421,
+      "sha256": "4fb639716ef6dc236156928e87b71cd246ea8f16a01ce00f8ebaa7f953be270d"
+    },
+    {
+      "path": "samples/google-sheets-sort-multiple-columns/example.csv",
+      "bytes": 158,
+      "sha256": "1d9451da582a01dbfe504c89e1118f0a1b75ab5b2333c4f6ac6015cef743f81d"
+    },
+    {
+      "path": "samples/google-sheets-sort-multiple-columns/README.txt",
+      "bytes": 495,
+      "sha256": "8f5fa9d6fb2e6d1a0f9174302f0e029ece7244b8b49f8d980668a29b5f55d435"
+    },
+    {
+      "path": "samples/google-sheets-sort-multiple-columns/sort-checklist.txt",
+      "bytes": 769,
+      "sha256": "4e8f615944662496b179d9685fb462c3b9501a02421685a25ef2ebbbee608eea"
+    },
+    {
+      "path": "samples/google-sheets-sort-multiple-columns/sort-expected.csv",
+      "bytes": 158,
+      "sha256": "ac322466cce515926f41bad2fb39066fd0fc8c24676cd426137e8a8fd9512872"
+    },
+    {
+      "path": "samples/google-sheets-sort-multiple-columns/sort-input.csv",
+      "bytes": 158,
+      "sha256": "1d9451da582a01dbfe504c89e1118f0a1b75ab5b2333c4f6ac6015cef743f81d"
+    },
+    {
+      "path": "samples/google-sheets-sort-multiple-columns/sort-score-first-expected.csv",
+      "bytes": 158,
+      "sha256": "412ceec53c2055cd3ec028adab8fdd4727311af9734f5c0a5ed27989c8ab4cf3"
+    },
+    {
+      "path": "samples/google-sheets-split-empty-fields/example.txt",
+      "bytes": 53,
+      "sha256": "ea110bb8c9a5c19a8d044f088003b94b10cdc2185fc15ec3204a8640f455213e"
+    },
+    {
+      "path": "samples/google-sheets-split-empty-fields/README.txt",
+      "bytes": 435,
+      "sha256": "efb8a43e7f9750f2645c195a65a0e14d6667a2beff956fde0de63b7aaeef45e5"
+    },
+    {
+      "path": "samples/google-sheets-sum-by-month-category/example.csv",
+      "bytes": 267,
+      "sha256": "c5d6f9351326ddd5b78306c218773f604156ccb60498d77f59715c8bd8c3eb35"
+    },
+    {
+      "path": "samples/google-sheets-sum-by-month-category/monthly-category-expected.csv",
+      "bytes": 92,
+      "sha256": "05f691a5e63127e673cd5030f56a36f9caecfb3207d687481b8d78a4ef3d0422"
+    },
+    {
+      "path": "samples/google-sheets-sum-by-month-category/monthly-category-formulas.txt",
+      "bytes": 1205,
+      "sha256": "c54615bc26f143ff792d94143bfd6c2bd992380c96667b38bbb01e1edfe62bfd"
+    },
+    {
+      "path": "samples/google-sheets-sum-by-month-category/monthly-category-input.csv",
+      "bytes": 267,
+      "sha256": "c5d6f9351326ddd5b78306c218773f604156ccb60498d77f59715c8bd8c3eb35"
+    },
+    {
+      "path": "samples/google-sheets-sum-by-month-category/README.txt",
+      "bytes": 535,
+      "sha256": "a89c640d39e9788c49d148120abadd8a0c976cb6a58865146cccbb1e6583bc15"
+    },
+    {
+      "path": "samples/google-sheets-sumif-wildcards-literal-text/example.csv",
+      "bytes": 71,
+      "sha256": "c18ea2555eee19b9b9cdb22d58354c7912d0b48186094ca595d0a37e9a3f52f6"
+    },
+    {
+      "path": "samples/google-sheets-sumif-wildcards-literal-text/README.txt",
+      "bytes": 439,
+      "sha256": "fda7286ce8e3d8e6b019d5654f633a18b2103b6e1075b2134a747118530e035b"
+    },
+    {
+      "path": "samples/google-sheets-sumif-wildcards-literal-text/sumif-formulas.txt",
+      "bytes": 746,
+      "sha256": "0bff380b5a6c0ee526fedda3e881299ac76c80d7a00365178f369187669c0b81"
+    },
+    {
+      "path": "samples/google-sheets-sumif-wildcards-literal-text/sumif-literal-expected.csv",
+      "bytes": 59,
+      "sha256": "60544a1bba70e31fa5e626dc7d939e3ec2c7525a2917ef713086ccd79277e2e7"
+    },
+    {
+      "path": "samples/google-sheets-sumif-wildcards-literal-text/sumif-patterns-expected.csv",
+      "bytes": 130,
+      "sha256": "95053a45827945c86c5a462dd8858cb440e7791c54fac27abf7d1b3ba2432261"
+    },
+    {
+      "path": "samples/google-sheets-sumif-wildcards-literal-text/sumif-patterns-input.csv",
+      "bytes": 71,
+      "sha256": "c18ea2555eee19b9b9cdb22d58354c7912d0b48186094ca595d0a37e9a3f52f6"
+    },
+    {
+      "path": "samples/nested-json-to-csv/example-2.py",
+      "bytes": 2049,
+      "sha256": "ba5d6147d82b02163fcc487e39b882fe61c282e422f961dde59226421b1bf71d"
+    },
+    {
+      "path": "samples/nested-json-to-csv/example.json",
+      "bytes": 183,
+      "sha256": "d51832ade5ab56905958a8dc959f0e9359888a72de858fab3ace8985a71227c5"
+    },
+    {
+      "path": "samples/nested-json-to-csv/README.txt",
+      "bytes": 460,
+      "sha256": "b88a0d2200fced8be669dafc7fe467e659a8499bf0dcfec22bcf3ecce7cdc4c6"
+    },
+    {
+      "path": "samples/power-query-change-type-using-locale/example.csv",
+      "bytes": 103,
+      "sha256": "62d512fbf6c2a7e2d5ff1d9e5875efa9f3f63f39ac896f1a26e72eec4cbfded7"
+    },
+    {
+      "path": "samples/power-query-change-type-using-locale/locale-contract.txt",
+      "bytes": 241,
+      "sha256": "f887b7da0f61134ee3cd5790c478c5e3d37c4c76d14a681c76a1251d73f8c7a9"
+    },
+    {
+      "path": "samples/power-query-change-type-using-locale/locale-conversion.pq",
+      "bytes": 1030,
+      "sha256": "46ba0b2be1530bcb32b9d1b61458afd4cf3d6d817af83703d0dc023ae2774406"
+    },
+    {
+      "path": "samples/power-query-change-type-using-locale/locale-expected.csv",
+      "bytes": 86,
+      "sha256": "5112f22d422b8b559fb2e7512905db75481366b5ba42fc106c0b3eeb426b9abc"
+    },
+    {
+      "path": "samples/power-query-change-type-using-locale/locale-input.csv",
+      "bytes": 103,
+      "sha256": "62d512fbf6c2a7e2d5ff1d9e5875efa9f3f63f39ac896f1a26e72eec4cbfded7"
+    },
+    {
+      "path": "samples/power-query-change-type-using-locale/locale-native-checks.csv",
+      "bytes": 1080,
+      "sha256": "c1afc4d2d6d65befd84c8fb5154ca717d21eb8ccd112c96a8018f0b92094bb86"
+    },
+    {
+      "path": "samples/power-query-change-type-using-locale/README.txt",
+      "bytes": 545,
+      "sha256": "e63f9b4cbbd17795bdc759b240b1602ac72fd7b0d6efb33189e886a8645c8231"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/a.csv",
+      "bytes": 42,
+      "sha256": "20e6d55115ab7ba11b340d0bef149cd1f055e78542851e3ec3f5a64e31c024dd"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/b.csv",
+      "bytes": 22,
+      "sha256": "2da97714601a23541a51299f2b87246eadecd7d88c1e14ccb96e5cc6fb0094bb"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/c.csv",
+      "bytes": 51,
+      "sha256": "7e87347dad5d3e6aa271eaf7a17dfbfd7a59f6f5b68bd76fa87581e58ed91bba"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/combined-schema-expected.csv",
+      "bytes": 119,
+      "sha256": "be6fca5f8ded39e7925cd1eb9d6d7a95477dd63c425ff9936dc3e34c7b962606"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/example.csv",
+      "bytes": 42,
+      "sha256": "20e6d55115ab7ba11b340d0bef149cd1f055e78542851e3ec3f5a64e31c024dd"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/README.txt",
+      "bytes": 595,
+      "sha256": "07e087370f64b8750111000ed90eb443c08c831be703ddc0a344d04bb4afe92c"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/schema-folder-query.pq",
+      "bytes": 2145,
+      "sha256": "39e4407a1365f756d825fa038848879210bdc6d3ec2dfb0f741a893fb05fd923"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/schema-native-checks.csv",
+      "bytes": 1314,
+      "sha256": "13c87b6adae8047aea29123ff9abe7b3abbba54b40ce42948254d86a9c8c8500"
+    },
+    {
+      "path": "samples/power-query-combine-files-schema-drift/source-schema-audit.csv",
+      "bytes": 122,
+      "sha256": "927e24445c7b4320cc9650fd9dd14d40b72c60a8531bc864875cdcac51115c1b"
+    },
+    {
+      "path": "samples/power-query-fill-down-null-values/batch-fill-query.pq",
+      "bytes": 611,
+      "sha256": "c385f7869eafc4723531bb1b03b78d6076120287b57c0a2b26ac34098e3fb047"
+    },
+    {
+      "path": "samples/power-query-fill-down-null-values/batch-rows-expected.csv",
+      "bytes": 123,
+      "sha256": "8cc9a90126994f9e0630d116ebe143801ca76e1c91440b7a54148b67fd5becba"
+    },
+    {
+      "path": "samples/power-query-fill-down-null-values/batch-rows-input.csv",
+      "bytes": 109,
+      "sha256": "860d73d373db47ccd2ad80889346c9453b0d3a5edc03f5b0adca71e53696453c"
+    },
+    {
+      "path": "samples/power-query-fill-down-null-values/blank-states.txt",
+      "bytes": 429,
+      "sha256": "53cd6c72e15c3337e163503f2cba7f9b0788fca7e3100096cbfafa2d234e6f4b"
+    },
+    {
+      "path": "samples/power-query-fill-down-null-values/example.csv",
+      "bytes": 109,
+      "sha256": "860d73d373db47ccd2ad80889346c9453b0d3a5edc03f5b0adca71e53696453c"
+    },
+    {
+      "path": "samples/power-query-fill-down-null-values/README.txt",
+      "bytes": 506,
+      "sha256": "2d403c292947b5823aba2dc28cbf47d5568c4bcfed4f2a2ba56b89002036a1ef"
+    },
+    {
+      "path": "samples/power-query-left-anti-join-missing-rows/available-items.csv",
+      "bytes": 28,
+      "sha256": "8bd2a3655568729dd5a37a9082dc9573e4b02e8747371ad0ceaa91b37e2a51fa"
+    },
+    {
+      "path": "samples/power-query-left-anti-join-missing-rows/example.csv",
+      "bytes": 82,
+      "sha256": "bfb0a1429945c6d6472be3c880c7beb02d2ad8aa2aecb10ff651395994a955da"
+    },
+    {
+      "path": "samples/power-query-left-anti-join-missing-rows/invalid-key-expected.csv",
+      "bytes": 31,
+      "sha256": "1851c1494249f1a50e2c91cd94ac918fcf410f30ce768c8be14b101256f08646"
+    },
+    {
+      "path": "samples/power-query-left-anti-join-missing-rows/missing-items-expected.csv",
+      "bytes": 56,
+      "sha256": "1eb2af7c5b3a9f004f2004ff9ccd3250cb302fc382f602afd5e997f752110bdc"
+    },
+    {
+      "path": "samples/power-query-left-anti-join-missing-rows/missing-items-query.pq",
+      "bytes": 808,
+      "sha256": "ccc705e584eda326cd8a6ca8b01c512f437559d06d6051b171a9dc3e45ed6fdf"
+    },
+    {
+      "path": "samples/power-query-left-anti-join-missing-rows/README.txt",
+      "bytes": 555,
+      "sha256": "7c00d0ed771f337396a541f0fdb2b600bc2ba3877f9b89de420e30ea7f6aae6c"
+    },
+    {
+      "path": "samples/power-query-left-anti-join-missing-rows/requested-items.csv",
+      "bytes": 82,
+      "sha256": "bfb0a1429945c6d6472be3c880c7beb02d2ad8aa2aecb10ff651395994a955da"
+    },
+    {
+      "path": "samples/power-query-merge-duplicates-extra-rows/addresses-input.csv",
+      "bytes": 78,
+      "sha256": "3870de47d406f0286025236fd9902c48b1e75b265407206aad52b48d48de6c60"
+    },
+    {
+      "path": "samples/power-query-merge-duplicates-extra-rows/example.csv",
+      "bytes": 65,
+      "sha256": "a25d07a243439d9469e3990cf387fb9fe46c40708cc519a23dd2234e8e4e7ee6"
+    },
+    {
+      "path": "samples/power-query-merge-duplicates-extra-rows/expanded-expected.csv",
+      "bytes": 166,
+      "sha256": "d2609a4ffb82c1f25b14ea1577acf34bcdb4c39ea702b307d532d40828c7fc3c"
+    },
+    {
+      "path": "samples/power-query-merge-duplicates-extra-rows/expanded-merge-query.pq",
+      "bytes": 753,
+      "sha256": "13514ed62fd2120a18338b5e400c71c56cba8ae145c509080b57916092a5f059"
+    },
+    {
+      "path": "samples/power-query-merge-duplicates-extra-rows/match-count-query.pq",
+      "bytes": 817,
+      "sha256": "f7059ad3a2582d9a19b0bbf6e369c9c3eeef0f5e72addb277ca90228eabc68eb"
+    },
+    {
+      "path": "samples/power-query-merge-duplicates-extra-rows/match-counts-expected.csv",
+      "bytes": 89,
+      "sha256": "50db3b40d5c0e908992847566947e98c32b451dbab9380ded91b0a1719fc5784"
+    },
+    {
+      "path": "samples/power-query-merge-duplicates-extra-rows/README.txt",
+      "bytes": 516,
+      "sha256": "9a31dc2778904117548d7e36401045291ca57eecbc4203c10262e15f4639c4f6"
+    },
+    {
+      "path": "samples/power-query-merge-duplicates-extra-rows/sales-input.csv",
+      "bytes": 65,
+      "sha256": "a25d07a243439d9469e3990cf387fb9fe46c40708cc519a23dd2234e8e4e7ee6"
+    },
+    {
+      "path": "samples/power-query-promote-headers/example.csv",
+      "bytes": 103,
+      "sha256": "c7bd35b187b45e4c4ee8264886dac7ac03675fec1f9bc78b273d9168513e45a7"
+    },
+    {
+      "path": "samples/power-query-promote-headers/header-refresh-tests.txt",
+      "bytes": 323,
+      "sha256": "0a1fe74b40244206e033128d09a27201aa7b6e21c285f99b530b280784fba977"
+    },
+    {
+      "path": "samples/power-query-promote-headers/headers-contract.txt",
+      "bytes": 235,
+      "sha256": "72492be2043596dc4e0f01f2744fcc20bf6522513c1677d7c8225960a398c6a7"
+    },
+    {
+      "path": "samples/power-query-promote-headers/headers-expected.csv",
+      "bytes": 62,
+      "sha256": "56d8261ed10c59d3ca7bec8d4a36e9e15805c5b037bae5e03dd9f23597f8ea16"
+    },
+    {
+      "path": "samples/power-query-promote-headers/headers-input.csv",
+      "bytes": 103,
+      "sha256": "c7bd35b187b45e4c4ee8264886dac7ac03675fec1f9bc78b273d9168513e45a7"
+    },
+    {
+      "path": "samples/power-query-promote-headers/headers-query.pq",
+      "bytes": 732,
+      "sha256": "b355482b715d165ed304661fdcb06210eebb57db8cfc7e0b86cc1a171d5ced6f"
+    },
+    {
+      "path": "samples/power-query-promote-headers/README.txt",
+      "bytes": 513,
+      "sha256": "04f1b25c2725a0044c2eccb107b2c5f5389acab60193579052a92e3ac7edea46"
+    },
+    {
+      "path": "samples/power-query-split-column-into-rows/example.csv",
+      "bytes": 66,
+      "sha256": "60b1bf19d56144143cd03ce69f56566eb8768f0d25f6c7130b31ce32c36ea772"
+    },
+    {
+      "path": "samples/power-query-split-column-into-rows/README.txt",
+      "bytes": 552,
+      "sha256": "9b83473e5ae1060feb57d62b18b6709fca4bfc4f5d74c01548375615b16538a6"
+    },
+    {
+      "path": "samples/power-query-split-column-into-rows/ticket-tags-expected.csv",
+      "bytes": 88,
+      "sha256": "4917a59a80032185ea5d1a0c81ce1e2b1a2fa7abd272492f269a054d917b172e"
+    },
+    {
+      "path": "samples/power-query-split-column-into-rows/ticket-tags-input.csv",
+      "bytes": 66,
+      "sha256": "60b1bf19d56144143cd03ce69f56566eb8768f0d25f6c7130b31ce32c36ea772"
+    },
+    {
+      "path": "samples/power-query-split-column-into-rows/ticket-tags-query.pq",
+      "bytes": 1051,
+      "sha256": "f074623edf5beb79c306dd238d440c6b8e499b0b1524a77884dec27d4ed8aa61"
+    },
+    {
+      "path": "samples/power-query-split-column-into-rows/token-audit.txt",
+      "bytes": 334,
+      "sha256": "cbb9de249218fe471ef845115686af448e988e0b9980c175828cfe7feb939280"
+    },
+    {
+      "path": "samples/power-query-unpivot-month-columns/example.csv",
+      "bytes": 85,
+      "sha256": "ea5eb2fa4a0d70f0f5355b540c6c961baed6268316e01c6b8e98e4475f8420e0"
+    },
+    {
+      "path": "samples/power-query-unpivot-month-columns/monthly-sales-long-expected.csv",
+      "bytes": 113,
+      "sha256": "5504b98031068786d3abb0a94fb759c7b43123c921e9a2dda592e85fc2107657"
+    },
+    {
+      "path": "samples/power-query-unpivot-month-columns/monthly-sales-unpivot.pq",
+      "bytes": 673,
+      "sha256": "fda782bfdd92b2d06b504dcb09d4df915326b6ba19c2af5f2e161ec212d879b2"
+    },
+    {
+      "path": "samples/power-query-unpivot-month-columns/monthly-sales-wide.csv",
+      "bytes": 85,
+      "sha256": "ea5eb2fa4a0d70f0f5355b540c6c961baed6268316e01c6b8e98e4475f8420e0"
+    },
+    {
+      "path": "samples/power-query-unpivot-month-columns/README.txt",
+      "bytes": 535,
+      "sha256": "b204a0f0bf318910d445644f008024eaccbfd84a69ea1d723dd9a49bac018014"
+    },
+    {
+      "path": "samples/spreadsheet-trim-spaces/example.csv",
+      "bytes": 75,
+      "sha256": "531d35684bb1fff65b95275a0365478395d840bc32e194048336cdff9e2e8e0a"
+    },
+    {
+      "path": "samples/spreadsheet-trim-spaces/README.txt",
+      "bytes": 403,
+      "sha256": "888f6325b815d578a93070580249b170205d73cf7417bb34e3ef7137d5017e50"
+    },
+    {
+      "path": "samples/spreadsheet-trim-spaces/trim-input.csv",
+      "bytes": 75,
+      "sha256": "531d35684bb1fff65b95275a0365478395d840bc32e194048336cdff9e2e8e0a"
+    },
+    {
+      "path": "samples/spreadsheet-trim-spaces/whitespace-diagnostics.csv",
+      "bytes": 279,
+      "sha256": "91fb3ec9b2107b42830313955fd3b55fc5c94a4a31a4cf3972cd2bac26eae07e"
+    },
+    {
+      "path": "samples/tsv-to-csv/example-2.py",
+      "bytes": 1145,
+      "sha256": "14ed4ecec4477e7c580b4cca730825db127d29f290caf4a01df44bd99ef5471d"
+    },
+    {
+      "path": "samples/tsv-to-csv/example.tsv",
+      "bytes": 100,
+      "sha256": "99c1527977ba02c9303a331c37504810695571c12b216322cff4a267e2e93aa4"
+    },
+    {
+      "path": "samples/tsv-to-csv/README.txt",
+      "bytes": 454,
+      "sha256": "3c0ecde971fec7423ea4bd087eff339c376b03e9f8cb39bdfbaf90b5f388f976"
+    },
+    {
+      "path": "samples/vlookup-identical-ids-na/example.txt",
+      "bytes": 233,
+      "sha256": "31fe1c23a8d1067fb8e389dc9fb919d089b1ed63f4351d2d23c97c113a27b4a9"
+    },
+    {
+      "path": "samples/vlookup-identical-ids-na/README.txt",
+      "bytes": 416,
+      "sha256": "3e48b20adcc1f8e2dd9f056e0bbfb9daaf740279c9fb64de5f5d6cd4cc074c8b"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 11428,
+      "sha256": "db52efe9c707871e0f2f0618a40912afd6b76e2e03874f161c69f9907c07e9dc"
+    },
+    {
+      "path": "tools.json",
+      "bytes": 22134,
+      "sha256": "70fcaf6b0f0db9446ee2d861a5009dc93c3f2dba80f70ce296c61488ae11f98a"
+    },
+    {
+      "path": "workspace.html",
+      "bytes": 67067,
+      "sha256": "531aa28c594132637083d14c0c7df7babd9de67636bb5f5f16a8669fe9205140"
+    },
+    {
+      "path": "workspace.txt",
+      "bytes": 4795,
+      "sha256": "553cc00b4a83805672d2631bb902f6c59e83f5f5028692cf8f4a1e411658c97d"
+    },
+    {
+      "path": "workspace/clean-csv.html",
+      "bytes": 56038,
+      "sha256": "2dc90626500d4bff5b41d866a213ad375735281a7095080ab88e1022a8be8df7"
+    },
+    {
+      "path": "workspace/clean-csv.txt",
+      "bytes": 12253,
+      "sha256": "297abc27d8247ada49d8b1ec991ba7a65aa73a101c0ab43525a7d6fe3a4143a7"
+    },
+    {
+      "path": "workspace/compare-csv-files.html",
+      "bytes": 48858,
+      "sha256": "fd6083502f14ec79607112c208d3a9e35cc061f9c4dc0243885523f1d49916a7"
+    },
+    {
+      "path": "workspace/compare-csv-files.txt",
+      "bytes": 16711,
+      "sha256": "87a2249806bf5399932d6b347186b4ed0ab4495890bc580a08dc3e1d61ed98c5"
+    },
+    {
+      "path": "workspace/compare-two-lists.html",
+      "bytes": 52142,
+      "sha256": "5acedf0e220325c56934c254e084dd27534f4d9a75c78e353b397d0956f69918"
+    },
+    {
+      "path": "workspace/compare-two-lists.txt",
+      "bytes": 12060,
+      "sha256": "d0109185a546da0172af12f02bf95e1792611e073e30f005443bcc286449aaed"
+    },
+    {
+      "path": "workspace/convert-csv.html",
+      "bytes": 44721,
+      "sha256": "790ed8c8a3c9056015e25e6b8614a23d32f1fa0df15c1ccd56f97be8e87450f5"
+    },
+    {
+      "path": "workspace/convert-csv.txt",
+      "bytes": 12423,
+      "sha256": "28f1a7b8beb921b149ea5360baa0e2743ce3226a7804370ef44dca2621db73ad"
+    },
+    {
+      "path": "workspace/csv-to-excel.html",
+      "bytes": 33753,
+      "sha256": "a700794e7bfb5bd06f83b1f51991701ff83c9dabeef71cd47ac2caeca45b739d"
+    },
+    {
+      "path": "workspace/csv-to-excel.txt",
+      "bytes": 11781,
+      "sha256": "849899e54f78aa55603e5c5f08a97c520af632b641368a63e4841901b45e7890"
+    },
+    {
+      "path": "workspace/extract-csv-columns.html",
+      "bytes": 60895,
+      "sha256": "8d780eff238c1050eba7d369e3819d38689abb9c446326be3002f8510c9d9c83"
+    },
+    {
+      "path": "workspace/extract-csv-columns.txt",
+      "bytes": 12151,
+      "sha256": "a5ddd7b9c10c58960898c9c5f33698ff1f8ab5ddf0bc9257a1d059ac9a15fe79"
+    },
+    {
+      "path": "workspace/formulas.html",
+      "bytes": 104150,
+      "sha256": "f6625495c7dcca237a91fc9053aa38634b073e372a5b98c689d04ac51a077ae6"
+    },
+    {
+      "path": "workspace/formulas.txt",
+      "bytes": 4833,
+      "sha256": "f20c513b81bd46f04bdd7e285be7526b7b9de1ac4c034553a5c69f6161db7fd3"
+    },
+    {
+      "path": "workspace/practice.html",
+      "bytes": 59949,
+      "sha256": "ffc354a6cd226d12b5205c5959dfd6db3f6569fc48398b8732925fed491eb783"
+    },
+    {
+      "path": "workspace/practice.txt",
+      "bytes": 4824,
+      "sha256": "7aea5db30a60ff96a7fc5c64b9c43ef8d56e8e41a93a1cf667a53820f52cff3c"
+    },
+    {
+      "path": "workspace/remove-csv-duplicates.html",
+      "bytes": 55130,
+      "sha256": "dc383f1dee14448db33115e57e386c8833431c71939364d5f66462d898e76d1f"
+    },
+    {
+      "path": "workspace/remove-csv-duplicates.txt",
+      "bytes": 12594,
+      "sha256": "a8f032d4918ed23df8adcd5e8a3c3a18c75a734559c2573aee9c11cd6afffbdc"
+    },
+    {
+      "path": "workspace/repeat-cleanup.html",
+      "bytes": 85720,
+      "sha256": "8c88c40c0f237a53c07db8714ea93f48b5b1e7d8856be7bca296270268ca30c7"
+    },
+    {
+      "path": "workspace/repeat-cleanup.txt",
+      "bytes": 11277,
+      "sha256": "fbce2bfab27b66ebd11bd23d2ad43d2fc7f44819b8570891dbda710012c72f2f"
+    },
+    {
+      "path": "workspace/shopify-csv-checker.html",
+      "bytes": 39567,
+      "sha256": "0c8790bf0fd43eac6b5f9b43a5923c41a29e719e8da2289fe7c63b8231b80111"
+    },
+    {
+      "path": "workspace/shopify-csv-checker.txt",
+      "bytes": 12031,
+      "sha256": "b96dd1d0b5147f079aef9709b4ec43c2322abe92cfcd309186bd7470dbcbeb55"
+    },
+    {
+      "path": "workspace/split-csv.html",
+      "bytes": 43728,
+      "sha256": "fae1aad33d44626555a046a5b3640bff3a54b9ea821c125228671e63273524c1"
+    },
+    {
+      "path": "workspace/split-csv.txt",
+      "bytes": 12360,
+      "sha256": "58dd7d68a7473f45aefed5866a87c48e341989985a57c0031ce46b7bf3e2f22c"
+    },
+    {
+      "path": "workspace/workflows.html",
+      "bytes": 60398,
+      "sha256": "9a3b986439a5439eba0f6407de3d5d2b83ca22e0a9caf169c387d4a6eeba41f7"
+    },
+    {
+      "path": "workspace/workflows.txt",
+      "bytes": 4894,
+      "sha256": "6b11b87cb52e58550009ae1a6faa20d547cf55d7ae74cd488677696fc4178f59"
+    }
+  ]
+}

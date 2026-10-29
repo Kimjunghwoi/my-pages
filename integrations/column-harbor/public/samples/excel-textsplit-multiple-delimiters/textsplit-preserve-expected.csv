@@ -1,0 +1,3 @@
+record,region,priority,status
+R-07,North,High,Open
+R-08,,Low,Closed

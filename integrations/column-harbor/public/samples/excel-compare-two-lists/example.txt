@@ -1,0 +1,20 @@
+List A, enter in A1:A8
+id
+A101
+A102
+A102
+A103
+ A104
+CaseA
+[empty]
+
+List B, enter in D1:D7
+id
+A102
+A103
+A104
+casea
+A105
+[empty]
+
+The List A value before A104 contains one leading space.

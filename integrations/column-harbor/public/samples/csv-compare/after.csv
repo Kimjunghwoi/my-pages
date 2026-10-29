@@ -1,0 +1,6 @@
+region,total,order_id,customer
+North,42.00,00103,Sam Taylor
+South,90.00,00102,Jordan Lee
+East,15.00,00105,Casey Park
+West,99.95,00104,Riley Chen
+North,0,0,Zero identifier

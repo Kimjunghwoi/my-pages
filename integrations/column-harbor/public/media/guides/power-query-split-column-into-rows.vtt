@@ -1,0 +1,21 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.000
+1. Keep the original four-ticket table
+Semicolon separates tags. T1 contains red twice; T3 has no tags.
+
+00:00:06.000 --> 00:00:12.000
+2. Split the lists and number each slot
+Assign positions before filtering. T2 has two empty slots; T3 has no list.
+
+00:00:12.000 --> 00:00:18.000
+3. Trim each individual tag
+Trim outer spaces without changing a token’s original position.
+
+00:00:18.000 --> 00:00:24.000
+4. Keep only nonempty occurrences
+Exclude empty tokens and empty lists before expansion. Keep both red entries.
+
+00:00:24.000 --> 00:00:30.000
+5. Choose the correct count
+Six occurrences are five unique pairs. The source still has four tickets.

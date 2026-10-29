@@ -1,0 +1,23 @@
+A2: =DATE(2026,9,4)
+B2: =DATE(2026,9,11)
+H2: =DATE(2026,9,7)
+H3: =DATE(2026,9,10)
+C2: =NETWORKDAYS(A2,B2,$H$2:$H$3)
+D2: =IF(B2<A2,"Check date order",NETWORKDAYS(A2,B2,$H$2:$H$3)-NETWORKDAYS(A2,A2,$H$2:$H$3))
+E2: =NETWORKDAYS.INTL(A2,B2,"0000110",$H$2:$H$3)
+Expected C2/D2/E2: 4 / 3 / 3.
+
+SEPARATE seven-case worksheet: import networkdays-cases.csv into Cases!A1:D8. D must be Text BEFORE import; B/C must be numeric dates. Keep exact strings 0000011 or 0000110.
+H2: =DATE(2026,9,7)
+H3: =DATE(2026,9,10)
+E2: =IF(C2<B2,"Check date order",NETWORKDAYS.INTL(B2,C2,D2,$H$2:$H$3))
+F2: =IF(C2<B2,"Check date order",NETWORKDAYS.INTL(B2,C2,D2,$H$2:$H$3)-NETWORKDAYS.INTL(B2,B2,D2,$H$2:$H$3))
+Fill E2:F2 down through row 8. Compare networkdays-expected.csv.
+Row 2: B =DATE(2026,9,4); C =DATE(2026,9,11); D Text 0000011
+Row 3: B =DATE(2026,9,4); C =DATE(2026,9,11); D Text 0000110
+Row 4: B =DATE(2026,9,8); C =DATE(2026,9,8); D Text 0000011
+Row 5: B =DATE(2026,9,7); C =DATE(2026,9,7); D Text 0000011
+Row 6: B =DATE(2026,9,7); C =DATE(2026,9,10); D Text 0000011
+Row 7: B =DATE(2026,9,5); C =DATE(2026,9,6); D Text 0000011
+Row 8: B =DATE(2026,9,11); C =DATE(2026,9,4); D Text 0000011
+Check ISTEXT(D2) and LEN(D2)=7, then exact original mask. Numeric 11 means Sunday-only; do not infer a missing-zero correction.

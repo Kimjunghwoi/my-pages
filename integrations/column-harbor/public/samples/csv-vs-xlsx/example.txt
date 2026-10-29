@@ -1,0 +1,6 @@
+Illustrative workbook: Orders sheet
+A1=sku, B1=quantity, C1=unit_price, D1=total
+A2=text 00123, B2=2, C2=12.5, D2=formula =B2*C2
+
+Second sheet: Notes
+A1=Prices checked against the product list.

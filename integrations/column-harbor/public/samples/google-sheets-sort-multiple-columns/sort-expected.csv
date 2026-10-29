@@ -1,0 +1,8 @@
+record_id,department,score,owner
+R04,Sales,95,Cam
+R02,Sales,90,Dee
+R03,Sales,90,Ada
+R06,Sales,0,Fay
+R05,Support,100,Gus
+R01,Support,80,Bea
+R07,Support,80,Eli

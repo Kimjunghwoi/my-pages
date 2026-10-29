@@ -1,0 +1,9 @@
+row_no,batch,label,value
+1,B1,,5
+2,B1,North,10
+3,B1,,20
+4,B1,South,30
+5,B1,,40
+6,B2,,50
+7,B2,East,60
+8,B2,,0

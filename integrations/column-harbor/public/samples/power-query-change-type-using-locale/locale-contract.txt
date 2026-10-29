@@ -1,0 +1,5 @@
+Delimiter: comma; encoding: UTF-8
+Dates: dd/MM/yyyy; en-GB; amounts: de-DE decimal comma
+Empty fields: missing, not zero
+Expected rows: 4; numeric amounts: 3; sum: 1208.75
+Negative test: 31/02/2026 must be rejected, not repaired by guessing

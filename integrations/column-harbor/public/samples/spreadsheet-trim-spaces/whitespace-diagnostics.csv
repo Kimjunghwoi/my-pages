@@ -1,0 +1,7 @@
+row_id,label,inspect_position,code_point,expected_label
+S1,  North  Harbor  ,1,32,North Harbor
+S2,North Harbor,6,160,North Harbor
+S3,North Harbor ,13,160,North Harbor
+S4,North​ Harbor,6,8203,North Harbor
+S5,North Harbor,6,8239,North Harbor
+S6,North	Harbor,6,9,North Harbor

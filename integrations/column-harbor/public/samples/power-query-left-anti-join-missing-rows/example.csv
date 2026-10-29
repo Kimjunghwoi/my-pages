@@ -1,0 +1,7 @@
+line_id,item_id,quantity
+L1,A100,2
+L2,A200,1
+L3,A200,3
+L4,A300,4
+L5,,5
+L6, A100,6

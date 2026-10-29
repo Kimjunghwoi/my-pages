@@ -1,0 +1,8 @@
+Place these values in a worksheet:
+A1=lookup_id, B1=result
+A2="00456"
+D1=product_id, E1=product_name
+D2="00123", E2="Blue mug"
+D3="00456", E3="Small plate"
+
+Quotation marks here describe text values; do not type them into the cells.

@@ -1,0 +1,9 @@
+order_id,month,region,amount
+O001,2026-01,North,120
+O002,2026-01,South,80
+O003,2026-01,North,40
+O004,2026-01,South,60
+O005,2026-02,North,90
+O006,2026-02,South,110
+O007,2026-02,North,70
+O008,2026-02,South,50

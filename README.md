@@ -1,9 +1,9 @@
 # JH Soft Labs
 
-개발자 회몬의 프로젝트와 글, 채널을 모은 정적 홈페이지.
+CSV·Excel 도구와 학습 콘텐츠, 개발자 회몬의 글·프로젝트를 제공하는 정적 사이트.
 
 - 운영 주소: https://jhsoftlabs.com/
-- 기술: HTML, CSS, vanilla JavaScript. 런타임 의존성이나 서버 API가 없습니다.
+- 기술: 메인과 기록은 HTML·CSS·vanilla JavaScript, Column Harbor 도구·학습은 React/vinext의 정적 산출물입니다. 서버 API나 Node.js 실행 서버는 필요하지 않습니다.
 - Pages 프로젝트: `jhsoftlabs`, https://jhsoftlabs.pages.dev/ (GitHub `main` 자동 배포).
 - 기존 Vercel `mypages` 프로젝트는 복구용으로 보존합니다.
 
@@ -23,7 +23,11 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 
 ## 콘텐츠 수정
 
-대표 프로젝트와 모든 링크는 `index.html`에 있습니다. JavaScript가 꺼져도 콘텐츠를 읽을 수 있습니다.
+2026-10-29 통합 구조: 실제 메인 원본은 `hosting/content-home.html`, 스타일은 `assets/content-home.css`입니다. 기존 `index.html`은 프로필 원본으로 보존하고 빌드에서 `/about/`으로 배치합니다. 메인에서는 `/workspace`, `/guides`, `/learn/excel`의 실제 도구와 학습을 제공합니다. 기존 한국어 글과 개발 기록 URL은 유지합니다. JavaScript가 꺼져도 글과 탐색 링크를 읽을 수 있으며 계산·학습 진도에는 JavaScript가 필요합니다.
+
+Column Harbor 원본 저장소는 별도입니다. 메인 저장소에는 `integrations/column-harbor/manifest.json`으로 검증한 **공개 정적 산출물만** 가져옵니다. React Flight의 길이 정보를 깨뜨리지 않도록 배포 산출물의 문자열을 바꾸지 않습니다. 별도 작업본에서 처음부터 메인 origin·`/csv-checker`·`/method`를 빌드하고 광고 요청은 제외합니다. `.gitattributes`가 스냅샷 바이트를 보존합니다. 자동 동기화가 아니므로 CSV 갱신 시 검증·가져오기·메인 배포를 다시 수행해야 합니다. [범위와 복구 설계](docs/root-content-integration-2026-10-29.md).
+
+로컬 통합 확인은 `node scripts/verify-pages.mjs` 후 `node scripts/serve-pages.mjs`로 `http://127.0.0.1:8019/`를 사용합니다. 저장소 루트를 직접 열면 이전 프로필 원본이 표시됩니다. `node scripts/audit-integrated.mjs http://127.0.0.1:8019`는 전체 sitemap·정적 자산과 비공개 경로의 404를 검사합니다. 원본 CSV 저장소·개인정보·계정 통계·운영 문서를 통합 산출물에 넣지 않습니다.
 
 프로젝트 이름과 용도를 시각 예시보다 먼저 표시합니다. 자료 목록은 외부 링크·작업 기록·템플릿·점검 도구와 메인 도메인의 한국어 데이터 실무 가이드를 함께 보여줍니다. `project` 필터는 실제 프로젝트 네 개, `record`는 작업 기록, `template`은 무료 양식과 점검 도구를 보여줍니다. 현재 링크 개수는 원본 HTML과 회귀 검사에서 확인합니다.
 

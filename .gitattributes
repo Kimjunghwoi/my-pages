@@ -1,0 +1,2 @@
+# React Flight and sample-file checksums require the exported bytes unchanged.
+integrations/column-harbor/public/** -text -whitespace

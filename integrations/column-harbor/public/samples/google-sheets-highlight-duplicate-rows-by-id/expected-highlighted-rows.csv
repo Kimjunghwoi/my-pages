@@ -1,0 +1,7 @@
+worksheet_row,record_id,all_occurrences,later_occurrences
+2,A101,yes,no
+3,A102,yes,no
+4,A101,yes,yes
+5,,no,no
+6,A103,no,no
+7,A102,yes,yes

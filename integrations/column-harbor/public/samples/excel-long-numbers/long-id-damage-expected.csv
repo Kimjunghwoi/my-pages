@@ -1,0 +1,5 @@
+case_id,text_result,matches_original,result_length
+display_only,123456789012345,TRUE,15
+long_id_a,1234567890123450,FALSE,16
+long_id_b,1234567890123450,FALSE,16
+another_long_id,9876543210987650,FALSE,16

@@ -1,0 +1,1 @@
+Place the sample header at row 2 beneath a report title at A1. With B3 selected when freezing, rows 1–2 and column A stay visible during scrolling; column B and row 3 belong to the scrolling area.

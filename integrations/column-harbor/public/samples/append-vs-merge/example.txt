@@ -1,0 +1,13 @@
+january.csv
+order_id,sku
+A01,00123
+A02,00456
+
+february.csv
+order_id,sku
+B01,00123
+
+products.csv
+sku,product_name
+00123,Blue mug
+00456,Small plate

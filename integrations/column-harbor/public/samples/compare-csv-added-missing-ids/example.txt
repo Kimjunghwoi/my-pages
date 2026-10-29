@@ -1,0 +1,9 @@
+old.csv
+id,name
+00123,Blue mug
+00456,Small plate
+
+new.csv
+id,name
+00456,Small plate revised
+00789,Glass

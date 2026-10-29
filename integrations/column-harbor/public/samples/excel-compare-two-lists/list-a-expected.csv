@@ -1,0 +1,8 @@
+id,status_A
+A101,Only in A
+A102,In both
+A102,In both
+A103,In both
+ A104,Only in A
+CaseA,In both
+,Skip blank

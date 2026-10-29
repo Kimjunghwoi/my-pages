@@ -1,0 +1,8 @@
+case,expected,observed,checked_in
+schema_exact_rows,"[[""source_file"", ""row_in_file"", ""item_id"", ""amount"", ""note""], [""a.csv"", 1.0, ""0007"", 10.0, ""first""], [""a.csv"", 2.0, ""0012"", 0.0, """"], [""b.csv"", 1.0, ""0020"", 5.0, null], [""c.csv"", 1.0, ""0021"", -2.0, ""late""]]","[[""source_file"", ""row_in_file"", ""item_id"", ""amount"", ""note""], [""a.csv"", 1.0, ""0007"", 10.0, ""first""], [""a.csv"", 2.0, ""0012"", 0.0, """"], [""b.csv"", 1.0, ""0020"", 5.0, null], [""c.csv"", 1.0, ""0021"", -2.0, ""late""]]","Excel 16.0 build 5569.0, 2026-10-05"
+schema_sum,13.0,13.0,"Excel 16.0 build 5569.0, 2026-10-05"
+schema_MissingHeader,"[[""message""], [""Missing required header in b.csv: amount""]]","[[""message""], [""Missing required header in b.csv: amount""]]","Excel 16.0 build 5569.0, 2026-10-05"
+schema_DuplicateHeader,"[[""message""], [""Empty or duplicate header: b.csv""]]","[[""message""], [""Empty or duplicate header: b.csv""]]","Excel 16.0 build 5569.0, 2026-10-05"
+schema_EmptyHeader,"[[""message""], [""Empty or duplicate header: b.csv""]]","[[""message""], [""Empty or duplicate header: b.csv""]]","Excel 16.0 build 5569.0, 2026-10-05"
+schema_header_only_row_count,3,3,"Excel 16.0 build 5569.0, 2026-10-05"
+schema_header_only_total,8.0,8.0,"Excel 16.0 build 5569.0, 2026-10-05"

@@ -1,0 +1,6 @@
+record_id,region,amount_text
+R1,North,10.00
+R2,North,20.00
+R3,South,0.00
+R4,South,5.00
+R5,South,

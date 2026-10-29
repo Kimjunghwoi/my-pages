@@ -1,0 +1,5 @@
+record_id,day_fraction,decimal_hours,minutes_since_midnight,seconds_since_midnight,expected_time
+T0,0,0,0,0,00:00:00
+T1,0.25,6,360,21600,06:00:00
+T2,0.5,12,720,43200,12:00:00
+T3,0.75,18,1080,64800,18:00:00

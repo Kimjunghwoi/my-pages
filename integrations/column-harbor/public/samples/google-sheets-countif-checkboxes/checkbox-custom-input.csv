@@ -1,0 +1,7 @@
+task_id,category,done
+T01,Setup,Done
+T02,Setup,Todo
+T03,Review,Done
+T04,Review,Todo
+T05,Review,Done
+,,Todo

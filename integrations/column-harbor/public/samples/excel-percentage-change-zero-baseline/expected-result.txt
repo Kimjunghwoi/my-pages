@@ -1,0 +1,1 @@
+Rows A, B and C return 25%, -20% and -100%. D has a zero baseline and E has a negative baseline; both are flagged for review. Their arithmetic absolute changes remain 20 and 30.

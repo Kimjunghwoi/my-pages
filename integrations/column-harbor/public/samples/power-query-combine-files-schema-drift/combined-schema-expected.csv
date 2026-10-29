@@ -1,0 +1,5 @@
+source_file,row_in_file,item_id,amount,note
+a.csv,1,0007,10,first
+a.csv,2,0012,0,
+b.csv,1,0020,5,
+c.csv,1,0021,-2,late

@@ -1,0 +1,7 @@
+case,expected,observed,checked_in
+locale_exact_rows,"[[""row_id"", ""date"", ""amount""], [""R1"", ""2026-04-03"", 1234.5], [""R2"", ""2026-12-25"", 0.0], [""R3"", ""2026-09-13"", -25.75], [""R4"", null, null]]","[[""row_id"", ""date"", ""amount""], [""R1"", ""2026-04-03"", 1234.5], [""R2"", ""2026-12-25"", 0.0], [""R3"", ""2026-09-13"", -25.75], [""R4"", null, null]]","Excel 16.0 build 5569.0, 2026-10-05"
+locale_sum,1208.75,1208.75,"Excel 16.0 build 5569.0, 2026-10-05"
+locale_nonmissing_amounts,3,3,"Excel 16.0 build 5569.0, 2026-10-05"
+locale_invalid_date_kept,"[[""row_id"", ""date_text""], [""R5"", ""31/02/2026""]]","[[""row_id"", ""date_text""], [""R5"", ""31/02/2026""]]","Excel 16.0 build 5569.0, 2026-10-05"
+locale_invalid_amount_kept,"[[""row_id"", ""amount_text""], [""R1"", ""pending""]]","[[""row_id"", ""amount_text""], [""R1"", ""pending""]]","Excel 16.0 build 5569.0, 2026-10-05"
+locale_exact_format_enforced,"[[""row_id"", ""date_text""], [""R1"", ""3/4/2026""]]","[[""row_id"", ""date_text""], [""R1"", ""3/4/2026""]]","Excel 16.0 build 5569.0, 2026-10-05"

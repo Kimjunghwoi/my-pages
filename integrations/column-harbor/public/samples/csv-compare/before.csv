@@ -1,0 +1,8 @@
+order_id,customer,total,region
+00101,Ana Müller,120.50,North
+00102,Jordan Lee,85.00,South
+00103,Sam Taylor,42.00,North
+00104,Riley Chen,99.95,West
+00104,Riley Chen,100.00,West
+"",Missing ID,7.00,East
+0,Zero identifier,0,North

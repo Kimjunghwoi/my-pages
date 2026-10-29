@@ -1,0 +1,7 @@
+order_id,customer,amount,note
+O101,Ada,25,paid
+O102,,40,pending
+,,,
+O103,Bo,0,waived
+,,,
+O104,Cy,15,

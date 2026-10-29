@@ -1,0 +1,1 @@
+The three durations total 27:00, or 27 decimal hours. The stored day fraction totals 1.125. A plain h:mm display can show 3:00 instead, discarding whole days only from the display.

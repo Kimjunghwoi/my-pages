@@ -1,0 +1,7 @@
+Region	Category	Amount	Status
+North	Parts	100	Paid
+South	Parts	80	Paid
+North	Service	60	Paid
+North	Parts	40	Open
+North	Parts	20	Paid
+South	Service	30	Open

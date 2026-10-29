@@ -23,10 +23,13 @@ test("Pages HTML removes only known telemetry, preserving public content and met
 
 test("Pages artifact excludes private paths, preserves downloads and replaces stale output", () => {
   const fixture = mkdtempSync(join(tmpdir(), "mypages-pages-test-"));
-  const roots = ["index.html", "privacy.html", "styles.css", "home.css", "stories.css", "growth.css", "sharing.js", "feed.xml", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html"];
+  const roots = ["index.html", "privacy.html", "styles.css", "home.css", "stories.css", "growth.css", "sharing.js", "feed.xml", "script.js", "experiences.js", "ads.txt", "robots.txt", "sitemap.xml", "hosting/404.html", "migration/index.html"];
   for (const directory of ["assets", "stories", "data-guides", "templates", "tools/release-check", "projects/bampang"]) {
     roots.push(...readdirSync(join(root, directory), { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => `${directory}/${entry.name}`));
   }
+  const snapshot = JSON.parse(readFileSync(join(root, "integrations/column-harbor/manifest.json"), "utf8"));
+  roots.push("integrations/column-harbor/manifest.json", "hosting/content-home.html");
+  roots.push(...snapshot.files.map(file => "integrations/column-harbor/public/" + file.path));
   for (const file of roots) {
     mkdirSync(dirname(join(fixture, file)), { recursive: true });
     writeFileSync(join(fixture, file), readFileSync(join(root, file)));
@@ -57,9 +60,13 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
   assert.doesNotMatch(sitemap, /\.html/);
   assert.match(readFileSync(join(first.output, "privacy.html"), "utf8"), /rel="canonical" href="https:\/\/jhsoftlabs.com\/privacy"/);
   assert.match(readFileSync(join(first.output, "stories/column-harbor.html"), "utf8"), /rel="canonical" href="https:\/\/jhsoftlabs.com\/stories\/column-harbor"/);
-  assert.match(readFileSync(join(first.output, "index.html"), "utf8"), /image.jhsoftlabs.com\/hair-salon\.html#cases/);
+  assert.match(readFileSync(join(first.output, "about/index.html"), "utf8"), /image.jhsoftlabs.com\/hair-salon\.html#cases/);
+  const brokenLinks = [];
   for (const file of first.files) {
     const bytes = readFileSync(join(first.output, file.path));
+    if (snapshot.files.some(entry => entry.path === file.path) && !["index.html", "index.txt", "404.html", "404.txt", "privacy.html", "privacy.txt", "sitemap.xml"].includes(file.path)) {
+      assert.deepEqual(bytes, readFileSync(join(root, "integrations/column-harbor/public", file.path)), "Do not rewrite serialized React exports: " + file.path);
+    }
     assert.equal(file.sha256, createHash("sha256").update(bytes).digest("hex"));
     assert.ok(!bytes.includes("PRIVATE SENTINEL"));
     if (file.path.endsWith(".md") || file.path === "ads.txt") assert.deepEqual(bytes, readFileSync(join(root, file.path)));
@@ -72,11 +79,14 @@ test("Pages artifact excludes private paths, preserves downloads and replaces st
         if (url.origin !== base.origin) continue;
         const paths = [url.pathname, `${url.pathname}.html`, `${url.pathname.replace(/\/$/, "")}/index.html`];
         const destination = paths.map((path) => join(first.output, path)).find((path) => existsSync(path) && lstatSync(path).isFile());
-        assert.ok(destination, `${file.path}: ${href}`);
-        if (url.hash && destination.endsWith(".html")) assert.ok(readFileSync(destination, "utf8").includes(`id="${url.hash.slice(1)}"`), href);
+        if (!destination) { brokenLinks.push(`${file.path}: ${href}`); continue; }
+        // Existing Workspace tabs are selected by the client hash, not static sections.
+        if (url.pathname.replace(/\.html$/, "") === "/workspace" && /^#(?:saved|compare|clean|dedupe|convert|columns|split)$/.test(url.hash)) continue;
+        if (url.hash && destination.endsWith(".html") && !readFileSync(destination, "utf8").includes(`id="${url.hash.slice(1)}"`)) brokenLinks.push(`${file.path}: ${href}`);
       }
     }
   }
+  assert.deepEqual([...new Set(brokenLinks)], []);
   writeFileSync(join(first.output, "stale.txt"), "old build");
   const second = buildPages(fixture);
   assert.deepEqual(second.files, first.files);
