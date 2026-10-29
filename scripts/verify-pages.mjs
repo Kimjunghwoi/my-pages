@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { buildPages } from "./build-pages.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const checks = ["script.js", "experiences.js", "sharing.js", "tools/release-check/checklist.js", "scripts/build-feed.mjs", "scripts/render-share-cards.mjs", "scripts/build-pages.mjs", "scripts/verify-pages.mjs", "scripts/check-public.mjs", "scripts/column-harbor.mjs", "scripts/import-column-harbor.mjs", "scripts/prepare-column-harbor.mjs", "scripts/serve-pages.mjs", "scripts/audit-integrated.mjs"];
+const checks = ["script.js", "experiences.js", "sharing.js", "tools/release-check/checklist.js", "scripts/build-feed.mjs", "scripts/render-share-cards.mjs", "scripts/build-pages.mjs", "scripts/verify-pages.mjs", "scripts/check-public.mjs", "scripts/column-harbor.mjs", "scripts/import-column-harbor.mjs", "scripts/prepare-column-harbor.mjs", "scripts/serve-pages.mjs", "scripts/audit-integrated.mjs", "scripts/csv-migration.mjs", "scripts/check-csv-migration.mjs"];
 const tests = readdirSync(resolve(root, "tests")).filter((name) => name.endsWith(".test.mjs")).sort().map((name) => `tests/${name}`);
 for (const args of [...checks.map((file) => ["--check", file]), ["--test", ...tests]]) {
   const result = spawnSync(process.execPath, args, { cwd: root, stdio: "inherit" });

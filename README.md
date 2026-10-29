@@ -12,14 +12,11 @@ CSV·Excel 도구와 학습 콘텐츠, 개발자 회몬의 글·프로젝트를 
 ## 로컬 확인
 
 ```powershell
-python -m http.server 8017 --bind 127.0.0.1
-node --check script.js
-node --check experiences.js
-node --check tools/release-check/checklist.js
-node --test tests/*.test.mjs
+node scripts/verify-pages.mjs
+node scripts/serve-pages.mjs
 ```
 
-http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insights의 전용 경로는 일반 로컬 서버에서 404가 발생할 수 있으며 실제 Vercel 배포에서 검증합니다.
+http://127.0.0.1:8019/ 에서 빌드된 통합 사이트를 확인합니다. 로컬에는 방문 분석을 삽입하지 않습니다. 호스팅 전용 분석·리디렉션은 실제 배포에서 따로 검사합니다. `/__mobile-preview`는 로컬 서버에서만 제공하는 390 CSS px iframe 검사 화면이며 배포 파일에는 포함되지 않습니다.
 
 ## 콘텐츠 수정
 
@@ -28,6 +25,10 @@ http://127.0.0.1:8017/ 에서 확인합니다. Vercel Analytics와 Speed Insight
 Column Harbor 원본 저장소는 별도입니다. 메인 저장소에는 `integrations/column-harbor/manifest.json`으로 검증한 **공개 정적 산출물만** 가져옵니다. React Flight의 길이 정보를 깨뜨리지 않도록 배포 산출물의 문자열을 바꾸지 않습니다. 별도 작업본에서 처음부터 메인 origin·`/csv-checker`·`/method`를 빌드하고 광고 요청은 제외합니다. `.gitattributes`가 스냅샷 바이트를 보존합니다. 자동 동기화가 아니므로 CSV 갱신 시 검증·가져오기·메인 배포를 다시 수행해야 합니다. [범위와 복구 설계](docs/root-content-integration-2026-10-29.md).
 
 로컬 통합 확인은 `node scripts/verify-pages.mjs` 후 `node scripts/serve-pages.mjs`로 `http://127.0.0.1:8019/`를 사용합니다. 저장소 루트를 직접 열면 이전 프로필 원본이 표시됩니다. `node scripts/audit-integrated.mjs http://127.0.0.1:8019`는 전체 sitemap·정적 자산과 비공개 경로의 404를 검사합니다. 원본 CSV 저장소·개인정보·계정 통계·운영 문서를 통합 산출물에 넣지 않습니다.
+
+CSV 소스 갱신 시 `node scripts/prepare-column-harbor.mjs CSV_CHECKOUT _workspace/새로운-작업본-이름`으로 새 작업본을 준비하고, 동일한 잠금 파일의 의존성으로 그 작업본에서 `npm run verify`를 실행합니다. 이후 `node scripts/import-column-harbor.mjs PREPARED_CHECKOUT --replace`로 검증된 공개 파일을 가져옵니다. 이미 있는 작업본을 덮어쓰거나 원본 소스를 수정하지 않습니다. 스냅샷 버전과 개수가 바뀌면 회귀 검사도 검토합니다.
+
+공개 URL 이전 확인은 `node scripts/check-csv-migration.mjs`입니다. 이전 CSV의 106개 canonical 경로를 HTTP/HTTPS에서 확인하고, 소개 주소의 `/method` 매핑·쿼리 보존·저장값 복구 예외·이전 클라이언트 자산 접근을 검사합니다. 주소 이전은 색인이나 AdSense 승인을 뜻하지 않습니다. 기존 CSV 저장값은 `/migration/` 안내를 따릅니다.
 
 프로젝트 이름과 용도를 시각 예시보다 먼저 표시합니다. 자료 목록은 외부 링크·작업 기록·템플릿·점검 도구와 메인 도메인의 한국어 데이터 실무 가이드를 함께 보여줍니다. `project` 필터는 실제 프로젝트 네 개, `record`는 작업 기록, `template`은 무료 양식과 점검 도구를 보여줍니다. 현재 링크 개수는 원본 HTML과 회귀 검사에서 확인합니다.
 

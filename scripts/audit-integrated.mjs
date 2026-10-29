@@ -33,7 +33,8 @@ async function worker() {
         assert.doesNotMatch(html, /<script[^>]*src="https:\/\/pagead2/);
       } else if (item.kind === "asset") {
         const expected = readFileSync(join(artifact, item.file));
-        if (/\.(?:css|js|xml|txt|svg|json|md|csv|tsv|pq|py|vtt)$/.test(item.file)) assert.equal(bytes.toString().replace(/\r\n/g, "\n"), expected.toString().replace(/\r\n/g, "\n"));
+        const flight = item.file.endsWith(".txt") && /^(?:csv-checker|method|guides|workspace|learn)(?:\/|\.txt$)/.test(item.file);
+        if (!flight && /\.(?:css|js|xml|txt|svg|json|md|csv|tsv|pq|py|vtt)$/.test(item.file)) assert.equal(bytes.toString().replace(/\r\n/g, "\n"), expected.toString().replace(/\r\n/g, "\n"));
         else assert.equal(createHash("sha256").update(bytes).digest("hex"), createHash("sha256").update(expected).digest("hex"));
       }
       results.push({ ...item, status: response.status, passed: true });

@@ -1,12 +1,13 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { existsSync, lstatSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { dirname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const source = resolve(process.argv[2] || "");
-const target = join(root, "_workspace/column-harbor-root-2026-10-29");
+const target = resolve(root, process.argv[3] || "_workspace/column-harbor-root-2026-10-29");
+assert.ok(target.startsWith(join(root, "_workspace") + sep), "Isolated source must stay inside _workspace/");
 assert.ok(existsSync(join(source, "package.json")) && !existsSync(target), "Use an existing source and a new isolated build directory");
 mkdirSync(dirname(target), { recursive: true });
 const commit = execFileSync("git", ["rev-parse", "HEAD"], { cwd: source, encoding: "utf8" }).trim();
