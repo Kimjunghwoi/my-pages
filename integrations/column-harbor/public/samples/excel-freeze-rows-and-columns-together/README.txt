@@ -1,4 +1,4 @@
-Freeze Rows and Columns Together in Excel: Choose the Correct Cell
+Freeze Rows and Columns Together in Excel: A B3 Example
 
 Synthetic example for https://jhsoftlabs.com/guides/excel-freeze-rows-and-columns-together
 

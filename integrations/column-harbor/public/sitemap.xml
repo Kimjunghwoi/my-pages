@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://jhsoftlabs.com/csv-checker</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://jhsoftlabs.com/</loc><lastmod>2026-10-21</lastmod></url>
-<url><loc>https://jhsoftlabs.com/guides</loc><lastmod>2026-10-27</lastmod></url>
+<url><loc>https://jhsoftlabs.com/guides</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://jhsoftlabs.com/workspace</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://jhsoftlabs.com/workspace/formulas</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://jhsoftlabs.com/workspace/workflows</loc><lastmod>2026-09-13</lastmod></url>
@@ -35,7 +35,7 @@
 <url><loc>https://jhsoftlabs.com/guides/google-sheets-split-empty-fields</loc><lastmod>2026-09-09</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/append-vs-merge</loc><lastmod>2026-09-09</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/combine-csv-files-excel</loc><lastmod>2026-09-09</lastmod></url>
-<url><loc>https://jhsoftlabs.com/guides/compare-csv-added-missing-ids</loc><lastmod>2026-10-14</lastmod></url>
+<url><loc>https://jhsoftlabs.com/guides/compare-csv-added-missing-ids</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/vlookup-identical-ids-na</loc><lastmod>2026-09-09</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/csv-vs-xlsx</loc><lastmod>2026-09-09</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/nested-json-to-csv</loc><lastmod>2026-09-09</lastmod></url>
@@ -43,7 +43,7 @@
 <url><loc>https://jhsoftlabs.com/guides/tsv-to-csv</loc><lastmod>2026-10-16</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-remove-duplicates-keep-latest</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-vlookup-between-sheets</loc><lastmod>2026-09-09</lastmod></url>
-<url><loc>https://jhsoftlabs.com/guides/excel-xlookup-multiple-criteria</loc><lastmod>2026-09-09</lastmod></url>
+<url><loc>https://jhsoftlabs.com/guides/excel-xlookup-multiple-criteria</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/google-sheets-query-group-by</loc><lastmod>2026-09-09</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-compare-two-lists</loc><lastmod>2026-10-19</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-sum-visible-rows-subtotal</loc><lastmod>2026-09-13</lastmod></url>
@@ -51,7 +51,7 @@
 <url><loc>https://jhsoftlabs.com/guides/excel-networkdays-working-days</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-conditional-formatting-duplicate-rows</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/google-sheets-filter-no-matches</loc><lastmod>2026-09-16</lastmod></url>
-<url><loc>https://jhsoftlabs.com/guides/power-query-merge-duplicates-extra-rows</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://jhsoftlabs.com/guides/power-query-merge-duplicates-extra-rows</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-pivot-table-count-instead-of-sum</loc><lastmod>2026-09-16</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-filter-spill-error</loc><lastmod>2026-09-17</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/google-sheets-countif-checkboxes</loc><lastmod>2026-09-17</lastmod></url>
@@ -65,7 +65,7 @@
 <url><loc>https://jhsoftlabs.com/guides/excel-drop-down-list-not-updating</loc><lastmod>2026-09-30</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-combine-cells-without-losing-data</loc><lastmod>2026-09-29</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-percentage-change-zero-baseline</loc><lastmod>2026-09-29</lastmod></url>
-<url><loc>https://jhsoftlabs.com/guides/excel-freeze-rows-and-columns-together</loc><lastmod>2026-09-30</lastmod></url>
+<url><loc>https://jhsoftlabs.com/guides/excel-freeze-rows-and-columns-together</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-repeat-header-row-print-every-page</loc><lastmod>2026-09-30</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-xlookup-return-all-matches</loc><lastmod>2026-09-30</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/excel-count-distinct-values</loc><lastmod>2026-10-02</lastmod></url>
@@ -74,7 +74,7 @@
 <url><loc>https://jhsoftlabs.com/guides/excel-workday-holidays</loc><lastmod>2026-10-03</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/power-query-unpivot-month-columns</loc><lastmod>2026-10-03</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/power-query-left-anti-join-missing-rows</loc><lastmod>2026-10-03</lastmod></url>
-<url><loc>https://jhsoftlabs.com/guides/power-query-promote-headers</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://jhsoftlabs.com/guides/power-query-promote-headers</loc><lastmod>2026-11-18</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/power-query-split-column-into-rows</loc><lastmod>2026-10-05</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/google-sheets-sumif-wildcards-literal-text</loc><lastmod>2026-10-05</lastmod></url>
 <url><loc>https://jhsoftlabs.com/guides/google-sheets-query-mixed-data-types</loc><lastmod>2026-10-11</lastmod></url>

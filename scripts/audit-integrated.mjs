@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { dirname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const origin = new URL(process.argv[2] || "https://jhsoftlabs.com").origin;
@@ -43,7 +43,8 @@ async function worker() {
 }
 await Promise.all(Array.from({ length: 8 }, worker));
 const report = { checkedAt: new Date().toISOString(), origin, sitemapPages: urls.length, passed: results.filter(item => item.passed).length, failed: results.filter(item => !item.passed).length, results };
-const output = join(root, "outputs/root-integration-2026-10-29", origin.startsWith("http:") ? "local-http.json" : origin.includes("pages.dev") ? "preview-http.json" : "public-http.json");
+const output = process.argv[3] ? resolve(root, process.argv[3]) : join(root, "outputs/root-integration-2026-10-29", origin.startsWith("http:") ? "local-http.json" : origin.includes("pages.dev") ? "preview-http.json" : "public-http.json");
+assert.ok(output.startsWith(join(root, "outputs") + sep), "Audit reports must remain inside ignored outputs/");
 mkdirSync(dirname(output), { recursive: true });
 writeFileSync(output, JSON.stringify(report, null, 2) + "\n");
 console.log(JSON.stringify({ origin, pages: report.sitemapPages, passed: report.passed, failed: report.failed, report: output }));

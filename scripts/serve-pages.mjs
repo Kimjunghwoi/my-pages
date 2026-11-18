@@ -6,7 +6,7 @@ const types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; ch
 const server = createServer((request, response) => {
   const url = new URL(request.url, "http://127.0.0.1");
   if (url.pathname === "/__mobile-preview") {
-    const allowed = new Set(["/", "/workspace/csv-to-excel", "/workspace/compare-csv-files", "/learn/excel/workbook-cells-ranges", "/about/"]);
+    const allowed = new Set(["/", "/workspace/csv-to-excel", "/workspace/compare-csv-files", "/learn/excel/workbook-cells-ranges", "/about/", "/guides/power-query-merge-duplicates-extra-rows", "/guides/excel-freeze-rows-and-columns-together", "/guides/compare-csv-added-missing-ids", "/guides/power-query-promote-headers", "/guides/excel-xlookup-multiple-criteria"]);
     const page = allowed.has(url.searchParams.get("page")) ? url.searchParams.get("page") : "/";
     response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     response.end(`<!doctype html><html><head><title>390px local responsive check</title></head><body style="margin:20px;background:#e4e6e1;font-family:sans-serif"><p>Local responsive check · 390 CSS px · not a production page</p><iframe title="390px site preview" src="${page}" width="390" height="844" style="display:block;border:1px solid #b7bdb6;background:white"></iframe></body></html>`);

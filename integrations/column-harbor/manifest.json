@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "importedOn": "2026-10-29",
-  "sourceCommit": "65920846c70a488af63e2ef325120263ea31021d",
+  "importedOn": "2026-11-18",
+  "sourceCommit": "789f364a925e4c7ef900fa464314d89e1f0c792f",
   "deploymentOrigin": "https://jhsoftlabs.com",
   "adsEnabled": false,
   "derivation": [
@@ -11,10 +11,10 @@
     "Remove advertising requests, keep ownership metadata",
     "Add main-domain navigation"
   ],
-  "verifiedAt": "2026-10-29T14:00:11.380Z",
+  "verifiedAt": "2026-11-18T11:05:22.849Z",
   "fingerprints": {
-    "source": "266a6957ab83b456d4b6615a0fb6f9df7e384e6033c938607ef41794109a51b5",
-    "artifact": "74fd579d227f8a34e0f8351524508ed286ed2adb95e23f8a5d3b64018a9b9115",
+    "source": "94be88c9002b9662b16c376d1c4ce983d20875f2bf7bc03f9d71fd083c1282c4",
+    "artifact": "becd9ba47ff175ac53caa2d8a37423a20ae23a203fabb1f1079e8452ccb687f6",
     "artifactFiles": 895
   },
   "counts": {
@@ -79,12 +79,12 @@
       "sha256": "e27f657e38d52887baa3b6b2f812bef93dfdd356f0810e40edd4ee284cc7e9f6"
     },
     {
-      "path": "_next/static/3b09c278-ac5d-4936-8b1e-9f9a0abebd51/_buildManifest.js",
+      "path": "_next/static/99362e6e-7014-4c25-8a59-29c65a4b5894/_buildManifest.js",
       "bytes": 159,
       "sha256": "47f02b34be6dc481257b6efce4c19e19111f37ef5c437f8ffed44f0da97fa9bb"
     },
     {
-      "path": "_next/static/3b09c278-ac5d-4936-8b1e-9f9a0abebd51/_ssgManifest.js",
+      "path": "_next/static/99362e6e-7014-4c25-8a59-29c65a4b5894/_ssgManifest.js",
       "bytes": 76,
       "sha256": "653f3e53e89b4f8548ff86c19e92bb3c6b84b6be7485a320b1e00893ed877479"
     },
@@ -174,14 +174,14 @@
       "sha256": "c8c4e7efd87c6c2dbc70da0d69ca8948e00e1b4aa57b2e1ef457e4713bba2d37"
     },
     {
-      "path": "_next/static/chunks/index-DE_x8UJU.js",
+      "path": "_next/static/chunks/index-8O2p9IcR.js",
       "bytes": 181891,
-      "sha256": "a5ba5527979a085cce7a8a9e8138a7e1d76898c46428f46cc876712b7bad9c14"
+      "sha256": "cc44772b9a2d40c3bcd3fb7003c0c36b9e3b3b9dbc29b965f2d6f7ea80e756f6"
     },
     {
-      "path": "_next/static/chunks/layout-segment-context-ChD58Ytr.js",
+      "path": "_next/static/chunks/layout-segment-context-BZA6f-8d.js",
       "bytes": 496,
-      "sha256": "73c02c4111d4965f793b49780f7be7d5ebb8975cf1db689b4e846bd6ada95d7b"
+      "sha256": "736c17f0f0aa1280d4ada1eeeb14934c80f2800b817a07953d0ff8a4144c8a7d"
     },
     {
       "path": "_next/static/chunks/local-csv-input-BdFa9U0S.js",
@@ -224,9 +224,9 @@
       "sha256": "74958baac5f94f6e33b9e43eeed2b2ec3cfba2fc63db2aa7bc8dd22c852a85a9"
     },
     {
-      "path": "_next/static/chunks/site-chrome-0AjYtK18.js",
+      "path": "_next/static/chunks/site-chrome-DWuOz48q.js",
       "bytes": 2166,
-      "sha256": "e41389836e48f84ad391a4243bbd3a0044ca6eb886f61261149794dc7ab1618a"
+      "sha256": "04817cc16fe9477e21459329f077ec1566b4b7bc9558ad8a4178d4cb8680b43f"
     },
     {
       "path": "_next/static/chunks/textarea-BAHJZERs.js",
@@ -239,9 +239,9 @@
       "sha256": "080d3bb53c0597680ceb171d80f687fa024736ffe69b6d894f8940931276288f"
     },
     {
-      "path": "_next/static/chunks/vinext-CS7dakAl.js",
+      "path": "_next/static/chunks/vinext-fVzumDAE.js",
       "bytes": 110943,
-      "sha256": "381b2acab4bd62a0cd9e9b64a54a6ec72b7b450262e5b3fd772b8d3c9e87d439"
+      "sha256": "a898b27e11701de944e55b4e306bfa8be179f9cd5724412824f7806fa1e129a8"
     },
     {
       "path": "_next/static/chunks/workspace-B7rlwvYZ.js",
@@ -269,9 +269,9 @@
       "sha256": "d79fb1bbcd0376d8dcac6a1546aef9c4fbf11c56450b2a04fd324b8c8b92892d"
     },
     {
-      "path": "_next/static/css/index.DitS2ZvF.css",
-      "bytes": 219342,
-      "sha256": "febf7b84d80320c157bf72cfc6afc966fa4b60c928bf3380f96939df83b4f826"
+      "path": "_next/static/css/index.BGUfEBxx.css",
+      "bytes": 221687,
+      "sha256": "cb0212ab5a715456162fd90af2117bba1a06f75aeab6e7f71800dd10e117777b"
     },
     {
       "path": "_next/static/css/workspace.15TwN2IR.css",
@@ -281,17 +281,17 @@
     {
       "path": "404.html",
       "bytes": 15810,
-      "sha256": "c899e1c3b4ab77d835f7f156da62dfc3bea57cb2503ec5ed693e5bd2cbbe07da"
+      "sha256": "5d80f8f5c2891fc96380bfa2d0a5f95c81d21af7f2b64899d16f64820f2e114b"
     },
     {
       "path": "csv-checker.html",
-      "bytes": 59382,
-      "sha256": "8fbc9945efc70090dbb99078b0e7b0ed17e4d368ecc3b02300f783889eba6c00"
+      "bytes": 59262,
+      "sha256": "3723c51b575d0fe68350c65ead2b97418c3d1513ee46073464e295080a3c6ea5"
     },
     {
       "path": "csv-checker.txt",
-      "bytes": 17398,
-      "sha256": "a03d8ae818bb06adee2ce41f566ec1dfbad17f0a5330353d28a6ab98488e10c1"
+      "bytes": 17338,
+      "sha256": "6e6c7843a461a18c9780f980afd5e61f7b41295fa1936b4cd7898a4d178e9dd6"
     },
     {
       "path": "favicon.svg",
@@ -300,643 +300,643 @@
     },
     {
       "path": "guides.html",
-      "bytes": 107536,
-      "sha256": "4f9bcf7e54c7c23cb685ec116ed4678a18ebb1d913e4285e24281db457fb9f27"
+      "bytes": 107560,
+      "sha256": "0b5387d76b98700f8b1120e119bf9c8005352d32d844c7079386acb038a3eed4"
     },
     {
       "path": "guides.txt",
-      "bytes": 50694,
-      "sha256": "697fdfe57bb124c0f320b51ef0944fb38257f2587b6725b53aae764b7fb4322f"
+      "bytes": 50706,
+      "sha256": "0cbbccece6c2aa76ab08be14a171e014ece4a536e8abae56028c4bc932774e3b"
     },
     {
       "path": "guides/append-vs-merge.html",
-      "bytes": 56321,
-      "sha256": "5d7416ec8446815347e15c41a42c1aa8cdbbc6427ace68105ca969e74287735f"
+      "bytes": 56412,
+      "sha256": "8ef954a50a7281a5fbfdf4a9a0bb3803b0e86eb1976d2ba9036d52ce1d425bec"
     },
     {
       "path": "guides/append-vs-merge.txt",
-      "bytes": 26183,
-      "sha256": "4344572f2e3650979deef1402972ba25f8cf9ffbc8b30fa5bdf5bf0235cca8d7"
+      "bytes": 26244,
+      "sha256": "785e04b5ab5b21d05c14a79656b08bb8ee3da49ac2e247d125ccf29a666d13da"
     },
     {
       "path": "guides/combine-csv-files-excel.html",
-      "bytes": 57108,
-      "sha256": "d53fe62f60ac75a51a6b231eb8c70fa0bcee9beac5c16ae636bc71edaa22db4f"
+      "bytes": 57199,
+      "sha256": "d9747519e2cddf39570ce7c43c5f2b8549bdd53c23cd9286170caab2c34146e0"
     },
     {
       "path": "guides/combine-csv-files-excel.txt",
-      "bytes": 26608,
-      "sha256": "46ce79a7e20488ff73c360ed246f690282463dfa055e2ed58fa95b214b3d42c2"
+      "bytes": 26669,
+      "sha256": "df2158ff839019801a84b443d4168a4e4c0f2e7824461c142025f9262bddca37"
     },
     {
       "path": "guides/compare-csv-added-missing-ids.html",
-      "bytes": 61595,
-      "sha256": "c61fdae96028d8058f940c9def720ac73f5a6894f9f1ac06be4faf8aa329ebc3"
+      "bytes": 66488,
+      "sha256": "e763e43a6498c1415ed6b8baee0c58bf68ad075c3c7900d007a2065621316293"
     },
     {
       "path": "guides/compare-csv-added-missing-ids.txt",
-      "bytes": 28341,
-      "sha256": "58697cad3ccb2be7e8750d173e3222834307e9ff933b89429ab83eab8c61eadc"
+      "bytes": 31124,
+      "sha256": "ce70704163dddbda005a54f108155071c1981005a7e498896f9f5cb45c6a903e"
     },
     {
       "path": "guides/csv-commas-double-quotes.html",
-      "bytes": 55934,
-      "sha256": "cc6c4c5501815cdac4f5b3829e2c54d7b7fb9fbd72ba770d324caa257408495c"
+      "bytes": 56025,
+      "sha256": "8696dde625a930ec04d72b4dd933039d03da293ee0fc30b4012a82bdc0d7748e"
     },
     {
       "path": "guides/csv-commas-double-quotes.txt",
-      "bytes": 25565,
-      "sha256": "85d7881ce76b158dbb31abcc9f1279c90c96d832b73794fd85987f71e7fe8b97"
+      "bytes": 25626,
+      "sha256": "73b3880cd47e35b2af84df9b37420eef223a5d395aa0756cbe7778474fbdd84e"
     },
     {
       "path": "guides/csv-dates-day-month.html",
-      "bytes": 54108,
-      "sha256": "785b0c5434c80f1b9f02b15e3b44471d97f4eb3d564714da68b9da52c1ea836d"
+      "bytes": 54199,
+      "sha256": "1ce232ceb404262adbca1329ad59304578c79faf1585cc95bf6ad35aa64ecfaf"
     },
     {
       "path": "guides/csv-dates-day-month.txt",
-      "bytes": 24892,
-      "sha256": "c391a5aba8459e12314183f9ec8e30cfe90ffb647cd46c9985507175b4ee6f51"
+      "bytes": 24953,
+      "sha256": "2d5dab1ec37dff680d855b8cfa0412a70a13d4e3a1b87da6e7b7bd237965a7a6"
     },
     {
       "path": "guides/csv-different-column-counts.html",
-      "bytes": 56496,
-      "sha256": "b3d72e7d15c7b825c3c3e95eb2c50a7655db0b73f34f0eb8d6d44349fd68488e"
+      "bytes": 56587,
+      "sha256": "805a7abecfc64d433367bceb92623088c7ad7c56617b2f1e058a1d3c3c5ac1b8"
     },
     {
       "path": "guides/csv-different-column-counts.txt",
-      "bytes": 25960,
-      "sha256": "4e9f5cc315989e7367f6fc15be243c6eb86d6820bf53d666298562247532563b"
+      "bytes": 26021,
+      "sha256": "6d9a383674c230f9f6da7abb57dc40809bf19fb8f415738bf487846b8f33fe61"
     },
     {
       "path": "guides/csv-opens-in-one-column.html",
-      "bytes": 68113,
-      "sha256": "3fffeb7650734ec866a0426431a86fdfb0ca4558bfbc46087f65305ba700fbf8"
+      "bytes": 68204,
+      "sha256": "9f1814df2d6727d136365737e6766cd5790c754ee3499befa4b233eb7d4246f6"
     },
     {
       "path": "guides/csv-opens-in-one-column.txt",
-      "bytes": 33139,
-      "sha256": "e537cb5cf6116af09ccfe8d6beda1c3c8dafd9a84f78309d5b9e9e0f4db0cd26"
+      "bytes": 33200,
+      "sha256": "31cfc99d5ee5fc255df1be554506de66a111ce17b02969eeca3f09376bac77a1"
     },
     {
       "path": "guides/csv-row-count-newlines.html",
-      "bytes": 57253,
-      "sha256": "e510691f8798b32c9e0b16178867d475c6511b49bcc3d4f9e42dd84db36b3cc6"
+      "bytes": 57344,
+      "sha256": "d09b9d45935edb331ee07e1d6c78fa0c020b584077de54ff055c021029383a65"
     },
     {
       "path": "guides/csv-row-count-newlines.txt",
-      "bytes": 26139,
-      "sha256": "e77c976799c691752a94a291604023c81c7565e6191692ed5b3b17f2deba86c6"
+      "bytes": 26200,
+      "sha256": "401d7d77bf7af69a5d4fff6552cd9799593785d3d2c89bd689c87a692bfddff3"
     },
     {
       "path": "guides/csv-to-json-preserve-types.html",
-      "bytes": 71001,
-      "sha256": "017adbc41bdaf6bbb306918d684782f4d909fba3a312527ce6b9b210bd9a2678"
+      "bytes": 71092,
+      "sha256": "cf6b55c3cc0373b09b62e9f0686e8b4b98f7f0f0918d14ee7b029755e91e98ce"
     },
     {
       "path": "guides/csv-to-json-preserve-types.txt",
-      "bytes": 34108,
-      "sha256": "9b5f2613357ac4c6274e7a900d9a71301fcb4e0b912d2ed24e7d22cba2a2b320"
+      "bytes": 34169,
+      "sha256": "1dc8536bef4dd244f020b009916f75b262cb98d8800c4efee0dc17774c2ce2df"
     },
     {
       "path": "guides/csv-utf8-accents.html",
-      "bytes": 54863,
-      "sha256": "6d44ebf431ab17e576830bb7b93996d74a3248b5c96d873acc77673e8d2d3eb5"
+      "bytes": 54954,
+      "sha256": "5e02d0dfd259aabb77a333c18a2e1ee766df94f5a052b8fb1cb03fd10c68facb"
     },
     {
       "path": "guides/csv-utf8-accents.txt",
-      "bytes": 25283,
-      "sha256": "7135595111fb9114664b1ff0ed06b3db8f7bfce2a24c843e43482f5db6f0c047"
+      "bytes": 25344,
+      "sha256": "55cc790001642aebec738c9f048963d368eedec95c4f53482219e93137ae677e"
     },
     {
       "path": "guides/csv-vs-xlsx.html",
-      "bytes": 56218,
-      "sha256": "03132b44a18993c293b3cb4bf5e5446b3f9165aaf3cb6bdea0c2b1410ad09a60"
+      "bytes": 56309,
+      "sha256": "e70efbf201611539489cc3dc69ad5133e62f64f89f2b6a9557d6037bfcd2eaf4"
     },
     {
       "path": "guides/csv-vs-xlsx.txt",
-      "bytes": 26204,
-      "sha256": "15fc00e046a1e708c717ebe2c92110c6a77c6a3ce47304145d72232add916ec3"
+      "bytes": 26265,
+      "sha256": "b703b19bba1edbe0532a7131f091fbe3dd10555d045c7799079e891e157dca18"
     },
     {
       "path": "guides/excel-codes-turn-into-dates.html",
-      "bytes": 57841,
-      "sha256": "883eb4a482749ca6a88b1128f9945bee75ba488cb695e5c1f5e425fe95d157cf"
+      "bytes": 57932,
+      "sha256": "97751340b712bd8543aaf073595be4b02cbd6268f6a1221a66d7b00b56c9f995"
     },
     {
       "path": "guides/excel-codes-turn-into-dates.txt",
-      "bytes": 26708,
-      "sha256": "fc3231827d2f0b2d24975b06749a39e49ecf19b0f0c673b78492e4e2af799fcf"
+      "bytes": 26769,
+      "sha256": "dd8a161f0fefefd803d985f202f8f49386400d7c73093ff75b4f43f52290a93d"
     },
     {
       "path": "guides/excel-combine-cells-without-losing-data.html",
-      "bytes": 52087,
-      "sha256": "59a0d09950befcc2434e7c510c890752fa71082ded2659463f2e1400794c03ac"
+      "bytes": 52178,
+      "sha256": "095797484e6f55a11ad2354cfe848b8ca56f33a77af23ea781ef0ccc6949f0f8"
     },
     {
       "path": "guides/excel-combine-cells-without-losing-data.txt",
-      "bytes": 23486,
-      "sha256": "376d889679f9a8d2d581e3b1e492e0b912e7f65d02c0f5e2797183d58e9b5d6f"
+      "bytes": 23547,
+      "sha256": "dccd194afd2185db9f4a15a5d24cdccddf2033e03754d5354624b4e6f59c60c8"
     },
     {
       "path": "guides/excel-compare-two-lists.html",
-      "bytes": 90781,
-      "sha256": "04ede05959ff88b667c97843144050ee4d0338758cf57607b431cbb7c3565eb1"
+      "bytes": 90872,
+      "sha256": "87aec87fa9ce474c4b5eb345fa0dd48b9ccce676aec30542032e9ca54bf399b0"
     },
     {
       "path": "guides/excel-compare-two-lists.txt",
-      "bytes": 46647,
-      "sha256": "46c9435cc2a3c6ac527ad22058068290ce34bc60f1f97f7968576daf759b9d41"
+      "bytes": 46708,
+      "sha256": "7e7766750d249d86a748cf725bc8578c0837332d095614e6c30ae47db5d1c3ac"
     },
     {
       "path": "guides/excel-conditional-formatting-duplicate-rows.html",
-      "bytes": 62199,
-      "sha256": "41acde803ce95f6e44f43c6bf82c3ab5c23ed9bc435bcb73d120580a01239136"
+      "bytes": 62290,
+      "sha256": "1951eac2333c405d6dfded9a12e30a087b66156b704e66a9e2594e02ed637ea1"
     },
     {
       "path": "guides/excel-conditional-formatting-duplicate-rows.txt",
-      "bytes": 29646,
-      "sha256": "797167424392f5604e70d0a6731d0daea9b0aa6cfede70d830ce4947025a4101"
+      "bytes": 29707,
+      "sha256": "ecfea926f35866d916112838c8b8a75eb5b7434c52aaf3392723621667cf1584"
     },
     {
       "path": "guides/excel-count-distinct-values.html",
-      "bytes": 60664,
-      "sha256": "f261f320bef7a73960c1622fc50564dd942c5d33173d3b4c9eb69ba17b24c82c"
+      "bytes": 60755,
+      "sha256": "23a6120f6e09add1cda385e29b55d76f1f29b139a7e118b3a2e180aa7829db11"
     },
     {
       "path": "guides/excel-count-distinct-values.txt",
-      "bytes": 28560,
-      "sha256": "6c0621f598bf9bd05f63907a9129e0c7e49ebaa7d71c84d51cfe91208e5deb2c"
+      "bytes": 28621,
+      "sha256": "b04601f92556b974f9dc00a9f84d26b79b34da8a40e32c867c6226798eea9593"
     },
     {
       "path": "guides/excel-date-serial-numbers.html",
-      "bytes": 68785,
-      "sha256": "02c5cae4ccebb26566c6cb0a3cd794ad26341fcc7e98bce0e7776d7a47cff152"
+      "bytes": 68876,
+      "sha256": "00ed96262a23dbac3472b5fa27f3f14581e63436b19742913741b6f568bd1a41"
     },
     {
       "path": "guides/excel-date-serial-numbers.txt",
-      "bytes": 33685,
-      "sha256": "4f6c152b640eb0c464a41d156f93d3dda4a7818448f03e82317e93393934587f"
+      "bytes": 33746,
+      "sha256": "3e7ce42f918bbb65972e7d204b5914e147afde3af8826a24e94003425bc28032"
     },
     {
       "path": "guides/excel-dates-sort-as-text.html",
-      "bytes": 60874,
-      "sha256": "f64eac82bbdd8d0200e36e12ad9a9aee532143e502465fca8c9a5090e9a9af35"
+      "bytes": 60965,
+      "sha256": "7dc275c1723643279251cc9b85a22a10f66ea13481a23c30250290a163d8a3d8"
     },
     {
       "path": "guides/excel-dates-sort-as-text.txt",
-      "bytes": 28901,
-      "sha256": "1d1382fb7b2a9f25fd06905b378228a78d1a253dc41b05f19cb0b9253a2317e0"
+      "bytes": 28962,
+      "sha256": "b3f71930e0c955e4bfa4ce108dc6424d3cd33355272bb16b7f026ae0016c380c"
     },
     {
       "path": "guides/excel-decimal-comma.html",
-      "bytes": 58377,
-      "sha256": "aa179123d194a3fb3644fb5268a52f0e32112409754ec50b98dcd8b7340df249"
+      "bytes": 58468,
+      "sha256": "153320b7b2c68772956bbe4386364f97a68cab53b223870191b8949a1c8255de"
     },
     {
       "path": "guides/excel-decimal-comma.txt",
-      "bytes": 27257,
-      "sha256": "c04317499a466144fd785a072a245e7df1ce25f8b8dc414ebcb9e95116138e88"
+      "bytes": 27318,
+      "sha256": "9b7309fbbbf56350a24c68b7937691417ba72612e6f98cca4ead83a0a071d1e8"
     },
     {
       "path": "guides/excel-drop-down-list-not-updating.html",
-      "bytes": 54980,
-      "sha256": "0f9ec9f4fb6eb6c46af9cc93609ac53d02bee86e260ee9f283cddf4e44f97b91"
+      "bytes": 55071,
+      "sha256": "30bbc6e0e3036e2ac09fefb1329c20c31d95dcb2d257843a6911b65506684568"
     },
     {
       "path": "guides/excel-drop-down-list-not-updating.txt",
-      "bytes": 25379,
-      "sha256": "282707de6e0cd974ed0f52b550d4b67e107ba6a38d140127bcbfe379bc906c83"
+      "bytes": 25440,
+      "sha256": "bbc3fdec567d6e56ab0c380923797af4dbde36f415db0d225c5ab11906e56289"
     },
     {
       "path": "guides/excel-filter-spill-error.html",
-      "bytes": 56601,
-      "sha256": "4ec476c063d1613bf8fb276a08d693edb0c2baaeed2fcbdfb1724afff7058d2e"
+      "bytes": 56692,
+      "sha256": "2c6efdf3b9b5c6260b7dcbdac0bd580ac8d5974273bd182c6eb4a35e0d4b95ee"
     },
     {
       "path": "guides/excel-filter-spill-error.txt",
-      "bytes": 26424,
-      "sha256": "0e7f2643e3322d0d49656ab1426565bed7d756ac163cef58912d9a1e283fa5ae"
+      "bytes": 26485,
+      "sha256": "e6e2b396ffef33fef2554b171f5307277799ae43e92dd1ab668686f7f494dc7a"
     },
     {
       "path": "guides/excel-formulas-not-calculating.html",
-      "bytes": 52281,
-      "sha256": "45f4cee64e9afd82094dd19c9fa2bc2d568bf41535e2b4384726129d31e6d918"
+      "bytes": 52372,
+      "sha256": "1c905da1e3aaac4ff35b44134a0f419a303f1573bf3a69c0fd1c273ae22db960"
     },
     {
       "path": "guides/excel-formulas-not-calculating.txt",
-      "bytes": 23715,
-      "sha256": "96c4191242b72e865fffd6281d71a47e5f5725521c9c842274477fb14630fe1a"
+      "bytes": 23776,
+      "sha256": "39fec56af28f28da94f6c538c271d71a36d592f5d5f4a2d2aab5acda35eed9f7"
     },
     {
       "path": "guides/excel-freeze-rows-and-columns-together.html",
-      "bytes": 54694,
-      "sha256": "3a20e2071065973116c823b713aeaa885e0ce09b0916cf4d35399a4d846ddafe"
+      "bytes": 60368,
+      "sha256": "21e802ee75f0ef69ca41732927243e086537508c5e8e72bd4832c0d25fd1cecf"
     },
     {
       "path": "guides/excel-freeze-rows-and-columns-together.txt",
-      "bytes": 25287,
-      "sha256": "8058ad07786373f4eb85169b4f19833a7900c0202672109174367858875f55d4"
+      "bytes": 28252,
+      "sha256": "704a12c2010d824da1c3b75514f491834038a76e07dd2fb1004c7be64927b103"
     },
     {
       "path": "guides/excel-leading-zeros.html",
-      "bytes": 65969,
-      "sha256": "719792e940995a695cb8d071301be34e4ddae0541a911088530cadf6cd87483e"
+      "bytes": 66060,
+      "sha256": "7e1c4945020203fdfb9b0c2bc8b2e9097f218f398ba912f621a8d12b75dba094"
     },
     {
       "path": "guides/excel-leading-zeros.txt",
-      "bytes": 31423,
-      "sha256": "d6d9cf9b9a37cfc911b9b70b7f2090fb466389e9c8e7a05d52e5ee50d6e88399"
+      "bytes": 31484,
+      "sha256": "47b9a2ef833351583ab443c212299321af858f6ffe3897fccef399e65ffd7e09"
     },
     {
       "path": "guides/excel-long-numbers.html",
-      "bytes": 90863,
-      "sha256": "f2e1de9f1704bf2c83c1f735732c30925389f5341f75a22e22f37d9af39e42e5"
+      "bytes": 90954,
+      "sha256": "b85e5c707dc0149cabbe442d5f0df5b7ebf0a65dff396902f07d5f00b3fadfd4"
     },
     {
       "path": "guides/excel-long-numbers.txt",
-      "bytes": 46913,
-      "sha256": "6941e049d891862cbdaf80a656a97a6434270d543d0863d88f60c6d336e1f594"
+      "bytes": 46974,
+      "sha256": "88bfdc7de3420686dc3e9f7542d1dd16116e3120bdd8d35d228b86f4d09a7788"
     },
     {
       "path": "guides/excel-networkdays-working-days.html",
-      "bytes": 67146,
-      "sha256": "f8d72b3abda7717d594dccece0422317d9431e93ef57372d925f06605b436346"
+      "bytes": 67237,
+      "sha256": "bc2d91a233e1afe18624d9ba258ef08e5be430d1fb4b938f74d9236a0620548c"
     },
     {
       "path": "guides/excel-networkdays-working-days.txt",
-      "bytes": 32434,
-      "sha256": "5b909e85805d051e6d8fbe42a7f02431ca4f4d3fe2436fc457848c2c42c4b0ac"
+      "bytes": 32495,
+      "sha256": "e91eb89d006af08dbe22d19b2ffbc60b4585acf5587a9ae8dea25b64966c2d53"
     },
     {
       "path": "guides/excel-percentage-change-zero-baseline.html",
-      "bytes": 50545,
-      "sha256": "6a212a07440ccde736ce12e4acabcfef1c2d2d59810865f60f9e1f28b265c749"
+      "bytes": 50636,
+      "sha256": "2796e7ba21e67117981b11107ea1f8c658008cade028f364ddc4407562feef3e"
     },
     {
       "path": "guides/excel-percentage-change-zero-baseline.txt",
-      "bytes": 22641,
-      "sha256": "ea167cdde0c9f39179551ff160beca24139fb2c6f164052528f55b88935a1c37"
+      "bytes": 22702,
+      "sha256": "a1c7cb0c7930b536de4457a5f0a641bac6241c6dc1972c84a964ed20af97eea2"
     },
     {
       "path": "guides/excel-pivot-table-count-instead-of-sum.html",
-      "bytes": 63696,
-      "sha256": "2d89797c3a1ab632e28c1334f743af5e13d151b0cfd2de1a6bbfd64187148391"
+      "bytes": 63787,
+      "sha256": "86cdb62cbdd1860e3fa52285e008fc8d278b4083a6396e8c9b38a9a1a541ea94"
     },
     {
       "path": "guides/excel-pivot-table-count-instead-of-sum.txt",
-      "bytes": 30637,
-      "sha256": "39fdd29fd2977ba018661dab0c91ac18fefffae05247c9ca6756c99448bcd8ce"
+      "bytes": 30698,
+      "sha256": "27833422986df2a19cf4bc2a944a738c4b3f304d0e9282418b61be28b979bcf1"
     },
     {
       "path": "guides/excel-pivot-table-missing-new-rows.html",
-      "bytes": 62439,
-      "sha256": "0ea3c02ebe300f654d0ebb5faa7a6f775edfc3f7a1436b7cba7b7c29c62b984b"
+      "bytes": 62530,
+      "sha256": "5807be8b5239ad2b4e3dc5068cbf042436a6c7ea4a913a0fd6cc386e3934fe4a"
     },
     {
       "path": "guides/excel-pivot-table-missing-new-rows.txt",
-      "bytes": 29848,
-      "sha256": "0abc61031bc49ed96e33628067e5aac4f19e96635bccb3e5931a4b231ea54797"
+      "bytes": 29909,
+      "sha256": "17ecf89ad3009d2aed9c82b104da59cedb4de3eed6842bc527fc75351d81fad1"
     },
     {
       "path": "guides/excel-remove-blank-rows-safely.html",
-      "bytes": 60001,
-      "sha256": "526fa6e2829c5ebcbbcd52735b1873f21f6611a5bc1ff12a14cb6f1a2ea4288a"
+      "bytes": 60092,
+      "sha256": "b25e279a82333d3dd6c01cb8363de6e3651f13ea8b01b4d65e46bedaf5be2bd6"
     },
     {
       "path": "guides/excel-remove-blank-rows-safely.txt",
-      "bytes": 28383,
-      "sha256": "85bc17fa1cf21577140340183c48a2ed8a907dcd75b33d0ef5411a20eb2ee4b1"
+      "bytes": 28444,
+      "sha256": "401b72d373c600dff035869aa8a5e04f4225d275bf73940ef2187112145d5918"
     },
     {
       "path": "guides/excel-remove-duplicates-keep-latest.html",
-      "bytes": 63371,
-      "sha256": "cc12d5b266dcf1a5586f8ef186f596b8cb8234411a7d65a59b8c41a757e4fd94"
+      "bytes": 63462,
+      "sha256": "868eebd1aefc34943cd141c4b2f153de7d9142bf71f05854d231782bffa35f6b"
     },
     {
       "path": "guides/excel-remove-duplicates-keep-latest.txt",
-      "bytes": 30393,
-      "sha256": "89e287d63517d402668c629cad13a53f696a137c125cea1d491bf4609a3432e2"
+      "bytes": 30454,
+      "sha256": "46a2e327b995e6534109be1304fbd72bf0edb17f74ba4c01817319903a5e49d3"
     },
     {
       "path": "guides/excel-repeat-header-row-print-every-page.html",
-      "bytes": 56224,
-      "sha256": "ffaed3eb61270da960d0e9f90283e452945995e7bcffc6a3a47b83cef066cc70"
+      "bytes": 56293,
+      "sha256": "7244d8b1fcb6db34d831f65673e1ce2f49e8784dcf9ab7d1797ec4f317873f89"
     },
     {
       "path": "guides/excel-repeat-header-row-print-every-page.txt",
-      "bytes": 26104,
-      "sha256": "89ea458bb7f37c7f6c613d24151af6b597a7f7268ed87122c14f2af315949bfe"
+      "bytes": 26154,
+      "sha256": "48c74406b198a8d2930f96d57bdd13e5b25ca7d8dcf35a26f60b8bdd622d203b"
     },
     {
       "path": "guides/excel-sum-hours-over-24.html",
-      "bytes": 52602,
-      "sha256": "2dd5eb09adcb080e0ed868e70d5abb17b49125701fe44aa56810a3b327d19645"
+      "bytes": 52693,
+      "sha256": "490c9e36d2667943b3df7a18c74c56f1c2fad624e0e856eb77f5e858d12ff1ee"
     },
     {
       "path": "guides/excel-sum-hours-over-24.txt",
-      "bytes": 23984,
-      "sha256": "1109aaf3edacf96e57a5406a35122bee0ea4aa07ba90579d5f3e0b502028bd2f"
+      "bytes": 24045,
+      "sha256": "2f3781025115f6b8aeaad80d5bb3b8bc8071e4371b295939b7ca0bb04c6f552c"
     },
     {
       "path": "guides/excel-sum-numbers-as-text.html",
-      "bytes": 58379,
-      "sha256": "061ae5791f11d34cdf9a01ed40345b64d2612ebd98c01ffa78fc0cc16d6af656"
+      "bytes": 58470,
+      "sha256": "b038eb273e1aaa530edfb6fb9df12272f4a236ecb3d8fb215a40b76c1e7d3539"
     },
     {
       "path": "guides/excel-sum-numbers-as-text.txt",
-      "bytes": 27219,
-      "sha256": "cd61399a5ce32d5a16de7cadfa9326650eda7e5dc4a4a260f7b5739ee91211e2"
+      "bytes": 27280,
+      "sha256": "9b74013f5f447f34419624a46a539cc44b24c964f4d7790da926e47c3714a372"
     },
     {
       "path": "guides/excel-sum-visible-rows-subtotal.html",
-      "bytes": 60737,
-      "sha256": "c37ca505624aefd3e17fe96cc07a966d206867150df39208d049fe617264fc31"
+      "bytes": 60828,
+      "sha256": "2ca2a9796180a489bbc2bd16ce0510a4dd0f5b30f80f3e14431c157f197eb359"
     },
     {
       "path": "guides/excel-sum-visible-rows-subtotal.txt",
-      "bytes": 28883,
-      "sha256": "37632e3e6932b62045e53e419d3d70fe072186d7390082b8c2c691f3652a6d59"
+      "bytes": 28944,
+      "sha256": "75944dedcd5a892bb85907018317aedc9f1bd996e23f0e1108ff8f4df039374d"
     },
     {
       "path": "guides/excel-sumifs-date-range.html",
-      "bytes": 61097,
-      "sha256": "8b0767389f516964d80e8785f8196ad58a12a68c3df864abb2683e6ad250ffec"
+      "bytes": 61188,
+      "sha256": "dd38dbc1c4aaadc0f52f3d6df27fd37f369216d8fb38161b313560d103fd94b3"
     },
     {
       "path": "guides/excel-sumifs-date-range.txt",
-      "bytes": 28794,
-      "sha256": "4212d268468cf40966122e0f7417b15d661683266de9da0895f5e4883038d258"
+      "bytes": 28855,
+      "sha256": "46ab90290acae624e29844494e5d833caa376a14e2e729a92d51552d084355da"
     },
     {
       "path": "guides/excel-textsplit-multiple-delimiters.html",
-      "bytes": 59796,
-      "sha256": "4056113ca56d52bfbce0fa86245f9a9b8b3995c687c248b1a6369d57bd7b6b22"
+      "bytes": 59887,
+      "sha256": "6891451ca1d77c3ca4ec7ac5402f72eb5499d9513b65b452cbfb52533717696a"
     },
     {
       "path": "guides/excel-textsplit-multiple-delimiters.txt",
-      "bytes": 28107,
-      "sha256": "50553a6da88f5fb42c8b1374258d1483cf7000fca19d9c750b9d4778577a515f"
+      "bytes": 28168,
+      "sha256": "86d0e190d6928d2ae8169965a08109f5e0adf8c45ab07c72f94855e978158426"
     },
     {
       "path": "guides/excel-vlookup-between-sheets.html",
-      "bytes": 59627,
-      "sha256": "97c65b43729f8113a229c898a075f0ca7cccdc333f862c7661b7d215bf1f8f1c"
+      "bytes": 59718,
+      "sha256": "e8d7f52be5b33805ef3252c4cd0c9ef9ee2e9052484a494923a296cd7bdfcbfe"
     },
     {
       "path": "guides/excel-vlookup-between-sheets.txt",
-      "bytes": 28078,
-      "sha256": "905040e7977cd9705f3ffb3ed335272e7696074fbdd9a3079435311108df2617"
+      "bytes": 28139,
+      "sha256": "9d4242a0a6e6db20db26544a03c1ad9ef1f33697757a4e65bf40f86bdbcf0845"
     },
     {
       "path": "guides/excel-workday-holidays.html",
-      "bytes": 60140,
-      "sha256": "1e6dd8d98702c611b04d5b20b120f0f7482c6ae266cbe44629656e63ec43a5e1"
+      "bytes": 60231,
+      "sha256": "27dc9926fc684a79afb86d5d99faa0ae0de0a143e96d6a0a25bd8d2adbd0359b"
     },
     {
       "path": "guides/excel-workday-holidays.txt",
-      "bytes": 28463,
-      "sha256": "9a3c8062e10d21de17cce9e291863b7499267df60da7533cb2c5ac0ba16208a0"
+      "bytes": 28524,
+      "sha256": "9a5e7bf2a5e90bde464b17f2ec8c17ae18f5754be3b3d6c7bebe886bb6cdfac4"
     },
     {
       "path": "guides/excel-xlookup-multiple-criteria.html",
-      "bytes": 62284,
-      "sha256": "540e567f9d4d6e0986ce0f9518c980ed45ddaaabeb9be1c93d246111aa615580"
+      "bytes": 67385,
+      "sha256": "f65c15519155dd91cd1e4a3dd914e3915f784a9267513dc09d22ae67c6d94b75"
     },
     {
       "path": "guides/excel-xlookup-multiple-criteria.txt",
-      "bytes": 29544,
-      "sha256": "980706764e644bf89e46cda8a7956c812938903a4ca092e554544047c38a87f4"
+      "bytes": 32362,
+      "sha256": "345e8d5a1aee11338a34206a51691f9b898e84d122b8d5fac4eb3a097b27d29a"
     },
     {
       "path": "guides/excel-xlookup-return-all-matches.html",
-      "bytes": 58700,
-      "sha256": "644a45858d80ac6a49232060e410e897053fb306aa9b4cd298c25dae1ffe163a"
+      "bytes": 58791,
+      "sha256": "dc9bbf22b85defd2395d797f7973074770ea8a15ccf98480e955619bc0661b5d"
     },
     {
       "path": "guides/excel-xlookup-return-all-matches.txt",
-      "bytes": 27520,
-      "sha256": "ccdab2c51789bd5c00565f83e4d89cb099e4dd00a330e8257573de3cb23880eb"
+      "bytes": 27581,
+      "sha256": "dfdce5e8112991825f2d57854718f5b97a844d4b0138366332dea74030c0a439"
     },
     {
       "path": "guides/google-sheets-countif-checkboxes.html",
-      "bytes": 62666,
-      "sha256": "798a15434c113a08b6ce2bfa31c1575f1c0787ee5f8839422447bd928f4d29d6"
+      "bytes": 62757,
+      "sha256": "879b2043e2c516999b70b625d17c172a232a48ec56e4e29c106ab6fb133a7556"
     },
     {
       "path": "guides/google-sheets-countif-checkboxes.txt",
-      "bytes": 29529,
-      "sha256": "dd8dac59d964d1bc8947332047dcfa469f9efa9c02170129f618ed9d91f88fe2"
+      "bytes": 29590,
+      "sha256": "777a0119f7ac029eeccc03dbbff8fda2a6e1e423f0f836a9e309f62468751679"
     },
     {
       "path": "guides/google-sheets-filter-no-matches.html",
-      "bytes": 60413,
-      "sha256": "2fd255cde57e98405cb16a46d7b561dbe06e031514e18b165a3d8098edac26ac"
+      "bytes": 60504,
+      "sha256": "17e4af7b238694da96dd11c72892a51f2773705f9715919f90734c3e7ef7cbf8"
     },
     {
       "path": "guides/google-sheets-filter-no-matches.txt",
-      "bytes": 28586,
-      "sha256": "8ba6cf87716fdd200e9ac5f3dbab6bcabb712bdd3882a256a590acc078208f8f"
+      "bytes": 28647,
+      "sha256": "4a2d16ab2a559a97f41c68267b0fdec871034e653275a543ffbe1b755deb3253"
     },
     {
       "path": "guides/google-sheets-highlight-duplicate-rows-by-id.html",
-      "bytes": 57656,
-      "sha256": "15f5d0c098c3ba2cad6b034abb04f9a4722935946c84db73612e2da27fdebb83"
+      "bytes": 57747,
+      "sha256": "5b64e1f2c1cd5425f4f7f49d6857357ef737223b33791f0178ff796eacad705d"
     },
     {
       "path": "guides/google-sheets-highlight-duplicate-rows-by-id.txt",
-      "bytes": 26946,
-      "sha256": "0c1c6fbac8342dc38af0eba71b75d9e170021fc9b366e1da6b6ab3a86fcb853d"
+      "bytes": 27007,
+      "sha256": "826d39011ec38787bc8f0a6852442aea9daf77a0d5581f0754aaed84af2d8cf8"
     },
     {
       "path": "guides/google-sheets-query-group-by.html",
-      "bytes": 55974,
-      "sha256": "a5a273ec94f171dabc791e7d124e3c095a223d12521b55c7503012861a9c0c81"
+      "bytes": 56065,
+      "sha256": "deb9993b16eefa4bd1a547bcb661cd4ec6074d427de7f4ef8b1a975f83baa4fa"
     },
     {
       "path": "guides/google-sheets-query-group-by.txt",
-      "bytes": 25940,
-      "sha256": "9c8dc1fba223badc767b50b323795f5af7baa308d0f56daed477261752ab9561"
+      "bytes": 26001,
+      "sha256": "0b5512a3311326a0fefe23a135a581c9d406f72173ded31cc15cdb805ba47b3c"
     },
     {
       "path": "guides/google-sheets-query-mixed-data-types.html",
-      "bytes": 70509,
-      "sha256": "68ac8946e1ea3a4fd30155da001e15079dd7db20814e63a98f937fcf9649a20d"
+      "bytes": 70600,
+      "sha256": "4f82b12ac3ed662acc0e945456ed01a28d003f530ce1cd712afe1b06c12f5e5d"
     },
     {
       "path": "guides/google-sheets-query-mixed-data-types.txt",
-      "bytes": 34642,
-      "sha256": "c82e1142f5185e86a8723f25d0bd2a0d818f130e0ab92b2ef3b1814ab2ee2268"
+      "bytes": 34703,
+      "sha256": "d3f9da1288ca85b73e24ffde813ac2d23b76ea2dba844d224b9edf53635496d1"
     },
     {
       "path": "guides/google-sheets-remove-duplicates.html",
-      "bytes": 56506,
-      "sha256": "57219d705ed827499bef0626f4341339023d4f7de21c958c49d3c052f50d53b8"
+      "bytes": 56597,
+      "sha256": "76c42cafda9e9adfbc1430612bdd0f913e4d4d56735d0b30e41177ff49d599b5"
     },
     {
       "path": "guides/google-sheets-remove-duplicates.txt",
-      "bytes": 26325,
-      "sha256": "bfe9df8868494a77c43861127c1a80dae2e1b8d26766722645838005f0c954cb"
+      "bytes": 26386,
+      "sha256": "8f79d274cebc8cd5d3db4ead16d657eb2561a13ddaff707db82b98f41c149b20"
     },
     {
       "path": "guides/google-sheets-sort-multiple-columns.html",
-      "bytes": 67490,
-      "sha256": "28ad2c59aacee221d3aaeba084b796fd515d66a18f4b482fb1a315f1c1c6cacf"
+      "bytes": 67581,
+      "sha256": "f06069cedec4ca0dbb87fc023899d0536be12a50719e3c3b1d5bec4c71cf20c8"
     },
     {
       "path": "guides/google-sheets-sort-multiple-columns.txt",
-      "bytes": 32873,
-      "sha256": "b2e21d0d1825a8ce6a6748b6230fceaca15a449ad3c49470920b132beb011628"
+      "bytes": 32934,
+      "sha256": "0376de71fe8177a0d094402ce08e50220916912bc1595d724caf7f24090afaa7"
     },
     {
       "path": "guides/google-sheets-split-empty-fields.html",
-      "bytes": 55226,
-      "sha256": "db0db37567a721c5f7f7f388c21bd7a157dfb96715109e401d84436ffdfd85c1"
+      "bytes": 55317,
+      "sha256": "30a91517d974db6befa625398a42d8c062fcede48ced7daa3b38b3d15e158eb0"
     },
     {
       "path": "guides/google-sheets-split-empty-fields.txt",
-      "bytes": 25367,
-      "sha256": "7ca2e4eece4ce6b194fba975ef60cfeebd9f41d9cd22461b63c43d992cf64a6c"
+      "bytes": 25428,
+      "sha256": "c7b694a090f32584334718d5d65bd97f4a3cf28805882d2ae57b9f0c961d5d82"
     },
     {
       "path": "guides/google-sheets-sum-by-month-category.html",
-      "bytes": 82567,
-      "sha256": "dae621632c91ce927b4c1c89c411184841b0b280b1ed97a624681ca0b6aa01dc"
+      "bytes": 82658,
+      "sha256": "130bd41aa9ee0e526dac9b403cda9a599c8f86067ef2512f1e7d333071f3a623"
     },
     {
       "path": "guides/google-sheets-sum-by-month-category.txt",
-      "bytes": 41200,
-      "sha256": "4b2867d6a551372b2738adfe1e0911eab0a2ecd39c440e88aca38e158a9a0a87"
+      "bytes": 41261,
+      "sha256": "3fcf975c49fcef15fbe2c75adce28ea64219b979c6dcbad0ff43d69371d5e435"
     },
     {
       "path": "guides/google-sheets-sumif-wildcards-literal-text.html",
-      "bytes": 64108,
-      "sha256": "83f7b36a65a87e43c85de942539d269bf25a071ffead15802be87199469405fb"
+      "bytes": 64199,
+      "sha256": "fc48d6aa4de61a085925149531e0aba5d0e13f36d738e28644251ed893981df7"
     },
     {
       "path": "guides/google-sheets-sumif-wildcards-literal-text.txt",
-      "bytes": 30742,
-      "sha256": "64bfc5f9bb629453356c1a40c43245d15d945e54052956c11bc195f1485691ca"
+      "bytes": 30803,
+      "sha256": "ad585734a523d5b9dd57d00d09cfbf6a87adcaa2bc085c3714f52d3f7e5e83ae"
     },
     {
       "path": "guides/nested-json-to-csv.html",
-      "bytes": 61861,
-      "sha256": "b99b85987e135d36c637b5138a0c9c766decac49bf3999b335be5cb4291a784c"
+      "bytes": 61952,
+      "sha256": "eaf83dc92d462fe9b0a46f72b8392fe8b28dbaecbb46140d0c3d5d09ae83771a"
     },
     {
       "path": "guides/nested-json-to-csv.txt",
-      "bytes": 28343,
-      "sha256": "a87557050417d26bc068cdd98748eafc70905a7bd178bc6d7589493593386c08"
+      "bytes": 28404,
+      "sha256": "120b35146e4e9f0bc2cca84ff1756fd1c584f6947f92a6eb072f6e5e54788d62"
     },
     {
       "path": "guides/power-query-change-type-using-locale.html",
-      "bytes": 72528,
-      "sha256": "779543df63a5237b6869c44972b3fd91e4d91e3481f05181075e795809f81216"
+      "bytes": 72619,
+      "sha256": "f62102938cf795f67fd2f65e8b3f6c39edb23c58e8b886c1b75f789540804c7b"
     },
     {
       "path": "guides/power-query-change-type-using-locale.txt",
-      "bytes": 35574,
-      "sha256": "6186e7646d9d3beafbd076743b2e0884e5833f0bad5489ad9722185db6161d6f"
+      "bytes": 35635,
+      "sha256": "c8d8a8f1cfb8b6299897cecba7a725efe116dd3d92cd6a5cc0a975961b81f983"
     },
     {
       "path": "guides/power-query-combine-files-schema-drift.html",
-      "bytes": 74825,
-      "sha256": "0ffdb96e2c7817d56c8c83e12786f81a72671370e98fbcee0435861abe8e0a3b"
+      "bytes": 74916,
+      "sha256": "b4e7cea7e802500396772d491d25b82f83ba2dfa1ec25cf7ffa419349f58e691"
     },
     {
       "path": "guides/power-query-combine-files-schema-drift.txt",
-      "bytes": 36472,
-      "sha256": "78f911a0750768a46f88ead98eeb13510fc24bc62ef2d3a1fd262011d6dc3715"
+      "bytes": 36533,
+      "sha256": "124a3290b4bc0b817fb4aa4a15ed80842d53061d7afc5c5faa14d3ba4a768cb7"
     },
     {
       "path": "guides/power-query-fill-down-null-values.html",
-      "bytes": 61105,
-      "sha256": "afe96698670f65705a19697578cd56c8cf7ffa422a58e01fa35bc005b74b5b3e"
+      "bytes": 61196,
+      "sha256": "425f28ceb4b34178b7db74dece3153db67492154aa8efcdb04de50f61e2c514b"
     },
     {
       "path": "guides/power-query-fill-down-null-values.txt",
-      "bytes": 28926,
-      "sha256": "892e0a1a04fc080a9d3cd94b75bd90c425d1fab2ae8a6459fed78635ef3e808f"
+      "bytes": 28987,
+      "sha256": "0a04f158edf821b06d24f0faf848f38ca111f83baeebfc52189385b43ea7e35f"
     },
     {
       "path": "guides/power-query-left-anti-join-missing-rows.html",
-      "bytes": 63980,
-      "sha256": "7209fe7e91dc667b2979125db5a856763b9bca49e154556aa33050db16e7e249"
+      "bytes": 64071,
+      "sha256": "562c7ac22b8d52a23f2eebbb041f536885edc3de2d3d86ff13713b69e88d316f"
     },
     {
       "path": "guides/power-query-left-anti-join-missing-rows.txt",
-      "bytes": 30569,
-      "sha256": "8359211e28f5f7420a4b42ae375625ae6dfaa64b0a285c25ed1557f5f7a3b187"
+      "bytes": 30630,
+      "sha256": "7784484b25cdfe4868b1e6bfd81c98ba943d90926d56a0d058fc462d45fc0975"
     },
     {
       "path": "guides/power-query-merge-duplicates-extra-rows.html",
-      "bytes": 77623,
-      "sha256": "12a1d84dd3fe1cb38ace3a97278ac1a50a9ec0d83e85541643b0bd781519744a"
+      "bytes": 83038,
+      "sha256": "d34528ee57881d9b7190e3ac74c1a309d02f55ccc79635b715024098e0bd790d"
     },
     {
       "path": "guides/power-query-merge-duplicates-extra-rows.txt",
-      "bytes": 38833,
-      "sha256": "767bc2beb1d0424deb10958273234751783bdca00aa57f4fe5d26275d8c2ff23"
+      "bytes": 41751,
+      "sha256": "4b8a0f24d293afdceb25ead7d8959102f13badc0002422ceeca80ed3e02e531f"
     },
     {
       "path": "guides/power-query-promote-headers.html",
-      "bytes": 78569,
-      "sha256": "296818474e70b10989b19b81e367b1281e6aadd5838e4d5e440312b6233febe3"
+      "bytes": 83760,
+      "sha256": "7c55b334a29b11f4388dafda5bc286cb012a1ba418fe46e6b489bcae58956c09"
     },
     {
       "path": "guides/power-query-promote-headers.txt",
-      "bytes": 38793,
-      "sha256": "50dcf849c90af61a02288ca0a003f5db6d08b6f6594d2d2237778c6831d12fb7"
+      "bytes": 42001,
+      "sha256": "51c00d955d25e33914c0c896721144d9b114e55172d1db4b4a2bfa4b0319d828"
     },
     {
       "path": "guides/power-query-split-column-into-rows.html",
-      "bytes": 73315,
-      "sha256": "3893a182a288012fc56f47201e251f3e78c98cc3a343e4d8a33f02974926c36c"
+      "bytes": 73406,
+      "sha256": "2688d14d6ca8199a04c76b5de09c5a6749659b3cf63aad64ec03977821c2b5c0"
     },
     {
       "path": "guides/power-query-split-column-into-rows.txt",
-      "bytes": 35583,
-      "sha256": "784ef1bb56fd0b2f548fe2b036522ae3dff680c4e0f94c54e99a4a43ab3013c4"
+      "bytes": 35644,
+      "sha256": "f8f6ce51f50a1a427afa9b4cc286d2a6e3f1a399e6fb6f01589b7df24bcb425f"
     },
     {
       "path": "guides/power-query-unpivot-month-columns.html",
-      "bytes": 65405,
-      "sha256": "a9692dff714702b11952f579c6817b6fc025833fefc0bd99734207998156b184"
+      "bytes": 65496,
+      "sha256": "70d793cdab49658f2357a4da16f8a943d56a03ea72be64edba67642e6a5e67f2"
     },
     {
       "path": "guides/power-query-unpivot-month-columns.txt",
-      "bytes": 31416,
-      "sha256": "0ef1e0a29764ab1ab9788785924c5bfa5a17b217a606503c892dacce91ef96bf"
+      "bytes": 31477,
+      "sha256": "3fbaaf3b15e26c27744f1ce4235b25d46cc3694ac8cd3922255cc3bbccba1c2b"
     },
     {
       "path": "guides/spreadsheet-trim-spaces.html",
-      "bytes": 78749,
-      "sha256": "60f5aad10a3d64b1a0694fcdc835a681d665dc458464bd186fee2076045d1fcc"
+      "bytes": 78840,
+      "sha256": "1670e93d4ab1409493a6f000080823ab8ac837fb2e8c9b79f483689c2739234f"
     },
     {
       "path": "guides/spreadsheet-trim-spaces.txt",
-      "bytes": 39237,
-      "sha256": "5a5a8a291c35d09120fcb9395541204b2541143b62056c29c7b7b98fbc9afdbf"
+      "bytes": 39298,
+      "sha256": "c7998294695f70e173da831ca824c32c330a88989f788fc502cc26e1cdaa0e80"
     },
     {
       "path": "guides/tsv-to-csv.html",
-      "bytes": 65813,
-      "sha256": "ad050fa722c587926117265c3a01d9914818b69570eec7a9b114b65f349d5b08"
+      "bytes": 65904,
+      "sha256": "786f9299dac851bbe0db1538d915467af809e1afc86d0a3a3d26c875155d742b"
     },
     {
       "path": "guides/tsv-to-csv.txt",
-      "bytes": 30969,
-      "sha256": "6155115c599b21e8020e3bd0816ce76b02d461404baeea609c2aa195edcd61de"
+      "bytes": 31030,
+      "sha256": "7627befc22f099317a902308dde1a1f55add1a7db1d2ac67b3a8a5809267ee59"
     },
     {
       "path": "guides/vlookup-identical-ids-na.html",
-      "bytes": 57738,
-      "sha256": "100f1fac9207580c70b6e390d939b4e1ad13b0a6b5436fcf2527f2d020bf0ee3"
+      "bytes": 57829,
+      "sha256": "9a6b0c9c0c9ce1596abc3f33097fb913fe51ffa9d3649904e18ee9c166a758a9"
     },
     {
       "path": "guides/vlookup-identical-ids-na.txt",
-      "bytes": 26844,
-      "sha256": "ec9ec189e3cdd718b52acfaabf44539710797be2da9125e4fa57093ab22ca1f4"
+      "bytes": 26905,
+      "sha256": "7cc56504b14bb35fb31b8eff52255d4f7a66e29ca8040a8390ffec6c85583e65"
     },
     {
       "path": "images/guides/append-vs-merge-1-mobile.svg",
@@ -2250,273 +2250,273 @@
     },
     {
       "path": "index.html",
-      "bytes": 59154,
-      "sha256": "7059b9d9f0263331eb0fe5732210a76b991afa3b54b2863507deb5a67984f185"
+      "bytes": 59034,
+      "sha256": "2bf0a34a7f4d62a1618568e9ce46783a2d0f4975e6310ab78c827c7a0d93ebe1"
     },
     {
       "path": "index.txt",
-      "bytes": 17221,
-      "sha256": "99899f333030a75901ba408e9964a1f2a7ad54f40d7b265a824e9ee45b1faf9d"
+      "bytes": 17161,
+      "sha256": "f510f6176c9803fdf37ed75e84422067fd8dba3f230b52160cc16250433b5e8a"
     },
     {
       "path": "learn/excel.html",
       "bytes": 49003,
-      "sha256": "3268936e41242cd641d2fec3dcab68d8fc0a2268e2a333468345bdcc90bf4d51"
+      "sha256": "d071e863ba722b29233b7343ce34499526e5765b56bcb7a7dd3f5cc3cc810352"
     },
     {
       "path": "learn/excel.txt",
       "bytes": 13099,
-      "sha256": "23763c1d31637e5716f1fb1bbfb80e89340d07c2f5029aaa635dfe7c280b8c66"
+      "sha256": "4c10489b81b2f0f583db515be832c9f257d3fddff59b7ba536bc446ede2b96bf"
     },
     {
       "path": "learn/excel/charts-that-explain.html",
       "bytes": 63023,
-      "sha256": "821f57806f4c05dd514708636c47e4290a78c4fe56f31f6608cb172809247bf8"
+      "sha256": "1cceec52a3e9334d9e2c2b464572ddcf796543978a378ebb850d873142f34383"
     },
     {
       "path": "learn/excel/charts-that-explain.txt",
       "bytes": 26116,
-      "sha256": "bf65d96d3a715c46cce3f7d3b796c3e9d023637862ea10a03470959e56ad6f53"
+      "sha256": "d445a9e64874c0aa0d08f4703aea092edce91fc841a345211db30f8ebc18d986"
     },
     {
       "path": "learn/excel/clean-text.html",
       "bytes": 68160,
-      "sha256": "b4229b0aea6ca84918aad36253eb1cef4935339e9690705ab7672c8fe6f20b98"
+      "sha256": "e1792ef463157d560fd293972fd8858be222d2eccc4553cf1e90daa2c573fba9"
     },
     {
       "path": "learn/excel/clean-text.txt",
       "bytes": 28272,
-      "sha256": "3adaf0309fcf43ac5a5e92e0ec9bcb501b6b10f2a5a716ae9347d9758b90d1b9"
+      "sha256": "a2428ab6379af8933122fbdb56feb16718373e5dc8c432607bc366d2f236e153"
     },
     {
       "path": "learn/excel/conditional-formatting.html",
       "bytes": 64485,
-      "sha256": "fb053ba356d5d88b9f1efdfed1c543d72cb08c5a7ed51e28fc3a4477cde604af"
+      "sha256": "fd3f2d1099ff5e9a194c38eeb9c074f1589de72ce1ca25fcb5be6eb4291836e9"
     },
     {
       "path": "learn/excel/conditional-formatting.txt",
       "bytes": 26157,
-      "sha256": "4a493348da9e040ddcbf4d12478628e3f43f02f586e703adb548749946404472"
+      "sha256": "98b19006ae095a0cde75749362752d04d6f5afd811088198b6303adc128a3083"
     },
     {
       "path": "learn/excel/data-validation.html",
       "bytes": 63413,
-      "sha256": "c3cdaf6637bd6ef922f350fae8eb1fdae6adf8cf529a473eca6ebcffa73021ad"
+      "sha256": "624fbfaf7d0c139d5c105b29733b451c71d353fca018943c68405d2485ecb212"
     },
     {
       "path": "learn/excel/data-validation.txt",
       "bytes": 26941,
-      "sha256": "c783ea361430cb898957e2b0849211d2cff8e1c8abac47e8a42583168fb887a2"
+      "sha256": "c415ec8366db3de1416bea318f32a0338a1650105fb171f7f8892eb60f45ce60"
     },
     {
       "path": "learn/excel/dates-times.html",
       "bytes": 67107,
-      "sha256": "c9c213885c95df8a7da13dba5f9518f8ebbfb4eeda5fdbc74961dfcc11742e37"
+      "sha256": "01e69114819e546a69c8ce52a6a0ad96e2ec6a7a78e66a71137cdfdcbe6f4082"
     },
     {
       "path": "learn/excel/dates-times.txt",
       "bytes": 28072,
-      "sha256": "e643d14583969686224eb139106570e74844ae09ace9f6913017316747a90e70"
+      "sha256": "eb0f0402376af9bc67291fcc1bd4f6fdc4a4c21e9f2a50af705dfc725f0b0adf"
     },
     {
       "path": "learn/excel/dynamic-arrays.html",
       "bytes": 69608,
-      "sha256": "56a0908964d68a01682bfe570f583c5435f32e9c928f29dff594602ce6d390a6"
+      "sha256": "fa3d0e6342370427ed00fb853c2ed249bbdfd7925083c4f2ad8502ba01fb4c49"
     },
     {
       "path": "learn/excel/dynamic-arrays.txt",
       "bytes": 28599,
-      "sha256": "3d0978b9ad9bd63bf5ccdf2c3d9a4d880272573ea51a4efe3a6b42bb3f44971b"
+      "sha256": "04a3352fb395993a39e8138219715567f367e3dba82eed688e4a24df95a14dd8"
     },
     {
       "path": "learn/excel/enter-edit-data.html",
       "bytes": 66206,
-      "sha256": "79e62635a853428047aa7ea2fa67896c052f72610f447f855dd1f0c5f214c0d0"
+      "sha256": "f638e217199ae978d4ba3b6eb4a8e488fac8bb44fa992b795bee466b03771bb0"
     },
     {
       "path": "learn/excel/enter-edit-data.txt",
       "bytes": 28252,
-      "sha256": "8b55b6c1924ce99dfb941a3303454992649f77a0f0d46fe7a9541bd37fe47a5f"
+      "sha256": "9bc39625608e404cac2ef3e635352777381c1d889275f18988a1c81d72c2f1fd"
     },
     {
       "path": "learn/excel/excel-tables.html",
       "bytes": 65556,
-      "sha256": "9334afb90abb4ec60d41b7d30f072127548d3bf10c321e83f341b34b1d906cf7"
+      "sha256": "bbc60ec0cdf65011c7b572964e2bdd82509e9aa548684c079446697832a40d18"
     },
     {
       "path": "learn/excel/excel-tables.txt",
       "bytes": 27209,
-      "sha256": "0a24cf48dfa869e4c67240493704d1c438851d05625295aa72b33d03d2746458"
+      "sha256": "bb463d251f5a06fffebeb20fc888252d4f630c34b9fd769f57cabf2c1fea23a5"
     },
     {
       "path": "learn/excel/first-formulas.html",
       "bytes": 65889,
-      "sha256": "5a34814dde170a3eafacd404606ed612aa093f9895e7ab1e02129a61937eafce"
+      "sha256": "4a43c1032669a09c27ad4c7eb57edba0a0b7eb41dec4fdf59bb7c40f65d69b09"
     },
     {
       "path": "learn/excel/first-formulas.txt",
       "bytes": 27257,
-      "sha256": "b89e3a93f980bd7193aa13e622d2112059549313aa5d34d69769792f0ec5f818"
+      "sha256": "cbf1f847d904e2631f1ef92e329ce6ccedfb64914552c7ecc11c7dc538e45293"
     },
     {
       "path": "learn/excel/if-and-or.html",
       "bytes": 67172,
-      "sha256": "862843e0462a36e4587207007aee5fbe226c9a510152c44016b0c3f0eab16058"
+      "sha256": "355981134c4f9fc9a30f0bb5f59971300a75bab7545318e8f5827bf58a382273"
     },
     {
       "path": "learn/excel/if-and-or.txt",
       "bytes": 27884,
-      "sha256": "2b2e83df80de4763bf3cb21e39c7df5eca562f83fa70d437dc7688ce1c09d57d"
+      "sha256": "ef38b22179c6ec8d4198ce2522466959b5e4e7207f47d04b4eeefd0ab1e6d941"
     },
     {
       "path": "learn/excel/import-csv-safely.html",
       "bytes": 69892,
-      "sha256": "18b1d1e23ccae28071d3dee888993ebbce141b106a61eb487c754511eb20301d"
+      "sha256": "7ae16ee950e92cb9b9686e7cb2c70c27938bf97a41cfb1b221834ebd17a124a1"
     },
     {
       "path": "learn/excel/import-csv-safely.txt",
       "bytes": 29482,
-      "sha256": "473b2c7f5fb9a1e42371fd2d2ea6766bac5261fa08c0e15a125e889da1f20188"
+      "sha256": "bda24302550e2046cf467e9fbb2d7ba884c4085007faeb559373ed9229bd2b00"
     },
     {
       "path": "learn/excel/index-match.html",
       "bytes": 69994,
-      "sha256": "f8450394a0cd425f561200eec5c825a64503ceb2ed30301452a26b8fb3833d07"
+      "sha256": "662825b06cae423fbe9a9714b46d452e9d1e3745d5967499fd2f8c808b518046"
     },
     {
       "path": "learn/excel/index-match.txt",
       "bytes": 28825,
-      "sha256": "9f96d5fa5bb0e27df9d0454660a981d5d4db2c36c1abc151b0692ae14aa27308"
+      "sha256": "2f4c3b034dec48de4f0c16a5be25d183369ac1814947dca420e1296c4fb0ae02"
     },
     {
       "path": "learn/excel/monthly-report-capstone.html",
       "bytes": 67570,
-      "sha256": "7fd80e590f3652813d0098578a716c69b8d17a5396b3903493d749061392f226"
+      "sha256": "4e553513f204b537eb261a9f7a1e15a228d3756c2ffa5db34341137f33f4186b"
     },
     {
       "path": "learn/excel/monthly-report-capstone.txt",
       "bytes": 26292,
-      "sha256": "ae7e6a5296f259d35757228d97b14f8200deabee9719ccbc4d6cb0ad22e4e26a"
+      "sha256": "4ff6e2f28e2efadbe1a9b9c69a35bd2f175a453c3c7e7ba88757cc361f7d02ce"
     },
     {
       "path": "learn/excel/number-formats.html",
       "bytes": 67040,
-      "sha256": "9e7094a60fd41d740626a8a8aacfdc0c8924eadc2a0a9ed9745156df4ff34ed6"
+      "sha256": "29168dc0aa35489d5195ba765cfdd9ffbea18a2b0d4df50aabd858bc903ec2de"
     },
     {
       "path": "learn/excel/number-formats.txt",
       "bytes": 28292,
-      "sha256": "f0b1689914b42dc925371cf64567824a898272487016207ad169a4292de573f8"
+      "sha256": "cf81c05daf544fa7ecabd79233520c8f645450b6c1ec3371f7121c67af1bd00a"
     },
     {
       "path": "learn/excel/pivot-tables.html",
       "bytes": 66213,
-      "sha256": "eccb6505c7c7fbbfb8f5f4c9ea2b0cd5f99253be43536cae31f84961c9585ebd"
+      "sha256": "be7b24adfe547fa43fea6d70adf5284cf3fa545cef6d093446a87c04d9809491"
     },
     {
       "path": "learn/excel/pivot-tables.txt",
       "bytes": 27690,
-      "sha256": "d0c951af4dbc6e3d8f8a73efd35cc9e3505305176b0f84c8c54f4944ffbe66d9"
+      "sha256": "700dca4d837902de93ccbb1144ba423b681692012094189afab4868de0b4be2c"
     },
     {
       "path": "learn/excel/power-query-first-import.html",
       "bytes": 70195,
-      "sha256": "9a8510301b3e13f3ed56136f241f3dfeaa8c95707eed75301aa78589e220e054"
+      "sha256": "60ed6451c83d4bac512f17b373b8a9be59e83794a998b8e7e72f54f0f5abff4b"
     },
     {
       "path": "learn/excel/power-query-first-import.txt",
       "bytes": 30283,
-      "sha256": "aa18f1c95eef6e00b2557197b56543cc1e77d7dcb3005eea2c1d1c7520023d3c"
+      "sha256": "da9a3c3f6eb3e9436934f0de2c1e8ef1c7ac7423d3afb939dbcbcddccc8a34f8"
     },
     {
       "path": "learn/excel/power-query-merge-append.html",
       "bytes": 69276,
-      "sha256": "16fffb3a45cc12451968d1dc49eb081cb8e7dc42c3cc85b8e4b6d6e430975882"
+      "sha256": "389a0c00a9d88ce1e46897ee48ddfc09f8dc2e8eb00d6ae9f262d2f55c642d73"
     },
     {
       "path": "learn/excel/power-query-merge-append.txt",
       "bytes": 30576,
-      "sha256": "7477f63ce6dbe2d68a4d41dbd3ccf254c378ff42654f431214445e8be3b26a1f"
+      "sha256": "b7abf9e87be57d315cfee9314065277b5c6e0ae586aaf940ba27925c56e90361"
     },
     {
       "path": "learn/excel/relative-absolute-references.html",
       "bytes": 64395,
-      "sha256": "7d3e900b10baa2a3765d49fc946c6151bff1be5bf7a9a72f2c0248c58379ac8a"
+      "sha256": "0b8ecd7ea9f5de735d93e2e06b3a3d292a9d73b105771790e16d1247ac7d9e01"
     },
     {
       "path": "learn/excel/relative-absolute-references.txt",
       "bytes": 26669,
-      "sha256": "b3a50b46d8b0f9c47db551570b35271b36d58ad68bfc2fa26a4a27def7c3efcd"
+      "sha256": "ec7ae759c4ba38030ba7ef28aa7841d353018ccb02e2eabae8f8ed80038d5777"
     },
     {
       "path": "learn/excel/sort-filter.html",
       "bytes": 65581,
-      "sha256": "9d4504a6f30e29dba41d10225544baca142ed8600cccd9cf1844e6b172e979ee"
+      "sha256": "28a8964599081c873f37abaa8fe90c958e3bfbd9b694c8c4c717c8d6c15d63e1"
     },
     {
       "path": "learn/excel/sort-filter.txt",
       "bytes": 27819,
-      "sha256": "286c5d1ecca7092070e04d04b16bd32721efb6c620497aab957d65392de54149"
+      "sha256": "0c6c4b0d88421ea2f3dcfacdf39df2a21603d0842e5e6a046a8fa3b544b23e02"
     },
     {
       "path": "learn/excel/sum-average-count.html",
       "bytes": 68308,
-      "sha256": "fc31d4180abbb1512694a162941c3ffba3a42fdc346536221bc4ff4de413227d"
+      "sha256": "147b6972371b74eed3fc0bd3db51d526bcd972872569031d04f952bc6ce4eb0c"
     },
     {
       "path": "learn/excel/sum-average-count.txt",
       "bytes": 28749,
-      "sha256": "2fbf071c11918331c93fc59803d045ce991d17b99d451f742a5ab974e5b7f260"
+      "sha256": "088457e3ffb4b23f80f1ce6222d0874258f881703c3c0f9871e597af464e3283"
     },
     {
       "path": "learn/excel/sumifs-countifs.html",
       "bytes": 67862,
-      "sha256": "4832cd6e90ac7c4cb7897465b40d6aff477933cffeede78cb94ea2f7dfdf4328"
+      "sha256": "8cf685b2e96438142d77e6f2691d06e0686dd52310d9fdc20a7bbf04beb3344c"
     },
     {
       "path": "learn/excel/sumifs-countifs.txt",
       "bytes": 28356,
-      "sha256": "135938b2748982548abd0ccf37bd392da8776df8edf52f44e8db17f52405d9ed"
+      "sha256": "08b87587a2be0ea9c403dcb11f4bc4f2d187c928466cd4fdfc76be2f0cf4a8d8"
     },
     {
       "path": "learn/excel/what-if-analysis.html",
       "bytes": 61901,
-      "sha256": "555dd1c484479b3158db3a818721a1aabdf0d0d45b02e2fae89c1e1f9bbc9011"
+      "sha256": "1a44d8448ead070fdba1875ed6135e44bd92b94dba973e50c7846e8186f5967d"
     },
     {
       "path": "learn/excel/what-if-analysis.txt",
       "bytes": 25844,
-      "sha256": "8d14f4429ace4949baaadb21e0fbde06d5ae30001935844d673a169e9b9dd496"
+      "sha256": "5ad5f72f02b128f814924ab9f9e439b5aa9cc087c14d5e7538f8d92f95f6d284"
     },
     {
       "path": "learn/excel/workbook-cells-ranges.html",
       "bytes": 62607,
-      "sha256": "0d9490ab02129be81c614a2cb0911db07ed2408a5f80df6076eebce9d287ad29"
+      "sha256": "eac5e9e07501da8e3a65553c9aa63671dc628226db8e6bd1578ec38b3e5072af"
     },
     {
       "path": "learn/excel/workbook-cells-ranges.txt",
       "bytes": 26349,
-      "sha256": "5a82db44e2975ed5c7fe7f25cd7010a756bf312839f1e04c2074267e232dd4ca"
+      "sha256": "f5da3705947263bfca0a7c3a22f50c8bf97eb3175e6567b593dd6cefcd703602"
     },
     {
       "path": "learn/excel/xlookup-exact-match.html",
       "bytes": 67103,
-      "sha256": "d100e47db830b1397e5087a7c58f1373aafa4cc07df7b0afac8d64a7d93075d0"
+      "sha256": "a65c0a4ce5327acea01245eb363da086893e4ebea6a2ba7d54436b479d15d155"
     },
     {
       "path": "learn/excel/xlookup-exact-match.txt",
       "bytes": 27958,
-      "sha256": "35b333ad746a3c27f732f56a0a6c54bc47345c8f56e9b13a954d9515de57c4cd"
+      "sha256": "b43c53fbb809986d8ff9f85af0a613b078c3ae8e7eca7ff9af1dd92ae37d8282"
     },
     {
       "path": "llms-full.txt",
-      "bytes": 655249,
-      "sha256": "9b627676ea398a1ae1a51045a37a4e7b110490ec70660107c6ed3b6f1926cf6e"
+      "bytes": 654995,
+      "sha256": "86f253d86866dd5f5118090d3265e297fb55abcf00921cf56014f79738589180"
     },
     {
       "path": "llms.txt",
-      "bytes": 29577,
-      "sha256": "594069316d86579540c797168cd08d8dde48b3e652842850fe6b074de1dc2660"
+      "bytes": 29589,
+      "sha256": "141144090a6683c9a180fcccc96b6f58bfdca81f1d3e82227f07825569908627"
     },
     {
       "path": "media/guides/google-sheets-sum-by-month-category-poster.jpg",
@@ -2566,22 +2566,22 @@
     {
       "path": "method.html",
       "bytes": 26035,
-      "sha256": "9c4dce2499c495ad8a93f882ab6639ed81bf92b19e067dd055283510166b8894"
+      "sha256": "850af73bfbfe07f6086c82819b9cfd7354f39142f111b9edde1d60d9614da835"
     },
     {
       "path": "method.txt",
       "bytes": 9009,
-      "sha256": "603b5dddee7dfb6614397ced125166ddcfedf4f92351291f452a345293e55967"
+      "sha256": "fba76d261f5f229f6734244bb726235a0894b57ac4d5d9cdc2e5d10dfb43f5a5"
     },
     {
       "path": "privacy.html",
       "bytes": 34404,
-      "sha256": "07b866899943d1267993686842c8c37c16b12249e3b72bc036745c21635d4b51"
+      "sha256": "e5870e851244e8f9d06151378622ec579d82e715b752ca9ac4fd4d076794f91e"
     },
     {
       "path": "privacy.txt",
       "bytes": 12967,
-      "sha256": "92e7986d8002f3b92b417e0245ced80ef9564c831c373dd99670c52e2cb8e981"
+      "sha256": "210d962081410c6056bf291aa75a1643b87390d1095386ab376fe6240b3cc9f4"
     },
     {
       "path": "samples/academy/charts-that-explain/monthly-orders-chart.tsv",
@@ -3315,8 +3315,8 @@
     },
     {
       "path": "samples/excel-freeze-rows-and-columns-together/README.txt",
-      "bytes": 458,
-      "sha256": "f460154d24469f8e6f65d8a5d487c68bec710cafb985743368191f9e76a20841"
+      "bytes": 447,
+      "sha256": "c786940aa8fc61348c6073945296d4c210dc2eeff391301d3f024410ac6e368c"
     },
     {
       "path": "samples/excel-leading-zeros/example.csv",
@@ -4220,8 +4220,8 @@
     },
     {
       "path": "samples/power-query-promote-headers/README.txt",
-      "bytes": 513,
-      "sha256": "04f1b25c2725a0044c2eccb107b2c5f5389acab60193579052a92e3ac7edea46"
+      "bytes": 487,
+      "sha256": "d5071f662691f33242599fcc0c0fdd5829ae9e96645acccddec329a77b3482fe"
     },
     {
       "path": "samples/power-query-split-column-into-rows/example.csv",
@@ -4326,7 +4326,7 @@
     {
       "path": "sitemap.xml",
       "bytes": 11428,
-      "sha256": "db52efe9c707871e0f2f0618a40912afd6b76e2e03874f161c69f9907c07e9dc"
+      "sha256": "d85cb840706824a54057ccb2f5fc480b2048cdd8c46c56d3cffaf446eff14260"
     },
     {
       "path": "tools.json",
@@ -4336,142 +4336,142 @@
     {
       "path": "workspace.html",
       "bytes": 67067,
-      "sha256": "531aa28c594132637083d14c0c7df7babd9de67636bb5f5f16a8669fe9205140"
+      "sha256": "cd0cc58c2c17a7a5ad939f2d62aa0b1bdc5f5b29ab07529313f76f423dfd0508"
     },
     {
       "path": "workspace.txt",
       "bytes": 4795,
-      "sha256": "553cc00b4a83805672d2631bb902f6c59e83f5f5028692cf8f4a1e411658c97d"
+      "sha256": "3c705a26c48d2c5f0a6731918181d34ced55f36771f6d017503fbbe77cd59166"
     },
     {
       "path": "workspace/clean-csv.html",
       "bytes": 56038,
-      "sha256": "2dc90626500d4bff5b41d866a213ad375735281a7095080ab88e1022a8be8df7"
+      "sha256": "1549bb5ad01c7667a2e25235c681975e65cd1a793712f455122a70ce4593ec8f"
     },
     {
       "path": "workspace/clean-csv.txt",
       "bytes": 12253,
-      "sha256": "297abc27d8247ada49d8b1ec991ba7a65aa73a101c0ab43525a7d6fe3a4143a7"
+      "sha256": "f6d576a71b3fe926b057882f6d6bfb73e0874abbcd13227b97977c3fa4c66581"
     },
     {
       "path": "workspace/compare-csv-files.html",
       "bytes": 48858,
-      "sha256": "fd6083502f14ec79607112c208d3a9e35cc061f9c4dc0243885523f1d49916a7"
+      "sha256": "96e92bd50e30a25c00c1523b4691ca5effb49c68da76c7178902154897a75a8e"
     },
     {
       "path": "workspace/compare-csv-files.txt",
       "bytes": 16711,
-      "sha256": "87a2249806bf5399932d6b347186b4ed0ab4495890bc580a08dc3e1d61ed98c5"
+      "sha256": "de0216e30967c9e830cdf8973b579e8169cfc6cdd5654ec99f423bb529c58ce6"
     },
     {
       "path": "workspace/compare-two-lists.html",
       "bytes": 52142,
-      "sha256": "5acedf0e220325c56934c254e084dd27534f4d9a75c78e353b397d0956f69918"
+      "sha256": "98ae29599f1c749f26b375da9ce0a37e86c98490afc5f426a705c9c120bf4964"
     },
     {
       "path": "workspace/compare-two-lists.txt",
       "bytes": 12060,
-      "sha256": "d0109185a546da0172af12f02bf95e1792611e073e30f005443bcc286449aaed"
+      "sha256": "bae7127348add9e492ae7d1d44266550d1b438274147f66daa88618c78a51bed"
     },
     {
       "path": "workspace/convert-csv.html",
       "bytes": 44721,
-      "sha256": "790ed8c8a3c9056015e25e6b8614a23d32f1fa0df15c1ccd56f97be8e87450f5"
+      "sha256": "4694b961348c65753af7b4c2e10d4d94093b5901568e2d0229c877d01471df26"
     },
     {
       "path": "workspace/convert-csv.txt",
       "bytes": 12423,
-      "sha256": "28f1a7b8beb921b149ea5360baa0e2743ce3226a7804370ef44dca2621db73ad"
+      "sha256": "d4a9bfe080c330a0f9a0ff50cbed42667dd8d14c7533114dd45ad3c5dd796340"
     },
     {
       "path": "workspace/csv-to-excel.html",
       "bytes": 33753,
-      "sha256": "a700794e7bfb5bd06f83b1f51991701ff83c9dabeef71cd47ac2caeca45b739d"
+      "sha256": "d57e9737b47171f48154664953d77d52a43e5d86ad8c1dd14a896af8bc1c52ce"
     },
     {
       "path": "workspace/csv-to-excel.txt",
       "bytes": 11781,
-      "sha256": "849899e54f78aa55603e5c5f08a97c520af632b641368a63e4841901b45e7890"
+      "sha256": "a5d37b3b7fe64fa4fd10919fc606e393204af4ecd4c0e6bbd098e48ed37a82af"
     },
     {
       "path": "workspace/extract-csv-columns.html",
       "bytes": 60895,
-      "sha256": "8d780eff238c1050eba7d369e3819d38689abb9c446326be3002f8510c9d9c83"
+      "sha256": "59c34433c39ed66355815e13963fbe2ebf63e8b432d4b388147948824814a347"
     },
     {
       "path": "workspace/extract-csv-columns.txt",
       "bytes": 12151,
-      "sha256": "a5ddd7b9c10c58960898c9c5f33698ff1f8ab5ddf0bc9257a1d059ac9a15fe79"
+      "sha256": "82737a5ca26582303f7153ca7ac13a8a508e71bf14f492081aa00ac48fc784e9"
     },
     {
       "path": "workspace/formulas.html",
       "bytes": 104150,
-      "sha256": "f6625495c7dcca237a91fc9053aa38634b073e372a5b98c689d04ac51a077ae6"
+      "sha256": "d2ff58df49e7807c21f5eae4a3efca5b8bbbd6b4e9a4a946b664520bd8f13595"
     },
     {
       "path": "workspace/formulas.txt",
       "bytes": 4833,
-      "sha256": "f20c513b81bd46f04bdd7e285be7526b7b9de1ac4c034553a5c69f6161db7fd3"
+      "sha256": "a998a3ea42dc46ad96317eff00561d2ed46511561254bd51e241d1a21ea1754a"
     },
     {
       "path": "workspace/practice.html",
       "bytes": 59949,
-      "sha256": "ffc354a6cd226d12b5205c5959dfd6db3f6569fc48398b8732925fed491eb783"
+      "sha256": "c4350eb34e93375f333064c1db59e5761ba895065e52b0bbc13abab4aafcd801"
     },
     {
       "path": "workspace/practice.txt",
       "bytes": 4824,
-      "sha256": "7aea5db30a60ff96a7fc5c64b9c43ef8d56e8e41a93a1cf667a53820f52cff3c"
+      "sha256": "97c2f566df60f78718fd696c8968e2bbae5b1d1a717c01b68710a93f8a784949"
     },
     {
       "path": "workspace/remove-csv-duplicates.html",
       "bytes": 55130,
-      "sha256": "dc383f1dee14448db33115e57e386c8833431c71939364d5f66462d898e76d1f"
+      "sha256": "e20527e2bba93b8784b27dafa57adcc3715a1dd9e456ec8e862decbc14708a64"
     },
     {
       "path": "workspace/remove-csv-duplicates.txt",
       "bytes": 12594,
-      "sha256": "a8f032d4918ed23df8adcd5e8a3c3a18c75a734559c2573aee9c11cd6afffbdc"
+      "sha256": "ccfe2990ca6c20c47cde67004531beb7850d688145bf02da03efb7ed07f4e114"
     },
     {
       "path": "workspace/repeat-cleanup.html",
       "bytes": 85720,
-      "sha256": "8c88c40c0f237a53c07db8714ea93f48b5b1e7d8856be7bca296270268ca30c7"
+      "sha256": "1ecd203d808216d7713984e479c616f23249ac6d02360216898e385b1aa8d810"
     },
     {
       "path": "workspace/repeat-cleanup.txt",
       "bytes": 11277,
-      "sha256": "fbce2bfab27b66ebd11bd23d2ad43d2fc7f44819b8570891dbda710012c72f2f"
+      "sha256": "a871fcfbca6cf6e4ff115755036669e672f8b743a8f615125257f4b606bb847b"
     },
     {
       "path": "workspace/shopify-csv-checker.html",
       "bytes": 39567,
-      "sha256": "0c8790bf0fd43eac6b5f9b43a5923c41a29e719e8da2289fe7c63b8231b80111"
+      "sha256": "97016738edba9ecc7f2fa2a467fad242369fe76c4e7c48a76e8da93fdb870cc9"
     },
     {
       "path": "workspace/shopify-csv-checker.txt",
       "bytes": 12031,
-      "sha256": "b96dd1d0b5147f079aef9709b4ec43c2322abe92cfcd309186bd7470dbcbeb55"
+      "sha256": "764d49df77347d9d35c692acafc7d17476bc6a52c732b4a85e2d0f1f7032006b"
     },
     {
       "path": "workspace/split-csv.html",
       "bytes": 43728,
-      "sha256": "fae1aad33d44626555a046a5b3640bff3a54b9ea821c125228671e63273524c1"
+      "sha256": "f5678eee8126455172557d197bccf34b2fd2cb6a929d058cf614775ea39c170e"
     },
     {
       "path": "workspace/split-csv.txt",
       "bytes": 12360,
-      "sha256": "58dd7d68a7473f45aefed5866a87c48e341989985a57c0031ce46b7bf3e2f22c"
+      "sha256": "dd9aca5a61ad5d1f1f9931595ff729d06a114d69d4f17a5b0e19bf5e74aaf5d3"
     },
     {
       "path": "workspace/workflows.html",
       "bytes": 60398,
-      "sha256": "9a3b986439a5439eba0f6407de3d5d2b83ca22e0a9caf169c387d4a6eeba41f7"
+      "sha256": "c139d0f4e64e3ae8bafe37becc43b9965613f13109b52ebae07b5225edab481a"
     },
     {
       "path": "workspace/workflows.txt",
       "bytes": 4894,
-      "sha256": "6b11b87cb52e58550009ae1a6faa20d547cf55d7ae74cd488677696fc4178f59"
+      "sha256": "b1b6d1d9eab795030ce9dbe958094a07515dbcfcc9d6d70fca4dd461a0952471"
     }
   ]
 }

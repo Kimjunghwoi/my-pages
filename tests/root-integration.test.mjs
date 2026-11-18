@@ -31,7 +31,7 @@ test("React payloads are built on the main origin and never string-rewritten aft
 test("the pinned public snapshot excludes private source and preserves every sample byte", () => {
   const manifest = JSON.parse(read("integrations/column-harbor/manifest.json"));
   assert.deepEqual(manifest.counts, { guides: 63, lessons: 24, tools: 10 });
-  assert.equal(manifest.sourceCommit, "65920846c70a488af63e2ef325120263ea31021d");
+  assert.equal(manifest.sourceCommit, "789f364a925e4c7ef900fa464314d89e1f0c792f");
   const files = contentFiles(root);
   for (const entry of manifest.files) {
     assert.doesNotMatch(entry.path, /(?:^|\/)(?:docs|content|node_modules|\.git|\.openai|\.env)(?:\/|$)|\.map$/);

@@ -1,4 +1,4 @@
-Power Query Promote Headers: Skip Report Titles Without Losing the First Record
+Power Query Promote Headers: Fix the Wrong Header Row
 
 Synthetic example for https://jhsoftlabs.com/guides/power-query-promote-headers
 

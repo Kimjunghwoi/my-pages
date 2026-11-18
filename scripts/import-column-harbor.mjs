@@ -44,7 +44,7 @@ const guides = JSON.parse(readFileSync(join(source, "lib/guide-content.json"), "
 const lessons = JSON.parse(readFileSync(join(source, "lib/academy-content.json"), "utf8"));
 const catalog = JSON.parse(readFileSync(join(artifact, "tools.json"), "utf8"));
 const manifest = {
-  version: 1, importedOn: "2026-10-29", sourceCommit: derivation.sourceCommit, deploymentOrigin: derivation.deploymentOrigin, adsEnabled: false, derivation: derivation.changes,
+  version: 1, importedOn: new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()), sourceCommit: derivation.sourceCommit, deploymentOrigin: derivation.deploymentOrigin, adsEnabled: false, derivation: derivation.changes,
   verifiedAt: stamp.verifiedAt, fingerprints: stamp.fingerprints,
   counts: { guides: guides.length, lessons: lessons.length, tools: catalog.tools.length },
   files: files.sort((a, b) => a.path.localeCompare(b.path, "en")),

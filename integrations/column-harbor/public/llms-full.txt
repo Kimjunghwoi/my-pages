@@ -3156,7 +3156,7 @@ B01,00123,3
 
 **URL:** https://jhsoftlabs.com/guides/compare-csv-added-missing-ids
 **Category:** compare-combine
-**Description:** Compare old and new CSV snapshots by a unique text ID with a local Python script, exact sample results and checks for duplicate keys and mismatched rows.
+**Description:** Find added and missing IDs in two CSV files with a local Python script, downloadable inputs and exact results. Use the browser alternative to inspect field edits.
 
 ## Related runnable tool
 
@@ -3169,7 +3169,7 @@ Map a unique ID or composite key and compare selected fields to find added, remo
 ## Summary
 Read both CSV files with the same unique ID column and compare their sets of IDs. New-only IDs are added; old-only IDs are missing from the new export. Preserve IDs as text and reject blank or duplicate keys so an ambiguous file does not silently produce a clean report.
 
-A changed row order makes visual comparison unreliable. Start by comparing stable identifiers before deciding whether you also need a field-by-field change report.
+Compare the IDs in an old and a new export without relying on row order. Download both small inputs and the Python script below, or use the browser tool when you also need to inspect changed field values.
 
 ## Worked example
 
@@ -4637,7 +4637,7 @@ P104
 ## Summary
 Use XLOOKUP(1,(region_range=region)*(product_range=product),rate_range,"Not found",0). Multiplication creates a 1 only where both conditions are true. XLOOKUP returns the first match, so count matching rows and use FILTER when you need every match.
 
-A product can have different rates in different regions. Looking up the product alone may return a valid-looking rate from the wrong region. Test both fields on the same source row, then decide whether the result must be unique.
+Match region and product on the same row to return the right rate. The sample includes two East/P101 rates on purpose: use it to see why a first match is not proof of a unique answer.
 
 ## Worked example
 
@@ -6288,7 +6288,7 @@ Finance,Open,0,0
 
 **URL:** https://jhsoftlabs.com/guides/power-query-merge-duplicates-extra-rows
 **Category:** compare-combine
-**Description:** Fix extra rows after a Power Query merge. Count matches before expanding, diagnose duplicate keys, and run downloadable M queries with a checked example.
+**Description:** Power Query merge added extra rows? Count matches before expanding. Download two CSVs and M queries to reproduce four sales becoming six rows and check the fix.
 
 ## Related runnable tool
 
@@ -6299,9 +6299,9 @@ Load the two source exports and map the proposed join key. Review blank or repea
 [Inspect source keys in the CSV comparison tool →](https://jhsoftlabs.com/workspace/compare-csv-files)
 
 ## Summary
-Duplicate rows after a Power Query merge usually mean the chosen key matches more than one row in the other table. Before expanding, add Table.RowCount([Addresses]) as a Custom Column for the nested Addresses column. If the count exceeds 1, choose a genuinely unique reference key, define which record belongs to each sale, or keep only match counts when existence is all you need. A left outer join retains left records but does not guarantee one output row per record after expansion.
+A merge can expand one source row into several when its key matches multiple rows in the other table. Before expanding Addresses, add Table.RowCount([Addresses]) as a Custom Column. A count above 1 explains the extra rows. Use a key that identifies the required record, or keep match counts if you only need to check existence; do not delete valid detail just to force the original row count.
 
-An Excel query with four sales can become six rows after you expand a merge. This is often a valid consequence of the selected keys, not a random refresh bug. The practical question is whether one output row should represent a sale, an address, or a sale-address pair.
+Four sales become six rows after a merge, and the amount total rises from 42 to 72. Reproduce the example below, count the matching addresses, then choose whether the report needs sales or sale-address pairs.
 
 ## Worked example
 
@@ -8831,16 +8831,16 @@ Rows A, B and C return 25%, -20% and -100%. D has a zero baseline and E has a ne
 
 ---
 
-# Freeze Rows and Columns Together in Excel: Choose the Correct Cell
+# Freeze Rows and Columns Together in Excel: A B3 Example
 
 **URL:** https://jhsoftlabs.com/guides/excel-freeze-rows-and-columns-together
 **Category:** text-cleanup
-**Description:** Keep two header rows and an ID column visible while scrolling in Excel. Use a B3 control, reset the boundary safely, and separate freezing from printing.
+**Description:** Freeze two header rows and column A together: select B3, then use Freeze Panes. Download the XLSX and check both scrolling directions, saving and printing limits.
 
 ## Summary
 To keep rows 1–2 and column A visible, first unfreeze any existing boundary, select B3, then choose View > Freeze Panes > Freeze Panes. Excel keeps rows above and columns left of that cell visible. Test vertical and horizontal scrolling separately.
 
-A wide export becomes hard to read when the column titles or record IDs disappear. Freeze Panes can retain both, but the active cell determines the boundary. Choosing the wrong cell freezes the wrong part of the sheet.
+Keep the report title, field labels and ID column visible at the same time. Start with the practice workbook below, select B3, and check vertical and horizontal scrolling separately.
 
 ## Worked example
 
@@ -10420,16 +10420,16 @@ in
 
 ---
 
-# Power Query Promote Headers: Skip Report Titles Without Losing the First Record
+# Power Query Promote Headers: Fix the Wrong Header Row
 
 **URL:** https://jhsoftlabs.com/guides/power-query-promote-headers
 **Category:** csv-structure
-**Description:** Fix the wrong header row in Power Query. Remove a fixed report preamble, promote headers once, preserve text IDs, and check refresh changes.
+**Description:** Remove two report rows, promote the real header once and retain every data record. Download a guarded Power Query M example with expected output and refresh checks.
 
 ## Summary
 Return to the parsed raw rows before automatic header promotion or type conversion. Remove only the agreed preamble rows, promote the next row once, then assign types. In the sample, remove two report rows so item_id, region, and quantity become the headers, while all three inventory records remain.
 
-A CSV export may begin with a report title and a preparation date before its actual table. Power Query can mistake that preamble for the column names, leaving the real headers in the data or consuming the first record. Correcting the step order is safer than renaming whatever columns happen to appear.
+When report titles become column names, adding another header step can consume the first data record. Use the sample export below to remove its two-row preamble, promote the real header once and verify all three inventory records.
 
 ## Worked example
 
